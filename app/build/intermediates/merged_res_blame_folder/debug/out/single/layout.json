@@ -68,10 +68,6 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\main_view_3g.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_menu_lateral_1.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/activity_menu_lateral_1.xml"
-    },
-    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_info.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_info.xml"
     },
@@ -146,6 +142,10 @@
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\dialog_periodo.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_periodo.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_ajustes.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_ajustes.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_detalle_gasto.xml",

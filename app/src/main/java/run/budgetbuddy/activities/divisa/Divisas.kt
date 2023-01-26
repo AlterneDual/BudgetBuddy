@@ -1,11 +1,16 @@
-package com.example.mygestorplantillas
+package run.budgetbuddy.activities.divisa
 
 import adapter.myListAdapter_menu_Lateral
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
 import models.ItemGenerico
 import run.budgetbuddy.R
+import run.budgetbuddy.activities.Ajustes
+import run.budgetbuddy.activities.MG.MgInicio
+import run.budgetbuddy.activities.MenuLateralMG
+import run.budgetbuddy.databinding.ActivityDivisasBinding
 
 class Divisas : AppCompatActivity() {
 
@@ -13,16 +18,24 @@ class Divisas : AppCompatActivity() {
     private lateinit var list_view: ListView
     private lateinit var listaOpciones: MutableList<ItemGenerico>
     private var posActual: Int = 0
+    private lateinit var binding: ActivityDivisasBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_divisas)
+        binding = ActivityDivisasBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         listaOpciones = crearAjustes()
 
         inicializarAdapter()
 
         abrirOpcion()
+
+        binding.btnMenu.setOnClickListener {
+            val intent = Intent(this, MenuLateralMG::class.java)
+            startActivity(intent)
+            finish()
+        }
 
 
     }

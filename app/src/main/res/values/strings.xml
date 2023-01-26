@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyGestorPlantillas</string>
+    <string name="app_name">BudgetBuddy</string>
     <string name="ingresos_underline"><u>INGRESOS</u></string>
     <string name="gastos_underline"><u>GASTOS</u></string>
     <string name="ingresos">INGRESOS</string>

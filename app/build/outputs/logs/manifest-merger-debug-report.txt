@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
 MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:2:1-12:12
 MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\b1b71b6e9556b4ea48be7bb341272e6a\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\349fed3c6b8905fb4cbe9aa4836949e1\transformed\viewbinding-7.3.0\AndroidManifest.xml:2:1-9:12
@@ -50,22 +50,22 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Aragon\.gradle\c
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\b2f8b08a5a46a94bd13ad818e660f057\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\e613a0fa896d155a11cea2ee287d94f1\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\e5821dd2dbb6681dbe340f1ba9b2d474\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
 	package
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-186:12
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-193:12
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:11-69
@@ -74,7 +74,7 @@ ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\Android
 	android:name
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:5:22-77
 application
-ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:6:5-184:19
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:6:5-191:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Aragon\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Aragon\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Aragon\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -263,6 +263,12 @@ ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\Android
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:178:13-37
 	android:name
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:177:13-47
+activity#run.budgetbuddy.activities.divisa.Divisas
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:183:9-189:20
+	android:exported
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:185:13-37
+	android:name
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:184:13-54
 uses-sdk
 INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml

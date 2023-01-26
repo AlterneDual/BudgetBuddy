@@ -2,12 +2,15 @@ package run.budgetbuddy.activities
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Intent
+import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
 import models.ItemGenerico
 import run.budgetbuddy.R
 import run.budgetbuddy.adapter.myListAdapter
+import run.budgetbuddy.databinding.ActivityAjustesBinding
 
 class Ajustes : AppCompatActivity() {
 
@@ -15,10 +18,12 @@ class Ajustes : AppCompatActivity() {
     private lateinit var list_view: ListView
     private lateinit var listaOpciones: MutableList<ItemGenerico>
     private var posActual: Int = 0
+    lateinit var binding: ActivityAjustesBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_ajustes)
+        binding = ActivityAjustesBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         listaOpciones = crearAjustes()
 
@@ -26,12 +31,18 @@ class Ajustes : AppCompatActivity() {
 
         abrirOpcion()
 
+        binding.btnMenu.setOnClickListener {
+            val intent = Intent(this, MenuLateralMG::class.java)
+            startActivity(intent)
+            finish()
+        }
+
 
     }
 
     private fun inicializarAdapter() {
 
-        list_view = findViewById<ListView>(R.id.list_view)
+        list_view = binding.listView
         adapterList = myListAdapter(this, R.layout.custom_list_ajustes, listaOpciones)
         list_view.adapter = adapterList
         registerForContextMenu(list_view)

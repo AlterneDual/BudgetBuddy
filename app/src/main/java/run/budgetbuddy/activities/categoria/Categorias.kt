@@ -19,7 +19,7 @@ class Categorias : AppCompatActivity() {
             finish()
         }
 
-        binding.btnMenu.setOnClickListener {
+        binding.btnAtras1.setOnClickListener {
             val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
             finish()

@@ -4,6 +4,7 @@ package run.budgetbuddy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,14 +22,18 @@ public final class ActivityAjustesBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
+  public final ImageView btnMenu;
+
+  @NonNull
   public final ListView listView;
 
   @NonNull
   public final Toolbar toolbar;
 
-  private ActivityAjustesBinding(@NonNull ConstraintLayout rootView, @NonNull ListView listView,
-      @NonNull Toolbar toolbar) {
+  private ActivityAjustesBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnMenu,
+      @NonNull ListView listView, @NonNull Toolbar toolbar) {
     this.rootView = rootView;
+    this.btnMenu = btnMenu;
     this.listView = listView;
     this.toolbar = toolbar;
   }
@@ -60,6 +65,12 @@ public final class ActivityAjustesBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.btnMenu;
+      ImageView btnMenu = ViewBindings.findChildViewById(rootView, id);
+      if (btnMenu == null) {
+        break missingId;
+      }
+
       id = R.id.list_view;
       ListView listView = ViewBindings.findChildViewById(rootView, id);
       if (listView == null) {
@@ -72,7 +83,7 @@ public final class ActivityAjustesBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAjustesBinding((ConstraintLayout) rootView, listView, toolbar);
+      return new ActivityAjustesBinding((ConstraintLayout) rootView, btnMenu, listView, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

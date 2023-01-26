@@ -44,10 +44,6 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_editar_ingreso.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-merged_res-29:/layout_activity_menu_lateral_1.xml.flat",
-        "source": "run.budgetbuddy.app-main-31:/layout/activity_menu_lateral_1.xml"
-    },
-    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\drawable_previous.png.flat",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\drawable\\previous.png"
     },
@@ -178,6 +174,10 @@
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\drawable_dolar.png.flat",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\drawable\\dolar.png"
+    },
+    {
+        "merged": "run.budgetbuddy.app-merged_res-29:/layout_activity_ajustes.xml.flat",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_ajustes.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\layout_gp_row_group.xml.flat",

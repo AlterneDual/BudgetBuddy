@@ -3484,6 +3484,7 @@ int id textSpacerNoButtons 0x7f09024f
 int id textSpacerNoTitle 0x7f090250
 int id textStart 0x7f090251
 int id textTop 0x7f090252
+int id textView 0x7f0902cf
 int id textView10 0x7f090253
 int id textView11 0x7f090254
 int id textView2 0x7f090255
@@ -3533,7 +3534,6 @@ int id tv1 0x7f090280
 int id tv2 0x7f090281
 int id tv3 0x7f090282
 int id tv4 0x7f090283
-int id tvAgregarImagen 0x7f090284
 int id tvAgregarImagen2 0x7f090285
 int id tvAnho 0x7f090286
 int id tvAñadirCategoria 0x7f090287

@@ -29,18 +29,18 @@ public final class CategoriasBinding implements ViewBinding {
   public final ImageButton btnAddCategoria2;
 
   @NonNull
-  public final ImageView btnMenu;
+  public final ImageView btnAtras1;
 
   @NonNull
   public final Toolbar toolbar3;
 
   private CategoriasBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView RVCategorias,
-      @NonNull ImageButton btnAddCategoria2, @NonNull ImageView btnMenu,
+      @NonNull ImageButton btnAddCategoria2, @NonNull ImageView btnAtras1,
       @NonNull Toolbar toolbar3) {
     this.rootView = rootView;
     this.RVCategorias = RVCategorias;
     this.btnAddCategoria2 = btnAddCategoria2;
-    this.btnMenu = btnMenu;
+    this.btnAtras1 = btnAtras1;
     this.toolbar3 = toolbar3;
   }
 
@@ -83,9 +83,9 @@ public final class CategoriasBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnMenu;
-      ImageView btnMenu = ViewBindings.findChildViewById(rootView, id);
-      if (btnMenu == null) {
+      id = R.id.btnAtras1;
+      ImageView btnAtras1 = ViewBindings.findChildViewById(rootView, id);
+      if (btnAtras1 == null) {
         break missingId;
       }
 
@@ -96,7 +96,7 @@ public final class CategoriasBinding implements ViewBinding {
       }
 
       return new CategoriasBinding((ConstraintLayout) rootView, RVCategorias, btnAddCategoria2,
-          btnMenu, toolbar3);
+          btnAtras1, toolbar3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

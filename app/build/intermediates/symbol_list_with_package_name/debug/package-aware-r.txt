@@ -3485,6 +3485,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id textView10
 id textView11
 id textView2
@@ -3534,7 +3535,6 @@ id tv1
 id tv2
 id tv3
 id tv4
-id tvAgregarImagen
 id tvAgregarImagen2
 id tvAnho
 id tvAñadirCategoria

@@ -5,12 +5,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
-import com.example.mygestorplantillas.Divisas
+import run.budgetbuddy.activities.divisa.Divisas
 import models.ItemGenerico
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.GG.Principal3G
-import run.budgetbuddy.activities.MG.MgInicioIngresos
-import run.budgetbuddy.activities.categoria.CrearCategoria
+import run.budgetbuddy.activities.categoria.Categorias
 
 class MenuLateral3G : AppCompatActivity() {
 
@@ -66,7 +65,7 @@ class MenuLateral3G : AppCompatActivity() {
                 }
 
                 1 -> {
-                    val intent = Intent(this, CrearCategoria::class.java)
+                    val intent = Intent(this, Categorias::class.java)
                     startActivity(intent)
                     finish()
 

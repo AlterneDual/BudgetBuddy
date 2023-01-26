@@ -20,6 +20,19 @@
         app:navigationIcon="@drawable/menu_button"
         tools:ignore="MissingConstraints" />
 
+    <ImageView
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="13dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_button" />
+
+
     <ListView
         android:id="@+id/list_view"
         android:layout_width="match_parent"

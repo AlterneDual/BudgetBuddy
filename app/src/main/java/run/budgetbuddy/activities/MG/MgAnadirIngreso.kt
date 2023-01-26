@@ -52,7 +52,7 @@ class MgAnadirIngreso : AppCompatActivity() {
         binding.btnFecha7.setOnClickListener {
             Toast.makeText(
                 this,
-                "Seleccionada la fecha N - 1 ",
+                "Seleccionada la fecha N ",
                 Toast.LENGTH_LONG
             ).show()
         }
@@ -60,7 +60,7 @@ class MgAnadirIngreso : AppCompatActivity() {
         binding.btnFecha6.setOnClickListener {
             Toast.makeText(
                 this,
-                "Seleccionada la fecha",
+                "Seleccionada la fecha N -1",
                 Toast.LENGTH_LONG
             ).show()
         }

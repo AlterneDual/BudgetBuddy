@@ -5,11 +5,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
-import com.example.mygestorplantillas.Divisas
+import run.budgetbuddy.activities.divisa.Divisas
 import models.ItemGenerico
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.MG.MgInicio
-import run.budgetbuddy.activities.MG.MgInicioIngresos
+import run.budgetbuddy.activities.categoria.Categorias
 
 class MenuLateralMG : AppCompatActivity() {
 
@@ -66,7 +66,9 @@ class MenuLateralMG : AppCompatActivity() {
                 }
 
                 1 -> {
-
+                    val intent = Intent(this, Categorias::class.java)
+                    startActivity(intent)
+                    finish()
 
                 }
 
@@ -84,9 +86,9 @@ class MenuLateralMG : AppCompatActivity() {
                 }
 
                 4 -> {
-                    val intent = Intent(this, MenuLateral3G::class.java)
-                    startActivity(intent)
-                    finish()
+//                    val intent = Intent(this, MenuLateral3G::class.java)
+//                    startActivity(intent)
+//                    finish()
 
                 }
 
