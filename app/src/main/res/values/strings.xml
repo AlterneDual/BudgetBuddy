@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">MyGestorPlantillas</string>
+    <string name="ingresos_underline"><u>INGRESOS</u></string>
+    <string name="gastos_underline"><u>GASTOS</u></string>
+    <string name="ingresos">INGRESOS</string>
+    <string name="gastos">GASTOS</string>
+    <string name="semana_underline"><u>12 dic. - 19 dic.</u></string>
+    <string name="periodo_underline"><u>Periodo</u></string>
+    <string name="year_underline"><u>Año</u></string>
+    <string name="recordar"><u>¿Has olvidado tu contraseña?</u></string>
+
+    <string name="my_gestor">My Gestor</string>
+    <string name="divisa">Divisa</string>
+    <string name="inicio">Inicio</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="editar_categorias">Editar Categorias</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="todo">TODO</string>
+    <string name="grupal">Grupal</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="password">Contraseña</string>
+    <string name="repetirPass">Repetir Contraseña</string>
+    <string name="aplicarCambios">Aplicar Cambios</string>
+    <string name="idioma">Idioma</string>
+    <string name="periodoDefecto">Periodo por defecto</string>
+    <string name="sinRedondear">Sin redondear</string>
+    <string name="seleccioneTema">Seleccione el tema</string>
+    <string name="pantallaInicial">Pantalla Inicial</string>
+    <string name="pantallaInicialMygestor">Pantalla Inicial My Gestor</string>
+    <string name="eliminarDatos">Eliminar todos los datos</string>
+    <string name="espanyol">Español</string>
+    <string name="semanal">Semanal</string>
+    <string name="predeterminado">Predeterminado</string>
+    <string name="borrar_datos">Borrar Datos</string>
+    <string name="diario">Diario</string>
+    <string name="mensual">Mensual</string>
+    <string name="anual">Anual</string>
+    <string name="gestor_gastos_grupal">Gestor Gastos Grupal</string>
+    <string name="gestor_con_saldo">Gestor con Saldo</string>
+    <string name="dia">Dia</string>
+    <string name="oscuro">OSCURO</string>
+    <string name="noche">NOCHE</string>
+    <string name="nombre1">nombre1</string>
+    <string name="nombre2">nombre2</string>
+    <string name="email">Email</string>
+
+</resources>

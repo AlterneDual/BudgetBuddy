@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/toolbarmenu_format"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/back_row"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="411dp"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTituloGasto"
+                android:layout_width="165dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/oswald"
+                android:gravity="center|start"
+                android:text="Titulo del Gasto"
+                android:textColor="@color/white"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/tvDebeA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/oswald"
+                android:gravity="top|start"
+                android:text="A debe a B"
+                android:textColor="@color/silver"
+                android:textSize="24dp" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/btnCategoria"
+                android:layout_width="124dp"
+                android:layout_height="94dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="36dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/default_categoria" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/card_black"
+        android:clickable="false"
+        android:padding="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/TextViewB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="A"
+                    android:textColor="@color/vidrian_green"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="debe a"
+                    android:textColor="@color/silver"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvReceptor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="B (Yo)"
+                    android:textColor="@color/vidrian_green"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvCantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald_bold"
+                    android:text="+ 34€"
+                    android:textColor="@color/green"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.8"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.507" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="276dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        app:layout_constraintVertical_bias="0.291"
+        tools:layout_editor_absoluteX="-5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <EditText
+                android:id="@+id/etCantidadPagada"
+                android:layout_width="198dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="28dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:fontFamily="@font/oswald_bold"
+                android:inputType="textPersonName"
+                android:singleLine="false"
+                android:text="¿Cuánto te ha pagado?"
+                android:textColor="@color/dark_silver"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <EditText
+                android:id="@+id/etFechaPagada"
+                android:layout_width="198dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:enabled="false"
+                android:fontFamily="@font/oswald_bold"
+                android:inputType="none"
+                android:text="¿Cuándo te ha pagado?"
+                android:textColor="@color/dark_silver"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etCantidadPagada" />
+
+            <ImageButton
+                android:id="@+id/btnCalendario"
+                android:layout_width="90dp"
+                android:layout_height="69dp"
+                android:layout_marginStart="16dp"
+                android:background="@color/transparent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/etFechaPagada"
+                app:layout_constraintTop_toBottomOf="@+id/btnSelectorDivisa"
+                app:layout_constraintVertical_bias="0.074"
+                app:srcCompat="@drawable/calendar" />
+
+            <Button
+                android:id="@+id/btnSelectorDivisa"
+                android:layout_width="96dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="28dp"
+                android:background="@drawable/default_button"
+                android:fontFamily="@font/oswald_bold"
+                android:text="Eur"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/etCantidadPagada"
+                app:layout_constraintStart_toEndOf="@+id/etCantidadPagada"
+                app:layout_constraintTop_toTopOf="@+id/etCantidadPagada"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/btnPagadorSelector"
+                android:layout_width="188dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/default_button"
+                android:fontFamily="@font/oswald_bold"
+                android:text="¿Quien ha pagado?"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etFechaPagada" />
+
+            <EditText
+                android:id="@+id/etPagadorInfo"
+                android:layout_width="115dp"
+                android:layout_height="51dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="@color/white"
+                android:ems="10"
+                android:enabled="false"
+                android:fontFamily="@font/oswald_bold"
+                android:gravity="center"
+                android:inputType="none"
+                android:text="A"
+                android:textColor="@color/vidrian_green"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/btnPagadorSelector"
+                app:layout_constraintTop_toBottomOf="@+id/btnCalendario" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="162dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/oswald_bold"
+        android:text="Guardar"
+        android:textColor="@color/light_black_2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnAllReembolsos"
+        android:layout_width="66dp"
+        android:layout_height="38dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/default_button"
+        android:backgroundTint="@color/orange"
+        android:fontFamily="@font/oswald_bold"
+        android:text="Otros"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar"
+        tools:ignore="TouchTargetSizeCheck" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
