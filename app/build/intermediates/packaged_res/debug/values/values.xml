@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#0E0D0D</color>
+    <color name="brown">#BF5A494F</color>
+    <color name="crayola">#F4D35E</color>
+    <color name="dark_black">#000</color>
+    <color name="dark_liver">#5A494F</color>
+    <color name="dark_orange">#80FF9D0A</color>
+    <color name="dark_silver">#615B5B</color>
+    <color name="green">#2ACD1B</color>
+    <color name="light_black">#80000000</color>
+    <color name="light_black_2">#CC000000</color>
+    <color name="orange">#FF9D0A</color>
+    <color name="red">#EF5757</color>
+    <color name="silver">#988C8C</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="vidrian_green">#11928E</color>
+    <color name="vidrian_green_darker">#2D7977</color>
+    <color name="vidrian_light_green">#68C9AC</color>
+    <color name="white">#FFF</color>
+    <string name="aceptar">Aceptar</string>
+    <string name="ajustes">Ajustes</string>
+    <string name="anual">Anual</string>
+    <string name="aplicarCambios">Aplicar Cambios</string>
+    <string name="app_name">MyGestorPlantillas</string>
+    <string name="borrar_datos">Borrar Datos</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="dia">Dia</string>
+    <string name="diario">Diario</string>
+    <string name="divisa">Divisa</string>
+    <string name="editar_categorias">Editar Categorias</string>
+    <string name="editar_perfil">Editar Perfil</string>
+    <string name="eliminarDatos">Eliminar todos los datos</string>
+    <string name="email">Email</string>
+    <string name="espanyol">Español</string>
+    <string name="gastos">GASTOS</string>
+    <string name="gastos_underline"><u>GASTOS</u></string>
+    <string name="gestor_con_saldo">Gestor con Saldo</string>
+    <string name="gestor_gastos_grupal">Gestor Gastos Grupal</string>
+    <string name="grupal">Grupal</string>
+    <string name="idioma">Idioma</string>
+    <string name="ingresos">INGRESOS</string>
+    <string name="ingresos_underline"><u>INGRESOS</u></string>
+    <string name="inicio">Inicio</string>
+    <string name="mensual">Mensual</string>
+    <string name="my_gestor">My Gestor</string>
+    <string name="noche">NOCHE</string>
+    <string name="nombre1">nombre1</string>
+    <string name="nombre2">nombre2</string>
+    <string name="oscuro">OSCURO</string>
+    <string name="pantallaInicial">Pantalla Inicial</string>
+    <string name="pantallaInicialMygestor">Pantalla Inicial My Gestor</string>
+    <string name="password">Contraseña</string>
+    <string name="periodoDefecto">Periodo por defecto</string>
+    <string name="periodo_underline"><u>Periodo</u></string>
+    <string name="predeterminado">Predeterminado</string>
+    <string name="recordar"><u>¿Has olvidado tu contraseña?</u></string>
+    <string name="repetirPass">Repetir Contraseña</string>
+    <string name="seleccioneTema">Seleccione el tema</string>
+    <string name="semana_underline"><u>12 dic. - 19 dic.</u></string>
+    <string name="semanal">Semanal</string>
+    <string name="sinRedondear">Sin redondear</string>
+    <string name="todo">TODO</string>
+    <string name="year_underline"><u>Año</u></string>
+    <style name="Theme.BudgetBuddy" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+            </style>
+</resources>

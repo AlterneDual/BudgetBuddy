@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/toolbarmenu_format"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:navigationIcon="@drawable/menu_button"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/groupList"
+        android:layout_width="match_parent"
+        android:layout_height="487dp"
+        android:layout_marginTop="24dp"
+        android:layout_weight="1"
+        android:background="@color/silver"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/addGrupo"
+        android:layout_width="76dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/transparent"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/groupList"
+        app:layout_constraintVertical_bias="0.948"
+        app:srcCompat="@drawable/plus_button" />
+
+    <ImageButton
+        android:id="@+id/optionsGrupo"
+        android:layout_width="76dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="1"
+        android:background="@color/transparent"
+        android:clickable="false"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/groupList"
+        app:layout_constraintVertical_bias="0.948"
+        app:srcCompat="@drawable/editable"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/addGrupoEnlace"
+        android:layout_width="163dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="464dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/long_button_empty_white"
+        android:fontFamily="@font/oswald_semibold"
+        android:padding="0dp"
+        android:text="Añadir por enlace"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/optionsGrupo"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <Button
+        android:id="@+id/nuevoGrupo"
+        android:layout_width="163dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/long_button_empty_white"
+        android:fontFamily="@font/oswald_semibold"
+        android:text="Nuevo Grupo"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toStartOf="@+id/optionsGrupo"
+        app:layout_constraintTop_toBottomOf="@+id/addGrupoEnlace" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

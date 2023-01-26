@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/default_backgound"
+    tools:context=".activities.app.Login">
+
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="65dp"
+        android:fontFamily="@font/oswald"
+        android:text="Email"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRegistrar" />
+
+    <ImageView
+        android:id="@+id/btnMenu1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:clickable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/menu_button" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_inputtext"
+        android:ems="10"
+        android:fontFamily="@font/oswald"
+        android:inputType="textEmailAddress"
+        android:paddingStart="10dp"
+        android:text="example@mail.com"
+        android:textColor="@color/light_black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/oswald"
+        android:text="Contraseña"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+    <EditText
+        android:id="@+id/etPsw"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/custom_inputtext"
+        android:ems="10"
+        android:fontFamily="@font/oswald"
+        android:inputType="textPassword"
+        android:paddingStart="10dp"
+        android:text="iii"
+        android:textColor="@color/light_black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+    <CheckBox
+        android:id="@+id/recordarPassword"
+        android:layout_width="143dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:buttonTint="@color/white"
+        android:fontFamily="@font/oswald"
+        android:text="Recuerdame"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPsw"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvContrasenaOlvidada"
+        android:layout_width="238dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/oswald"
+        android:text="@string/recordar"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recordarPassword"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="235dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/long_button_orange"
+        android:fontFamily="@font/oswald"
+        android:text="REGISTRARME"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnInicioSesion"
+        android:layout_width="236dp"
+        android:layout_height="90dp"
+        android:background="@drawable/long_button_empty"
+        android:fontFamily="@font/oswald"
+        android:text="INICIAR SESION"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContrasenaOlvidada"
+        app:layout_constraintVertical_bias="0.838" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

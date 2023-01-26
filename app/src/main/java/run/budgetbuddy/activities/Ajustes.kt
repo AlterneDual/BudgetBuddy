@@ -1,18 +1,19 @@
 package run.budgetbuddy.activities
 
+import android.annotation.SuppressLint
 import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
+import models.ItemGenerico
 import run.budgetbuddy.R
 import run.budgetbuddy.adapter.myListAdapter
-import run.budgetbuddy.model.OpcionAjuste
 
 class Ajustes : AppCompatActivity() {
 
     private lateinit var adapterList: myListAdapter
     private lateinit var list_view: ListView
-    private lateinit var listaOpciones: MutableList<OpcionAjuste>
+    private lateinit var listaOpciones: MutableList<ItemGenerico>
     private var posActual: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,22 +32,22 @@ class Ajustes : AppCompatActivity() {
     private fun inicializarAdapter() {
 
         list_view = findViewById<ListView>(R.id.list_view)
-        adapterList = myListAdapter(this, R.layout.custom_list, listaOpciones)
+        adapterList = myListAdapter(this, R.layout.custom_list_ajustes, listaOpciones)
         list_view.adapter = adapterList
         registerForContextMenu(list_view)
     }
 
-    private fun crearAjustes(): MutableList<OpcionAjuste> {
+    private fun crearAjustes(): MutableList<ItemGenerico> {
 
-        val listaAjustes = mutableListOf<OpcionAjuste>(
+        val listaAjustes = mutableListOf<ItemGenerico>(
 
-            OpcionAjuste("Idioma", "Español", R.drawable.idioma),
-            OpcionAjuste("Periodo por defecto", "Semanal", R.drawable.calendario),
-            OpcionAjuste("Redondeo", "Sin redondear", R.drawable.decimal),
-            OpcionAjuste("Tema por defecto", "Predeterminado", R.drawable.tema),
-            OpcionAjuste("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
-            OpcionAjuste("Pantalla inicial MyGestor", "Semanal", R.drawable.group),
-            OpcionAjuste(
+            ItemGenerico("Idioma", "Español", R.drawable.idioma),
+            ItemGenerico("Periodo por defecto", "Semanal", R.drawable.calendario),
+            ItemGenerico("Redondeo", "Sin redondear", R.drawable.decimal),
+            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
+            ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
+            ItemGenerico("Pantalla inicial MyGestor", "Semanal", R.drawable.group),
+            ItemGenerico(
                 "Eliminar datos", "Borrar todos los datos", R.drawable.eliminar
             )
 
@@ -55,6 +56,7 @@ class Ajustes : AppCompatActivity() {
         return listaAjustes
     }
 
+    @SuppressLint("InflateParams")
     fun abrirOpcion() {
 
         list_view.setOnItemClickListener() { adapterView, view, position, id ->

@@ -6,20 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import models.ItemGenerico
 import run.budgetbuddy.R
-import run.budgetbuddy.model.OpcionAjuste
 
 class myListAdapter(
     private val context: Context,
     private val layout: Int,
-    private val listaAjustes: List<OpcionAjuste>
+    private val listaAjustes: List<ItemGenerico>
 ) : BaseAdapter() {
 
     override fun getCount(): Int {
         return listaAjustes.size
     }
 
-    override fun getItem(position: Int): OpcionAjuste {
+    override fun getItem(position: Int): ItemGenerico {
         return listaAjustes[position]
     }
 

@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
-import run.budgetbuddy.activities.MenuLateralMG
 import run.budgetbuddy.databinding.MainView3gBinding
 
 class Principal3G : AppCompatActivity() {

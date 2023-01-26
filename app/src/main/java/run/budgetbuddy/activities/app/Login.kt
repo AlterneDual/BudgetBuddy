@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import run.budgetbuddy.activities.GG.Principal3G
 import run.budgetbuddy.activities.MenuLateralMG
+import run.budgetbuddy.activities.GG.Principal3G
 import run.budgetbuddy.databinding.LoginBinding
 
 class Login : AppCompatActivity() {
