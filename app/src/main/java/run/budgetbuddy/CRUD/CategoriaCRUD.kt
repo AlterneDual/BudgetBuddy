@@ -15,6 +15,7 @@ open class CategoriaCRUD {
             var categoriaR = r.createObject(Categoria::class.java, key)
             categoriaR.nombre = categoria.nombre
             categoriaR.icono = categoria.icono
+            categoriaR.color = categoria.color
             categoriaR.descripcion = categoria.descripcion
 
 
@@ -44,7 +45,7 @@ open class CategoriaCRUD {
 
     }
 
-    fun updateCategoria(id: Int, new_nombre: String?, new_icono: Int?, new_desc: String?){
+    fun updateCategoria(id: Int, new_nombre: String?, new_icono: Int?, new_desc: String?, new_color : Int?){
         var categoria = getCategoria(id)
         realm.executeTransaction{
             if(new_nombre != null){
@@ -52,6 +53,9 @@ open class CategoriaCRUD {
             }
             if(new_icono != null) {
                 categoria?.icono = new_icono
+            }
+            if(new_color != null) {
+                categoria?.color = new_color
             }
             if(new_desc != null) {
                 categoria?.descripcion = new_desc
