@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import run.budgetbuddy.activities.MenuLateralMG
+import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.databinding.MgInicioIngresosBinding
 
 class MgInicioIngresos : AppCompatActivity() {

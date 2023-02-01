@@ -3,7 +3,7 @@ package run.budgetbuddy.activities.categoria
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import run.budgetbuddy.activities.MenuLateralMG
+import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.databinding.CategoriasBinding
 
 class Categorias : AppCompatActivity() {

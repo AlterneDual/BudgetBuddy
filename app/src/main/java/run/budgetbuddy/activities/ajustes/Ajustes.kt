@@ -1,14 +1,14 @@
-package run.budgetbuddy.activities
+package run.budgetbuddy.activities.ajustes
 
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Intent
-import android.os.Binder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
 import models.ItemGenerico
 import run.budgetbuddy.R
+import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.adapter.myListAdapter
 import run.budgetbuddy.databinding.ActivityAjustesBinding
 

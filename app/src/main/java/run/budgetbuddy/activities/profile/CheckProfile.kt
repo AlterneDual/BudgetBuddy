@@ -1,4 +1,4 @@
-package run.budgetbuddy.activities
+package run.budgetbuddy.activities.profile
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

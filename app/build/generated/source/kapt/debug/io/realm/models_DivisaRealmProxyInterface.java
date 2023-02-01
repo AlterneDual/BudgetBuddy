@@ -12,8 +12,8 @@ public interface models_DivisaRealmProxyInterface {
     public void realmSet$divOrigen(String value);
     public String realmGet$divDestino();
     public void realmSet$divDestino(String value);
-    public double realmGet$origen();
-    public void realmSet$origen(double value);
-    public double realmGet$destino();
-    public void realmSet$destino(double value);
+    public Double realmGet$origen();
+    public void realmSet$origen(Double value);
+    public Double realmGet$destino();
+    public void realmSet$destino(Double value);
 }

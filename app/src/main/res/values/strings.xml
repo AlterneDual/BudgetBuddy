@@ -5,7 +5,7 @@
     <string name="ingresos">INGRESOS</string>
     <string name="gastos">GASTOS</string>
     <string name="semana_underline"><u>12 dic. - 19 dic.</u></string>
-    <string name="periodo_underline"><u>Periodo</u></string>
+    <string name="periodo_underline">Periodo</string>
     <string name="year_underline"><u>Año</u></string>
     <string name="recordar"><u>¿Has olvidado tu contraseña?</u></string>
 

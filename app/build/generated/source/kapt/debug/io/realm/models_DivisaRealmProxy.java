@@ -144,7 +144,8 @@ public class models_DivisaRealmProxy extends models.Divisa
             }
             final Row row = proxyState.getRow$realm();
             if (value == null) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'nombre' to null.");
+                row.getTable().setNull(columnInfo.nombreColKey, row.getObjectKey(), true);
+                return;
             }
             row.getTable().setString(columnInfo.nombreColKey, row.getObjectKey(), value, true);
             return;
@@ -152,7 +153,8 @@ public class models_DivisaRealmProxy extends models.Divisa
 
         proxyState.getRealm$realm().checkIfValid();
         if (value == null) {
-            throw new IllegalArgumentException("Trying to set non-nullable field 'nombre' to null.");
+            proxyState.getRow$realm().setNull(columnInfo.nombreColKey);
+            return;
         }
         proxyState.getRow$realm().setString(columnInfo.nombreColKey, value);
     }
@@ -172,7 +174,8 @@ public class models_DivisaRealmProxy extends models.Divisa
             }
             final Row row = proxyState.getRow$realm();
             if (value == null) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'simbolo' to null.");
+                row.getTable().setNull(columnInfo.simboloColKey, row.getObjectKey(), true);
+                return;
             }
             row.getTable().setString(columnInfo.simboloColKey, row.getObjectKey(), value, true);
             return;
@@ -180,7 +183,8 @@ public class models_DivisaRealmProxy extends models.Divisa
 
         proxyState.getRealm$realm().checkIfValid();
         if (value == null) {
-            throw new IllegalArgumentException("Trying to set non-nullable field 'simbolo' to null.");
+            proxyState.getRow$realm().setNull(columnInfo.simboloColKey);
+            return;
         }
         proxyState.getRow$realm().setString(columnInfo.simboloColKey, value);
     }
@@ -200,7 +204,8 @@ public class models_DivisaRealmProxy extends models.Divisa
             }
             final Row row = proxyState.getRow$realm();
             if (value == null) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'divOrigen' to null.");
+                row.getTable().setNull(columnInfo.divOrigenColKey, row.getObjectKey(), true);
+                return;
             }
             row.getTable().setString(columnInfo.divOrigenColKey, row.getObjectKey(), value, true);
             return;
@@ -208,7 +213,8 @@ public class models_DivisaRealmProxy extends models.Divisa
 
         proxyState.getRealm$realm().checkIfValid();
         if (value == null) {
-            throw new IllegalArgumentException("Trying to set non-nullable field 'divOrigen' to null.");
+            proxyState.getRow$realm().setNull(columnInfo.divOrigenColKey);
+            return;
         }
         proxyState.getRow$realm().setString(columnInfo.divOrigenColKey, value);
     }
@@ -228,7 +234,8 @@ public class models_DivisaRealmProxy extends models.Divisa
             }
             final Row row = proxyState.getRow$realm();
             if (value == null) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'divDestino' to null.");
+                row.getTable().setNull(columnInfo.divDestinoColKey, row.getObjectKey(), true);
+                return;
             }
             row.getTable().setString(columnInfo.divDestinoColKey, row.getObjectKey(), value, true);
             return;
@@ -236,64 +243,87 @@ public class models_DivisaRealmProxy extends models.Divisa
 
         proxyState.getRealm$realm().checkIfValid();
         if (value == null) {
-            throw new IllegalArgumentException("Trying to set non-nullable field 'divDestino' to null.");
+            proxyState.getRow$realm().setNull(columnInfo.divDestinoColKey);
+            return;
         }
         proxyState.getRow$realm().setString(columnInfo.divDestinoColKey, value);
     }
 
     @Override
     @SuppressWarnings("cast")
-    public double realmGet$origen() {
+    public Double realmGet$origen() {
         proxyState.getRealm$realm().checkIfValid();
+        if (proxyState.getRow$realm().isNull(columnInfo.origenColKey)) {
+            return null;
+        }
         return (double) proxyState.getRow$realm().getDouble(columnInfo.origenColKey);
     }
 
     @Override
-    public void realmSet$origen(double value) {
+    public void realmSet$origen(Double value) {
         if (proxyState.isUnderConstruction()) {
             if (!proxyState.getAcceptDefaultValue$realm()) {
                 return;
             }
             final Row row = proxyState.getRow$realm();
+            if (value == null) {
+                row.getTable().setNull(columnInfo.origenColKey, row.getObjectKey(), true);
+                return;
+            }
             row.getTable().setDouble(columnInfo.origenColKey, row.getObjectKey(), value, true);
             return;
         }
 
         proxyState.getRealm$realm().checkIfValid();
+        if (value == null) {
+            proxyState.getRow$realm().setNull(columnInfo.origenColKey);
+            return;
+        }
         proxyState.getRow$realm().setDouble(columnInfo.origenColKey, value);
     }
 
     @Override
     @SuppressWarnings("cast")
-    public double realmGet$destino() {
+    public Double realmGet$destino() {
         proxyState.getRealm$realm().checkIfValid();
+        if (proxyState.getRow$realm().isNull(columnInfo.destinoColKey)) {
+            return null;
+        }
         return (double) proxyState.getRow$realm().getDouble(columnInfo.destinoColKey);
     }
 
     @Override
-    public void realmSet$destino(double value) {
+    public void realmSet$destino(Double value) {
         if (proxyState.isUnderConstruction()) {
             if (!proxyState.getAcceptDefaultValue$realm()) {
                 return;
             }
             final Row row = proxyState.getRow$realm();
+            if (value == null) {
+                row.getTable().setNull(columnInfo.destinoColKey, row.getObjectKey(), true);
+                return;
+            }
             row.getTable().setDouble(columnInfo.destinoColKey, row.getObjectKey(), value, true);
             return;
         }
 
         proxyState.getRealm$realm().checkIfValid();
+        if (value == null) {
+            proxyState.getRow$realm().setNull(columnInfo.destinoColKey);
+            return;
+        }
         proxyState.getRow$realm().setDouble(columnInfo.destinoColKey, value);
     }
 
     private static OsObjectSchemaInfo createExpectedObjectSchemaInfo() {
         OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(NO_ALIAS, "Divisa", false, 7, 0);
         builder.addPersistedProperty(NO_ALIAS, "id", RealmFieldType.INTEGER, Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "nombre", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "simbolo", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "divOrigen", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "divDestino", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "origen", RealmFieldType.DOUBLE, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "destino", RealmFieldType.DOUBLE, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "nombre", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "simbolo", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "divOrigen", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "divDestino", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "origen", RealmFieldType.DOUBLE, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "destino", RealmFieldType.DOUBLE, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         return builder.build();
     }
 
@@ -379,14 +409,14 @@ public class models_DivisaRealmProxy extends models.Divisa
         }
         if (json.has("origen")) {
             if (json.isNull("origen")) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'origen' to null.");
+                objProxy.realmSet$origen(null);
             } else {
                 objProxy.realmSet$origen((double) json.getDouble("origen"));
             }
         }
         if (json.has("destino")) {
             if (json.isNull("destino")) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'destino' to null.");
+                objProxy.realmSet$destino(null);
             } else {
                 objProxy.realmSet$destino((double) json.getDouble("destino"));
             }
@@ -446,14 +476,14 @@ public class models_DivisaRealmProxy extends models.Divisa
                     objProxy.realmSet$origen((double) reader.nextDouble());
                 } else {
                     reader.skipValue();
-                    throw new IllegalArgumentException("Trying to set non-nullable field 'origen' to null.");
+                    objProxy.realmSet$origen(null);
                 }
             } else if (name.equals("destino")) {
                 if (reader.peek() != JsonToken.NULL) {
                     objProxy.realmSet$destino((double) reader.nextDouble());
                 } else {
                     reader.skipValue();
-                    throw new IllegalArgumentException("Trying to set non-nullable field 'destino' to null.");
+                    objProxy.realmSet$destino(null);
                 }
             } else {
                 reader.skipValue();
@@ -577,8 +607,14 @@ public class models_DivisaRealmProxy extends models.Divisa
         if (realmGet$divDestino != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.divDestinoColKey, objKey, realmGet$divDestino, false);
         }
-        Table.nativeSetDouble(tableNativePtr, columnInfo.origenColKey, objKey, ((models_DivisaRealmProxyInterface) object).realmGet$origen(), false);
-        Table.nativeSetDouble(tableNativePtr, columnInfo.destinoColKey, objKey, ((models_DivisaRealmProxyInterface) object).realmGet$destino(), false);
+        Double realmGet$origen = ((models_DivisaRealmProxyInterface) object).realmGet$origen();
+        if (realmGet$origen != null) {
+            Table.nativeSetDouble(tableNativePtr, columnInfo.origenColKey, objKey, realmGet$origen, false);
+        }
+        Double realmGet$destino = ((models_DivisaRealmProxyInterface) object).realmGet$destino();
+        if (realmGet$destino != null) {
+            Table.nativeSetDouble(tableNativePtr, columnInfo.destinoColKey, objKey, realmGet$destino, false);
+        }
         return objKey;
     }
 
@@ -624,8 +660,14 @@ public class models_DivisaRealmProxy extends models.Divisa
             if (realmGet$divDestino != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.divDestinoColKey, objKey, realmGet$divDestino, false);
             }
-            Table.nativeSetDouble(tableNativePtr, columnInfo.origenColKey, objKey, ((models_DivisaRealmProxyInterface) object).realmGet$origen(), false);
-            Table.nativeSetDouble(tableNativePtr, columnInfo.destinoColKey, objKey, ((models_DivisaRealmProxyInterface) object).realmGet$destino(), false);
+            Double realmGet$origen = ((models_DivisaRealmProxyInterface) object).realmGet$origen();
+            if (realmGet$origen != null) {
+                Table.nativeSetDouble(tableNativePtr, columnInfo.origenColKey, objKey, realmGet$origen, false);
+            }
+            Double realmGet$destino = ((models_DivisaRealmProxyInterface) object).realmGet$destino();
+            if (realmGet$destino != null) {
+                Table.nativeSetDouble(tableNativePtr, columnInfo.destinoColKey, objKey, realmGet$destino, false);
+            }
         }
     }
 
@@ -670,8 +712,18 @@ public class models_DivisaRealmProxy extends models.Divisa
         } else {
             Table.nativeSetNull(tableNativePtr, columnInfo.divDestinoColKey, objKey, false);
         }
-        Table.nativeSetDouble(tableNativePtr, columnInfo.origenColKey, objKey, ((models_DivisaRealmProxyInterface) object).realmGet$origen(), false);
-        Table.nativeSetDouble(tableNativePtr, columnInfo.destinoColKey, objKey, ((models_DivisaRealmProxyInterface) object).realmGet$destino(), false);
+        Double realmGet$origen = ((models_DivisaRealmProxyInterface) object).realmGet$origen();
+        if (realmGet$origen != null) {
+            Table.nativeSetDouble(tableNativePtr, columnInfo.origenColKey, objKey, realmGet$origen, false);
+        } else {
+            Table.nativeSetNull(tableNativePtr, columnInfo.origenColKey, objKey, false);
+        }
+        Double realmGet$destino = ((models_DivisaRealmProxyInterface) object).realmGet$destino();
+        if (realmGet$destino != null) {
+            Table.nativeSetDouble(tableNativePtr, columnInfo.destinoColKey, objKey, realmGet$destino, false);
+        } else {
+            Table.nativeSetNull(tableNativePtr, columnInfo.destinoColKey, objKey, false);
+        }
         return objKey;
     }
 
@@ -723,8 +775,18 @@ public class models_DivisaRealmProxy extends models.Divisa
             } else {
                 Table.nativeSetNull(tableNativePtr, columnInfo.divDestinoColKey, objKey, false);
             }
-            Table.nativeSetDouble(tableNativePtr, columnInfo.origenColKey, objKey, ((models_DivisaRealmProxyInterface) object).realmGet$origen(), false);
-            Table.nativeSetDouble(tableNativePtr, columnInfo.destinoColKey, objKey, ((models_DivisaRealmProxyInterface) object).realmGet$destino(), false);
+            Double realmGet$origen = ((models_DivisaRealmProxyInterface) object).realmGet$origen();
+            if (realmGet$origen != null) {
+                Table.nativeSetDouble(tableNativePtr, columnInfo.origenColKey, objKey, realmGet$origen, false);
+            } else {
+                Table.nativeSetNull(tableNativePtr, columnInfo.origenColKey, objKey, false);
+            }
+            Double realmGet$destino = ((models_DivisaRealmProxyInterface) object).realmGet$destino();
+            if (realmGet$destino != null) {
+                Table.nativeSetDouble(tableNativePtr, columnInfo.destinoColKey, objKey, realmGet$destino, false);
+            } else {
+                Table.nativeSetNull(tableNativePtr, columnInfo.destinoColKey, objKey, false);
+            }
         }
     }
 
@@ -788,27 +850,27 @@ public class models_DivisaRealmProxy extends models.Divisa
         stringBuilder.append("}");
         stringBuilder.append(",");
         stringBuilder.append("{nombre:");
-        stringBuilder.append(realmGet$nombre());
+        stringBuilder.append(realmGet$nombre() != null ? realmGet$nombre() : "null");
         stringBuilder.append("}");
         stringBuilder.append(",");
         stringBuilder.append("{simbolo:");
-        stringBuilder.append(realmGet$simbolo());
+        stringBuilder.append(realmGet$simbolo() != null ? realmGet$simbolo() : "null");
         stringBuilder.append("}");
         stringBuilder.append(",");
         stringBuilder.append("{divOrigen:");
-        stringBuilder.append(realmGet$divOrigen());
+        stringBuilder.append(realmGet$divOrigen() != null ? realmGet$divOrigen() : "null");
         stringBuilder.append("}");
         stringBuilder.append(",");
         stringBuilder.append("{divDestino:");
-        stringBuilder.append(realmGet$divDestino());
+        stringBuilder.append(realmGet$divDestino() != null ? realmGet$divDestino() : "null");
         stringBuilder.append("}");
         stringBuilder.append(",");
         stringBuilder.append("{origen:");
-        stringBuilder.append(realmGet$origen());
+        stringBuilder.append(realmGet$origen() != null ? realmGet$origen() : "null");
         stringBuilder.append("}");
         stringBuilder.append(",");
         stringBuilder.append("{destino:");
-        stringBuilder.append(realmGet$destino());
+        stringBuilder.append(realmGet$destino() != null ? realmGet$destino() : "null");
         stringBuilder.append("}");
         stringBuilder.append("]");
         return stringBuilder.toString();

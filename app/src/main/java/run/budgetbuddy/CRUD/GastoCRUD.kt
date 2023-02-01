@@ -5,6 +5,7 @@ import io.realm.kotlin.where
 import models.Categoria
 import models.Divisa
 import models.Gasto
+import java.util.Date
 
 open class GastoCRUD {
 
@@ -49,7 +50,7 @@ open class GastoCRUD {
 
     }
 
-    fun updateGasto(id: Int, new_importe : Double?, new_fecha: String?, new_categoria: Categoria?, new_desc: String?, new_divisa: Divisa?){
+    fun updateGasto(id: Int, new_importe : Double?, new_fecha: Date?, new_categoria: Categoria?, new_desc: String?, new_divisa: Divisa?){
         var gasto = getGasto(id)
         realm.executeTransaction{
             if(new_importe != null){

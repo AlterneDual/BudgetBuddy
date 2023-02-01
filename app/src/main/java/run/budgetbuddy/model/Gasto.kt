@@ -1,29 +1,30 @@
 package models
 
-import io.realm.RealmModel
 import io.realm.RealmObject
-import io.realm.RealmResults
 import io.realm.annotations.PrimaryKey
 import io.realm.annotations.RealmClass
-import io.realm.annotations.RealmField
-import io.realm.internal.ObjectServerFacade.RealmInstanceFactory
+import java.util.Date
+import java.util.Calendar
 
 @RealmClass
-open class Gasto() : RealmObject(){
+open class Gasto() : RealmObject() {
+
+    @Transient
+    var calendar: Calendar = Calendar.getInstance()
 
     @PrimaryKey
-    var id : Int = 0
+    var id: Int = 0
 
-    var importe : Double = 0.0
-    var fecha : String? = ""
-    var categoria: Categoria? = Categoria()
-    var descripcion : String = ""
-    var divisa : Divisa? = Divisa()
+    var importe: Double = 0.0
+    var fecha: Date = calendar.time
+    var categoria: Categoria? = null
+    var descripcion: String = ""
+    var divisa: Divisa? = null
 
-    var id_user : Int = 0
+    var id_user: Int = 0
 
     override fun toString(): String {
-        return "ID: $id, Importe: $importe || DESC: $descripcion || Categoria:|| id_user: $id_user"
+        return "ID: $id, Importe: $importe || DESC: $descripcion || Categoria: ${categoria.toString()}|| id_user: $id_user || Fecha: ${fecha.toString()}"
     }
 
 }

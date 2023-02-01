@@ -52,7 +52,7 @@
     <string name="pantallaInicialMygestor">Pantalla Inicial My Gestor</string>
     <string name="password">Contraseña</string>
     <string name="periodoDefecto">Periodo por defecto</string>
-    <string name="periodo_underline"><u>Periodo</u></string>
+    <string name="periodo_underline">Periodo</string>
     <string name="predeterminado">Predeterminado</string>
     <string name="recordar"><u>¿Has olvidado tu contraseña?</u></string>
     <string name="repetirPass">Repetir Contraseña</string>

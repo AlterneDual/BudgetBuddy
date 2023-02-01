@@ -7,9 +7,7 @@ import android.os.Bundle
 import android.widget.ListView
 import models.ItemGenerico
 import run.budgetbuddy.R
-import run.budgetbuddy.activities.Ajustes
-import run.budgetbuddy.activities.MG.MgInicio
-import run.budgetbuddy.activities.MenuLateralMG
+import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.databinding.ActivityDivisasBinding
 
 class Divisas : AppCompatActivity() {

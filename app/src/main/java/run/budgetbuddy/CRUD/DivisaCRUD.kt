@@ -3,83 +3,94 @@ package CRUD
 import io.realm.*
 import io.realm.kotlin.where
 import models.Categoria
+import models.Divisa
 
 open class DivisaCRUD {
 
     var realm: Realm = Realm.getDefaultInstance()
 
-    fun addCategoria(categoria: Categoria) : Int{
+    fun addDivisa(divisa: Divisa): Int {
         var key = getKey()
 
-        realm.executeTransaction{ r:Realm  ->
-            var categoriaR = r.createObject(Categoria::class.java, key)
-            categoriaR.nombre = categoria.nombre
-            categoriaR.icono = categoria.icono
-            categoriaR.descripcion = categoria.descripcion
+        realm.executeTransaction { r: Realm ->
+            var divisaR = r.createObject(Divisa::class.java, key)
+            divisaR.nombre = divisa.nombre
+            divisaR.simbolo = divisa.simbolo
+            divisaR.divOrigen = divisa.divOrigen
+            divisaR.divDestino = divisa.divDestino
 
 
-            realm.insertOrUpdate(categoriaR)
+            realm.insertOrUpdate(divisaR)
         }
         return key
     }
 
-    fun getKey():Int{
+    fun getKey(): Int {
 
         return try {
-            val number: Number? = realm.where<Categoria>().max("id")
-            if(number!= null){
+            val number: Number? = realm.where<Divisa>().max("id")
+            if (number != null) {
                 number.toInt() + 1
             } else {
                 0
             }
 
-        }catch (e : ArrayIndexOutOfBoundsException){
+        } catch (e: ArrayIndexOutOfBoundsException) {
             0
         }
     }
 
-    fun getCategoria(id:Int): Categoria?{
+    fun getDivisa(id: Int): Divisa? {
 
-        return realm.where(Categoria::class.java).equalTo("id",id).findFirst()
+        return realm.where(Divisa::class.java).equalTo("id", id).findFirst()
 
     }
 
-    fun updateCategoria(id: Int, new_nombre: String?, new_icono: Int?, new_desc: String?){
-        var categoria = getCategoria(id)
-        realm.executeTransaction{
-            if(new_nombre != null){
-                categoria?.nombre = new_nombre
+    fun updateDivisa(
+        id: Int,
+        new_nombre: String?,
+        new_simbolo: String?,
+        new_divOrigen: String?,
+        new_divDestino: String?
+    ) {
+        var divisa = getDivisa(id)
+        realm.executeTransaction {
+            if (new_nombre != null) {
+                divisa?.nombre = new_nombre
             }
-            if(new_icono != null) {
-                categoria?.icono = new_icono
+            if (new_simbolo != null) {
+                divisa?.simbolo = new_simbolo
             }
-            if(new_desc != null) {
-                categoria?.descripcion = new_desc
+            if (new_divOrigen != null) {
+                divisa?.divOrigen = new_divOrigen
             }
-            realm.insertOrUpdate(categoria)
+            if (new_divDestino != null) {
+                divisa?.divDestino = new_divDestino
+            }
+            realm.insertOrUpdate(divisa)
         }
     }
 
-    fun deleteCategoria(id:Int){
+    fun deleteCategoria(id: Int) {
 
-        val user = getCategoria(id)
-        realm.executeTransaction{
+        val user = getDivisa(id)
+        realm.executeTransaction {
             user!!.deleteFromRealm()
         }
     }
 
-    fun cleanAll(){
+    fun cleanAll() {
 
         realm.executeTransaction { r: Realm ->
-            r.delete(Categoria::class.java)
+            r.delete(Divisa::class.java)
         }
     }
 
-    fun getAllCategoria():MutableList<Categoria>{
+    fun getAllDivisa(): MutableList<Divisa> {
 
-        var list =  mutableListOf<Categoria>()
-        var categoria_list = realm.where(Categoria::class.java).findAll()
-        list.addAll(categoria_list)
+        var list = mutableListOf<Divisa>()
+        var divisa_list = realm.where(Divisa::class.java).findAll()
+        list.addAll(divisa_list)
         return list
     }
 

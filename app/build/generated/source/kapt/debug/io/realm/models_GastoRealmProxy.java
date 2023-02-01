@@ -153,32 +153,30 @@ public class models_GastoRealmProxy extends models.Gasto
 
     @Override
     @SuppressWarnings("cast")
-    public String realmGet$fecha() {
+    public Date realmGet$fecha() {
         proxyState.getRealm$realm().checkIfValid();
-        return (java.lang.String) proxyState.getRow$realm().getString(columnInfo.fechaColKey);
+        return (java.util.Date) proxyState.getRow$realm().getDate(columnInfo.fechaColKey);
     }
 
     @Override
-    public void realmSet$fecha(String value) {
+    public void realmSet$fecha(Date value) {
         if (proxyState.isUnderConstruction()) {
             if (!proxyState.getAcceptDefaultValue$realm()) {
                 return;
             }
             final Row row = proxyState.getRow$realm();
             if (value == null) {
-                row.getTable().setNull(columnInfo.fechaColKey, row.getObjectKey(), true);
-                return;
+                throw new IllegalArgumentException("Trying to set non-nullable field 'fecha' to null.");
             }
-            row.getTable().setString(columnInfo.fechaColKey, row.getObjectKey(), value, true);
+            row.getTable().setDate(columnInfo.fechaColKey, row.getObjectKey(), value, true);
             return;
         }
 
         proxyState.getRealm$realm().checkIfValid();
         if (value == null) {
-            proxyState.getRow$realm().setNull(columnInfo.fechaColKey);
-            return;
+            throw new IllegalArgumentException("Trying to set non-nullable field 'fecha' to null.");
         }
-        proxyState.getRow$realm().setString(columnInfo.fechaColKey, value);
+        proxyState.getRow$realm().setDate(columnInfo.fechaColKey, value);
     }
 
     @Override
@@ -319,7 +317,7 @@ public class models_GastoRealmProxy extends models.Gasto
         OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(NO_ALIAS, "Gasto", false, 7, 0);
         builder.addPersistedProperty(NO_ALIAS, "id", RealmFieldType.INTEGER, Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "importe", RealmFieldType.DOUBLE, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "fecha", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "fecha", RealmFieldType.DATE, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedLinkProperty(NO_ALIAS, "categoria", RealmFieldType.OBJECT, "Categoria");
         builder.addPersistedProperty(NO_ALIAS, "descripcion", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedLinkProperty(NO_ALIAS, "divisa", RealmFieldType.OBJECT, "Divisa");
@@ -396,7 +394,12 @@ public class models_GastoRealmProxy extends models.Gasto
             if (json.isNull("fecha")) {
                 objProxy.realmSet$fecha(null);
             } else {
-                objProxy.realmSet$fecha((String) json.getString("fecha"));
+                Object timestamp = json.get("fecha");
+                if (timestamp instanceof String) {
+                    objProxy.realmSet$fecha(JsonUtils.stringToDate((String) timestamp));
+                } else {
+                    objProxy.realmSet$fecha(new Date(json.getLong("fecha")));
+                }
             }
         }
         if (json.has("categoria")) {
@@ -459,11 +462,16 @@ public class models_GastoRealmProxy extends models.Gasto
                     throw new IllegalArgumentException("Trying to set non-nullable field 'importe' to null.");
                 }
             } else if (name.equals("fecha")) {
-                if (reader.peek() != JsonToken.NULL) {
-                    objProxy.realmSet$fecha((String) reader.nextString());
-                } else {
+                if (reader.peek() == JsonToken.NULL) {
                     reader.skipValue();
                     objProxy.realmSet$fecha(null);
+                } else if (reader.peek() == JsonToken.NUMBER) {
+                    long timestamp = reader.nextLong();
+                    if (timestamp > -1) {
+                        objProxy.realmSet$fecha(new Date(timestamp));
+                    }
+                } else {
+                    objProxy.realmSet$fecha(JsonUtils.stringToDate(reader.nextString()));
                 }
             } else if (name.equals("categoria")) {
                 if (reader.peek() == JsonToken.NULL) {
@@ -567,7 +575,7 @@ public class models_GastoRealmProxy extends models.Gasto
         // Add all non-"object reference" fields
         builder.addInteger(columnInfo.idColKey, unmanagedSource.realmGet$id());
         builder.addDouble(columnInfo.importeColKey, unmanagedSource.realmGet$importe());
-        builder.addString(columnInfo.fechaColKey, unmanagedSource.realmGet$fecha());
+        builder.addDate(columnInfo.fechaColKey, unmanagedSource.realmGet$fecha());
         builder.addString(columnInfo.descripcionColKey, unmanagedSource.realmGet$descripcion());
         builder.addInteger(columnInfo.id_userColKey, unmanagedSource.realmGet$id_user());
 
@@ -625,9 +633,9 @@ public class models_GastoRealmProxy extends models.Gasto
         }
         cache.put(object, objKey);
         Table.nativeSetDouble(tableNativePtr, columnInfo.importeColKey, objKey, ((models_GastoRealmProxyInterface) object).realmGet$importe(), false);
-        String realmGet$fecha = ((models_GastoRealmProxyInterface) object).realmGet$fecha();
+        java.util.Date realmGet$fecha = ((models_GastoRealmProxyInterface) object).realmGet$fecha();
         if (realmGet$fecha != null) {
-            Table.nativeSetString(tableNativePtr, columnInfo.fechaColKey, objKey, realmGet$fecha, false);
+            Table.nativeSetTimestamp(tableNativePtr, columnInfo.fechaColKey, objKey, realmGet$fecha.getTime(), false);
         }
 
         models.Categoria categoriaObj = ((models_GastoRealmProxyInterface) object).realmGet$categoria();
@@ -682,9 +690,9 @@ public class models_GastoRealmProxy extends models.Gasto
             }
             cache.put(object, objKey);
             Table.nativeSetDouble(tableNativePtr, columnInfo.importeColKey, objKey, ((models_GastoRealmProxyInterface) object).realmGet$importe(), false);
-            String realmGet$fecha = ((models_GastoRealmProxyInterface) object).realmGet$fecha();
+            java.util.Date realmGet$fecha = ((models_GastoRealmProxyInterface) object).realmGet$fecha();
             if (realmGet$fecha != null) {
-                Table.nativeSetString(tableNativePtr, columnInfo.fechaColKey, objKey, realmGet$fecha, false);
+                Table.nativeSetTimestamp(tableNativePtr, columnInfo.fechaColKey, objKey, realmGet$fecha.getTime(), false);
             }
 
             models.Categoria categoriaObj = ((models_GastoRealmProxyInterface) object).realmGet$categoria();
@@ -730,9 +738,9 @@ public class models_GastoRealmProxy extends models.Gasto
         }
         cache.put(object, objKey);
         Table.nativeSetDouble(tableNativePtr, columnInfo.importeColKey, objKey, ((models_GastoRealmProxyInterface) object).realmGet$importe(), false);
-        String realmGet$fecha = ((models_GastoRealmProxyInterface) object).realmGet$fecha();
+        java.util.Date realmGet$fecha = ((models_GastoRealmProxyInterface) object).realmGet$fecha();
         if (realmGet$fecha != null) {
-            Table.nativeSetString(tableNativePtr, columnInfo.fechaColKey, objKey, realmGet$fecha, false);
+            Table.nativeSetTimestamp(tableNativePtr, columnInfo.fechaColKey, objKey, realmGet$fecha.getTime(), false);
         } else {
             Table.nativeSetNull(tableNativePtr, columnInfo.fechaColKey, objKey, false);
         }
@@ -793,9 +801,9 @@ public class models_GastoRealmProxy extends models.Gasto
             }
             cache.put(object, objKey);
             Table.nativeSetDouble(tableNativePtr, columnInfo.importeColKey, objKey, ((models_GastoRealmProxyInterface) object).realmGet$importe(), false);
-            String realmGet$fecha = ((models_GastoRealmProxyInterface) object).realmGet$fecha();
+            java.util.Date realmGet$fecha = ((models_GastoRealmProxyInterface) object).realmGet$fecha();
             if (realmGet$fecha != null) {
-                Table.nativeSetString(tableNativePtr, columnInfo.fechaColKey, objKey, realmGet$fecha, false);
+                Table.nativeSetTimestamp(tableNativePtr, columnInfo.fechaColKey, objKey, realmGet$fecha.getTime(), false);
             } else {
                 Table.nativeSetNull(tableNativePtr, columnInfo.fechaColKey, objKey, false);
             }
@@ -873,7 +881,7 @@ public class models_GastoRealmProxy extends models.Gasto
         OsObjectBuilder builder = new OsObjectBuilder(table, flags);
         builder.addInteger(columnInfo.idColKey, realmObjectSource.realmGet$id());
         builder.addDouble(columnInfo.importeColKey, realmObjectSource.realmGet$importe());
-        builder.addString(columnInfo.fechaColKey, realmObjectSource.realmGet$fecha());
+        builder.addDate(columnInfo.fechaColKey, realmObjectSource.realmGet$fecha());
 
         models.Categoria categoriaObj = realmObjectSource.realmGet$categoria();
         if (categoriaObj == null) {

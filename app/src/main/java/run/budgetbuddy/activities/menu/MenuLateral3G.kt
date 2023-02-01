@@ -1,4 +1,4 @@
-package run.budgetbuddy.activities
+package run.budgetbuddy.activities.menu
 
 import adapter.myListAdapter_menu_Lateral
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.widget.ListView
 import run.budgetbuddy.activities.divisa.Divisas
 import models.ItemGenerico
 import run.budgetbuddy.R
+import run.budgetbuddy.activities.ajustes.Ajustes
 import run.budgetbuddy.activities.GG.Principal3G
 import run.budgetbuddy.activities.categoria.Categorias
 
