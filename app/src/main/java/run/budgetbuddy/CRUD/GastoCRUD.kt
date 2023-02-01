@@ -86,7 +86,7 @@ open class GastoCRUD {
         }
     }
 
-    fun getAllGastos():MutableList<Gasto>{
+    public fun getAllGastos():MutableList<Gasto>{
 
         var list =  mutableListOf<Gasto>()
         var gasto_list = realm.where(Gasto::class.java).findAll()

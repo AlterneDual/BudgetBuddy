@@ -10,7 +10,7 @@
         android:id="@+id/ivPrevious"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="20dp"
         android:clickable="true"
         android:padding="5dp"
@@ -22,12 +22,11 @@
         android:id="@+id/ivNext"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="48dp"
         android:clickable="true"
         android:padding="5dp"
-        android:rotationX="2"
-        android:rotationY="179"
+        android:rotationY="180"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
         app:srcCompat="@drawable/previous" />
@@ -40,19 +39,22 @@
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/oswald_bold"
-        android:text="Info"
+        android:text="Informacion"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
-        app:layout_constraintStart_toEndOf="@+id/btnAtras"
+        app:layout_constraintEnd_toEndOf="@+id/toolbarA"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/toolbarA"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -69,12 +71,12 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="88dp"
         android:text="Saldo Restante:"
         android:textColor="@color/orange"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.274"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,42 +84,21 @@
         android:id="@+id/tvSaldoRestante"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="356dp"
-        android:layout_marginEnd="156dp"
+        android:layout_marginTop="88dp"
         android:text="800$"
         android:textColor="@color/orange"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.918"
+        app:layout_constraintHorizontal_bias="0.339"
         app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="100dp"
-        android:text="Total Gastado:"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvTotalGastado"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        android:text="1300$"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="359dp"
+        android:layout_width="match_parent"
         android:layout_height="42dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="15dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -126,90 +107,79 @@
 
         <TextView
             android:id="@+id/tvDia"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:clickable="true"
             android:text="Día"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvSemana"
-            android:layout_width="52dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:clickable="true"
             android:text="Semana"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvMes"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:clickable="true"
             android:text="Mes"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvAnho"
-            android:layout_width="50dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:clickable="true"
             android:text="Año"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tvPeriodo"
-            android:layout_width="52dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:clickable="true"
             android:text="@string/periodo_underline"
             android:textAlignment="center"
-            android:textColor="#11928E"
+            android:textColor="@color/vidrian_green"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tvInicio"
-            android:layout_width="50dp"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:text="Inicio"
-            android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tvResultadoFecha"
         android:layout_width="wrap_content"
-        android:layout_height="22dp"
+        android:layout_height="33dp"
         android:layout_marginTop="20dp"
         android:text="@string/semana_underline"
         android:textAlignment="center"
-        android:textColor="#FFFFFF"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivNext"
+        app:layout_constraintStart_toEndOf="@+id/ivPrevious"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
-
-    <ImageView
-        android:id="@+id/btnCalendario4"
-        android:layout_width="58dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="64dp"
-        android:layout_weight="1"
-        android:padding="15dp"
-        app:layout_constraintStart_toEndOf="@+id/tvResultadoFecha"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:srcCompat="@drawable/calendar" />
 
     <TextView
         android:id="@+id/textView10"
@@ -218,8 +188,8 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="30dp"
         android:text="Ingresos"
-        android:textColor="#2ACD1B"
-        android:textSize="16sp"
+        android:textColor="@color/green"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvResultadoFecha" />
@@ -231,8 +201,8 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="15dp"
         android:text="Gastos"
-        android:textColor="#D11010"
-        android:textSize="16sp"
+        android:textColor="@color/red"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
@@ -241,11 +211,11 @@
         android:id="@+id/tvIngresos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
+        android:layout_marginStart="116dp"
         android:layout_marginTop="28dp"
         android:text="900 €"
-        android:textColor="#2ACD1B"
-        android:textSize="16sp"
+        android:textColor="@color/green"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/tvResultadoFecha" />
@@ -254,35 +224,37 @@
         android:id="@+id/tvGastos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
+        android:layout_marginStart="132dp"
         android:layout_marginTop="16dp"
         android:text="100 €"
-        android:textColor="#D11010"
-        android:textSize="16sp"
+        android:textColor="@color/red"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/textView8"
         app:layout_constraintTop_toBottomOf="@+id/tvIngresos" />
 
     <TextView
         android:id="@+id/tvFechaActual1"
-        android:layout_width="171dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="36dp"
+        android:layout_width="344dp"
+        android:layout_height="32dp"
         android:layout_marginTop="20dp"
         android:text="12 dic. - 19 dic. del 2022"
         android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvGastos" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="309dp"
-        android:layout_height="313dp"
+        android:layout_width="312dp"
+        android:layout_height="305dp"
         android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="388dp" />
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaActual1" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

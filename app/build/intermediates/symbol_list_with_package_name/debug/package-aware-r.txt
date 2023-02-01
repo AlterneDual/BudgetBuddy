@@ -3023,7 +3023,6 @@ id btnBorrar
 id btnCalendario
 id btnCalendario2
 id btnCalendario3
-id btnCalendario4
 id btnCancelar
 id btnCategoria
 id btnCerrar
@@ -3490,6 +3489,7 @@ id textView10
 id textView11
 id textView2
 id textView28
+id textView3
 id textView4
 id textView6
 id textView8
@@ -3559,7 +3559,6 @@ id tvGastos
 id tvGroupInfo
 id tvGroupName
 id tvIngresos
-id tvInicio
 id tvMes
 id tvNombre1
 id tvNombre2
@@ -3578,7 +3577,6 @@ id tvTipoGasto
 id tvTitulo
 id tvTituloGasto
 id tvTotalA
-id tvTotalGastado
 id tvUser
 id tvYear
 id tvYear2
