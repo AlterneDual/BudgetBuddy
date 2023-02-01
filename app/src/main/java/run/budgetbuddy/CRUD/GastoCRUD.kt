@@ -11,10 +11,12 @@ open class GastoCRUD {
     var realm: Realm = Realm.getDefaultInstance()
 
     fun addGasto(gasto: Gasto) : Int{
-        var key = getKey()
+        var keyGasto = getKey()
+
 
         realm.executeTransaction{ r:Realm  ->
-            var gastoR = r.createObject(Gasto::class.java, key)
+            var gastoR = r.createObject(Gasto::class.java, keyGasto)
+
             gastoR.importe = gasto.importe
             gastoR.fecha = gasto.fecha
             gastoR.categoria = gasto.categoria
@@ -25,7 +27,7 @@ open class GastoCRUD {
 
             realm.insertOrUpdate(gastoR)
         }
-        return key
+        return keyGasto
     }
 
     fun getKey():Int{
@@ -42,6 +44,9 @@ open class GastoCRUD {
             0
         }
     }
+
+
+
 
     fun getGasto(id:Int): Gasto?{
 

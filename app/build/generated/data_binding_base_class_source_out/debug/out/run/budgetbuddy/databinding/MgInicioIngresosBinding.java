@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.github.mikephil.charting.charts.PieChart;
@@ -24,9 +24,6 @@ import run.budgetbuddy.R;
 public final class MgInicioIngresosBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final RecyclerView RVIngresos;
 
   @NonNull
   public final ImageButton btnAddGroup3;
@@ -45,6 +42,9 @@ public final class MgInicioIngresosBinding implements ViewBinding {
 
   @NonNull
   public final LinearLayout linearLayout5;
+
+  @NonNull
+  public final ListView lvInicioGastos;
 
   @NonNull
   public final PieChart pieChart;
@@ -83,21 +83,21 @@ public final class MgInicioIngresosBinding implements ViewBinding {
   public final TextView tvYear2;
 
   private MgInicioIngresosBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView RVIngresos, @NonNull ImageButton btnAddGroup3,
-      @NonNull ImageView btnMenu2, @NonNull ImageView butInfo, @NonNull ImageView ivNext1,
-      @NonNull ImageView ivPrevious4, @NonNull LinearLayout linearLayout5,
+      @NonNull ImageButton btnAddGroup3, @NonNull ImageView btnMenu2, @NonNull ImageView butInfo,
+      @NonNull ImageView ivNext1, @NonNull ImageView ivPrevious4,
+      @NonNull LinearLayout linearLayout5, @NonNull ListView lvInicioGastos,
       @NonNull PieChart pieChart, @NonNull TextView textView11, @NonNull Toolbar toolbarA,
       @NonNull TextView tvAnho, @NonNull TextView tvDia, @NonNull TextView tvGastos,
       @NonNull TextView tvIngresos, @NonNull TextView tvMes, @NonNull TextView tvPeriodo,
       @NonNull TextView tvSaldoRestante2, @NonNull TextView tvSemana, @NonNull TextView tvYear2) {
     this.rootView = rootView;
-    this.RVIngresos = RVIngresos;
     this.btnAddGroup3 = btnAddGroup3;
     this.btnMenu2 = btnMenu2;
     this.butInfo = butInfo;
     this.ivNext1 = ivNext1;
     this.ivPrevious4 = ivPrevious4;
     this.linearLayout5 = linearLayout5;
+    this.lvInicioGastos = lvInicioGastos;
     this.pieChart = pieChart;
     this.textView11 = textView11;
     this.toolbarA = toolbarA;
@@ -139,12 +139,6 @@ public final class MgInicioIngresosBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.RVIngresos;
-      RecyclerView RVIngresos = ViewBindings.findChildViewById(rootView, id);
-      if (RVIngresos == null) {
-        break missingId;
-      }
-
       id = R.id.btnAddGroup3;
       ImageButton btnAddGroup3 = ViewBindings.findChildViewById(rootView, id);
       if (btnAddGroup3 == null) {
@@ -178,6 +172,12 @@ public final class MgInicioIngresosBinding implements ViewBinding {
       id = R.id.linearLayout5;
       LinearLayout linearLayout5 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout5 == null) {
+        break missingId;
+      }
+
+      id = R.id.lvInicioGastos;
+      ListView lvInicioGastos = ViewBindings.findChildViewById(rootView, id);
+      if (lvInicioGastos == null) {
         break missingId;
       }
 
@@ -253,10 +253,10 @@ public final class MgInicioIngresosBinding implements ViewBinding {
         break missingId;
       }
 
-      return new MgInicioIngresosBinding((ConstraintLayout) rootView, RVIngresos, btnAddGroup3,
-          btnMenu2, butInfo, ivNext1, ivPrevious4, linearLayout5, pieChart, textView11, toolbarA,
-          tvAnho, tvDia, tvGastos, tvIngresos, tvMes, tvPeriodo, tvSaldoRestante2, tvSemana,
-          tvYear2);
+      return new MgInicioIngresosBinding((ConstraintLayout) rootView, btnAddGroup3, btnMenu2,
+          butInfo, ivNext1, ivPrevious4, linearLayout5, lvInicioGastos, pieChart, textView11,
+          toolbarA, tvAnho, tvDia, tvGastos, tvIngresos, tvMes, tvPeriodo, tvSaldoRestante2,
+          tvSemana, tvYear2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

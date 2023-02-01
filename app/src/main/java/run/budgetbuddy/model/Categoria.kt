@@ -13,6 +13,7 @@ open class Categoria(): RealmObject() {
     var id : Int = 0
     var nombre : String = ""
     var icono : Int = 0
+    var color: Int = 0
     var descripcion : String = ""
 
     override fun toString(): String {

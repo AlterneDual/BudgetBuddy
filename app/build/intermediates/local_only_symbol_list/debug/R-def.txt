@@ -96,9 +96,9 @@ drawable user
 font oswald
 font oswald_bold
 font oswald_semibold
+id ImagenListaGasto
 id RVCategorias
 id RVGastosA
-id RVIngresos
 id RVParticipantes
 id ReclyclerViewB
 id RecyclerViewC1
@@ -234,6 +234,7 @@ id linearLayout6
 id listView_menu
 id list_view
 id lista_categorias
+id lvInicioGastos
 id nuevoGrupo
 id optionsGrupo
 id participanteAdd
@@ -297,6 +298,7 @@ id tvGroupInfo
 id tvGroupName
 id tvIngresos
 id tvInicio
+id tvListaGasto
 id tvMes
 id tvNombre1
 id tvNombre2
@@ -365,6 +367,7 @@ layout mg_editar_ingreso
 layout mg_info
 layout mg_inicio_gastos
 layout mg_inicio_ingresos
+layout mg_row_gasto
 layout register
 mipmap ic_launcher
 mipmap ic_launcher_round

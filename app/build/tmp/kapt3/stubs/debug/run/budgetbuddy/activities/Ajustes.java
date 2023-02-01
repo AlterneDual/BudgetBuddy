@@ -14,17 +14,17 @@ public final class Ajustes extends androidx.appcompat.app.AppCompatActivity {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final run.budgetbuddy.databinding.ActivityAjustesBinding getBinding() {
         return null;
     }
     
-    public final void setBinding(@org.jetbrains.annotations.NotNull
+    public final void setBinding(@org.jetbrains.annotations.NotNull()
     run.budgetbuddy.databinding.ActivityAjustesBinding p0) {
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     

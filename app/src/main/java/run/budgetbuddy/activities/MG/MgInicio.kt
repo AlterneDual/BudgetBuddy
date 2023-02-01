@@ -1,20 +1,49 @@
 package run.budgetbuddy.activities.MG
 
+import CRUD.CategoriaCRUD
+import CRUD.DivisaCRUD
+import CRUD.GastoCRUD
+import CRUD.UsuarioCRUD
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ListView
 import android.widget.Toast
+import com.github.mikephil.charting.data.PieEntry
+import io.realm.Realm
+import io.realm.RealmList
+import models.Categoria
+import models.Divisa
+import models.Gasto
+import run.budgetbuddy.R
 import run.budgetbuddy.activities.MenuLateralMG
+import run.budgetbuddy.adapter.myListAdapter_gasto
 import run.budgetbuddy.databinding.MgInicioGastosBinding
 
 class MgInicio : AppCompatActivity() {
 
     private lateinit var binding: MgInicioGastosBinding
+    private lateinit var adapter: myListAdapter_gasto
+    var categoriaCRUD : CategoriaCRUD = CategoriaCRUD()
+    var divisaCRUD : DivisaCRUD = DivisaCRUD()
+    var gastoCRUD : GastoCRUD = GastoCRUD()
+    var usuarioCRUD : UsuarioCRUD = UsuarioCRUD()
+    var listagastos: RealmList<Gasto> = RealmList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
+        val listView = findViewById<ListView>(R.id.lvInicioGastos)
+        val adapter = myListAdapter_gasto(this, listagastos)
+        listView.adapter = adapter
+
+        crearGasto()
 
         var btnIngresos = binding.tvIngresos
         btnIngresos.setOnClickListener {
@@ -77,6 +106,28 @@ class MgInicio : AppCompatActivity() {
         }
 
 
+    }
+
+
+    private fun crearGasto() {
+        var div1 = Divisa()
+        div1.nombre = "Euro"
+        var keydivisa = divisaCRUD.addDivisa(div1)
+
+        var cat1 = Categoria()
+        cat1.nombre = "Ocio"
+        cat1.icono = R.drawable.cat_cine
+        var keycat = categoriaCRUD.addCategoria(cat1)
+
+        var gasto1 = Gasto()
+        gasto1.importe = 20.00
+        var div = divisaCRUD.getDivisa(keydivisa)
+        gasto1.divisa = div
+        var cat = categoriaCRUD.getCategoria(keycat)
+        gasto1.categoria = cat
+        var keyGasto = gastoCRUD.addGasto(gasto1)
+        listagastos.add(gastoCRUD.getGasto(keyGasto))
+        adapter.notifyDataSetChanged()
     }
 
 }

@@ -112,11 +112,9 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        app:layout_constraintBottom_toTopOf="@+id/RVIngresos"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvYear2"
-        app:layout_constraintVertical_bias="0.2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvYear2" />
 
     <TextView
         android:id="@+id/tvGastos"
@@ -212,17 +210,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/factura" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RVIngresos"
-        android:layout_width="409dp"
-        android:layout_height="269dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
     <ImageView
         android:id="@+id/ivNext1"
         android:layout_width="8dp"
@@ -235,6 +222,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
         app:srcCompat="@drawable/previous" />
+
+    <ListView
+        android:id="@+id/lvInicioGastos"
+        android:layout_width="match_parent"
+        android:layout_height="266dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

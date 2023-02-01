@@ -13,8 +13,8 @@ public final class MenuLateral3G extends androidx.appcompat.app.AppCompatActivit
         super();
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
