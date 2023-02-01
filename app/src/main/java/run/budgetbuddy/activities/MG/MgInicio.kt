@@ -8,7 +8,6 @@ import android.content.Intent
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ListView
 import android.widget.Toast
 import com.github.mikephil.charting.data.PieEntry
 import io.realm.Realm
@@ -39,8 +38,8 @@ class MgInicio : AppCompatActivity() {
 
 
 
-        val listView = findViewById<ListView>(R.id.lvInicioGastos)
-        val adapter = myListAdapter_gasto(this, listagastos)
+        val listView = binding.lvInicioGastos
+        adapter = myListAdapter_gasto(this, listagastos)
         listView.adapter = adapter
 
         crearGasto()
@@ -125,6 +124,7 @@ class MgInicio : AppCompatActivity() {
         gasto1.divisa = div
         var cat = categoriaCRUD.getCategoria(keycat)
         gasto1.categoria = cat
+
         var keyGasto = gastoCRUD.addGasto(gasto1)
         listagastos.add(gastoCRUD.getGasto(keyGasto))
         adapter.notifyDataSetChanged()

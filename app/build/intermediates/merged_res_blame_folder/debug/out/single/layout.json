@@ -52,10 +52,6 @@
         "source": "C:\\Users\\josel\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_editar_gasto_avanzado.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_inicio_ingresos.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/mg_inicio_ingresos.xml"
-    },
-    {
         "merged": "C:\\Users\\josel\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\divisas_list.xml",
         "source": "C:\\Users\\josel\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\divisas_list.xml"
     },
@@ -94,6 +90,10 @@
     {
         "merged": "C:\\Users\\josel\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_list_divisas.xml",
         "source": "C:\\Users\\josel\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_list_divisas.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_inicio_gastos.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_inicio_gastos.xml"
     },
     {
         "merged": "C:\\Users\\josel\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_editar_ingreso.xml",
