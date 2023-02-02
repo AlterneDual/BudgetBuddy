@@ -13,13 +13,28 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d3aa97ae-6589-4b6e-9ec5-ff4ed2a47f6d" name="Changes" comment="" />
+    <list default="true" id="d3aa97ae-6589-4b6e-9ec5-ff4ed2a47f6d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/run/budgetbuddy/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/run/budgetbuddy/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/DefaultRealmModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/DefaultRealmModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/DefaultRealmModuleMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/DefaultRealmModuleMediator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_CategoriaRealmProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_CategoriaRealmProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_CategoriaRealmProxyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_CategoriaRealmProxyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_DivisaRealmProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_DivisaRealmProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_DivisaRealmProxyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_DivisaRealmProxyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_GastoRealmProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_GastoRealmProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_GastoRealmProxyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_GastoRealmProxyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_UsuarioRealmProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_UsuarioRealmProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_UsuarioRealmProxyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_UsuarioRealmProxyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R58M52ZETZP]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[9fb859db]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -36,13 +51,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\java\run\budgetbuddy" />
@@ -102,7 +116,6 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
         <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-        <option name="PROFILING_MODE" value="NOT_SET" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -123,5 +136,16 @@
       <updated>1675276040957</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
