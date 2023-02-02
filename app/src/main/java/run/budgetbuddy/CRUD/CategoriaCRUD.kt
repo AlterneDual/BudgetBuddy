@@ -6,6 +6,7 @@ import models.Categoria
 
 open class CategoriaCRUD {
 
+
     var realm: Realm = Realm.getDefaultInstance()
 
     fun addCategoria(categoria: Categoria) : Int{

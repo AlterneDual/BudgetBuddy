@@ -48,7 +48,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.menu.MenuLateral3G"
+            android:name=".activities.MenuLateral3G"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -168,14 +168,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.menu.MenuLateralMG"
+            android:name=".activities.MenuLateralMG"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.ajustes.Ajustes"
+            android:name=".activities.Ajustes"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.github.mikephil.charting.charts.PieChart;
@@ -24,9 +24,6 @@ import run.budgetbuddy.R;
 public final class MgInicioGastosBinding implements ViewBinding {
   @NonNull
   private final ConstraintLayout rootView;
-
-  @NonNull
-  public final RecyclerView RVGastosA;
 
   @NonNull
   public final ImageButton btnAddGroup2;
@@ -45,6 +42,9 @@ public final class MgInicioGastosBinding implements ViewBinding {
 
   @NonNull
   public final LinearLayout linearLayout5;
+
+  @NonNull
+  public final ListView lvInicioGastos;
 
   @NonNull
   public final PieChart pieChart;
@@ -85,22 +85,23 @@ public final class MgInicioGastosBinding implements ViewBinding {
   @NonNull
   public final TextView tvYear;
 
-  private MgInicioGastosBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView RVGastosA,
+  private MgInicioGastosBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageButton btnAddGroup2, @NonNull ImageView btnMenu1, @NonNull ImageView butInfo,
       @NonNull ImageView ivNext2, @NonNull ImageView ivPrevious,
-      @NonNull LinearLayout linearLayout5, @NonNull PieChart pieChart, @NonNull TextView textView28,
-      @NonNull Toolbar toolbarA, @NonNull TextView tvAgregarImagen2,
-      @NonNull ConstraintLayout tvAnho, @NonNull TextView tvDia, @NonNull TextView tvGastos,
-      @NonNull TextView tvIngresos, @NonNull TextView tvMes, @NonNull TextView tvPeriodo,
-      @NonNull TextView tvSaldoRestante1, @NonNull TextView tvSemana, @NonNull TextView tvYear) {
+      @NonNull LinearLayout linearLayout5, @NonNull ListView lvInicioGastos,
+      @NonNull PieChart pieChart, @NonNull TextView textView28, @NonNull Toolbar toolbarA,
+      @NonNull TextView tvAgregarImagen2, @NonNull ConstraintLayout tvAnho, @NonNull TextView tvDia,
+      @NonNull TextView tvGastos, @NonNull TextView tvIngresos, @NonNull TextView tvMes,
+      @NonNull TextView tvPeriodo, @NonNull TextView tvSaldoRestante1, @NonNull TextView tvSemana,
+      @NonNull TextView tvYear) {
     this.rootView = rootView;
-    this.RVGastosA = RVGastosA;
     this.btnAddGroup2 = btnAddGroup2;
     this.btnMenu1 = btnMenu1;
     this.butInfo = butInfo;
     this.ivNext2 = ivNext2;
     this.ivPrevious = ivPrevious;
     this.linearLayout5 = linearLayout5;
+    this.lvInicioGastos = lvInicioGastos;
     this.pieChart = pieChart;
     this.textView28 = textView28;
     this.toolbarA = toolbarA;
@@ -143,12 +144,6 @@ public final class MgInicioGastosBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.RVGastosA;
-      RecyclerView RVGastosA = ViewBindings.findChildViewById(rootView, id);
-      if (RVGastosA == null) {
-        break missingId;
-      }
-
       id = R.id.btnAddGroup2;
       ImageButton btnAddGroup2 = ViewBindings.findChildViewById(rootView, id);
       if (btnAddGroup2 == null) {
@@ -182,6 +177,12 @@ public final class MgInicioGastosBinding implements ViewBinding {
       id = R.id.linearLayout5;
       LinearLayout linearLayout5 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout5 == null) {
+        break missingId;
+      }
+
+      id = R.id.lvInicioGastos;
+      ListView lvInicioGastos = ViewBindings.findChildViewById(rootView, id);
+      if (lvInicioGastos == null) {
         break missingId;
       }
 
@@ -259,8 +260,8 @@ public final class MgInicioGastosBinding implements ViewBinding {
         break missingId;
       }
 
-      return new MgInicioGastosBinding((ConstraintLayout) rootView, RVGastosA, btnAddGroup2,
-          btnMenu1, butInfo, ivNext2, ivPrevious, linearLayout5, pieChart, textView28, toolbarA,
+      return new MgInicioGastosBinding((ConstraintLayout) rootView, btnAddGroup2, btnMenu1, butInfo,
+          ivNext2, ivPrevious, linearLayout5, lvInicioGastos, pieChart, textView28, toolbarA,
           tvAgregarImagen2, tvAnho, tvDia, tvGastos, tvIngresos, tvMes, tvPeriodo, tvSaldoRestante1,
           tvSemana, tvYear);
     }
