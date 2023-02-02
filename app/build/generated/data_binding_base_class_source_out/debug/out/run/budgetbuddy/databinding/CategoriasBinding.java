@@ -4,13 +4,13 @@ package run.budgetbuddy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import java.lang.NullPointerException;
@@ -23,7 +23,7 @@ public final class CategoriasBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final RecyclerView RVCategorias;
+  public final GridView GVCategoria;
 
   @NonNull
   public final ImageButton btnAddCategoria2;
@@ -34,11 +34,11 @@ public final class CategoriasBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar3;
 
-  private CategoriasBinding(@NonNull ConstraintLayout rootView, @NonNull RecyclerView RVCategorias,
+  private CategoriasBinding(@NonNull ConstraintLayout rootView, @NonNull GridView GVCategoria,
       @NonNull ImageButton btnAddCategoria2, @NonNull ImageView btnAtras1,
       @NonNull Toolbar toolbar3) {
     this.rootView = rootView;
-    this.RVCategorias = RVCategorias;
+    this.GVCategoria = GVCategoria;
     this.btnAddCategoria2 = btnAddCategoria2;
     this.btnAtras1 = btnAtras1;
     this.toolbar3 = toolbar3;
@@ -71,9 +71,9 @@ public final class CategoriasBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.RVCategorias;
-      RecyclerView RVCategorias = ViewBindings.findChildViewById(rootView, id);
-      if (RVCategorias == null) {
+      id = R.id.GVCategoria;
+      GridView GVCategoria = ViewBindings.findChildViewById(rootView, id);
+      if (GVCategoria == null) {
         break missingId;
       }
 
@@ -95,7 +95,7 @@ public final class CategoriasBinding implements ViewBinding {
         break missingId;
       }
 
-      return new CategoriasBinding((ConstraintLayout) rootView, RVCategorias, btnAddCategoria2,
+      return new CategoriasBinding((ConstraintLayout) rootView, GVCategoria, btnAddCategoria2,
           btnAtras1, toolbar3);
     }
     String missingId = rootView.getResources().getResourceName(id);

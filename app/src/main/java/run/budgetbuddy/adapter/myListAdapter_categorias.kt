@@ -6,19 +6,21 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import models.Categoria
 import models.ItemGenerico
 import run.budgetbuddy.R
 
 class myListAdapter_categorias(private val context: Context,
-                               private val layout : Int,
-                               private val listaOpciones: List<ItemGenerico>)
+                               private val layout: Int,
+                               private val listaOpciones: MutableList<Categoria>
+)
                     : BaseAdapter(){
 
     override fun getCount(): Int {
         return listaOpciones.size
     }
 
-    override fun getItem(position: Int): ItemGenerico {
+    override fun getItem(position: Int): Categoria {
         return listaOpciones[position]
     }
 
@@ -46,7 +48,6 @@ class myListAdapter_categorias(private val context: Context,
         val opcionActual = listaOpciones[position]
 
         holder.icono.setImageResource(opcionActual.icono)
-
 
         return cView!!
     }

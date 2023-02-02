@@ -48,7 +48,7 @@ class myListAdapter(
 
         val ajusteActual = listaAjustes[position]
         holder.nombre1.setText(ajusteActual.nombre1)
-        holder.nombre2.setText(ajusteActual.nombre2)
+        holder.nombre2.setText(ajusteActual.color)
         holder.icono.setImageResource(ajusteActual.icono)
 
 

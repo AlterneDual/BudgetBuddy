@@ -1,21 +1,32 @@
 package run.budgetbuddy.activities.categoria
 
-import adapter.myListAdapter_categorias
+import CRUD.CategoriaCRUD
+import adapter.myListAdapter_colores
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.os.SystemClock
+import android.view.View
+import android.widget.EditText
 import android.widget.GridView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import models.ItemGenerico
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.CrearCategoriaBinding
 
 class CrearCategoria : AppCompatActivity() {
     private lateinit var binding: CrearCategoriaBinding
-    private lateinit var adapterList: myListAdapter_categorias
+    private lateinit var adapterList: myListAdapter_colores
+    private lateinit var adapterListColores: myListAdapter_colores
     private lateinit var grid_view: GridView
-    private lateinit var listaIconos: MutableList<ItemGenerico>
+    private lateinit var txt_nombre: EditText
+    private lateinit var grid_view_colores: GridView
+    private lateinit var listaIconos: MutableList<Int>
+    private lateinit var listaColores: MutableList<Int>
+    private var categoriaSeleccionada: Int = 0
+    private var colorSeleccionado: Int = 0
+    private lateinit var viewActual: View
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = CrearCategoriaBinding.inflate(layoutInflater)
@@ -23,6 +34,42 @@ class CrearCategoria : AppCompatActivity() {
 
         listaIconos = crearIconos()
         inicializarAdapter()
+
+        listaColores = crearColores()
+        inicializarAdapterColores()
+
+        txt_nombre = binding.etNombreCategoria
+        grid_view = binding.GVCategorias3
+        grid_view.setOnItemClickListener() { parent, view, position, id ->
+            categoriaSeleccionada = parent.getItemAtPosition(position) as Int
+            viewActual = view
+        }
+
+        grid_view_colores = binding.GVColores
+        grid_view_colores.setOnItemClickListener() { parent, view, position, id ->
+            colorSeleccionado = parent.getItemAtPosition(position) as Int
+            if(position==0){
+                viewActual.setBackgroundColor(Color.rgb(69, 119, 193))
+            } else if (position==1){
+                viewActual.setBackgroundColor(Color.rgb(232, 84, 217))
+            }else if (position==2){
+                viewActual.setBackgroundColor(Color.rgb(104, 201, 172))
+            }else if (position==3){
+                viewActual.setBackgroundColor(Color.rgb(84, 202, 117))
+            }else if (position==4){
+                viewActual.setBackgroundColor(Color.rgb(220, 45, 45))
+            }else if (position==5){
+                viewActual.setBackgroundColor(Color.rgb(237, 229, 33))
+            }else if (position==6){
+                viewActual.setBackgroundColor(Color.rgb(42, 205, 27))
+            }else if (position==7){
+                viewActual.setBackgroundColor(Color.rgb(255, 157, 10))
+            }
+        }
+
+
+//        val imageView: ImageView = findViewById(R.id.imageView)
+//        imageView.setBackgroundColor(Color.rgb(100, 100, 250))
 
         binding.btnAnadir2.setOnClickListener {
 
@@ -43,37 +90,51 @@ class CrearCategoria : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+        crearCategoria()
+    }
+
+    private fun crearCategoria() {
+        var categoriaCRUD: CategoriaCRUD
     }
 
     private fun inicializarAdapter() {
 
-        grid_view = findViewById<GridView>(R.id.grid_view)
-        adapterList = myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaIconos)
+        grid_view = binding.GVCategorias3
+        adapterList = myListAdapter_colores(this, R.layout.custom_grid_categorias, listaIconos)
         grid_view.adapter = adapterList
         registerForContextMenu(grid_view)
     }
 
-    private fun crearIconos(): MutableList<ItemGenerico> {
+    private fun inicializarAdapterColores() {
 
-        val listaAjustes = mutableListOf<ItemGenerico>(
+        grid_view_colores = binding.GVColores
+        adapterListColores = myListAdapter_colores(this, R.layout.custom_list_colores, listaColores)
+        grid_view_colores.adapter = adapterListColores
+        registerForContextMenu(grid_view_colores)
+    }
 
-            ItemGenerico("", "", R.drawable.cat_avion),
-            ItemGenerico("", "", R.drawable.cat_cine),
-            ItemGenerico("", "", R.drawable.cat_bolos),
-            ItemGenerico("", "", R.drawable.cat_coctel),
-            ItemGenerico("", "", R.drawable.cat_compras1),
-            ItemGenerico("", "", R.drawable.cat_compras2),
-            ItemGenerico("", "", R.drawable.cat_compras3),
-            ItemGenerico("", "", R.drawable.cat_compras4),
-            ItemGenerico("", "", R.drawable.cat_hotel),
-            ItemGenerico("", "", R.drawable.cat_limpieza),
-            ItemGenerico("", "", R.drawable.cat_regalo),
-            ItemGenerico("", "", R.drawable.cat_restaurante),
-            ItemGenerico("", "", R.drawable.cat_videojuego)
+    private fun crearIconos(): MutableList<Int> {
 
+        val listaCategorias = mutableListOf<Int>(
 
+            R.drawable.cat_avion_, R.drawable.cat_cine, R.drawable.cat_bolos, R.drawable.cat_coctel,
+            R.drawable.cat_compras1, R.drawable.cat_compras2, R.drawable.cat_compras3,
+            R.drawable.cat_compras4,R.drawable.cat_hotel, R.drawable.cat_limpieza,
+            R.drawable.cat_regalo, R.drawable.cat_restaurante,R.drawable.cat_videojuego
         )
 
-        return listaAjustes
+        return listaCategorias
+    }
+
+    private fun crearColores(): MutableList<Int> {
+
+        val listaColores = mutableListOf<Int>(
+
+            R.drawable.circulo_azul ,R.drawable.circulo_rosa, R.drawable.circulo_celeste,
+            R.drawable.circulo_turquesa, R.drawable.circulo_rojo, R.drawable.circulo_amarillo,
+            R.drawable.circulo_verde, R.drawable.circulo_naranja
+        )
+
+        return listaColores
     }
 }

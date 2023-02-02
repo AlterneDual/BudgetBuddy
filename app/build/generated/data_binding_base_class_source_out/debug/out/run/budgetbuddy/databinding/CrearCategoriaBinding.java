@@ -6,13 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import java.lang.NullPointerException;
@@ -25,7 +25,10 @@ public final class CrearCategoriaBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final RecyclerView RVCategorias;
+  public final GridView GVCategorias3;
+
+  @NonNull
+  public final GridView GVColores;
 
   @NonNull
   public final Button btnAnadir2;
@@ -42,12 +45,13 @@ public final class CrearCategoriaBinding implements ViewBinding {
   @NonNull
   public final Toolbar toolbar;
 
-  private CrearCategoriaBinding(@NonNull ConstraintLayout rootView,
-      @NonNull RecyclerView RVCategorias, @NonNull Button btnAnadir2, @NonNull ImageView btnAtras,
+  private CrearCategoriaBinding(@NonNull ConstraintLayout rootView, @NonNull GridView GVCategorias3,
+      @NonNull GridView GVColores, @NonNull Button btnAnadir2, @NonNull ImageView btnAtras,
       @NonNull EditText etNombreCategoria, @NonNull LinearLayout linearLayout,
       @NonNull Toolbar toolbar) {
     this.rootView = rootView;
-    this.RVCategorias = RVCategorias;
+    this.GVCategorias3 = GVCategorias3;
+    this.GVColores = GVColores;
     this.btnAnadir2 = btnAnadir2;
     this.btnAtras = btnAtras;
     this.etNombreCategoria = etNombreCategoria;
@@ -82,9 +86,15 @@ public final class CrearCategoriaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.RVCategorias;
-      RecyclerView RVCategorias = ViewBindings.findChildViewById(rootView, id);
-      if (RVCategorias == null) {
+      id = R.id.GVCategorias3;
+      GridView GVCategorias3 = ViewBindings.findChildViewById(rootView, id);
+      if (GVCategorias3 == null) {
+        break missingId;
+      }
+
+      id = R.id.GVColores;
+      GridView GVColores = ViewBindings.findChildViewById(rootView, id);
+      if (GVColores == null) {
         break missingId;
       }
 
@@ -118,8 +128,8 @@ public final class CrearCategoriaBinding implements ViewBinding {
         break missingId;
       }
 
-      return new CrearCategoriaBinding((ConstraintLayout) rootView, RVCategorias, btnAnadir2,
-          btnAtras, etNombreCategoria, linearLayout, toolbar);
+      return new CrearCategoriaBinding((ConstraintLayout) rootView, GVCategorias3, GVColores,
+          btnAnadir2, btnAtras, etNombreCategoria, linearLayout, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
