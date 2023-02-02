@@ -81,12 +81,10 @@ class MgAnadirGasto : AppCompatActivity() {
         var btnFecha2 = binding.btnFecha2
         var btnFecha3 = binding.btnFecha3
 
-<<<<<<< Updated upstream
+
         var etCantidad = binding.etCantidad
         var etComentario = binding.etComentario
-=======
-        
->>>>>>> Stashed changes
+
 
 
         tvFechaSeleccionada.setText("$todayDay del $todayMonth de $todayYear")
@@ -164,13 +162,13 @@ class MgAnadirGasto : AppCompatActivity() {
             selectedMonthManual = yesterdayMonth
             selectedYearManual = yesterdayYear
 
-            yesterday.set(Calendar.YEAR, selectedYearManual)
-            yesterday.set(Calendar.MONTH, selectedMonthManual)
-            yesterday.set(Calendar.DAY_OF_MONTH, selectedDayManual)
+            var calYesterday = yesterday
+            calYesterday.set(Calendar.YEAR, selectedYearManual)
+            calYesterday.set(Calendar.MONTH, selectedMonthManual)
+            calYesterday.set(Calendar.DAY_OF_MONTH, selectedDayManual)
 
             updateFecha(yesterday)
 
-//            updateFechaSeleccionada()
 
             tvFechaSeleccionada.setText("$selectedDayManual del $selectedMonthManual de $yesterdayYear")
         }
@@ -204,9 +202,10 @@ class MgAnadirGasto : AppCompatActivity() {
             selectedMonthManual = tomorrowMonth
             selectedYearManual = tomorrowYear
 
-            tomorrow.set(Calendar.YEAR, selectedYearManual)
-            tomorrow.set(Calendar.MONTH, selectedMonthManual)
-            tomorrow.set(Calendar.DAY_OF_MONTH, selectedDayManual)
+            var calTomorrow = yesterday
+            calTomorrow.set(Calendar.YEAR, selectedYearManual)
+            calTomorrow.set(Calendar.MONTH, selectedMonthManual)
+            calTomorrow.set(Calendar.DAY_OF_MONTH, selectedDayManual)
 
             updateFecha(tomorrow)
 //            updateFechaSeleccionada()
@@ -256,9 +255,6 @@ class MgAnadirGasto : AppCompatActivity() {
 
 
 
-
-//            updateFechaSeleccionada()
-
             selectedDate.set(Calendar.YEAR, year)
             selectedDate.set(Calendar.MONTH, month)
             selectedDate.set(Calendar.DAY_OF_MONTH, dayOfMonth)
@@ -271,6 +267,8 @@ class MgAnadirGasto : AppCompatActivity() {
             fecha1.setText("$yesterdayDay/$yesterdayMonth")
             fecha2.setText("$selectedDay/$selectedMonth")
             fecha3.setText("$tomorrowDay/$tomorrowMonth")
+
+
 
         },
 
@@ -286,11 +284,7 @@ class MgAnadirGasto : AppCompatActivity() {
 
     }
 
-//    @SuppressLint("NewApi")
-//    private fun updateFechaSeleccionada() {
-//        fechaSeleccionada = LocalDate.of(selectedYearManual, selectedMonthManual, selectedDayManual)
-////        println(fechaSeleccionada.toString())
-//    }
+
 
     @RequiresApi(Build.VERSION_CODES.N)
     private fun updateFecha(selectedDate : Calendar){
