@@ -1,5 +1,9 @@
 package run.budgetbuddy.activities.MG
 
+import CRUD.CategoriaCRUD
+import CRUD.DivisaCRUD
+import CRUD.GastoCRUD
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.icu.util.Calendar
@@ -10,12 +14,28 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import models.Categoria
+import models.Divisa
+import models.Gasto
+import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgAnadirGastoBinding
-import java.time.Year
+import java.time.LocalDate
+import java.time.ZoneId
+import java.util.*
 
 class MgAnadirGasto : AppCompatActivity() {
 
     private lateinit var binding: MgAnadirGastoBinding
+
+    var categoriaCrud : CategoriaCRUD = CategoriaCRUD()
+    var divisaCrud : DivisaCRUD = DivisaCRUD()
+    var gastoCrud : GastoCRUD = GastoCRUD()
+
+//    @RequiresApi(Build.VERSION_CODES.O)
+//    var fechaSeleccionada : LocalDate = LocalDate.now()
+
+
+
 
     @RequiresApi(Build.VERSION_CODES.N)
     private var selectedDate: Calendar = Calendar.getInstance()
@@ -44,6 +64,10 @@ class MgAnadirGasto : AppCompatActivity() {
     private var tomorrowYear: Int = 0
 
     @RequiresApi(Build.VERSION_CODES.N)
+    var fecha = selectedDate.time
+
+    @SuppressLint("NewApi")
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgAnadirGastoBinding.inflate(layoutInflater)
@@ -56,6 +80,9 @@ class MgAnadirGasto : AppCompatActivity() {
         var btnFecha1 = binding.btnFecha1
         var btnFecha2 = binding.btnFecha2
         var btnFecha3 = binding.btnFecha3
+
+        var etCantidad = binding.etCantidad
+        var etComentario = binding.etComentario
 
 
         tvFechaSeleccionada.setText("$todayDay del $todayMonth de $todayYear")
@@ -74,14 +101,44 @@ class MgAnadirGasto : AppCompatActivity() {
         }
 
         binding.btnAnadir.setOnClickListener {
-            SystemClock.sleep(5000)
+//            SystemClock.sleep(5000)
             Toast.makeText(
                 this, "Se ha añadido un nuevo gasto", Toast.LENGTH_SHORT
             ).show()
 
-            val intent = Intent(this, MgInicio::class.java)
-            startActivity(intent)
-            finish()
+            var cat = Categoria()
+            cat.nombre = "Ocio"
+            cat.descripcion = "Cine"
+            cat.icono = R.drawable.cat_cine
+            var keyCat = categoriaCrud.addCategoria(cat)
+
+            var div = Divisa()
+            div.nombre = "Euro"
+            div.simbolo = "€"
+            var keyDiv = divisaCrud.addDivisa(div)
+
+            var gasto = Gasto()
+            gasto.categoria = categoriaCrud.getCategoria(keyCat)
+            gasto.divisa = divisaCrud.getDivisa(keyDiv)
+            gasto.importe = etCantidad.text.toString().toDouble()
+            gasto.descripcion = etComentario.text.toString()
+            gasto.fecha = fecha
+            var keyGasto = gastoCrud.addGasto(gasto)
+
+            for (gasto in gastoCrud.getAllGastos()){
+
+                println(gasto)
+            }
+
+
+
+
+
+
+
+//            val intent = Intent(this, MgInicio::class.java)
+//            startActivity(intent)
+//            finish()
         }
 
         binding.btnAtras3.setOnClickListener {
@@ -103,6 +160,13 @@ class MgAnadirGasto : AppCompatActivity() {
             selectedMonthManual = yesterdayMonth
             selectedYearManual = yesterdayYear
 
+            yesterday.set(Calendar.YEAR, selectedYearManual)
+            yesterday.set(Calendar.MONTH, selectedMonthManual)
+            yesterday.set(Calendar.DAY_OF_MONTH, selectedDayManual)
+
+            updateFecha(yesterday)
+
+//            updateFechaSeleccionada()
 
             tvFechaSeleccionada.setText("$selectedDayManual del $selectedMonthManual de $yesterdayYear")
         }
@@ -113,10 +177,18 @@ class MgAnadirGasto : AppCompatActivity() {
                 selectedDayManual = todayDay
                 selectedMonthManual = todayMonth
                 selectedYearManual = todayYear
+
+
             } else{
                 selectedDayManual = selectedDay
                 selectedMonthManual = selectedMonth
                 selectedYearManual = selectedYear
+
+                today.set(Calendar.YEAR, selectedYearManual)
+                today.set(Calendar.MONTH, selectedMonthManual)
+                today.set(Calendar.DAY_OF_MONTH, selectedDayManual)
+
+                updateFecha(today)
             }
 
             tvFechaSeleccionada.setText("$selectedDayManual del $selectedMonthManual de $selectedYearManual")
@@ -127,6 +199,13 @@ class MgAnadirGasto : AppCompatActivity() {
             selectedDayManual = tomorrowDay
             selectedMonthManual = tomorrowMonth
             selectedYearManual = tomorrowYear
+
+            tomorrow.set(Calendar.YEAR, selectedYearManual)
+            tomorrow.set(Calendar.MONTH, selectedMonthManual)
+            tomorrow.set(Calendar.DAY_OF_MONTH, selectedDayManual)
+
+            updateFecha(tomorrow)
+//            updateFechaSeleccionada()
 
             tvFechaSeleccionada.setText("$selectedDayManual del $selectedMonthManual de $selectedYearManual")
 
@@ -155,6 +234,7 @@ class MgAnadirGasto : AppCompatActivity() {
     }
 
 
+    @SuppressLint("NewApi")
     @RequiresApi(Build.VERSION_CODES.N)
     private fun showDatePickerDialog(tvFechaSeleccionada: TextView, fecha1 : TextView, fecha2 : TextView, fecha3 : TextView) {
         val today = Calendar.getInstance()
@@ -165,15 +245,23 @@ class MgAnadirGasto : AppCompatActivity() {
             selectedMonth = month.plus(1)
             selectedDay = dayOfMonth
             tvFechaSeleccionada.setText("$selectedDay del $selectedMonth de $selectedYear")
+
             selectedDayManual = selectedDay
             selectedMonthManual = selectedMonth
             selectedYearManual = selectedYear
+
+
+
+
+//            updateFechaSeleccionada()
 
             selectedDate.set(Calendar.YEAR, year)
             selectedDate.set(Calendar.MONTH, month)
             selectedDate.set(Calendar.DAY_OF_MONTH, dayOfMonth)
 
-            actualizarYestardayTomorrow()
+            updateFecha(selectedDate)
+
+            actualizarYesterdayTomorrow()
 
 
             fecha1.setText("$yesterdayDay/$yesterdayMonth")
@@ -194,8 +282,25 @@ class MgAnadirGasto : AppCompatActivity() {
 
     }
 
+//    @SuppressLint("NewApi")
+//    private fun updateFechaSeleccionada() {
+//        fechaSeleccionada = LocalDate.of(selectedYearManual, selectedMonthManual, selectedDayManual)
+////        println(fechaSeleccionada.toString())
+//    }
+
     @RequiresApi(Build.VERSION_CODES.N)
-    private fun actualizarYestardayTomorrow(){
+    private fun updateFecha(selectedDate : Calendar){
+        fecha = selectedDate.time
+    }
+
+    @RequiresApi(Build.VERSION_CODES.N)
+    private fun actualizarYesterdayTomorrow(){
+
+        today = selectedDate.apply { add(Calendar.DATE,0) }
+        todayDay = today.get(Calendar.DAY_OF_MONTH)
+        todayMonth = today.get(Calendar.MONTH) +1
+        todayYear = today.get(Calendar.YEAR)
+
 
         yesterday = selectedDate.apply { add(Calendar.DATE, -1) }
         yesterdayDay = yesterday.get(Calendar.DAY_OF_MONTH)
