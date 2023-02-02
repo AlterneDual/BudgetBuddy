@@ -4,7 +4,7 @@
             "outputFile": "run.budgetbuddy.app-mergeDebugResources-27:/values-small-v4/values-small-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Aragon\\.gradle\\caches\\transforms-3\\f0209ecd0c904b43df0928ab3def9ccf\\transformed\\material-1.8.0\\res\\values-small-v4\\values-small-v4.xml",
+                    "source": "C:\\Users\\Syzer\\.gradle\\caches\\transforms-3\\f0209ecd0c904b43df0928ab3def9ccf\\transformed\\material-1.8.0\\res\\values-small-v4\\values-small-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

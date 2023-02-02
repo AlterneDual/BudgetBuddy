@@ -9,7 +9,7 @@ open class UsuarioCRUD {
 
     var realm: Realm = Realm.getDefaultInstance()
 
-//fun addUser(name : String, pss: String, email: String, rol: String, listaGastos: RealmList<Gasto>)
+    //fun addUser(name : String, pss: String, email: String, rol: String, listaGastos: RealmList<Gasto>)
     fun addUser(usuario : Usuario) : Int{
         var key = getKey()
 
@@ -19,11 +19,11 @@ open class UsuarioCRUD {
             user.password = usuario.password
             user.email = usuario.email
             user.rol = usuario.rol
+            user.listaGastos = usuario.listaGastos
 
-
-            if(usuario.listaGastos!!.size < 0){
-                user.listaGastos = usuario.listaGastos
-            }
+//            if(usuario.listaGastos!!.size <= 0){
+//                user.listaGastos = usuario.listaGastos
+//            }
             realm.insertOrUpdate(user)
         }
         return key
