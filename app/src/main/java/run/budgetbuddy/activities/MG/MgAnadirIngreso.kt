@@ -72,7 +72,5 @@ class MgAnadirIngreso : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
         }
-
-
     }
 }
