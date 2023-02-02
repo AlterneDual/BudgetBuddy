@@ -81,8 +81,12 @@ class MgAnadirGasto : AppCompatActivity() {
         var btnFecha2 = binding.btnFecha2
         var btnFecha3 = binding.btnFecha3
 
+<<<<<<< Updated upstream
         var etCantidad = binding.etCantidad
         var etComentario = binding.etComentario
+=======
+        
+>>>>>>> Stashed changes
 
 
         tvFechaSeleccionada.setText("$todayDay del $todayMonth de $todayYear")
