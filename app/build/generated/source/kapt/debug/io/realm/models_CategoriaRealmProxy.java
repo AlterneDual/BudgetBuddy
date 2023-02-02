@@ -46,14 +46,16 @@ public class models_CategoriaRealmProxy extends models.Categoria
         long idColKey;
         long nombreColKey;
         long iconoColKey;
+        long colorColKey;
         long descripcionColKey;
 
         CategoriaColumnInfo(OsSchemaInfo schemaInfo) {
-            super(4);
+            super(5);
             OsObjectSchemaInfo objectSchemaInfo = schemaInfo.getObjectSchemaInfo("Categoria");
             this.idColKey = addColumnDetails("id", "id", objectSchemaInfo);
             this.nombreColKey = addColumnDetails("nombre", "nombre", objectSchemaInfo);
             this.iconoColKey = addColumnDetails("icono", "icono", objectSchemaInfo);
+            this.colorColKey = addColumnDetails("color", "color", objectSchemaInfo);
             this.descripcionColKey = addColumnDetails("descripcion", "descripcion", objectSchemaInfo);
         }
 
@@ -74,6 +76,7 @@ public class models_CategoriaRealmProxy extends models.Categoria
             dst.idColKey = src.idColKey;
             dst.nombreColKey = src.nombreColKey;
             dst.iconoColKey = src.iconoColKey;
+            dst.colorColKey = src.colorColKey;
             dst.descripcionColKey = src.descripcionColKey;
         }
     }
@@ -135,8 +138,7 @@ public class models_CategoriaRealmProxy extends models.Categoria
             }
             final Row row = proxyState.getRow$realm();
             if (value == null) {
-                row.getTable().setNull(columnInfo.nombreColKey, row.getObjectKey(), true);
-                return;
+                throw new IllegalArgumentException("Trying to set non-nullable field 'nombre' to null.");
             }
             row.getTable().setString(columnInfo.nombreColKey, row.getObjectKey(), value, true);
             return;
@@ -144,43 +146,53 @@ public class models_CategoriaRealmProxy extends models.Categoria
 
         proxyState.getRealm$realm().checkIfValid();
         if (value == null) {
-            proxyState.getRow$realm().setNull(columnInfo.nombreColKey);
-            return;
+            throw new IllegalArgumentException("Trying to set non-nullable field 'nombre' to null.");
         }
         proxyState.getRow$realm().setString(columnInfo.nombreColKey, value);
     }
 
     @Override
     @SuppressWarnings("cast")
-    public Integer realmGet$icono() {
+    public int realmGet$icono() {
         proxyState.getRealm$realm().checkIfValid();
-        if (proxyState.getRow$realm().isNull(columnInfo.iconoColKey)) {
-            return null;
-        }
         return (int) proxyState.getRow$realm().getLong(columnInfo.iconoColKey);
     }
 
     @Override
-    public void realmSet$icono(Integer value) {
+    public void realmSet$icono(int value) {
         if (proxyState.isUnderConstruction()) {
             if (!proxyState.getAcceptDefaultValue$realm()) {
                 return;
             }
             final Row row = proxyState.getRow$realm();
-            if (value == null) {
-                row.getTable().setNull(columnInfo.iconoColKey, row.getObjectKey(), true);
-                return;
-            }
             row.getTable().setLong(columnInfo.iconoColKey, row.getObjectKey(), value, true);
             return;
         }
 
         proxyState.getRealm$realm().checkIfValid();
-        if (value == null) {
-            proxyState.getRow$realm().setNull(columnInfo.iconoColKey);
+        proxyState.getRow$realm().setLong(columnInfo.iconoColKey, value);
+    }
+
+    @Override
+    @SuppressWarnings("cast")
+    public int realmGet$color() {
+        proxyState.getRealm$realm().checkIfValid();
+        return (int) proxyState.getRow$realm().getLong(columnInfo.colorColKey);
+    }
+
+    @Override
+    public void realmSet$color(int value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            row.getTable().setLong(columnInfo.colorColKey, row.getObjectKey(), value, true);
             return;
         }
-        proxyState.getRow$realm().setLong(columnInfo.iconoColKey, value);
+
+        proxyState.getRealm$realm().checkIfValid();
+        proxyState.getRow$realm().setLong(columnInfo.colorColKey, value);
     }
 
     @Override
@@ -198,8 +210,7 @@ public class models_CategoriaRealmProxy extends models.Categoria
             }
             final Row row = proxyState.getRow$realm();
             if (value == null) {
-                row.getTable().setNull(columnInfo.descripcionColKey, row.getObjectKey(), true);
-                return;
+                throw new IllegalArgumentException("Trying to set non-nullable field 'descripcion' to null.");
             }
             row.getTable().setString(columnInfo.descripcionColKey, row.getObjectKey(), value, true);
             return;
@@ -207,18 +218,18 @@ public class models_CategoriaRealmProxy extends models.Categoria
 
         proxyState.getRealm$realm().checkIfValid();
         if (value == null) {
-            proxyState.getRow$realm().setNull(columnInfo.descripcionColKey);
-            return;
+            throw new IllegalArgumentException("Trying to set non-nullable field 'descripcion' to null.");
         }
         proxyState.getRow$realm().setString(columnInfo.descripcionColKey, value);
     }
 
     private static OsObjectSchemaInfo createExpectedObjectSchemaInfo() {
-        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(NO_ALIAS, "Categoria", false, 4, 0);
+        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(NO_ALIAS, "Categoria", false, 5, 0);
         builder.addPersistedProperty(NO_ALIAS, "id", RealmFieldType.INTEGER, Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "nombre", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "icono", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "descripcion", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "nombre", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "icono", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "color", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "descripcion", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         return builder.build();
     }
 
@@ -283,9 +294,16 @@ public class models_CategoriaRealmProxy extends models.Categoria
         }
         if (json.has("icono")) {
             if (json.isNull("icono")) {
-                objProxy.realmSet$icono(null);
+                throw new IllegalArgumentException("Trying to set non-nullable field 'icono' to null.");
             } else {
                 objProxy.realmSet$icono((int) json.getInt("icono"));
+            }
+        }
+        if (json.has("color")) {
+            if (json.isNull("color")) {
+                throw new IllegalArgumentException("Trying to set non-nullable field 'color' to null.");
+            } else {
+                objProxy.realmSet$color((int) json.getInt("color"));
             }
         }
         if (json.has("descripcion")) {
@@ -329,7 +347,14 @@ public class models_CategoriaRealmProxy extends models.Categoria
                     objProxy.realmSet$icono((int) reader.nextInt());
                 } else {
                     reader.skipValue();
-                    objProxy.realmSet$icono(null);
+                    throw new IllegalArgumentException("Trying to set non-nullable field 'icono' to null.");
+                }
+            } else if (name.equals("color")) {
+                if (reader.peek() != JsonToken.NULL) {
+                    objProxy.realmSet$color((int) reader.nextInt());
+                } else {
+                    reader.skipValue();
+                    throw new IllegalArgumentException("Trying to set non-nullable field 'color' to null.");
                 }
             } else if (name.equals("descripcion")) {
                 if (reader.peek() != JsonToken.NULL) {
@@ -411,6 +436,7 @@ public class models_CategoriaRealmProxy extends models.Categoria
         builder.addInteger(columnInfo.idColKey, unmanagedSource.realmGet$id());
         builder.addString(columnInfo.nombreColKey, unmanagedSource.realmGet$nombre());
         builder.addInteger(columnInfo.iconoColKey, unmanagedSource.realmGet$icono());
+        builder.addInteger(columnInfo.colorColKey, unmanagedSource.realmGet$color());
         builder.addString(columnInfo.descripcionColKey, unmanagedSource.realmGet$descripcion());
 
         // Create the underlying object and cache it before setting any object/objectlist references
@@ -445,10 +471,8 @@ public class models_CategoriaRealmProxy extends models.Categoria
         if (realmGet$nombre != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.nombreColKey, objKey, realmGet$nombre, false);
         }
-        Number realmGet$icono = ((models_CategoriaRealmProxyInterface) object).realmGet$icono();
-        if (realmGet$icono != null) {
-            Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, realmGet$icono.longValue(), false);
-        }
+        Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
         String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
         if (realmGet$descripcion != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -486,10 +510,8 @@ public class models_CategoriaRealmProxy extends models.Categoria
             if (realmGet$nombre != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.nombreColKey, objKey, realmGet$nombre, false);
             }
-            Number realmGet$icono = ((models_CategoriaRealmProxyInterface) object).realmGet$icono();
-            if (realmGet$icono != null) {
-                Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, realmGet$icono.longValue(), false);
-            }
+            Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
+            Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
             String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
             if (realmGet$descripcion != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -520,12 +542,8 @@ public class models_CategoriaRealmProxy extends models.Categoria
         } else {
             Table.nativeSetNull(tableNativePtr, columnInfo.nombreColKey, objKey, false);
         }
-        Number realmGet$icono = ((models_CategoriaRealmProxyInterface) object).realmGet$icono();
-        if (realmGet$icono != null) {
-            Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, realmGet$icono.longValue(), false);
-        } else {
-            Table.nativeSetNull(tableNativePtr, columnInfo.iconoColKey, objKey, false);
-        }
+        Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
         String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
         if (realmGet$descripcion != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -565,12 +583,8 @@ public class models_CategoriaRealmProxy extends models.Categoria
             } else {
                 Table.nativeSetNull(tableNativePtr, columnInfo.nombreColKey, objKey, false);
             }
-            Number realmGet$icono = ((models_CategoriaRealmProxyInterface) object).realmGet$icono();
-            if (realmGet$icono != null) {
-                Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, realmGet$icono.longValue(), false);
-            } else {
-                Table.nativeSetNull(tableNativePtr, columnInfo.iconoColKey, objKey, false);
-            }
+            Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
+            Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
             String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
             if (realmGet$descripcion != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -603,6 +617,7 @@ public class models_CategoriaRealmProxy extends models.Categoria
         unmanagedCopy.realmSet$id(realmSource.realmGet$id());
         unmanagedCopy.realmSet$nombre(realmSource.realmGet$nombre());
         unmanagedCopy.realmSet$icono(realmSource.realmGet$icono());
+        unmanagedCopy.realmSet$color(realmSource.realmGet$color());
         unmanagedCopy.realmSet$descripcion(realmSource.realmGet$descripcion());
 
         return unmanagedObject;
@@ -616,36 +631,11 @@ public class models_CategoriaRealmProxy extends models.Categoria
         builder.addInteger(columnInfo.idColKey, realmObjectSource.realmGet$id());
         builder.addString(columnInfo.nombreColKey, realmObjectSource.realmGet$nombre());
         builder.addInteger(columnInfo.iconoColKey, realmObjectSource.realmGet$icono());
+        builder.addInteger(columnInfo.colorColKey, realmObjectSource.realmGet$color());
         builder.addString(columnInfo.descripcionColKey, realmObjectSource.realmGet$descripcion());
 
         builder.updateExistingTopLevelObject();
         return realmObject;
-    }
-
-    @Override
-    @SuppressWarnings("ArrayToString")
-    public String toString() {
-        if (!RealmObject.isValid(this)) {
-            return "Invalid object";
-        }
-        StringBuilder stringBuilder = new StringBuilder("Categoria = proxy[");
-        stringBuilder.append("{id:");
-        stringBuilder.append(realmGet$id());
-        stringBuilder.append("}");
-        stringBuilder.append(",");
-        stringBuilder.append("{nombre:");
-        stringBuilder.append(realmGet$nombre() != null ? realmGet$nombre() : "null");
-        stringBuilder.append("}");
-        stringBuilder.append(",");
-        stringBuilder.append("{icono:");
-        stringBuilder.append(realmGet$icono() != null ? realmGet$icono() : "null");
-        stringBuilder.append("}");
-        stringBuilder.append(",");
-        stringBuilder.append("{descripcion:");
-        stringBuilder.append(realmGet$descripcion() != null ? realmGet$descripcion() : "null");
-        stringBuilder.append("}");
-        stringBuilder.append("]");
-        return stringBuilder.toString();
     }
 
     @Override

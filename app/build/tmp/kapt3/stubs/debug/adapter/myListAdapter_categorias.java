@@ -8,52 +8,52 @@ public final class myListAdapter_categorias extends android.widget.BaseAdapter {
     private final int layout = 0;
     private final java.util.List<models.ItemGenerico> listaOpciones = null;
     
-    public myListAdapter_categorias(@org.jetbrains.annotations.NotNull()
-    android.content.Context context, int layout, @org.jetbrains.annotations.NotNull()
+    public myListAdapter_categorias(@org.jetbrains.annotations.NotNull
+    android.content.Context context, int layout, @org.jetbrains.annotations.NotNull
     java.util.List<models.ItemGenerico> listaOpciones) {
         super();
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public int getCount() {
         return 0;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
     public models.ItemGenerico getItem(int position) {
         return null;
     }
     
-    @java.lang.Override()
+    @java.lang.Override
     public long getItemId(int id) {
         return 0L;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    @java.lang.Override()
-    public android.view.View getView(int position, @org.jetbrains.annotations.Nullable()
-    android.view.View convertView, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    @java.lang.Override
+    public android.view.View getView(int position, @org.jetbrains.annotations.Nullable
+    android.view.View convertView, @org.jetbrains.annotations.NotNull
     android.view.ViewGroup parent) {
         return null;
     }
     
     @kotlin.Metadata(mv = {1, 8, 0}, k = 1, d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\b\u0000\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u00a2\u0006\u0002\u0010\u0004R\u001a\u0010\u0002\u001a\u00020\u0003X\u0086\u000e\u00a2\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\u0004\u00a8\u0006\b"}, d2 = {"Ladapter/myListAdapter_categorias$ViewHolder;", "", "icono", "Landroid/widget/ImageView;", "(Landroid/widget/ImageView;)V", "getIcono", "()Landroid/widget/ImageView;", "setIcono", "app_debug"})
     public static final class ViewHolder {
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         private android.widget.ImageView icono;
         
-        public ViewHolder(@org.jetbrains.annotations.NotNull()
+        public ViewHolder(@org.jetbrains.annotations.NotNull
         android.widget.ImageView icono) {
             super();
         }
         
-        @org.jetbrains.annotations.NotNull()
+        @org.jetbrains.annotations.NotNull
         public final android.widget.ImageView getIcono() {
             return null;
         }
         
-        public final void setIcono(@org.jetbrains.annotations.NotNull()
+        public final void setIcono(@org.jetbrains.annotations.NotNull
         android.widget.ImageView p0) {
         }
     }

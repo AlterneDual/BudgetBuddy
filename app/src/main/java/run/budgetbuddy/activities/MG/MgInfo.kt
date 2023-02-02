@@ -1,13 +1,13 @@
 package run.budgetbuddy.activities.MG
 
 import CRUD.GastoCRUD
+import adapter.myListAdapter_menu_Lateral
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.graphics.Paint
 import android.os.Build
 import android.os.Bundle
-import android.widget.CalendarView
-import android.widget.Toast
+import android.widget.ListView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -17,12 +17,14 @@ import java.sql.Date
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
-import java.util.concurrent.BlockingQueue
+import run.budgetbuddy.adapter.*
 
 class MgInfo : AppCompatActivity() {
     private lateinit var binding: MgInfoBinding
     private var seleccionado: Int = 1;
     var gc: GastoCRUD = GastoCRUD()
+    private lateinit var list_view: ListView
+    private lateinit var adapterList: myListAdapterInfoGasto
 
 
     //    private lateinit var sharedPreferences: SharedPreferences
@@ -44,6 +46,7 @@ class MgInfo : AppCompatActivity() {
 
 //        if (sharedPreferences.getBoolean(MYGESTORVIEWINGRESOS_SETTING, false)) {
         var lista_gastos = gc.getAllGastos();
+        inicializarAdapter()
 
         println("******************************************************************************************************************")
         for (g in lista_gastos) {
@@ -318,6 +321,16 @@ class MgInfo : AppCompatActivity() {
             dayOfMonth
         )
         startDatePicker.show()
+    }
+
+    private fun inicializarAdapter() {
+        var lista_gastos = gc.getAllGastos()
+
+        list_view = findViewById<ListView>(R.id.lista_gastos)
+        adapterList =
+            myListAdapterInfoGasto(this, R.layout.mg_info_gasto_ingreso_row, lista_gastos)
+        list_view.adapter = adapterList
+        registerForContextMenu(list_view)
     }
 
 

@@ -108,6 +108,10 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\drawable\\pantallamygroup.png"
     },
     {
+        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\layout_mg_info_gasto_ingreso_row.xml.flat",
+        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_info_gasto_ingreso_row.xml"
+    },
+    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\layout_mg_inicio_gastos.xml.flat",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_inicio_gastos.xml"
     },
@@ -182,6 +186,10 @@
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\layout_gp_row_group.xml.flat",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_row_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\layout_mg_row_gasto.xml.flat",
+        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_row_gasto.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\layout_dialog_borrar_datos.xml.flat",
