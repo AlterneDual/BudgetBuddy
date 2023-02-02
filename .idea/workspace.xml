@@ -41,12 +41,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/layout" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\java\run\budgetbuddy" />
       <recent name="C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\res\layout" />
+      <recent name="C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\java\run\budgetbuddy" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="run.budgetbuddy.activities.MG" />

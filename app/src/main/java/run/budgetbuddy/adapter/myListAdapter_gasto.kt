@@ -29,13 +29,13 @@ class myListAdapter_gasto(context: Context, gastos: List<Gasto>) : BaseAdapter()
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val gasto = mGastos[position]
-        val view: View = convertView ?: LayoutInflater.from(mContext).inflate(R.layout.mg_row_gasto, parent, false)
+        val view: View = convertView ?: LayoutInflater.from(mContext).inflate(R.layout.mg_row_lista_gasto, parent, false)
 
         val categoriaIcono = view.findViewById<ImageView>(R.id.ImagenListaGasto)
         val gastoNombre = view.findViewById<TextView>(R.id.tvListaGasto)
 
         categoriaIcono.setImageResource(gasto.categoria!!.icono)
-        gastoNombre.text = gasto.descripcion
+        gastoNombre.text = gasto.categoria!!.nombre.toString()
 
         return view
     }

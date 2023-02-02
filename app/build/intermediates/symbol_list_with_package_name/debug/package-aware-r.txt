@@ -2895,11 +2895,11 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id ImagenListaGasto
 id META
 id NO_DEBUG
 id RVCategorias
 id RVGastosA
-id RVIngresos
 id RVParticipantes
 id ReclyclerViewB
 id RecyclerViewC1
@@ -3264,6 +3264,7 @@ id listView_menu
 id list_item
 id list_view
 id lista_categorias
+id lvInicioGastos
 id m3_side_sheet
 id marquee
 id masked
@@ -3558,6 +3559,7 @@ id tvGastos
 id tvGroupInfo
 id tvGroupName
 id tvIngresos
+id tvListaGasto
 id tvMes
 id tvNombre1
 id tvNombre2
@@ -3789,6 +3791,7 @@ layout mg_editar_ingreso
 layout mg_info
 layout mg_inicio_gastos
 layout mg_inicio_ingresos
+layout mg_row_lista_gasto
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

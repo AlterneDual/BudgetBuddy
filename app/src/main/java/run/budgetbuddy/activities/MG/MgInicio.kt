@@ -7,20 +7,33 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import io.realm.RealmList
 import models.Categoria
 import models.Divisa
 import models.Gasto
+import run.budgetbuddy.R
 import run.budgetbuddy.activities.menu.MenuLateralMG
+import run.budgetbuddy.adapter.myListAdapter_gasto
 import run.budgetbuddy.databinding.MgInicioGastosBinding
 
 class MgInicio : AppCompatActivity() {
 
     private lateinit var binding: MgInicioGastosBinding
+    private lateinit var adapter: myListAdapter_gasto
+    var listagastos: RealmList<Gasto> = RealmList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
+        val listView = binding.lvInicioGastos
+        adapter = myListAdapter_gasto(this, listagastos)
+        listView.adapter = adapter
+
+        cargar()
 
         var btnIngresos = binding.tvIngresos
         btnIngresos.setOnClickListener {
@@ -105,14 +118,17 @@ class MgInicio : AppCompatActivity() {
         // Creacion de Categorias
         var cat1 = Categoria()
         cat1.nombre = "Ocio"
+        cat1.icono = R.drawable.cat_cine
         var k1 = categoriaCRUD.addCategoria(cat1)
 
         var cat2 = Categoria()
         cat2.nombre = "Alimentacion"
+        cat2.icono = R.drawable.cat_coctel
         var k2 = categoriaCRUD.addCategoria(cat2)
 
         var cat3 = Categoria()
         cat3.nombre = "Alquiler"
+        cat3.icono = R.drawable.cat_hotel
         var k3 = categoriaCRUD.addCategoria(cat3)
 
         // Creacion de los Gastos
@@ -148,17 +164,10 @@ class MgInicio : AppCompatActivity() {
         gasto4.categoria = cat
         gastoCRUD.addGasto(gasto4)
 
-        println("DIVISAS -- //////////////////////////////////////////////////////////////////////////////////////////////////////")
-        for (div in divisaCRUD.getAllDivisa()) {
-            println(div.toString())
-        }
-        println("CATEGORIAS -- //////////////////////////////////////////////////////////////////////////////////////////////////////")
-        for (cat in categoriaCRUD.getAllCategoria()) {
-            println(cat.toString())
-        }
-        println("GASTOS -- //////////////////////////////////////////////////////////////////////////////////////////////////////")
-        for (g in gastoCRUD.getAllGastos()) {
-            println(g.toString())
-        }
+        var keyGasto = gastoCRUD.addGasto(gasto3)
+        listagastos.add(gastoCRUD.getGasto(keyGasto))
+        adapter.notifyDataSetChanged()
+
+
     }
 }
