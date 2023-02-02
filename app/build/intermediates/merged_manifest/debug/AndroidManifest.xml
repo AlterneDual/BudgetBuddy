@@ -65,7 +65,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="run.budgetbuddy.activities.menu.MenuLateral3G"
+            android:name="run.budgetbuddy.activities.MenuLateral3G"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
@@ -184,14 +184,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="run.budgetbuddy.activities.menu.MenuLateralMG"
+            android:name="run.budgetbuddy.activities.MenuLateralMG"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name="run.budgetbuddy.activities.ajustes.Ajustes"
+            android:name="run.budgetbuddy.activities.Ajustes"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
