@@ -10,8 +10,8 @@ public final class MgAnadirIngreso extends androidx.appcompat.app.AppCompatActiv
         super();
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
 }

@@ -2735,6 +2735,7 @@ drawable camara
 drawable campana
 drawable card_black
 drawable cat_avion
+drawable cat_avion_
 drawable cat_bolos
 drawable cat_cine
 drawable cat_coctel
@@ -2749,6 +2750,14 @@ drawable cat_restaurante
 drawable cat_videojuego
 drawable categoria
 drawable cerrar
+drawable circulo_amarillo
+drawable circulo_azul
+drawable circulo_celeste
+drawable circulo_naranja
+drawable circulo_rojo
+drawable circulo_rosa
+drawable circulo_turquesa
+drawable circulo_verde
 drawable confirmar
 drawable custom_inputtext
 drawable decimal
@@ -2895,10 +2904,13 @@ id BOTTOM_END
 id BOTTOM_START
 id CTRL
 id FUNCTION
+id GVCategoria
+id GVCategorias2
+id GVCategorias3
+id GVColores
 id ImagenListaGasto
 id META
 id NO_DEBUG
-id RVCategorias
 id RVGastosA
 id RVParticipantes
 id ReclyclerViewB
@@ -3264,6 +3276,7 @@ id listView_menu
 id list_item
 id list_view
 id lista_categorias
+id lista_gastos
 id lvInicioGastos
 id m3_side_sheet
 id marquee
@@ -3485,6 +3498,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textTotal
 id textView
 id textView10
 id textView11
@@ -3538,7 +3552,6 @@ id tv3
 id tv4
 id tvAgregarImagen2
 id tvAnho
-id tvAñadirCategoria
 id tvCantidad
 id tvCantidadGasto
 id tvCategorias
@@ -3728,6 +3741,7 @@ layout custom_dialog
 layout custom_grid_categorias
 layout custom_list
 layout custom_list_ajustes
+layout custom_list_colores
 layout custom_list_divisas
 layout custom_list_menu_lateral
 layout design_bottom_navigation_item
@@ -3789,9 +3803,10 @@ layout mg_anadir_ingreso
 layout mg_editar_gastos
 layout mg_editar_ingreso
 layout mg_info
+layout mg_info_gasto_ingreso_row
 layout mg_inicio_gastos
 layout mg_inicio_ingresos
-layout mg_row_gasto
+layout mg_row_lista_gasto
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

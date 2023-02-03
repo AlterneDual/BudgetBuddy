@@ -43,19 +43,19 @@ public class models_CategoriaRealmProxy extends models.Categoria
     implements RealmObjectProxy, models_CategoriaRealmProxyInterface {
 
     static final class CategoriaColumnInfo extends ColumnInfo {
-        long idColKey;
         long nombreColKey;
-        long iconoColKey;
         long colorColKey;
+        long iconoColKey;
+        long idColKey;
         long descripcionColKey;
 
         CategoriaColumnInfo(OsSchemaInfo schemaInfo) {
             super(5);
             OsObjectSchemaInfo objectSchemaInfo = schemaInfo.getObjectSchemaInfo("Categoria");
-            this.idColKey = addColumnDetails("id", "id", objectSchemaInfo);
             this.nombreColKey = addColumnDetails("nombre", "nombre", objectSchemaInfo);
-            this.iconoColKey = addColumnDetails("icono", "icono", objectSchemaInfo);
             this.colorColKey = addColumnDetails("color", "color", objectSchemaInfo);
+            this.iconoColKey = addColumnDetails("icono", "icono", objectSchemaInfo);
+            this.idColKey = addColumnDetails("id", "id", objectSchemaInfo);
             this.descripcionColKey = addColumnDetails("descripcion", "descripcion", objectSchemaInfo);
         }
 
@@ -73,10 +73,10 @@ public class models_CategoriaRealmProxy extends models.Categoria
         protected final void copy(ColumnInfo rawSrc, ColumnInfo rawDst) {
             final CategoriaColumnInfo src = (CategoriaColumnInfo) rawSrc;
             final CategoriaColumnInfo dst = (CategoriaColumnInfo) rawDst;
-            dst.idColKey = src.idColKey;
             dst.nombreColKey = src.nombreColKey;
-            dst.iconoColKey = src.iconoColKey;
             dst.colorColKey = src.colorColKey;
+            dst.iconoColKey = src.iconoColKey;
+            dst.idColKey = src.idColKey;
             dst.descripcionColKey = src.descripcionColKey;
         }
     }
@@ -103,24 +103,6 @@ public class models_CategoriaRealmProxy extends models.Categoria
         proxyState.setRow$realm(context.getRow());
         proxyState.setAcceptDefaultValue$realm(context.getAcceptDefaultValue());
         proxyState.setExcludeFields$realm(context.getExcludeFields());
-    }
-
-    @Override
-    @SuppressWarnings("cast")
-    public int realmGet$id() {
-        proxyState.getRealm$realm().checkIfValid();
-        return (int) proxyState.getRow$realm().getLong(columnInfo.idColKey);
-    }
-
-    @Override
-    public void realmSet$id(int value) {
-        if (proxyState.isUnderConstruction()) {
-            // default value of the primary key is always ignored.
-            return;
-        }
-
-        proxyState.getRealm$realm().checkIfValid();
-        throw new io.realm.exceptions.RealmException("Primary key field 'id' cannot be changed after object was created.");
     }
 
     @Override
@@ -153,6 +135,28 @@ public class models_CategoriaRealmProxy extends models.Categoria
 
     @Override
     @SuppressWarnings("cast")
+    public int realmGet$color() {
+        proxyState.getRealm$realm().checkIfValid();
+        return (int) proxyState.getRow$realm().getLong(columnInfo.colorColKey);
+    }
+
+    @Override
+    public void realmSet$color(int value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            row.getTable().setLong(columnInfo.colorColKey, row.getObjectKey(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        proxyState.getRow$realm().setLong(columnInfo.colorColKey, value);
+    }
+
+    @Override
+    @SuppressWarnings("cast")
     public int realmGet$icono() {
         proxyState.getRealm$realm().checkIfValid();
         return (int) proxyState.getRow$realm().getLong(columnInfo.iconoColKey);
@@ -175,24 +179,20 @@ public class models_CategoriaRealmProxy extends models.Categoria
 
     @Override
     @SuppressWarnings("cast")
-    public int realmGet$color() {
+    public int realmGet$id() {
         proxyState.getRealm$realm().checkIfValid();
-        return (int) proxyState.getRow$realm().getLong(columnInfo.colorColKey);
+        return (int) proxyState.getRow$realm().getLong(columnInfo.idColKey);
     }
 
     @Override
-    public void realmSet$color(int value) {
+    public void realmSet$id(int value) {
         if (proxyState.isUnderConstruction()) {
-            if (!proxyState.getAcceptDefaultValue$realm()) {
-                return;
-            }
-            final Row row = proxyState.getRow$realm();
-            row.getTable().setLong(columnInfo.colorColKey, row.getObjectKey(), value, true);
+            // default value of the primary key is always ignored.
             return;
         }
 
         proxyState.getRealm$realm().checkIfValid();
-        proxyState.getRow$realm().setLong(columnInfo.colorColKey, value);
+        throw new io.realm.exceptions.RealmException("Primary key field 'id' cannot be changed after object was created.");
     }
 
     @Override
@@ -225,10 +225,10 @@ public class models_CategoriaRealmProxy extends models.Categoria
 
     private static OsObjectSchemaInfo createExpectedObjectSchemaInfo() {
         OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(NO_ALIAS, "Categoria", false, 5, 0);
-        builder.addPersistedProperty(NO_ALIAS, "id", RealmFieldType.INTEGER, Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "nombre", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "icono", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "color", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "icono", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "id", RealmFieldType.INTEGER, Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "descripcion", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         return builder.build();
     }
@@ -292,18 +292,18 @@ public class models_CategoriaRealmProxy extends models.Categoria
                 objProxy.realmSet$nombre((String) json.getString("nombre"));
             }
         }
-        if (json.has("icono")) {
-            if (json.isNull("icono")) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'icono' to null.");
-            } else {
-                objProxy.realmSet$icono((int) json.getInt("icono"));
-            }
-        }
         if (json.has("color")) {
             if (json.isNull("color")) {
                 throw new IllegalArgumentException("Trying to set non-nullable field 'color' to null.");
             } else {
                 objProxy.realmSet$color((int) json.getInt("color"));
+            }
+        }
+        if (json.has("icono")) {
+            if (json.isNull("icono")) {
+                throw new IllegalArgumentException("Trying to set non-nullable field 'icono' to null.");
+            } else {
+                objProxy.realmSet$icono((int) json.getInt("icono"));
             }
         }
         if (json.has("descripcion")) {
@@ -327,27 +327,12 @@ public class models_CategoriaRealmProxy extends models.Categoria
         while (reader.hasNext()) {
             String name = reader.nextName();
             if (false) {
-            } else if (name.equals("id")) {
-                if (reader.peek() != JsonToken.NULL) {
-                    objProxy.realmSet$id((int) reader.nextInt());
-                } else {
-                    reader.skipValue();
-                    throw new IllegalArgumentException("Trying to set non-nullable field 'id' to null.");
-                }
-                jsonHasPrimaryKey = true;
             } else if (name.equals("nombre")) {
                 if (reader.peek() != JsonToken.NULL) {
                     objProxy.realmSet$nombre((String) reader.nextString());
                 } else {
                     reader.skipValue();
                     objProxy.realmSet$nombre(null);
-                }
-            } else if (name.equals("icono")) {
-                if (reader.peek() != JsonToken.NULL) {
-                    objProxy.realmSet$icono((int) reader.nextInt());
-                } else {
-                    reader.skipValue();
-                    throw new IllegalArgumentException("Trying to set non-nullable field 'icono' to null.");
                 }
             } else if (name.equals("color")) {
                 if (reader.peek() != JsonToken.NULL) {
@@ -356,6 +341,21 @@ public class models_CategoriaRealmProxy extends models.Categoria
                     reader.skipValue();
                     throw new IllegalArgumentException("Trying to set non-nullable field 'color' to null.");
                 }
+            } else if (name.equals("icono")) {
+                if (reader.peek() != JsonToken.NULL) {
+                    objProxy.realmSet$icono((int) reader.nextInt());
+                } else {
+                    reader.skipValue();
+                    throw new IllegalArgumentException("Trying to set non-nullable field 'icono' to null.");
+                }
+            } else if (name.equals("id")) {
+                if (reader.peek() != JsonToken.NULL) {
+                    objProxy.realmSet$id((int) reader.nextInt());
+                } else {
+                    reader.skipValue();
+                    throw new IllegalArgumentException("Trying to set non-nullable field 'id' to null.");
+                }
+                jsonHasPrimaryKey = true;
             } else if (name.equals("descripcion")) {
                 if (reader.peek() != JsonToken.NULL) {
                     objProxy.realmSet$descripcion((String) reader.nextString());
@@ -433,10 +433,10 @@ public class models_CategoriaRealmProxy extends models.Categoria
         OsObjectBuilder builder = new OsObjectBuilder(table, flags);
 
         // Add all non-"object reference" fields
-        builder.addInteger(columnInfo.idColKey, unmanagedSource.realmGet$id());
         builder.addString(columnInfo.nombreColKey, unmanagedSource.realmGet$nombre());
-        builder.addInteger(columnInfo.iconoColKey, unmanagedSource.realmGet$icono());
         builder.addInteger(columnInfo.colorColKey, unmanagedSource.realmGet$color());
+        builder.addInteger(columnInfo.iconoColKey, unmanagedSource.realmGet$icono());
+        builder.addInteger(columnInfo.idColKey, unmanagedSource.realmGet$id());
         builder.addString(columnInfo.descripcionColKey, unmanagedSource.realmGet$descripcion());
 
         // Create the underlying object and cache it before setting any object/objectlist references
@@ -471,8 +471,8 @@ public class models_CategoriaRealmProxy extends models.Categoria
         if (realmGet$nombre != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.nombreColKey, objKey, realmGet$nombre, false);
         }
-        Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
         Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
         String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
         if (realmGet$descripcion != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -510,8 +510,8 @@ public class models_CategoriaRealmProxy extends models.Categoria
             if (realmGet$nombre != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.nombreColKey, objKey, realmGet$nombre, false);
             }
-            Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
             Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
+            Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
             String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
             if (realmGet$descripcion != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -542,8 +542,8 @@ public class models_CategoriaRealmProxy extends models.Categoria
         } else {
             Table.nativeSetNull(tableNativePtr, columnInfo.nombreColKey, objKey, false);
         }
-        Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
         Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
+        Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
         String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
         if (realmGet$descripcion != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -583,8 +583,8 @@ public class models_CategoriaRealmProxy extends models.Categoria
             } else {
                 Table.nativeSetNull(tableNativePtr, columnInfo.nombreColKey, objKey, false);
             }
-            Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
             Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
+            Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
             String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
             if (realmGet$descripcion != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -614,10 +614,10 @@ public class models_CategoriaRealmProxy extends models.Categoria
         models_CategoriaRealmProxyInterface unmanagedCopy = (models_CategoriaRealmProxyInterface) unmanagedObject;
         models_CategoriaRealmProxyInterface realmSource = (models_CategoriaRealmProxyInterface) realmObject;
         Realm objectRealm = (Realm) ((RealmObjectProxy) realmObject).realmGet$proxyState().getRealm$realm();
-        unmanagedCopy.realmSet$id(realmSource.realmGet$id());
         unmanagedCopy.realmSet$nombre(realmSource.realmGet$nombre());
-        unmanagedCopy.realmSet$icono(realmSource.realmGet$icono());
         unmanagedCopy.realmSet$color(realmSource.realmGet$color());
+        unmanagedCopy.realmSet$icono(realmSource.realmGet$icono());
+        unmanagedCopy.realmSet$id(realmSource.realmGet$id());
         unmanagedCopy.realmSet$descripcion(realmSource.realmGet$descripcion());
 
         return unmanagedObject;
@@ -628,10 +628,10 @@ public class models_CategoriaRealmProxy extends models.Categoria
         models_CategoriaRealmProxyInterface realmObjectSource = (models_CategoriaRealmProxyInterface) newObject;
         Table table = realm.getTable(models.Categoria.class);
         OsObjectBuilder builder = new OsObjectBuilder(table, flags);
-        builder.addInteger(columnInfo.idColKey, realmObjectSource.realmGet$id());
         builder.addString(columnInfo.nombreColKey, realmObjectSource.realmGet$nombre());
-        builder.addInteger(columnInfo.iconoColKey, realmObjectSource.realmGet$icono());
         builder.addInteger(columnInfo.colorColKey, realmObjectSource.realmGet$color());
+        builder.addInteger(columnInfo.iconoColKey, realmObjectSource.realmGet$icono());
+        builder.addInteger(columnInfo.idColKey, realmObjectSource.realmGet$id());
         builder.addString(columnInfo.descripcionColKey, realmObjectSource.realmGet$descripcion());
 
         builder.updateExistingTopLevelObject();

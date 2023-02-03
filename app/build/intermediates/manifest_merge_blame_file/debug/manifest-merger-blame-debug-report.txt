@@ -6,399 +6,400 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml
+8-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="33" />
-9-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml
+9-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-11-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:5:5-80
-11-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:5:22-77
+11-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:5:5-80
+11-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:5:22-77
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->[io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:5-79
-12-->[io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:22-76
+12-->[io.realm:realm-android-library-object-server:10.11.1] C:\Users\Syzer\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:5-79
+12-->[io.realm:realm-android-library-object-server:10.11.1] C:\Users\Syzer\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:22-76
 13    <uses-permission android:name="android.permission.INTERNET" />
-13-->[io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:5-67
-13-->[io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:22-64
+13-->[io.realm:realm-android-library-object-server:10.11.1] C:\Users\Syzer\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:5-67
+13-->[io.realm:realm-android-library-object-server:10.11.1] C:\Users\Syzer\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:22-64
 14
 15    <permission
-15-->[androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+15-->[androidx.core:core:1.9.0] C:\Users\Syzer\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 16        android:name="run.budgetbuddy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-16-->[androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+16-->[androidx.core:core:1.9.0] C:\Users\Syzer\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 17        android:protectionLevel="signature" />
-17-->[androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+17-->[androidx.core:core:1.9.0] C:\Users\Syzer\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 18
 19    <uses-permission android:name="run.budgetbuddy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-19-->[androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-19-->[androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+19-->[androidx.core:core:1.9.0] C:\Users\Syzer\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.9.0] C:\Users\Syzer\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 20
 21    <application
-21-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:6:5-192:19
+21-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:6:5-192:19
 22        android:name="run.budgetbuddy.utils.RealmHelp"
-22-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:7:9-40
+22-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:7:9-40
 23        android:allowBackup="true"
-23-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:8:9-35
+23-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:8:9-35
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+24-->[androidx.core:core:1.9.0] C:\Users\Syzer\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 25        android:dataExtractionRules="@xml/data_extraction_rules"
-25-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:9:9-65
+25-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:9:9-65
 26        android:debuggable="true"
 27        android:fullBackupContent="@xml/backup_rules"
-27-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:10:9-54
+27-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:10:9-54
 28        android:icon="@mipmap/ic_launcher"
-28-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:11:9-43
+28-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:11:9-43
 29        android:label="@string/app_name"
-29-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:12:9-41
+29-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:12:9-41
 30        android:roundIcon="@mipmap/ic_launcher_round"
-30-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:13:9-54
+30-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:13:9-54
 31        android:supportsRtl="true"
-31-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:14:9-35
-32        android:theme="@style/Theme.Design.Light.NoActionBar" >
-32-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:15:9-62
-33        <activity
-33-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:17:9-28:20
-34            android:name="run.budgetbuddy.activities.MG.MgInicio"
-34-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:18:13-51
-35            android:exported="true" >
-35-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:19:13-36
-36            <intent-filter>
-36-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:20:13-24:29
-37                <action android:name="android.intent.action.MAIN" />
-37-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:21:17-69
-37-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:21:25-66
-38
-39                <category android:name="android.intent.category.LAUNCHER" />
-39-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:23:17-77
-39-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:23:27-74
-40            </intent-filter>
-41
-42            <meta-data
-42-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-43                android:name="android.app.lib_name"
-43-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-44                android:value="" />
-44-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-45        </activity>
-46        <activity
-46-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:29:9-35:20
-47            android:name="run.budgetbuddy.activities.MG.MgInicioIngresos"
-47-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:30:13-59
-48            android:exported="false" >
-48-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:31:13-37
-49            <meta-data
-49-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-50                android:name="android.app.lib_name"
-50-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-51                android:value="" />
-51-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-52        </activity>
-53        <activity
-53-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:36:9-42:20
-54            android:name="run.budgetbuddy.activities.MG.MgAnadirGasto"
-54-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:37:13-56
-55            android:exported="false" >
-55-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:38:13-37
-56            <meta-data
-56-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-57                android:name="android.app.lib_name"
-57-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-58                android:value="" />
-58-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-59        </activity>
-60        <activity
-60-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:43:9-49:20
-61            android:name="run.budgetbuddy.activities.MG.MgAnadirIngreso"
-61-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:44:13-58
-62            android:exported="false" >
-62-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:45:13-37
-63            <meta-data
-63-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-64                android:name="android.app.lib_name"
-64-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-65                android:value="" />
-65-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-66        </activity>
-67        <activity
-67-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:50:9-56:20
-68            android:name="run.budgetbuddy.activities.menu.MenuLateral3G"
-68-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:51:13-58
-69            android:exported="false" >
-69-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:52:13-37
-70            <meta-data
-70-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-71                android:name="android.app.lib_name"
-71-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-72                android:value="" />
-72-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-73        </activity>
-74        <activity
-74-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:57:9-63:20
-75            android:name="run.budgetbuddy.activities.MG.MgInfo"
-75-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:58:13-49
-76            android:exported="false" >
-76-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:59:13-37
-77            <meta-data
-77-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-78                android:name="android.app.lib_name"
-78-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-79                android:value="" />
-79-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-80        </activity>
-81        <activity
-81-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:64:9-70:20
-82            android:name="run.budgetbuddy.activities.categoria.AddCategoria"
-82-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:65:13-62
-83            android:exported="false" >
-83-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:66:13-37
-84            <meta-data
-84-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-85                android:name="android.app.lib_name"
-85-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-86                android:value="" />
-86-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-87        </activity>
-88        <activity
-88-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:71:9-77:20
-89            android:name="run.budgetbuddy.activities.categoria.Categorias"
-89-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:72:13-60
-90            android:exported="false" >
-90-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:73:13-37
-91            <meta-data
-91-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-92                android:name="android.app.lib_name"
-92-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-93                android:value="" />
-93-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-94        </activity>
-95        <activity
-95-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:78:9-84:20
-96            android:name="run.budgetbuddy.activities.categoria.CrearCategoria"
-96-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:79:13-64
-97            android:exported="false" >
-97-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:80:13-37
-98            <meta-data
-98-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-99                android:name="android.app.lib_name"
-99-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-100                android:value="" />
-100-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-101        </activity>
-102        <activity
-102-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:85:9-91:20
-103            android:name="run.budgetbuddy.activities.app.Register"
-103-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:86:13-52
-104            android:exported="false" >
-104-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:87:13-37
-105            <meta-data
-105-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-106                android:name="android.app.lib_name"
-106-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-107                android:value="" />
-107-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-108        </activity>
-109        <activity
-109-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:92:9-98:20
-110            android:name="run.budgetbuddy.activities.app.Login"
-110-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:93:13-49
-111            android:exported="false" >
-111-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:94:13-37
-112            <meta-data
-112-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-113                android:name="android.app.lib_name"
-113-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-114                android:value="" />
-114-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-115        </activity>
-116        <activity
-116-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:99:9-106:20
-117            android:name="run.budgetbuddy.activities.app.CargaInicio"
-117-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:100:13-55
-118            android:exported="false" >
-118-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:101:13-37
-119            <meta-data
-119-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-120                android:name="android.app.lib_name"
-120-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-121                android:value="" />
-121-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-122        </activity>
-123        <activity
-123-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:107:9-113:20
-124            android:name="run.budgetbuddy.activities.GG.CrearGrupo3G"
-124-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:108:13-55
-125            android:exported="false" >
-125-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:109:13-37
-126            <meta-data
-126-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-127                android:name="android.app.lib_name"
-127-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-128                android:value="" />
-128-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-129        </activity>
-130        <activity
-130-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:114:9-120:20
-131            android:name="run.budgetbuddy.activities.GG.EditarGasto3G"
-131-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:115:13-56
-132            android:exported="false" >
-132-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:116:13-37
-133            <meta-data
-133-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-134                android:name="android.app.lib_name"
-134-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-135                android:value="" />
-135-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-136        </activity>
-137        <activity
-137-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:121:9-127:20
-138            android:name="run.budgetbuddy.activities.GG.Gastos3G"
-138-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:122:13-51
-139            android:exported="false" >
-139-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:123:13-37
-140            <meta-data
-140-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-141                android:name="android.app.lib_name"
-141-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-142                android:value="" />
-142-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-143        </activity>
-144        <activity
-144-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:128:9-134:20
-145            android:name="run.budgetbuddy.activities.GG.NuevoGasto3G"
-145-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:129:13-55
-146            android:exported="false" >
-146-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:130:13-37
-147            <meta-data
-147-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-148                android:name="android.app.lib_name"
-148-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-149                android:value="" />
-149-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-150        </activity>
-151        <activity
-151-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:135:9-141:20
-152            android:name="run.budgetbuddy.activities.GG.Principal3G"
-152-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:136:13-54
-153            android:exported="false" >
-153-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:137:13-37
-154            <meta-data
-154-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-155                android:name="android.app.lib_name"
-155-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-156                android:value="" />
-156-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-157        </activity>
-158        <activity
-158-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:142:9-148:20
-159            android:name="run.budgetbuddy.activities.GG.Saldos3G"
-159-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:143:13-51
-160            android:exported="false" >
-160-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:144:13-37
-161            <meta-data
-161-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-162                android:name="android.app.lib_name"
-162-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-163                android:value="" />
-163-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-164        </activity>
-165        <activity
-165-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:149:9-155:20
-166            android:name="run.budgetbuddy.activities.GG.UnirGrupo3G"
-166-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:150:13-54
-167            android:exported="false" >
-167-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:151:13-37
-168            <meta-data
-168-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-169                android:name="android.app.lib_name"
-169-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-170                android:value="" />
-170-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-171        </activity>
-172        <activity
-172-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:156:9-162:20
-173            android:name="run.budgetbuddy.activities.GG.reembolso.AllReembolsos"
-173-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:157:13-66
-174            android:exported="false" >
-174-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:158:13-37
-175            <meta-data
-175-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-176                android:name="android.app.lib_name"
-176-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-177                android:value="" />
-177-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-178        </activity>
-179        <activity
-179-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:163:9-169:20
-180            android:name="run.budgetbuddy.activities.GG.reembolso.Reembolso3G"
-180-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:164:13-64
-181            android:exported="false" >
-181-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:165:13-37
-182            <meta-data
-182-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-183                android:name="android.app.lib_name"
-183-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-184                android:value="" />
-184-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-185        </activity>
-186        <activity
-186-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:170:9-176:20
-187            android:name="run.budgetbuddy.activities.menu.MenuLateralMG"
-187-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:171:13-58
-188            android:exported="false" >
-188-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:172:13-37
-189            <meta-data
-189-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-190                android:name="android.app.lib_name"
-190-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-191                android:value="" />
-191-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-192        </activity>
-193        <activity
-193-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:177:9-183:20
-194            android:name="run.budgetbuddy.activities.ajustes.Ajustes"
-194-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:178:13-55
-195            android:exported="false" >
-195-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:179:13-37
-196            <meta-data
-196-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-197                android:name="android.app.lib_name"
-197-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-198                android:value="" />
-198-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-199        </activity>
-200        <activity
-200-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:184:9-190:20
-201            android:name="run.budgetbuddy.activities.divisa.Divisas"
-201-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:185:13-54
-202            android:exported="false" >
-202-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:186:13-37
-203            <meta-data
-203-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
-204                android:name="android.app.lib_name"
-204-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
-205                android:value="" />
-205-->C:\Users\Aragon\Desktop\Alterne Dual 2\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
-206        </activity>
-207
-208        <provider
-208-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-209            android:name="androidx.startup.InitializationProvider"
-209-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-210            android:authorities="run.budgetbuddy.androidx-startup"
-210-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-211            android:exported="false" >
-211-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-212            <meta-data
-212-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-213                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-213-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-214                android:value="androidx.startup" />
-214-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-215            <meta-data
-215-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-216                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-216-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-217                android:value="androidx.startup" />
-217-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-218        </provider>
-219    </application>
-220
-221</manifest>
+31-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:14:9-35
+32        android:testOnly="true"
+33        android:theme="@style/Theme.Design.Light.NoActionBar" >
+33-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:15:9-62
+34        <activity
+34-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:17:9-28:20
+35            android:name="run.budgetbuddy.activities.MG.MgInicio"
+35-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:18:13-51
+36            android:exported="true" >
+36-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:19:13-36
+37            <intent-filter>
+37-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:20:13-24:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:21:17-69
+38-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:21:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:23:17-77
+40-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:23:27-74
+41            </intent-filter>
+42
+43            <meta-data
+43-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+44                android:name="android.app.lib_name"
+44-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+45                android:value="" />
+45-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+46        </activity>
+47        <activity
+47-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:29:9-35:20
+48            android:name="run.budgetbuddy.activities.MG.MgInicioIngresos"
+48-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:30:13-59
+49            android:exported="false" >
+49-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:31:13-37
+50            <meta-data
+50-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+51                android:name="android.app.lib_name"
+51-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+52                android:value="" />
+52-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+53        </activity>
+54        <activity
+54-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:36:9-42:20
+55            android:name="run.budgetbuddy.activities.MG.MgAnadirGasto"
+55-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:37:13-56
+56            android:exported="false" >
+56-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:38:13-37
+57            <meta-data
+57-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+58                android:name="android.app.lib_name"
+58-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+59                android:value="" />
+59-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+60        </activity>
+61        <activity
+61-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:43:9-49:20
+62            android:name="run.budgetbuddy.activities.MG.MgAnadirIngreso"
+62-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:44:13-58
+63            android:exported="false" >
+63-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:45:13-37
+64            <meta-data
+64-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+65                android:name="android.app.lib_name"
+65-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+66                android:value="" />
+66-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+67        </activity>
+68        <activity
+68-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:50:9-56:20
+69            android:name="run.budgetbuddy.activities.menu.MenuLateral3G"
+69-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:51:13-58
+70            android:exported="false" >
+70-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:52:13-37
+71            <meta-data
+71-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+72                android:name="android.app.lib_name"
+72-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+73                android:value="" />
+73-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+74        </activity>
+75        <activity
+75-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:57:9-63:20
+76            android:name="run.budgetbuddy.activities.MG.MgInfo"
+76-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:58:13-49
+77            android:exported="false" >
+77-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:59:13-37
+78            <meta-data
+78-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+79                android:name="android.app.lib_name"
+79-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+80                android:value="" />
+80-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+81        </activity>
+82        <activity
+82-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:64:9-70:20
+83            android:name="run.budgetbuddy.activities.categoria.AddCategoria"
+83-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:65:13-62
+84            android:exported="false" >
+84-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:66:13-37
+85            <meta-data
+85-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+86                android:name="android.app.lib_name"
+86-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+87                android:value="" />
+87-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+88        </activity>
+89        <activity
+89-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:71:9-77:20
+90            android:name="run.budgetbuddy.activities.categoria.Categorias"
+90-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:72:13-60
+91            android:exported="false" >
+91-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:73:13-37
+92            <meta-data
+92-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+93                android:name="android.app.lib_name"
+93-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+94                android:value="" />
+94-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+95        </activity>
+96        <activity
+96-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:78:9-84:20
+97            android:name="run.budgetbuddy.activities.categoria.CrearCategoria"
+97-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:79:13-64
+98            android:exported="false" >
+98-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:80:13-37
+99            <meta-data
+99-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+100                android:name="android.app.lib_name"
+100-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+101                android:value="" />
+101-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+102        </activity>
+103        <activity
+103-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:85:9-91:20
+104            android:name="run.budgetbuddy.activities.app.Register"
+104-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:86:13-52
+105            android:exported="false" >
+105-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:87:13-37
+106            <meta-data
+106-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+107                android:name="android.app.lib_name"
+107-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+108                android:value="" />
+108-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+109        </activity>
+110        <activity
+110-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:92:9-98:20
+111            android:name="run.budgetbuddy.activities.app.Login"
+111-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:93:13-49
+112            android:exported="false" >
+112-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:94:13-37
+113            <meta-data
+113-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+114                android:name="android.app.lib_name"
+114-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+115                android:value="" />
+115-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+116        </activity>
+117        <activity
+117-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:99:9-106:20
+118            android:name="run.budgetbuddy.activities.app.CargaInicio"
+118-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:100:13-55
+119            android:exported="false" >
+119-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:101:13-37
+120            <meta-data
+120-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+121                android:name="android.app.lib_name"
+121-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+122                android:value="" />
+122-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+123        </activity>
+124        <activity
+124-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:107:9-113:20
+125            android:name="run.budgetbuddy.activities.GG.CrearGrupo3G"
+125-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:108:13-55
+126            android:exported="false" >
+126-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:109:13-37
+127            <meta-data
+127-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+128                android:name="android.app.lib_name"
+128-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+129                android:value="" />
+129-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+130        </activity>
+131        <activity
+131-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:114:9-120:20
+132            android:name="run.budgetbuddy.activities.GG.EditarGasto3G"
+132-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:115:13-56
+133            android:exported="false" >
+133-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:116:13-37
+134            <meta-data
+134-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+135                android:name="android.app.lib_name"
+135-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+136                android:value="" />
+136-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+137        </activity>
+138        <activity
+138-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:121:9-127:20
+139            android:name="run.budgetbuddy.activities.GG.Gastos3G"
+139-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:122:13-51
+140            android:exported="false" >
+140-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:123:13-37
+141            <meta-data
+141-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+142                android:name="android.app.lib_name"
+142-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+143                android:value="" />
+143-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+144        </activity>
+145        <activity
+145-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:128:9-134:20
+146            android:name="run.budgetbuddy.activities.GG.NuevoGasto3G"
+146-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:129:13-55
+147            android:exported="false" >
+147-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:130:13-37
+148            <meta-data
+148-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+149                android:name="android.app.lib_name"
+149-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+150                android:value="" />
+150-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+151        </activity>
+152        <activity
+152-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:135:9-141:20
+153            android:name="run.budgetbuddy.activities.GG.Principal3G"
+153-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:136:13-54
+154            android:exported="false" >
+154-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:137:13-37
+155            <meta-data
+155-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+156                android:name="android.app.lib_name"
+156-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+157                android:value="" />
+157-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+158        </activity>
+159        <activity
+159-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:142:9-148:20
+160            android:name="run.budgetbuddy.activities.GG.Saldos3G"
+160-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:143:13-51
+161            android:exported="false" >
+161-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:144:13-37
+162            <meta-data
+162-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+163                android:name="android.app.lib_name"
+163-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+164                android:value="" />
+164-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+165        </activity>
+166        <activity
+166-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:149:9-155:20
+167            android:name="run.budgetbuddy.activities.GG.UnirGrupo3G"
+167-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:150:13-54
+168            android:exported="false" >
+168-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:151:13-37
+169            <meta-data
+169-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+170                android:name="android.app.lib_name"
+170-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+171                android:value="" />
+171-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+172        </activity>
+173        <activity
+173-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:156:9-162:20
+174            android:name="run.budgetbuddy.activities.GG.reembolso.AllReembolsos"
+174-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:157:13-66
+175            android:exported="false" >
+175-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:158:13-37
+176            <meta-data
+176-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+177                android:name="android.app.lib_name"
+177-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+178                android:value="" />
+178-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+179        </activity>
+180        <activity
+180-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:163:9-169:20
+181            android:name="run.budgetbuddy.activities.GG.reembolso.Reembolso3G"
+181-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:164:13-64
+182            android:exported="false" >
+182-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:165:13-37
+183            <meta-data
+183-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+184                android:name="android.app.lib_name"
+184-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+185                android:value="" />
+185-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+186        </activity>
+187        <activity
+187-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:170:9-176:20
+188            android:name="run.budgetbuddy.activities.menu.MenuLateralMG"
+188-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:171:13-58
+189            android:exported="false" >
+189-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:172:13-37
+190            <meta-data
+190-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+191                android:name="android.app.lib_name"
+191-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+192                android:value="" />
+192-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+193        </activity>
+194        <activity
+194-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:177:9-183:20
+195            android:name="run.budgetbuddy.activities.ajustes.Ajustes"
+195-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:178:13-55
+196            android:exported="false" >
+196-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:179:13-37
+197            <meta-data
+197-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+198                android:name="android.app.lib_name"
+198-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+199                android:value="" />
+199-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+200        </activity>
+201        <activity
+201-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:184:9-190:20
+202            android:name="run.budgetbuddy.activities.divisa.Divisas"
+202-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:185:13-54
+203            android:exported="false" >
+203-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:186:13-37
+204            <meta-data
+204-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:25:13-27:36
+205                android:name="android.app.lib_name"
+205-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:26:17-52
+206                android:value="" />
+206-->C:\Users\Syzer\AndroidStudioProjects\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-33
+207        </activity>
+208
+209        <provider
+209-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Syzer\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+210            android:name="androidx.startup.InitializationProvider"
+210-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Syzer\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+211            android:authorities="run.budgetbuddy.androidx-startup"
+211-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Syzer\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+212            android:exported="false" >
+212-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Syzer\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+213            <meta-data
+213-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Syzer\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+214                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+214-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Syzer\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+215                android:value="androidx.startup" />
+215-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Syzer\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+216            <meta-data
+216-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Syzer\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+217                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+217-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Syzer\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+218                android:value="androidx.startup" />
+218-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Syzer\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+219        </provider>
+220    </application>
+221
+222</manifest>

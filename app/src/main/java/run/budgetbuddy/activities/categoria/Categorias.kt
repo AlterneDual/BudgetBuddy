@@ -7,7 +7,7 @@ import android.widget.GridView
 import androidx.appcompat.app.AppCompatActivity
 import models.Categoria
 import run.budgetbuddy.R
-import run.budgetbuddy.activities.MenuLateralMG
+import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.databinding.CategoriasBinding
 
 class Categorias : AppCompatActivity() {
@@ -31,7 +31,7 @@ class Categorias : AppCompatActivity() {
         }
 
         binding.btnAtras1.setOnClickListener {
-            val intent = Intent(this, MenuLateralMG::class.java)
+            val intent = Intent(this,MenuLateralMG::class.java)
             startActivity(intent)
             finish()
         }

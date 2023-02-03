@@ -52,6 +52,10 @@
         "source": "run.budgetbuddy.app-main-31:/layout/dialog_borrar_datos.xml"
     },
     {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_menu_lateral_1.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_menu_lateral_1.xml"
+    },
+    {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_inicio_gastos.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/mg_inicio_gastos.xml"
     },
@@ -60,16 +64,12 @@
         "source": "run.budgetbuddy.app-main-31:/layout/activity_divisas.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_menu_lateral_1.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/activity_menu_lateral_1.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/custom_list.xml"
     },
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_detalle_gasto.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/gp_detalle_gasto.xml"
-    },
-    {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/custom_list.xml"
     },
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/login.xml",
@@ -78,6 +78,10 @@
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_info_inicio.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/dialog_info_inicio.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_info_gasto_ingreso_row.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_info_gasto_ingreso_row.xml"
     },
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list_ajustes.xml",
@@ -106,10 +110,6 @@
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_idioma.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/dialog_idioma.xml"
-    },
-    {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_row_gasto.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/mg_row_gasto.xml"
     },
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_tema.xml",
@@ -144,6 +144,10 @@
         "source": "run.budgetbuddy.app-main-31:/layout/gp_saldo.xml"
     },
     {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list_colores.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/custom_list_colores.xml"
+    },
+    {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_crear_categorias.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/activity_crear_categorias.xml"
     },
@@ -152,12 +156,12 @@
         "source": "run.budgetbuddy.app-main-31:/layout/activity_check_profile.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_reembolso.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/gp_reembolso.xml"
-    },
-    {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_menu_lateral_2.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/activity_menu_lateral_2.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_reembolso.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_reembolso.xml"
     },
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/divisas_list.xml",
@@ -170,6 +174,10 @@
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list_menu_lateral.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/custom_list_menu_lateral.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_row_lista_gasto.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_row_lista_gasto.xml"
     },
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_row_group.xml",

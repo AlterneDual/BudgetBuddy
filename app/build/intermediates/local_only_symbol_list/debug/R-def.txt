@@ -32,6 +32,7 @@ drawable camara
 drawable campana
 drawable card_black
 drawable cat_avion
+drawable cat_avion_
 drawable cat_bolos
 drawable cat_cine
 drawable cat_coctel
@@ -46,6 +47,14 @@ drawable cat_restaurante
 drawable cat_videojuego
 drawable categoria
 drawable cerrar
+drawable circulo_amarillo
+drawable circulo_azul
+drawable circulo_celeste
+drawable circulo_naranja
+drawable circulo_rojo
+drawable circulo_rosa
+drawable circulo_turquesa
+drawable circulo_verde
 drawable confirmar
 drawable custom_inputtext
 drawable decimal
@@ -96,8 +105,11 @@ drawable user
 font oswald
 font oswald_bold
 font oswald_semibold
+id GVCategoria
+id GVCategorias2
+id GVCategorias3
+id GVColores
 id ImagenListaGasto
-id RVCategorias
 id RVGastosA
 id RVParticipantes
 id ReclyclerViewB
@@ -233,6 +245,7 @@ id linearLayout6
 id listView_menu
 id list_view
 id lista_categorias
+id lista_gastos
 id lvInicioGastos
 id nuevoGrupo
 id optionsGrupo
@@ -247,6 +260,7 @@ id recyclerViewA4
 id relativeLayout
 id rvCategorias
 id tbSemanal
+id textTotal
 id textView
 id textView10
 id textView11
@@ -275,7 +289,6 @@ id tv3
 id tv4
 id tvAgregarImagen2
 id tvAnho
-id tvAñadirCategoria
 id tvCantidad
 id tvCantidadGasto
 id tvCategorias
@@ -335,6 +348,7 @@ layout crear_categoria
 layout custom_grid_categorias
 layout custom_list
 layout custom_list_ajustes
+layout custom_list_colores
 layout custom_list_divisas
 layout custom_list_menu_lateral
 layout dialog_borrar_datos
@@ -362,9 +376,10 @@ layout mg_anadir_ingreso
 layout mg_editar_gastos
 layout mg_editar_ingreso
 layout mg_info
+layout mg_info_gasto_ingreso_row
 layout mg_inicio_gastos
 layout mg_inicio_ingresos
-layout mg_row_gasto
+layout mg_row_lista_gasto
 layout register
 mipmap ic_launcher
 mipmap ic_launcher_round
