@@ -11,6 +11,7 @@ import android.widget.EditText
 import android.widget.GridView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import models.Categoria
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.CrearCategoriaBinding
 
@@ -25,7 +26,9 @@ class CrearCategoria : AppCompatActivity() {
     private lateinit var listaColores: MutableList<Int>
     private var categoriaSeleccionada: Int = 0
     private var colorSeleccionado: Int = 0
+    private var nombreSeleccionado: String = ""
     private lateinit var viewActual: View
+    var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,16 +41,23 @@ class CrearCategoria : AppCompatActivity() {
         listaColores = crearColores()
         inicializarAdapterColores()
 
-        txt_nombre = binding.etNombreCategoria
+
+
         grid_view = binding.GVCategorias3
         grid_view.setOnItemClickListener() { parent, view, position, id ->
-            categoriaSeleccionada = parent.getItemAtPosition(position) as Int
+            categoriaSeleccionada = position
             viewActual = view
+        }
+
+        txt_nombre = binding.etNombreCategoria
+        txt_nombre.setOnClickListener(){
+            txt_nombre.text.clear()
         }
 
         grid_view_colores = binding.GVColores
         grid_view_colores.setOnItemClickListener() { parent, view, position, id ->
-            colorSeleccionado = parent.getItemAtPosition(position) as Int
+            //colorSeleccionado = parent.getItemAtPosition(position) as Int
+            colorSeleccionado = position
             if(position==0){
                 viewActual.setBackgroundColor(Color.rgb(69, 119, 193))
             } else if (position==1){
@@ -80,21 +90,28 @@ class CrearCategoria : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
 
+            crearCategoria()
+
             val intent = Intent(this, Categorias::class.java)
             startActivity(intent)
             finish()
         }
 
         binding.btnAtras.setOnClickListener {
-            val intent = Intent(this, AddCategoria::class.java)
+            val intent = Intent(this, Categorias::class.java)
             startActivity(intent)
             finish()
         }
-        crearCategoria()
+
     }
 
     private fun crearCategoria() {
-        var categoriaCRUD: CategoriaCRUD
+        var categoria = Categoria()
+        categoria.nombre = txt_nombre
+        categoria.icono = listaIconos[categoriaSeleccionada]
+        categoria.color = listaColores[colorSeleccionado]
+
+        categoriaCRUD.addCategoria(categoria)
     }
 
     private fun inicializarAdapter() {
@@ -118,8 +135,7 @@ class CrearCategoria : AppCompatActivity() {
         val listaCategorias = mutableListOf<Int>(
 
             R.drawable.cat_avion_, R.drawable.cat_cine, R.drawable.cat_bolos, R.drawable.cat_coctel,
-            R.drawable.cat_compras1, R.drawable.cat_compras2, R.drawable.cat_compras3,
-            R.drawable.cat_compras4,R.drawable.cat_hotel, R.drawable.cat_limpieza,
+            R.drawable.cat_compras, R.drawable.cat_hotel, R.drawable.cat_limpieza,
             R.drawable.cat_regalo, R.drawable.cat_restaurante,R.drawable.cat_videojuego
         )
 
@@ -131,7 +147,7 @@ class CrearCategoria : AppCompatActivity() {
         val listaColores = mutableListOf<Int>(
 
             R.drawable.circulo_azul ,R.drawable.circulo_rosa, R.drawable.circulo_celeste,
-            R.drawable.circulo_turquesa, R.drawable.circulo_rojo, R.drawable.circulo_amarillo,
+            R.drawable.circulo_celeste, R.drawable.circulo_rojo, R.drawable.circulo_amarillo,
             R.drawable.circulo_verde, R.drawable.circulo_naranja
         )
 

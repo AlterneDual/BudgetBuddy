@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import models.Categoria
-import models.ItemGenerico
 import run.budgetbuddy.R
 
 class myListAdapter_categorias(private val context: Context,
@@ -36,7 +35,9 @@ class myListAdapter_categorias(private val context: Context,
             cView = LayoutInflater.from(context).inflate(layout,null)
             holder = ViewHolder(
 
-                cView.findViewById(R.id.ivIconoCategoria)
+                cView.findViewById(R.id.ivIconoCategoria),
+                cView.findViewById(R.id.ivColorCategoria),
+                cView.findViewById(R.id.nombreCategoria)
 
             )
             cView.tag = holder
@@ -48,12 +49,16 @@ class myListAdapter_categorias(private val context: Context,
         val opcionActual = listaOpciones[position]
 
         holder.icono.setImageResource(opcionActual.icono)
+        holder.color.setImageResource(opcionActual.color)
+        holder.nombreCategoria.setText(opcionActual.nombre)
 
         return cView!!
     }
 
     internal class ViewHolder(
-        var icono: ImageView
+        var icono: ImageView,
+        var color: ImageView,
+        var nombreCategoria: TextView
 
         )
 
