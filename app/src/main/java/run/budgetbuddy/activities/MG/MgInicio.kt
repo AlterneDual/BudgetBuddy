@@ -4,9 +4,16 @@ import CRUD.CategoriaCRUD
 import CRUD.DivisaCRUD
 import CRUD.GastoCRUD
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
 import io.realm.RealmList
 import models.Categoria
 import models.Divisa
@@ -22,10 +29,28 @@ class MgInicio : AppCompatActivity() {
     private lateinit var adapter: myListAdapter_gasto
     var listagastos: RealmList<Gasto> = RealmList()
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        val pieChart = findViewById<PieChart>(R.id.pieChart)
+
+        val entries = listOf(
+            PieEntry(30f, ""),
+            PieEntry(30f, ""),
+            PieEntry(40f, "")
+        )
+
+        val pieDataSet = PieDataSet(entries, "")
+        pieDataSet.colors = listOf(Color.MAGENTA, Color.YELLOW, Color.GREEN)
+
+        val pieData = PieData(pieDataSet)
+
+        pieChart.data = pieData
+
+        pieChart.invalidate()
 
 
 
@@ -144,7 +169,7 @@ class MgInicio : AppCompatActivity() {
         gasto2.importe = 10.00
         div = divisaCRUD.getDivisa(keydivisa2)
         gasto2.divisa = div
-        cat = categoriaCRUD.getCategoria(k1)
+        cat = categoriaCRUD.getCategoria(k2)
         gasto2.categoria = cat
         gastoCRUD.addGasto(gasto2)
 
@@ -152,22 +177,23 @@ class MgInicio : AppCompatActivity() {
         gasto3.importe = 15.50
         div = divisaCRUD.getDivisa(keydivisa2)
         gasto3.divisa = div
-        cat = categoriaCRUD.getCategoria(k2)
+        cat = categoriaCRUD.getCategoria(k3)
         gasto3.categoria = cat
         gastoCRUD.addGasto(gasto3)
 
-        var gasto4 = Gasto()
-        gasto4.importe = 50.00
-        div = divisaCRUD.getDivisa(keydivisa)
-        gasto4.divisa = div
-        cat = categoriaCRUD.getCategoria(k2)
-        gasto4.categoria = cat
-        gastoCRUD.addGasto(gasto4)
 
-        var keyGasto = gastoCRUD.addGasto(gasto3)
-        listagastos.add(gastoCRUD.getGasto(keyGasto))
+        var keyGasto1 = gastoCRUD.addGasto(gasto1)
+        var keyGasto2 = gastoCRUD.addGasto(gasto2)
+        var keyGasto3 = gastoCRUD.addGasto(gasto3)
+
+        listagastos.add(gastoCRUD.getGasto(keyGasto1))
+        listagastos.add(gastoCRUD.getGasto(keyGasto2))
+        listagastos.add(gastoCRUD.getGasto(keyGasto3))
+
         adapter.notifyDataSetChanged()
 
 
     }
+
+
 }
