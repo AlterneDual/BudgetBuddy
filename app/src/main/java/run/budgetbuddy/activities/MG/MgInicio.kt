@@ -58,7 +58,7 @@ class MgInicio : AppCompatActivity() {
         adapter = myListAdapter_gasto(this, listagastos)
         listView.adapter = adapter
 
-        cargar()
+        //cargar()
 
         var btnIngresos = binding.tvIngresos
         btnIngresos.setOnClickListener {
