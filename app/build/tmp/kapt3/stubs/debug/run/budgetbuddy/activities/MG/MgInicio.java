@@ -6,24 +6,24 @@ import java.lang.System;
 public final class MgInicio extends androidx.appcompat.app.AppCompatActivity {
     private run.budgetbuddy.databinding.MgInicioGastosBinding binding;
     private run.budgetbuddy.adapter.myListAdapter_gasto adapter;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private io.realm.RealmList<models.Gasto> listagastos;
     
     public MgInicio() {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final io.realm.RealmList<models.Gasto> getListagastos() {
         return null;
     }
     
-    public final void setListagastos(@org.jetbrains.annotations.NotNull()
+    public final void setListagastos(@org.jetbrains.annotations.NotNull
     io.realm.RealmList<models.Gasto> p0) {
     }
     
-    @java.lang.Override()
-    protected void onCreate(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    protected void onCreate(@org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     

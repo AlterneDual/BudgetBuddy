@@ -15,34 +15,28 @@
   <component name="ChangeListManager">
     <list default="true" id="d3aa97ae-6589-4b6e-9ec5-ff4ed2a47f6d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/run/budgetbuddy/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/run/budgetbuddy/BuildConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/DefaultRealmModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/DefaultRealmModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/DefaultRealmModuleMediator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/DefaultRealmModuleMediator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_CategoriaRealmProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_CategoriaRealmProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_CategoriaRealmProxyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_CategoriaRealmProxyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_DivisaRealmProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_DivisaRealmProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_DivisaRealmProxyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_DivisaRealmProxyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_GastoRealmProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_GastoRealmProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_GastoRealmProxyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_GastoRealmProxyInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_UsuarioRealmProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_UsuarioRealmProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_UsuarioRealmProxyInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/generated/source/kapt/debug/io/realm/models_UsuarioRealmProxyInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/GG/CrearGrupo3G.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/GG/EditarGasto3G.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/GG/Gastos3G.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/GG/NuevoGasto3G.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/GG/Principal3G.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/GG/Saldos3G.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/GG/UnirGrupo3G.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/GG/reembolso/AllReembolsos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/GG/reembolso/Reembolso3G.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgAnadirIngreso.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgEditarEliminarGasto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgEditarEliminarIngreso.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgInicio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgInicioIngresos.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/app/CargaInicio.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/app/Login.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/app/Register.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/categoria/AddCategoria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/categoria/Categorias.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/categoria/CrearCategoria.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/adapter/myListAdapter$ViewHolder.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/adapter/myListAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/activities/MG/MgAnadirGasto.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/activities/MG/MgAnadirGasto.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/activities/categoria/Categorias.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/activities/categoria/Categorias.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgInicio.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/MG/MgInicio.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/categoria/Categorias.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/categoria/Categorias.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/categoria/CrearCategoria.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/activities/categoria/CrearCategoria.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/adapter/myListAdapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/app/build/tmp/kotlin-classes/debug/run/budgetbuddy/adapter/myListAdapter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/CRUD/GastoCRUD.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/CRUD/GastoCRUD.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/activities/MG/MgInfo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/activities/MG/MgInfo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/activities/categoria/CrearCategoria.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/run/budgetbuddy/activities/categoria/CrearCategoria.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/mg_info.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/mg_info.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/mg_info_gasto_ingreso_row.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/mg_info_gasto_ingreso_row.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +44,49 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[2af2e660331c7ece]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[9fb859db]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$/app">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="BudgetBuddy" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="BudgetBuddy" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="BudgetBuddy" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="BudgetBuddy" type="f1a62948:ProjectNode" />
+                <item name="app" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -67,10 +99,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="cidr.known.project.marker" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\java\run\budgetbuddy" />
@@ -130,7 +165,6 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Java/Kotlin Method Sample (legacy)" />
         <option name="STARTUP_NATIVE_MEMORY_PROFILING_ENABLED" value="false" />
         <option name="NATIVE_MEMORY_SAMPLE_RATE_BYTES" value="2048" />
-        <option name="PROFILING_MODE" value="NOT_SET" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />

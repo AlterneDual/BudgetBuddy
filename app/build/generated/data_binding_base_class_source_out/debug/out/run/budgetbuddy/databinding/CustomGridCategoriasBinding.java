@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
@@ -20,12 +21,21 @@ public final class CustomGridCategoriasBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final ImageView ivColorCategoria;
+
+  @NonNull
   public final ImageView ivIconoCategoria;
 
+  @NonNull
+  public final TextView nombreCategoria;
+
   private CustomGridCategoriasBinding(@NonNull LinearLayout rootView,
-      @NonNull ImageView ivIconoCategoria) {
+      @NonNull ImageView ivColorCategoria, @NonNull ImageView ivIconoCategoria,
+      @NonNull TextView nombreCategoria) {
     this.rootView = rootView;
+    this.ivColorCategoria = ivColorCategoria;
     this.ivIconoCategoria = ivIconoCategoria;
+    this.nombreCategoria = nombreCategoria;
   }
 
   @Override
@@ -55,13 +65,26 @@ public final class CustomGridCategoriasBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.ivColorCategoria;
+      ImageView ivColorCategoria = ViewBindings.findChildViewById(rootView, id);
+      if (ivColorCategoria == null) {
+        break missingId;
+      }
+
       id = R.id.ivIconoCategoria;
       ImageView ivIconoCategoria = ViewBindings.findChildViewById(rootView, id);
       if (ivIconoCategoria == null) {
         break missingId;
       }
 
-      return new CustomGridCategoriasBinding((LinearLayout) rootView, ivIconoCategoria);
+      id = R.id.nombreCategoria;
+      TextView nombreCategoria = ViewBindings.findChildViewById(rootView, id);
+      if (nombreCategoria == null) {
+        break missingId;
+      }
+
+      return new CustomGridCategoriasBinding((LinearLayout) rootView, ivColorCategoria,
+          ivIconoCategoria, nombreCategoria);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

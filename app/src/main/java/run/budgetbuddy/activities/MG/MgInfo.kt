@@ -11,6 +11,8 @@ import android.widget.ListView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
+import models.Categoria
+import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgInfoBinding
 import java.sql.Date
@@ -325,10 +327,18 @@ class MgInfo : AppCompatActivity() {
 
     private fun inicializarAdapter() {
         var lista_gastos = gc.getAllGastos()
+        var lista_categorias = mutableListOf<Categoria>()
+
+        for(g in lista_gastos){
+            var cat_temp = g.categoria
+            for(cat in lista_categorias){
+
+            }
+        }
 
         list_view = findViewById<ListView>(R.id.lista_gastos)
         adapterList =
-            myListAdapterInfoGasto(this, R.layout.mg_info_gasto_ingreso_row, lista_gastos)
+            myListAdapterInfoGasto(this, R.layout.mg_info_gasto_ingreso_row, distintos_gastos)
         list_view.adapter = adapterList
         registerForContextMenu(list_view)
     }
