@@ -41,8 +41,6 @@ class CrearCategoria : AppCompatActivity() {
         listaColores = crearColores()
         inicializarAdapterColores()
 
-
-
         grid_view = binding.GVCategorias3
         grid_view.setOnItemClickListener() { parent, view, position, id ->
             categoriaSeleccionada = position
@@ -50,9 +48,6 @@ class CrearCategoria : AppCompatActivity() {
         }
 
         txt_nombre = binding.etNombreCategoria
-        txt_nombre.setOnClickListener(){
-            txt_nombre.text.clear()
-        }
 
         grid_view_colores = binding.GVColores
         grid_view_colores.setOnItemClickListener() { parent, view, position, id ->
@@ -107,7 +102,7 @@ class CrearCategoria : AppCompatActivity() {
 
     private fun crearCategoria() {
         var categoria = Categoria()
-        categoria.nombre = txt_nombre
+        categoria.nombre = txt_nombre.text.toString()
         categoria.icono = listaIconos[categoriaSeleccionada]
         categoria.color = listaColores[colorSeleccionado]
 
@@ -147,7 +142,7 @@ class CrearCategoria : AppCompatActivity() {
         val listaColores = mutableListOf<Int>(
 
             R.drawable.circulo_azul ,R.drawable.circulo_rosa, R.drawable.circulo_celeste,
-            R.drawable.circulo_celeste, R.drawable.circulo_rojo, R.drawable.circulo_amarillo,
+            R.drawable.circulo_turquesa, R.drawable.circulo_rojo, R.drawable.circulo_amarillo,
             R.drawable.circulo_verde, R.drawable.circulo_naranja
         )
 
