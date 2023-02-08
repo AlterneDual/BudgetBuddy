@@ -221,8 +221,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvCategorias"
+    <GridView
+        android:id="@+id/gvCategorias"
         android:layout_width="match_parent"
         android:layout_height="132dp"
         android:layout_marginStart="5dp"
@@ -231,6 +231,7 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCategorias" />
+        app:layout_constraintTop_toBottomOf="@+id/tvCategorias"
+        android:numColumns="4"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

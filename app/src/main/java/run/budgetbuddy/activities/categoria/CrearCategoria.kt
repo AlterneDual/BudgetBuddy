@@ -107,7 +107,7 @@ class CrearCategoria : AppCompatActivity() {
 
     private fun crearCategoria() {
         var categoria = Categoria()
-        categoria.nombre = txt_nombre
+        categoria.nombre = txt_nombre.text.toString()
         categoria.icono = listaIconos[categoriaSeleccionada]
         categoria.color = listaColores[colorSeleccionado]
 

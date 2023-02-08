@@ -2739,10 +2739,7 @@ drawable cat_avion_
 drawable cat_bolos
 drawable cat_cine
 drawable cat_coctel
-drawable cat_compras1
-drawable cat_compras2
-drawable cat_compras3
-drawable cat_compras4
+drawable cat_compras
 drawable cat_hotel
 drawable cat_limpieza
 drawable cat_regalo
@@ -2754,6 +2751,7 @@ drawable circulo_amarillo
 drawable circulo_azul
 drawable circulo_celeste
 drawable circulo_naranja
+drawable circulo_negro
 drawable circulo_rojo
 drawable circulo_rosa
 drawable circulo_turquesa
@@ -3212,6 +3210,7 @@ id groupList
 id group_divider
 id grouping
 id groups
+id gvCategorias
 id header_title
 id hideable
 id home
@@ -3245,6 +3244,7 @@ id ivBuscarA
 id ivBuscarA2
 id ivCalendarioA
 id ivCategoria
+id ivColorCategoria
 id ivIcono
 id ivIconoCategoria
 id ivMenu
@@ -3350,6 +3350,7 @@ id neverCompleteToEnd
 id neverCompleteToStart
 id noScroll
 id noState
+id nombreCategoria
 id none
 id normal
 id north
@@ -3400,7 +3401,6 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
-id rvCategorias
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth

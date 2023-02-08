@@ -3,12 +3,14 @@ package run.budgetbuddy.activities.MG
 import CRUD.CategoriaCRUD
 import CRUD.DivisaCRUD
 import CRUD.GastoCRUD
+import adapter.myListAdapter_categorias
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
+import android.widget.GridView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
@@ -19,13 +21,19 @@ import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgAnadirGastoBinding
 
+
 class MgAnadirGasto : AppCompatActivity() {
 
     private lateinit var binding: MgAnadirGastoBinding
 
-    var categoriaCrud: CategoriaCRUD = CategoriaCRUD()
+    var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
     var divisaCrud: DivisaCRUD = DivisaCRUD()
     var gastoCrud: GastoCRUD = GastoCRUD()
+    var categoriaAtributo = Categoria()
+    private lateinit var adapterList: myListAdapter_categorias
+    private lateinit var grid_view: GridView
+    private lateinit var listaCategorias: MutableList<Categoria>
+    var nombreMes : String = String()
 
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -62,6 +70,10 @@ class MgAnadirGasto : AppCompatActivity() {
         binding = MgAnadirGastoBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        listaCategorias = categoriaCRUD.getAllCategoria()
+        inicializarAdapter()
+        mostrarMensaje()
+
         valoresAyerHoyPredeterminados()
 
 
@@ -72,11 +84,15 @@ class MgAnadirGasto : AppCompatActivity() {
         var etCantidad = binding.etCantidad
         var etComentario = binding.etComentario
         var btnIngreso = binding.tvIngresos
+        var gvCategoria = binding.gvCategorias
 
-        tvFechaSeleccionada.setText("$todayDay del ${todayMonth.plus(1)} de $todayYear")
-        btnFecha1.setText("$yesterdayDay/${yesterdayMonth.plus(1)}")
-        btnFecha2.setText("$todayDay/${todayMonth.plus(1)}")
-        btnFecha3.setText("$tomorrowDay/${tomorrowMonth.plus(1)}")
+        nombreMes = nombreMeses(todayMonth.plus(1))[0]
+        tvFechaSeleccionada.setText("$todayDay del $nombreMes de $todayYear")
+
+        nombreMes = nombreMeses(todayMonth.plus(1))[1]
+        btnFecha1.setText("$yesterdayDay/$nombreMes")
+        btnFecha2.setText("$todayDay/$nombreMes")
+        btnFecha3.setText("$tomorrowDay/$nombreMes")
 
 
         btnIngreso.setOnClickListener {
@@ -85,17 +101,16 @@ class MgAnadirGasto : AppCompatActivity() {
             finish()
         }
 
+        etComentario.setOnClickListener {
+            etComentario.setText("")
+        }
+
+        etCantidad.setOnClickListener {
+            etCantidad.setText("")
+        }
+
         binding.btnAnadir.setOnClickListener {
 
-            for(gasto in gastoCrud.getAllGastos()){
-                gastoCrud.deleteGasto(gasto.id)
-            }
-
-            var cat = Categoria()
-            cat.nombre = "Ocio"
-            cat.descripcion = "Cine"
-            cat.icono = R.drawable.cat_cine
-            var keyCat = categoriaCrud.addCategoria(cat)
 
             var div = Divisa()
             div.nombre = "Euro"
@@ -103,7 +118,7 @@ class MgAnadirGasto : AppCompatActivity() {
             var keyDiv = divisaCrud.addDivisa(div)
 
             var gasto = Gasto()
-            gasto.categoria = categoriaCrud.getCategoria(keyCat)
+            gasto.categoria = categoriaAtributo
             gasto.divisa = divisaCrud.getDivisa(keyDiv)
             gasto.importe = etCantidad.text.toString().toDouble()
             gasto.descripcion = etComentario.text.toString()
@@ -111,6 +126,7 @@ class MgAnadirGasto : AppCompatActivity() {
             var keyGasto = gastoCrud.addGasto(gasto)
 
             for (gasto in gastoCrud.getAllGastos()) {
+
 
                 println(gasto)
             }
@@ -141,24 +157,35 @@ class MgAnadirGasto : AppCompatActivity() {
         binding.btnFecha1.setOnClickListener {
 
             updateFecha(yesterday)
-            tvFechaSeleccionada.setText("$yesterdayDay del ${yesterdayMonth.plus(1)} de $yesterdayYear")
+            nombreMes = nombreMeses(yesterdayMonth.plus(1))[0]
+            tvFechaSeleccionada.setText("$yesterdayDay del $nombreMes de $yesterdayYear")
 
         }
 
         binding.btnFecha2.setOnClickListener {
 
             updateFecha(today)
-            tvFechaSeleccionada.setText("$todayDay del ${todayMonth.plus(1)} de $todayYear")
+            nombreMes = nombreMeses(todayMonth.plus(1))[0]
+            tvFechaSeleccionada.setText("$todayDay del $nombreMes de $todayYear")
 
         }
 
         binding.btnFecha3.setOnClickListener {
 
             updateFecha(tomorrow)
-            tvFechaSeleccionada.setText("$tomorrowDay del ${todayMonth.plus(1)} de $tomorrowYear")
+            nombreMes = nombreMeses(yesterdayMonth.plus(1))[0]
+            tvFechaSeleccionada.setText("$tomorrowDay del $nombreMes de $tomorrowYear")
 
         }
 
+    }
+
+    private fun inicializarAdapter() {
+
+        grid_view = binding.gvCategorias
+        adapterList = myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
+        grid_view.adapter = adapterList
+        registerForContextMenu(grid_view)
     }
 
     @SuppressLint("NewApi")
@@ -180,10 +207,13 @@ class MgAnadirGasto : AppCompatActivity() {
                 updateFecha(selectedDate)
                 actualizarYesterdayTomorrow()
 
-                fecha1.setText("$yesterdayDay/${yesterdayMonth.plus(1)}")
-                fecha2.setText("$todayDay/${todayMonth.plus(1)}")
-                fecha3.setText("$tomorrowDay/${tomorrowMonth.plus(1)}")
-                tvFechaSeleccionada.setText("$dayOfMonth del ${month.plus(1)} de $year")
+                nombreMes = nombreMeses(month.plus(1))[1]
+                fecha1.setText("$yesterdayDay/$nombreMes")
+                fecha2.setText("$todayDay/$nombreMes")
+                fecha3.setText("$tomorrowDay/$nombreMes")
+                
+                nombreMes = nombreMeses(month.plus(1))[0]
+                tvFechaSeleccionada.setText("$dayOfMonth del $nombreMes de $year")
 
             },
             selectedDate.get(Calendar.YEAR),
@@ -244,4 +274,38 @@ class MgAnadirGasto : AppCompatActivity() {
     }
 
 
+    fun mostrarMensaje() {
+
+        binding.gvCategorias.setOnItemClickListener() { adapterView, view, position, id ->
+
+            Toast.makeText(
+                this,
+                "Has seleccionado ${listaCategorias[position].nombre}",
+                Toast.LENGTH_SHORT
+            ).show()
+            println("------------------------------")
+            println(listaCategorias[position].nombre+" ID: "+listaCategorias[position].id)
+            println("----------------------------------")
+
+            categoriaAtributo = listaCategorias[position]
+        }
+        registerForContextMenu(binding.gvCategorias)
+    }
+
+    fun nombreMeses(mes: Int): ArrayList<String>{
+
+        var mesesCortoLargos = arrayListOf<String>()
+
+        val monthNames = arrayOf("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+        val monthNumber = mes
+        val monthName = monthNames[monthNumber - 1]
+        mesesCortoLargos.add(monthName)
+
+        val monthNames2 = arrayOf("En", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic")
+        val monthNumber2 = mes
+        val monthName2 = monthNames2[monthNumber2 - 1]
+        mesesCortoLargos.add(monthName2)
+
+        return mesesCortoLargos
+    }
 }

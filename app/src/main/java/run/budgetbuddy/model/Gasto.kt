@@ -24,7 +24,7 @@ open class Gasto() : RealmObject() {
     var id_user: Int = 0
 
     override fun toString(): String {
-        return "ID: $id, Importe: $importe || DESC: $descripcion || Categoria: ${categoria.toString()}|| id_user: $id_user || Fecha: ${fecha.toString()}"
+        return "ID: $id, Importe: $importe || DESC: $descripcion || Categoria: ${categoria.toString()} ID_cat: ${categoria!!.id.toString()}|| id_user: $id_user || Fecha: ${fecha.toString()}"
     }
 
 }

@@ -36,10 +36,7 @@ drawable cat_avion_
 drawable cat_bolos
 drawable cat_cine
 drawable cat_coctel
-drawable cat_compras1
-drawable cat_compras2
-drawable cat_compras3
-drawable cat_compras4
+drawable cat_compras
 drawable cat_hotel
 drawable cat_limpieza
 drawable cat_regalo
@@ -51,6 +48,7 @@ drawable circulo_amarillo
 drawable circulo_azul
 drawable circulo_celeste
 drawable circulo_naranja
+drawable circulo_negro
 drawable circulo_rojo
 drawable circulo_rosa
 drawable circulo_turquesa
@@ -213,6 +211,7 @@ id frameLayout3
 id gif
 id grid_view
 id groupList
+id gvCategorias
 id icCategoriaA
 id icCategoriaA2
 id icPerfil
@@ -226,6 +225,7 @@ id ivBuscarA
 id ivBuscarA2
 id ivCalendarioA
 id ivCategoria
+id ivColorCategoria
 id ivIcono
 id ivIconoCategoria
 id ivMenu
@@ -247,6 +247,7 @@ id list_view
 id lista_categorias
 id lista_gastos
 id lvInicioGastos
+id nombreCategoria
 id nuevoGrupo
 id optionsGrupo
 id participanteAdd
@@ -258,7 +259,6 @@ id rbPortugues
 id recordarPassword
 id recyclerViewA4
 id relativeLayout
-id rvCategorias
 id tbSemanal
 id textTotal
 id textView
