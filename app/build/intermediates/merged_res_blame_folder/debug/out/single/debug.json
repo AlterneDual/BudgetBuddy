@@ -28,10 +28,6 @@
         "source": "run.budgetbuddy.app-main-31:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "run.budgetbuddy.app-merged_res-29:/drawable_cat_compras2.png.flat",
-        "source": "run.budgetbuddy.app-main-31:/drawable/cat_compras2.png"
-    },
-    {
         "merged": "run.budgetbuddy.app-merged_res-29:/drawable_group.png.flat",
         "source": "run.budgetbuddy.app-main-31:/drawable/group.png"
     },
@@ -144,10 +140,6 @@
         "source": "run.budgetbuddy.app-main-31:/drawable/btn_add.png"
     },
     {
-        "merged": "run.budgetbuddy.app-merged_res-29:/drawable_cat_compras1.png.flat",
-        "source": "run.budgetbuddy.app-main-31:/drawable/cat_compras1.png"
-    },
-    {
         "merged": "run.budgetbuddy.app-merged_res-29:/layout_gp_saldo.xml.flat",
         "source": "run.budgetbuddy.app-main-31:/layout/gp_saldo.xml"
     },
@@ -248,6 +240,10 @@
         "source": "run.budgetbuddy.app-main-31:/drawable/long_button_orange.xml"
     },
     {
+        "merged": "run.budgetbuddy.app-merged_res-29:/drawable_circulo_negro.png.flat",
+        "source": "run.budgetbuddy.app-main-31:/drawable/circulo_negro.png"
+    },
+    {
         "merged": "run.budgetbuddy.app-merged_res-29:/layout_activity_ajustes.xml.flat",
         "source": "run.budgetbuddy.app-main-31:/layout/activity_ajustes.xml"
     },
@@ -310,10 +306,6 @@
     {
         "merged": "run.budgetbuddy.app-merged_res-29:/drawable_cat_avion_.png.flat",
         "source": "run.budgetbuddy.app-main-31:/drawable/cat_avion_.png"
-    },
-    {
-        "merged": "run.budgetbuddy.app-merged_res-29:/drawable_cat_compras3.png.flat",
-        "source": "run.budgetbuddy.app-main-31:/drawable/cat_compras3.png"
     },
     {
         "merged": "run.budgetbuddy.app-merged_res-29:/layout_dialog_tema.xml.flat",
@@ -476,10 +468,6 @@
         "source": "run.budgetbuddy.app-main-31:/layout/custom_list_divisas.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-merged_res-29:/drawable_cat_compras4.png.flat",
-        "source": "run.budgetbuddy.app-main-31:/drawable/cat_compras4.png"
-    },
-    {
         "merged": "run.budgetbuddy.app-merged_res-29:/drawable_circulo_rojo.png.flat",
         "source": "run.budgetbuddy.app-main-31:/drawable/circulo_rojo.png"
     },
@@ -498,6 +486,10 @@
     {
         "merged": "run.budgetbuddy.app-merged_res-29:/drawable_back_row.png.flat",
         "source": "run.budgetbuddy.app-main-31:/drawable/back_row.png"
+    },
+    {
+        "merged": "run.budgetbuddy.app-merged_res-29:/drawable_cat_compras.png.flat",
+        "source": "run.budgetbuddy.app-main-31:/drawable/cat_compras.png"
     },
     {
         "merged": "run.budgetbuddy.app-merged_res-29:/drawable_default_button_cancel.xml.flat",
