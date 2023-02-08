@@ -87,6 +87,10 @@ class MgAnadirGasto : AppCompatActivity() {
 
         binding.btnAnadir.setOnClickListener {
 
+            for(gasto in gastoCrud.getAllGastos()){
+                gastoCrud.deleteGasto(gasto.id)
+            }
+
             var cat = Categoria()
             cat.nombre = "Ocio"
             cat.descripcion = "Cine"
@@ -112,7 +116,7 @@ class MgAnadirGasto : AppCompatActivity() {
             }
 
             Toast.makeText(
-                this, "Se ha añadido un nuevo gasto: ${div.nombre}", Toast.LENGTH_SHORT
+                this, "Añadido gasto con fecha: ${gasto.fecha}", Toast.LENGTH_SHORT
             ).show()
 
 
