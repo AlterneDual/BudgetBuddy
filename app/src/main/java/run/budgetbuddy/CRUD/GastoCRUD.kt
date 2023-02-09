@@ -11,11 +11,11 @@ open class GastoCRUD {
 
     var realm: Realm = Realm.getDefaultInstance()
 
-    fun addGasto(gasto: Gasto) : Int{
+    fun addGasto(gasto: Gasto): Int {
         var keyGasto = getKey()
 
 
-        realm.executeTransaction{ r:Realm  ->
+        realm.executeTransaction { r: Realm ->
             var gastoR = r.createObject(Gasto::class.java, keyGasto)
 
             gastoR.importe = gasto.importe
@@ -31,70 +31,75 @@ open class GastoCRUD {
         return keyGasto
     }
 
-    fun getKey():Int{
+    fun getKey(): Int {
 
         return try {
             val number: Number? = realm.where<Gasto>().max("id")
-            if(number!= null){
+            if (number != null) {
                 number.toInt() + 1
             } else {
                 0
             }
 
-        }catch (e : ArrayIndexOutOfBoundsException){
+        } catch (e: ArrayIndexOutOfBoundsException) {
             0
         }
     }
 
 
+    fun getGasto(id: Int): Gasto? {
 
-
-    fun getGasto(id:Int): Gasto?{
-
-        return realm.where(Gasto::class.java).equalTo("id",id).findFirst()
+        return realm.where(Gasto::class.java).equalTo("id", id).findFirst()
 
     }
 
-    fun updateGasto(id: Int, new_importe : Double?, new_fecha: Date?, new_categoria: Categoria?, new_desc: String?, new_divisa: Divisa?){
+    fun updateGasto(
+        id: Int,
+        new_importe: Double?,
+        new_fecha: Date?,
+        new_categoria: Categoria?,
+        new_desc: String?,
+        new_divisa: Divisa?
+    ) {
         var gasto = getGasto(id)
-        realm.executeTransaction{
-            if(new_importe != null){
+        realm.executeTransaction {
+            if (new_importe != null) {
                 gasto?.importe = new_importe
             }
-            if(new_fecha != null) {
+            if (new_fecha != null) {
                 gasto?.fecha = new_fecha
             }
-            if(new_categoria != null) {
+            if (new_categoria != null) {
                 gasto?.categoria = new_categoria
             }
-            if(new_desc != null) {
+            if (new_desc != null) {
                 gasto?.descripcion = new_desc
             }
-            if(new_divisa != null) {
+            if (new_divisa != null) {
                 gasto?.divisa = new_divisa
             }
             realm.insertOrUpdate(gasto)
         }
     }
 
-    fun deleteGasto(id:Int){
+    fun deleteGasto(id: Int) {
 
         val gasto = getGasto(id)
-        realm.executeTransaction{
+        realm.executeTransaction {
             gasto!!.deleteFromRealm()
         }
     }
 
-    fun cleanAll(){
+    fun cleanAll() {
 
         realm.executeTransaction { r: Realm ->
             r.delete(Gasto::class.java)
         }
     }
 
-    public fun getAllGastos():MutableList<Gasto>{
+    public fun getAllGastos(): MutableList<Gasto> {
 
-        var list =  mutableListOf<Gasto>()
+        var list = mutableListOf<Gasto>()
         var gasto_list = realm.where(Gasto::class.java).findAll()
         list.addAll(gasto_list)
         return list

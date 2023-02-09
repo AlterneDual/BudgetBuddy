@@ -229,7 +229,6 @@ id ivColorCategoria
 id ivIcono
 id ivIconoCategoria
 id ivMenu
-id ivNext
 id ivNext1
 id ivNext2
 id ivNotifiacionA
