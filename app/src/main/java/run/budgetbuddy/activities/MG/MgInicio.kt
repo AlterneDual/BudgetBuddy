@@ -14,6 +14,7 @@ import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.utils.ColorTemplate
 import io.realm.RealmList
 import models.Categoria
 import models.Divisa
@@ -24,36 +25,28 @@ import run.budgetbuddy.adapter.myListAdapter_gasto
 import run.budgetbuddy.databinding.MgInicioGastosBinding
 
 class MgInicio : AppCompatActivity() {
+
     private lateinit var binding: MgInicioGastosBinding
     private lateinit var adapter: myListAdapter_gasto
-    var listagastos: RealmList<Gasto> = RealmList()
     var listagastosBD: RealmList<Gasto> = RealmList()
     var divisaCRUD = DivisaCRUD()
     var categoriaCRUD = CategoriaCRUD()
     var gastoCRUD = GastoCRUD()
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val pieChart = findViewById<PieChart>(R.id.pieChart)
-        val entries = listOf(
-            PieEntry(30f, ""),
-            PieEntry(30f, ""),
-            PieEntry(40f, "")
-        )
-        val pieDataSet = PieDataSet(entries, "")
-        pieDataSet.colors = listOf(Color.MAGENTA, Color.YELLOW, Color.GREEN)
-        val pieData = PieData(pieDataSet)
-        pieChart.data = pieData
-        pieChart.invalidate()
-        val listView = binding.lvInicioGastos
-        adapter = myListAdapter_gasto(this, listagastosBD)
-        listView.adapter = adapter
-        //cargar()
-        for (gasto in gastoCRUD.getAllGastos()) {
-            listagastosBD.add(gasto)
-            adapter.notifyDataSetChanged()
-        }
+
+        IniciarAdapter()
+        GetAllGastos()
+        VerGrafico()
+
+
+
+
         var btnIngresos = binding.tvIngresos
         btnIngresos.setOnClickListener {
             val intent = Intent(this, MgInicioIngresos::class.java)
@@ -79,6 +72,7 @@ class MgInicio : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
         }
+
         binding.tvSemana.setOnClickListener {
             Toast.makeText(
                 this,
@@ -108,10 +102,43 @@ class MgInicio : AppCompatActivity() {
             ).show()
         }
         binding.butInfo.setOnClickListener {
-//            cargar()
+            GetAllGastos()
             val intent = Intent(this, MgInfo::class.java)
             startActivity(intent)
             finish()
         }
     }
+
+    private fun VerGrafico() {
+        val pieChart = findViewById<PieChart>(R.id.pieChart)
+
+        val pieEntries = mutableListOf<PieEntry>()
+        for (gasto in listagastosBD) {
+            pieEntries.add(PieEntry(gasto.importe.toFloat(), gasto.categoria!!.nombre))
+        }
+
+        val pieDataSet = PieDataSet(pieEntries, "")
+        pieDataSet.setColors(*ColorTemplate.COLORFUL_COLORS)
+
+        val pieData = PieData(pieDataSet)
+
+        pieChart.data = pieData
+        pieChart.description.text = "Gastos registrados"
+        pieChart.invalidate()
+    }
+
+    private fun IniciarAdapter() {
+        val listView = binding.lvInicioGastos
+        adapter = myListAdapter_gasto(this, listagastosBD)
+        listView.adapter = adapter
+    }
+
+    private fun GetAllGastos() {
+        for (gasto in gastoCRUD.getAllGastos()) {
+            listagastosBD.add(gasto)
+            adapter.notifyDataSetChanged()
+        }
+    }
+
+
 }
