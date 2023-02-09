@@ -10,8 +10,6 @@ public interface models_GastoRealmProxyInterface {
     public void realmSet$fecha(java.util.Date value);
     public models.Categoria realmGet$categoria();
     public void realmSet$categoria(models.Categoria value);
-    public String realmGet$descripcion();
-    public void realmSet$descripcion(String value);
     public models.Divisa realmGet$divisa();
     public void realmSet$divisa(models.Divisa value);
     public int realmGet$id_user();

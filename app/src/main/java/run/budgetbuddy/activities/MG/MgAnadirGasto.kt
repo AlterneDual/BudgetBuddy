@@ -7,9 +7,11 @@ import adapter.myListAdapter_categorias
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.graphics.Color
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.GridView
 import android.widget.TextView
 import android.widget.Toast
@@ -24,7 +26,7 @@ import run.budgetbuddy.databinding.MgAnadirGastoBinding
 
 class MgAnadirGasto : AppCompatActivity() {
 
-    private lateinit var binding: MgAnadirGastoBinding
+    private lateinit var binding: run.budgetbuddy.databinding.MgAnadirGastoBinding
 
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
     var divisaCrud: DivisaCRUD = DivisaCRUD()
@@ -33,7 +35,9 @@ class MgAnadirGasto : AppCompatActivity() {
     private lateinit var adapterList: myListAdapter_categorias
     private lateinit var grid_view: GridView
     private lateinit var listaCategorias: MutableList<Categoria>
-    var nombreMes : String = String()
+    var nombreMes: String = String()
+
+    private var vistaActual: View? = null
 
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -63,7 +67,7 @@ class MgAnadirGasto : AppCompatActivity() {
     @RequiresApi(Build.VERSION_CODES.N)
     var fechaGasto = selectedDate.time
 
-    @SuppressLint("NewApi")
+    @SuppressLint("NewApi", "ResourceAsColor")
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +86,6 @@ class MgAnadirGasto : AppCompatActivity() {
         var btnFecha2 = binding.btnFecha2
         var btnFecha3 = binding.btnFecha3
         var etCantidad = binding.etCantidad
-        var etComentario = binding.etComentario
         var btnIngreso = binding.tvIngresos
         var gvCategoria = binding.gvCategorias
 
@@ -95,14 +98,12 @@ class MgAnadirGasto : AppCompatActivity() {
         btnFecha3.setText("$tomorrowDay/$nombreMes")
 
 
+
+
         btnIngreso.setOnClickListener {
             val intent = Intent(this, MgAnadirIngreso::class.java)
             startActivity(intent)
             finish()
-        }
-
-        etComentario.setOnClickListener {
-            etComentario.setText("")
         }
 
         etCantidad.setOnClickListener {
@@ -110,7 +111,6 @@ class MgAnadirGasto : AppCompatActivity() {
         }
 
         binding.btnAnadir.setOnClickListener {
-
 
             var div = Divisa()
             div.nombre = "Euro"
@@ -121,7 +121,6 @@ class MgAnadirGasto : AppCompatActivity() {
             gasto.categoria = categoriaAtributo
             gasto.divisa = divisaCrud.getDivisa(keyDiv)
             gasto.importe = etCantidad.text.toString().toDouble()
-            gasto.descripcion = etComentario.text.toString()
             gasto.fecha = fechaGasto
             var keyGasto = gastoCrud.addGasto(gasto)
 
@@ -148,13 +147,13 @@ class MgAnadirGasto : AppCompatActivity() {
         }
 
         binding.btnCalendario.setOnClickListener {
-            Toast.makeText(
-                this, "Se muestra una pantalla de seleccion de Fecha", Toast.LENGTH_SHORT
-            ).show()
             showDatePickerDialog(tvFechaSeleccionada, btnFecha1, btnFecha2, btnFecha3)
         }
 
         binding.btnFecha1.setOnClickListener {
+            btnFecha1.setBackgroundColor(resources.getColor(R.color.vidrian_light_green))
+            btnFecha2.setBackgroundColor(resources.getColor(R.color.vidrian_green))
+            btnFecha3.setBackgroundColor(resources.getColor(R.color.vidrian_green))
 
             updateFecha(yesterday)
             nombreMes = nombreMeses(yesterdayMonth.plus(1))[0]
@@ -163,7 +162,9 @@ class MgAnadirGasto : AppCompatActivity() {
         }
 
         binding.btnFecha2.setOnClickListener {
-
+            btnFecha2.setBackgroundColor(resources.getColor(R.color.vidrian_light_green))
+            btnFecha1.setBackgroundColor(resources.getColor(R.color.vidrian_green))
+            btnFecha3.setBackgroundColor(resources.getColor(R.color.vidrian_green))
             updateFecha(today)
             nombreMes = nombreMeses(todayMonth.plus(1))[0]
             tvFechaSeleccionada.setText("$todayDay del $nombreMes de $todayYear")
@@ -171,7 +172,9 @@ class MgAnadirGasto : AppCompatActivity() {
         }
 
         binding.btnFecha3.setOnClickListener {
-
+            btnFecha3.setBackgroundColor(resources.getColor(R.color.vidrian_light_green))
+            btnFecha1.setBackgroundColor(resources.getColor(R.color.vidrian_green))
+            btnFecha2.setBackgroundColor(resources.getColor(R.color.vidrian_green))
             updateFecha(tomorrow)
             nombreMes = nombreMeses(yesterdayMonth.plus(1))[0]
             tvFechaSeleccionada.setText("$tomorrowDay del $nombreMes de $tomorrowYear")
@@ -183,7 +186,8 @@ class MgAnadirGasto : AppCompatActivity() {
     private fun inicializarAdapter() {
 
         grid_view = binding.gvCategorias
-        adapterList = myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
+        adapterList =
+            myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
         grid_view.adapter = adapterList
         registerForContextMenu(grid_view)
     }
@@ -208,10 +212,10 @@ class MgAnadirGasto : AppCompatActivity() {
                 actualizarYesterdayTomorrow()
 
                 nombreMes = nombreMeses(month.plus(1))[1]
-                fecha1.setText("$yesterdayDay/$nombreMes")
-                fecha2.setText("$todayDay/$nombreMes")
-                fecha3.setText("$tomorrowDay/$nombreMes")
-                
+                fecha1.setText("$yesterdayDay de $nombreMes")
+                fecha2.setText("$todayDay de $nombreMes")
+                fecha3.setText("$tomorrowDay de $nombreMes")
+
                 nombreMes = nombreMeses(month.plus(1))[0]
                 tvFechaSeleccionada.setText("$dayOfMonth del $nombreMes de $year")
 
@@ -248,7 +252,6 @@ class MgAnadirGasto : AppCompatActivity() {
         tomorrowYear = tomorrow.get(Calendar.YEAR)
 
 
-
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -277,31 +280,58 @@ class MgAnadirGasto : AppCompatActivity() {
     fun mostrarMensaje() {
 
         binding.gvCategorias.setOnItemClickListener() { adapterView, view, position, id ->
-
             Toast.makeText(
                 this,
                 "Has seleccionado ${listaCategorias[position].nombre}",
-                Toast.LENGTH_SHORT
+                Toast.LENGTH_LONG
             ).show()
+            view.
             println("------------------------------")
-            println(listaCategorias[position].nombre+" ID: "+listaCategorias[position].id)
+            println(listaCategorias[position].nombre + " ID: " + listaCategorias[position].id)
             println("----------------------------------")
 
             categoriaAtributo = listaCategorias[position]
         }
+
         registerForContextMenu(binding.gvCategorias)
     }
 
-    fun nombreMeses(mes: Int): ArrayList<String>{
+    fun nombreMeses(mes: Int): ArrayList<String> {
 
         var mesesCortoLargos = arrayListOf<String>()
 
-        val monthNames = arrayOf("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+        val monthNames = arrayOf(
+            "Enero",
+            "Febrero",
+            "Marzo",
+            "Abril",
+            "Mayo",
+            "Junio",
+            "Julio",
+            "Agosto",
+            "Septiembre",
+            "Octubre",
+            "Noviembre",
+            "Diciembre"
+        )
         val monthNumber = mes
         val monthName = monthNames[monthNumber - 1]
         mesesCortoLargos.add(monthName)
 
-        val monthNames2 = arrayOf("En", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic")
+        val monthNames2 = arrayOf(
+            "En",
+            "Feb",
+            "Mar",
+            "Abr",
+            "May",
+            "Jun",
+            "Jul",
+            "Ago",
+            "Sep",
+            "Oct",
+            "Nov",
+            "Dic"
+        )
         val monthNumber2 = mes
         val monthName2 = monthNames2[monthNumber2 - 1]
         mesesCortoLargos.add(monthName2)

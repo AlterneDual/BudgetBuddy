@@ -2802,6 +2802,7 @@ drawable interrogacion
 drawable libra
 drawable long_button_empty
 drawable long_button_empty2
+drawable long_button_empty3
 drawable long_button_empty_white
 drawable long_button_orange
 drawable lupa
@@ -3149,6 +3150,7 @@ id easeOut
 id east
 id edit_query
 id elastic
+id eliminar
 id embed
 id end
 id endToStart
@@ -3498,7 +3500,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textTotal
-id textView
 id textView10
 id textView11
 id textView2
@@ -3553,7 +3554,6 @@ id tvAgregarImagen2
 id tvAnho
 id tvCantidad
 id tvCantidadGasto
-id tvCategorias
 id tvContrasenaOlvidada
 id tvDebeA
 id tvDia
@@ -3582,7 +3582,6 @@ id tvPeriodo
 id tvReceptor
 id tvResultadoFecha
 id tvSaldoA
-id tvSaldoRestante
 id tvSaldoRestante1
 id tvSaldoRestante2
 id tvSemana
@@ -3803,6 +3802,7 @@ layout mg_editar_gastos
 layout mg_editar_ingreso
 layout mg_info
 layout mg_info_gasto_ingreso_row
+layout mg_info_gasto_ingreso_row_ingreso
 layout mg_inicio_gastos
 layout mg_inicio_ingresos
 layout mg_row_lista_gasto
@@ -3849,6 +3849,7 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+menu context_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

@@ -82,6 +82,7 @@ drawable interrogacion
 drawable libra
 drawable long_button_empty
 drawable long_button_empty2
+drawable long_button_empty3
 drawable long_button_empty_white
 drawable long_button_orange
 drawable lupa
@@ -183,6 +184,7 @@ id constraintLayout
 id custom_list
 id descripcion_grupo
 id divider
+id eliminar
 id etCantidad
 id etCantidad2
 id etCantidad3
@@ -260,7 +262,6 @@ id recyclerViewA4
 id relativeLayout
 id tbSemanal
 id textTotal
-id textView
 id textView10
 id textView11
 id textView2
@@ -290,7 +291,6 @@ id tvAgregarImagen2
 id tvAnho
 id tvCantidad
 id tvCantidadGasto
-id tvCategorias
 id tvContrasenaOlvidada
 id tvDebeA
 id tvDia
@@ -319,7 +319,6 @@ id tvPeriodo
 id tvReceptor
 id tvResultadoFecha
 id tvSaldoA
-id tvSaldoRestante
 id tvSaldoRestante1
 id tvSaldoRestante2
 id tvSemana
@@ -376,10 +375,12 @@ layout mg_editar_gastos
 layout mg_editar_ingreso
 layout mg_info
 layout mg_info_gasto_ingreso_row
+layout mg_info_gasto_ingreso_row_ingreso
 layout mg_inicio_gastos
 layout mg_inicio_ingresos
 layout mg_row_lista_gasto
 layout register
+menu context_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 string aceptar

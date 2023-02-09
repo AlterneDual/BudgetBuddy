@@ -13,6 +13,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import models.Categoria
 import run.budgetbuddy.R
+import run.budgetbuddy.databinding.ActivityCrearCategoriasBinding
 import run.budgetbuddy.databinding.CrearCategoriaBinding
 
 class CrearCategoria : AppCompatActivity() {
@@ -53,21 +54,21 @@ class CrearCategoria : AppCompatActivity() {
         grid_view_colores.setOnItemClickListener() { parent, view, position, id ->
             //colorSeleccionado = parent.getItemAtPosition(position) as Int
             colorSeleccionado = position
-            if(position==0){
+            if (position == 0) {
                 viewActual.setBackgroundColor(Color.rgb(69, 119, 193))
-            } else if (position==1){
+            } else if (position == 1) {
                 viewActual.setBackgroundColor(Color.rgb(232, 84, 217))
-            }else if (position==2){
+            } else if (position == 2) {
                 viewActual.setBackgroundColor(Color.rgb(104, 201, 172))
-            }else if (position==3){
+            } else if (position == 3) {
                 viewActual.setBackgroundColor(Color.rgb(84, 202, 117))
-            }else if (position==4){
+            } else if (position == 4) {
                 viewActual.setBackgroundColor(Color.rgb(220, 45, 45))
-            }else if (position==5){
+            } else if (position == 5) {
                 viewActual.setBackgroundColor(Color.rgb(237, 229, 33))
-            }else if (position==6){
+            } else if (position == 6) {
                 viewActual.setBackgroundColor(Color.rgb(42, 205, 27))
-            }else if (position==7){
+            } else if (position == 7) {
                 viewActual.setBackgroundColor(Color.rgb(255, 157, 10))
             }
         }
@@ -131,7 +132,7 @@ class CrearCategoria : AppCompatActivity() {
 
             R.drawable.cat_avion_, R.drawable.cat_cine, R.drawable.cat_bolos, R.drawable.cat_coctel,
             R.drawable.cat_compras, R.drawable.cat_hotel, R.drawable.cat_limpieza,
-            R.drawable.cat_regalo, R.drawable.cat_restaurante,R.drawable.cat_videojuego
+            R.drawable.cat_regalo, R.drawable.cat_restaurante, R.drawable.cat_videojuego
         )
 
         return listaCategorias
@@ -141,7 +142,7 @@ class CrearCategoria : AppCompatActivity() {
 
         val listaColores = mutableListOf<Int>(
 
-            R.drawable.circulo_azul ,R.drawable.circulo_rosa, R.drawable.circulo_celeste,
+            R.drawable.circulo_azul, R.drawable.circulo_rosa, R.drawable.circulo_celeste,
             R.drawable.circulo_turquesa, R.drawable.circulo_rojo, R.drawable.circulo_amarillo,
             R.drawable.circulo_verde, R.drawable.circulo_naranja
         )

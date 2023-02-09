@@ -47,9 +47,6 @@ public final class MgAnadirGastoBinding implements ViewBinding {
   public final EditText etCantidad;
 
   @NonNull
-  public final EditText etComentario;
-
-  @NonNull
   public final GridView gvCategorias;
 
   @NonNull
@@ -60,9 +57,6 @@ public final class MgAnadirGastoBinding implements ViewBinding {
 
   @NonNull
   public final Toolbar toolbarA;
-
-  @NonNull
-  public final TextView tvCategorias;
 
   @NonNull
   public final TextView tvDivisa;
@@ -76,9 +70,8 @@ public final class MgAnadirGastoBinding implements ViewBinding {
   private MgAnadirGastoBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAnadir,
       @NonNull ImageView btnAtras3, @NonNull ImageView btnCalendario, @NonNull Button btnFecha1,
       @NonNull Button btnFecha2, @NonNull Button btnFecha3, @NonNull EditText etCantidad,
-      @NonNull EditText etComentario, @NonNull GridView gvCategorias,
-      @NonNull LinearLayout linearLayout2, @NonNull LinearLayout linearLayout3,
-      @NonNull Toolbar toolbarA, @NonNull TextView tvCategorias, @NonNull TextView tvDivisa,
+      @NonNull GridView gvCategorias, @NonNull LinearLayout linearLayout2,
+      @NonNull LinearLayout linearLayout3, @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa,
       @NonNull TextView tvFechaSeleccionada, @NonNull TextView tvIngresos) {
     this.rootView = rootView;
     this.btnAnadir = btnAnadir;
@@ -88,12 +81,10 @@ public final class MgAnadirGastoBinding implements ViewBinding {
     this.btnFecha2 = btnFecha2;
     this.btnFecha3 = btnFecha3;
     this.etCantidad = etCantidad;
-    this.etComentario = etComentario;
     this.gvCategorias = gvCategorias;
     this.linearLayout2 = linearLayout2;
     this.linearLayout3 = linearLayout3;
     this.toolbarA = toolbarA;
-    this.tvCategorias = tvCategorias;
     this.tvDivisa = tvDivisa;
     this.tvFechaSeleccionada = tvFechaSeleccionada;
     this.tvIngresos = tvIngresos;
@@ -168,12 +159,6 @@ public final class MgAnadirGastoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.etComentario;
-      EditText etComentario = ViewBindings.findChildViewById(rootView, id);
-      if (etComentario == null) {
-        break missingId;
-      }
-
       id = R.id.gvCategorias;
       GridView gvCategorias = ViewBindings.findChildViewById(rootView, id);
       if (gvCategorias == null) {
@@ -198,12 +183,6 @@ public final class MgAnadirGastoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvCategorias;
-      TextView tvCategorias = ViewBindings.findChildViewById(rootView, id);
-      if (tvCategorias == null) {
-        break missingId;
-      }
-
       id = R.id.tvDivisa;
       TextView tvDivisa = ViewBindings.findChildViewById(rootView, id);
       if (tvDivisa == null) {
@@ -223,9 +202,8 @@ public final class MgAnadirGastoBinding implements ViewBinding {
       }
 
       return new MgAnadirGastoBinding((ConstraintLayout) rootView, btnAnadir, btnAtras3,
-          btnCalendario, btnFecha1, btnFecha2, btnFecha3, etCantidad, etComentario, gvCategorias,
-          linearLayout2, linearLayout3, toolbarA, tvCategorias, tvDivisa, tvFechaSeleccionada,
-          tvIngresos);
+          btnCalendario, btnFecha1, btnFecha2, btnFecha3, etCantidad, gvCategorias, linearLayout2,
+          linearLayout3, toolbarA, tvDivisa, tvFechaSeleccionada, tvIngresos);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

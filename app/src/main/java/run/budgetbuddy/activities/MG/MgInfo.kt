@@ -1,7 +1,6 @@
 package run.budgetbuddy.activities.MG
 
 import CRUD.GastoCRUD
-import adapter.myListAdapter_menu_Lateral
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.graphics.Paint
@@ -10,9 +9,9 @@ import android.os.Bundle
 import android.widget.ListView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import models.Categoria
-import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgInfoBinding
 import java.sql.Date
@@ -28,9 +27,7 @@ class MgInfo : AppCompatActivity() {
     private lateinit var list_view: ListView
     private lateinit var adapterList: myListAdapterInfoGasto
 
-
     //    private lateinit var sharedPreferences: SharedPreferences
-
 
     private var MYGESTORVIEWINGRESOS_SETTING = "MyGestorView"
 
@@ -41,12 +38,10 @@ class MgInfo : AppCompatActivity() {
         setContentView(binding.root)
         check()
 
-        binding.textView.isVisible = false;
-        binding.tvSaldoRestante.isVisible = false;
         binding.textView10.isVisible = false
         binding.tvIngresos.isVisible = false
 
-//        if (sharedPreferences.getBoolean(MYGESTORVIEWINGRESOS_SETTING, false)) {
+
         var lista_gastos = gc.getAllGastos();
         inicializarAdapter()
 
@@ -325,20 +320,30 @@ class MgInfo : AppCompatActivity() {
         startDatePicker.show()
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun inicializarAdapter() {
         var lista_gastos = gc.getAllGastos()
-        var lista_categorias = mutableListOf<Categoria>()
+        var elementos = HashMap<Categoria, Double>()
 
-        for(g in lista_gastos){
+        for (g in lista_gastos) {
             var cat_temp = g.categoria
-            for(cat in lista_categorias){
+            var total: Double = 0.0
+            if (elementos.isNotEmpty() && elementos[cat_temp] != null) {
+                total = elementos[cat_temp]!!
+                if (cat_temp != null) {
+                    elementos.replace(cat_temp, total + g.importe)
+                }
 
+            } else {
+                if (cat_temp != null) {
+                    elementos[cat_temp] = g.importe
+                }
             }
         }
 
         list_view = findViewById<ListView>(R.id.lista_gastos)
         adapterList =
-            myListAdapterInfoGasto(this, R.layout.mg_info_gasto_ingreso_row, distintos_gastos)
+            myListAdapterInfoGasto(this, R.layout.mg_info_gasto_ingreso_row, elementos, false)
         list_view.adapter = adapterList
         registerForContextMenu(list_view)
     }

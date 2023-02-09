@@ -25,7 +25,7 @@
         android:fontFamily="@font/oswald_bold"
         android:text="Añadir Gasto"
         android:textColor="#FFFFFF"
-        android:textSize="28sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarA"
         app:layout_constraintEnd_toEndOf="@+id/toolbarA"
         app:layout_constraintStart_toStartOf="parent"
@@ -48,10 +48,11 @@
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="24dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarA">
 
@@ -62,8 +63,8 @@
             android:layout_weight="1"
             android:backgroundTint="#FFFFFF"
             android:ems="10"
+            android:hint="0"
             android:inputType="textPersonName"
-            android:text="1000"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="26sp"
@@ -87,23 +88,22 @@
         android:id="@+id/tvFechaSeleccionada"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="28dp"
         android:text="10 de Diciembre de 2023"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCalendario" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="225dp"
+        android:layout_marginTop="260dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
@@ -111,10 +111,9 @@
             android:id="@+id/btnFecha1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#68C9AC"
+            android:background="@color/vidrian_green"
             android:text="09/01"
             android:textAlignment="center" />
 
@@ -125,7 +124,8 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
+            android:background="@color/vidrian_light_green"
+            android:focusedByDefault="true"
             android:text="10/01" />
 
         <Button
@@ -134,56 +134,27 @@
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#68C9AC"
+            android:background="@color/vidrian_green"
+            android:focusedByDefault="false"
             android:text="11/01" />
 
-        <ImageView
-            android:id="@+id/btnCalendario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
-            android:clickable="true"
-            app:srcCompat="@drawable/calendar"
-            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
     </LinearLayout>
 
     <Button
         android:id="@+id/btnAnadir"
-        android:layout_width="181dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="281dp"
+        android:layout_height="44dp"
         android:layout_weight="1"
         android:background="@drawable/long_button_orange"
         android:text="AÑADIR"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etComentario"
-        app:layout_constraintVertical_bias="0.272"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaSeleccionada"
+        app:layout_constraintVertical_bias="0.351"
         tools:ignore="TouchTargetSizeCheck" />
-
-    <EditText
-        android:id="@+id/etComentario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_weight="1"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingTop="15dp"
-        android:text="Comentario editable"
-        android:textColor="#615B5B"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFechaSeleccionada" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -193,7 +164,7 @@
         android:fontFamily="@font/oswald"
         android:text="@string/gastos_underline"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="@+id/toolbarA"
         app:layout_constraintTop_toTopOf="@+id/toolbarA" />
 
@@ -206,32 +177,35 @@
         android:fontFamily="@font/oswald"
         android:text="@string/ingresos"
         android:textColor="#C6BEBE"
-        android:textSize="20sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvCategorias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:text="Categorías"
-        android:textColor="#FFFFFF"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
     <GridView
         android:id="@+id/gvCategorias"
         android:layout_width="match_parent"
-        android:layout_height="132dp"
+        android:layout_height="234dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="54dp"
+        android:numColumns="4"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCategorias"
-        android:numColumns="4"/>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/btnCalendario"
+        android:layout_width="56dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        app:srcCompat="@drawable/calendar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

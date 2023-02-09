@@ -77,13 +77,13 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FFFFFF"
                 android:ems="10"
+                android:focusable="true"
+                android:hint="Nombre de la categoria"
                 android:inputType="textPersonName"
                 android:paddingTop="15dp"
-                android:text=" Nombre de la categoria"
-                android:focusable="true"
-                android:textColor="#615B5B"
-                android:textSize="14sp"
-                />
+                android:textColor="#FFFFFF"
+                android:textColorHint="#615B5B"
+                android:textSize="14sp" />
 
             <TextView
                 android:layout_width="300dp"

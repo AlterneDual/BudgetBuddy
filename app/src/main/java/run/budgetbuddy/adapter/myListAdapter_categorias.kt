@@ -54,7 +54,7 @@ class myListAdapter_categorias(private val context: Context,
 
         holder.icono.setImageResource(opcionActual.icono)
         holder.color.setImageResource(opcionActual.color)
-        holder.nombreCategoria.setText(opcionActual.nombre)
+        holder.nombreCategoria.text = opcionActual.nombre
 
         if (opcionActual.color == R.drawable.circulo_azul){
             holder.nombreCategoria.setTextColor(Color.rgb(69, 119, 193))

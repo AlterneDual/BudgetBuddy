@@ -18,13 +18,12 @@ open class Gasto() : RealmObject() {
     var importe: Double = 0.0
     var fecha: Date = calendar.time
     var categoria: Categoria? = null
-    var descripcion: String = ""
     var divisa: Divisa? = null
 
     var id_user: Int = 0
 
     override fun toString(): String {
-        return "ID: $id, Importe: $importe || DESC: $descripcion || Categoria: ${categoria.toString()} ID_cat: ${categoria!!.id.toString()}|| id_user: $id_user || Fecha: ${fecha.toString()}"
+        return "ID: $id, Importe: $importe || Categoria: ${categoria.toString()} ID_cat: ${categoria!!.id.toString()}|| id_user: $id_user || Fecha: ${fecha.toString()}"
     }
 
 }
