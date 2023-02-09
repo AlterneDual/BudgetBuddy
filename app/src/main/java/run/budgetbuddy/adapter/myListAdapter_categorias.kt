@@ -11,11 +11,11 @@ import models.Categoria
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.categoria.CrearCategoria
 
-class myListAdapter_categorias(private val context: Context,
-                               private val layout: Int,
-                               private val listaOpciones: MutableList<Categoria>
-)
-                    : BaseAdapter(){
+class myListAdapter_categorias(
+    private val context: Context,
+    private val layout: Int,
+    private val listaOpciones: MutableList<Categoria>
+) : BaseAdapter() {
 
     private lateinit var listaColores: MutableList<Int>
 
@@ -31,12 +31,14 @@ class myListAdapter_categorias(private val context: Context,
         return id.toLong()
     }
 
+    var selectedItem = -1
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         var cView = convertView
-        val holder : ViewHolder
-        if( cView == null){
+        val holder: ViewHolder
+        if (cView == null) {
 
-            cView = LayoutInflater.from(context).inflate(layout,null)
+            cView = LayoutInflater.from(context).inflate(layout, null)
             holder = ViewHolder(
 
                 cView.findViewById(R.id.ivIconoCategoria),
@@ -46,9 +48,16 @@ class myListAdapter_categorias(private val context: Context,
             )
             cView.tag = holder
 
-        } else{
+        } else {
             holder = cView.tag as ViewHolder
         }
+
+        if (selectedItem == position) {
+            cView?.setBackgroundColor(Color.parseColor("#988C8C"))
+        } else {
+            cView?.setBackgroundColor(Color.TRANSPARENT)
+        }
+
 
         val opcionActual = listaOpciones[position]
 
@@ -56,21 +65,21 @@ class myListAdapter_categorias(private val context: Context,
         holder.color.setImageResource(opcionActual.color)
         holder.nombreCategoria.text = opcionActual.nombre
 
-        if (opcionActual.color == R.drawable.circulo_azul){
+        if (opcionActual.color == R.drawable.circulo_azul) {
             holder.nombreCategoria.setTextColor(Color.rgb(69, 119, 193))
-        }else if(opcionActual.color == R.drawable.circulo_rosa){
+        } else if (opcionActual.color == R.drawable.circulo_rosa) {
             holder.nombreCategoria.setTextColor(Color.rgb(232, 84, 217))
-        }else if(opcionActual.color == R.drawable.circulo_celeste){
+        } else if (opcionActual.color == R.drawable.circulo_celeste) {
             holder.nombreCategoria.setTextColor(Color.rgb(104, 201, 172))
-        }else if(opcionActual.color == R.drawable.circulo_turquesa){
+        } else if (opcionActual.color == R.drawable.circulo_turquesa) {
             holder.nombreCategoria.setTextColor(Color.rgb(84, 202, 117))
-        }else if(opcionActual.color == R.drawable.circulo_rojo){
+        } else if (opcionActual.color == R.drawable.circulo_rojo) {
             holder.nombreCategoria.setTextColor(Color.rgb(220, 45, 45))
-        }else if(opcionActual.color == R.drawable.circulo_amarillo){
+        } else if (opcionActual.color == R.drawable.circulo_amarillo) {
             holder.nombreCategoria.setTextColor(Color.rgb(237, 229, 33))
-        }else if(opcionActual.color == R.drawable.circulo_verde) {
+        } else if (opcionActual.color == R.drawable.circulo_verde) {
             holder.nombreCategoria.setTextColor(Color.rgb(42, 205, 27))
-        }else if(opcionActual.color == R.drawable.circulo_naranja){
+        } else if (opcionActual.color == R.drawable.circulo_naranja) {
             holder.nombreCategoria.setTextColor(Color.rgb(255, 157, 10))
         }
         return cView!!
@@ -82,6 +91,6 @@ class myListAdapter_categorias(private val context: Context,
         var color: ImageView,
         var nombreCategoria: TextView
 
-        )
+    )
 
 }

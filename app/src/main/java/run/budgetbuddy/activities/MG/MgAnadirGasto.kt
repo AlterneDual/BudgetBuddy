@@ -31,7 +31,7 @@ class MgAnadirGasto : AppCompatActivity() {
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
     var divisaCrud: DivisaCRUD = DivisaCRUD()
     var gastoCrud: GastoCRUD = GastoCRUD()
-    var categoriaAtributo = Categoria()
+    var categoriaAtributo: Categoria? = null
     private lateinit var adapterList: myListAdapter_categorias
     private lateinit var grid_view: GridView
     private lateinit var listaCategorias: MutableList<Categoria>
@@ -118,26 +118,34 @@ class MgAnadirGasto : AppCompatActivity() {
             var keyDiv = divisaCrud.addDivisa(div)
 
             var gasto = Gasto()
-            gasto.categoria = categoriaAtributo
-            gasto.divisa = divisaCrud.getDivisa(keyDiv)
-            gasto.importe = etCantidad.text.toString().toDouble()
-            gasto.fecha = fechaGasto
-            var keyGasto = gastoCrud.addGasto(gasto)
-
-            for (gasto in gastoCrud.getAllGastos()) {
-
-
-                println(gasto)
+            if (etCantidad.text != null && fechaGasto != null && categoriaAtributo != null) {
+                gasto.categoria = categoriaAtributo
+                gasto.divisa = divisaCrud.getDivisa(keyDiv)
+                gasto.importe = etCantidad.text.toString().toDouble()
+                gasto.fecha = fechaGasto
+                gastoCrud.addGasto(gasto)
+                Toast.makeText(
+                    this, "Añadido gasto con fecha: ${gasto.fecha}", Toast.LENGTH_SHORT
+                ).show()
+                val intent = Intent(this, MgInicio::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(
+                    this,
+                    "Por favor, rellene correctamente la Cantidad, la categoria y la fecha",
+                    Toast.LENGTH_LONG
+                ).show()
             }
 
-            Toast.makeText(
-                this, "Añadido gasto con fecha: ${gasto.fecha}", Toast.LENGTH_SHORT
-            ).show()
+
+//            for (gasto in gastoCrud.getAllGastos()) {
+//
+//
+//                println(gasto)
+//            }
 
 
-//            val intent = Intent(this, MgInicio::class.java)
-//            startActivity(intent)
-//            finish()
         }
 
         binding.btnAtras3.setOnClickListener {
@@ -285,10 +293,11 @@ class MgAnadirGasto : AppCompatActivity() {
                 "Has seleccionado ${listaCategorias[position].nombre}",
                 Toast.LENGTH_LONG
             ).show()
-            view.
+            adapterList.selectedItem = position
             println("------------------------------")
             println(listaCategorias[position].nombre + " ID: " + listaCategorias[position].id)
             println("----------------------------------")
+            adapterList.notifyDataSetChanged()
 
             categoriaAtributo = listaCategorias[position]
         }

@@ -73,10 +73,6 @@ class CrearCategoria : AppCompatActivity() {
             }
         }
 
-
-//        val imageView: ImageView = findViewById(R.id.imageView)
-//        imageView.setBackgroundColor(Color.rgb(100, 100, 250))
-
         binding.btnAnadir2.setOnClickListener {
 
             SystemClock.sleep(5000)
