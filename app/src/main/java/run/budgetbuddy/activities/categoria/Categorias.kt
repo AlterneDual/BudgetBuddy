@@ -4,7 +4,13 @@ import CRUD.CategoriaCRUD
 import adapter.myListAdapter_categorias
 import android.content.Intent
 import android.os.Bundle
+import android.view.ContextMenu
+import android.view.MenuItem
+import android.view.View
+import android.widget.AdapterView
 import android.widget.GridView
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import models.Categoria
 import run.budgetbuddy.R
@@ -17,6 +23,7 @@ class Categorias : AppCompatActivity() {
     private lateinit var grid_view: GridView
     private lateinit var listaCategorias: MutableList<Categoria>
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
+    private var posicion: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -83,5 +90,52 @@ class Categorias : AppCompatActivity() {
                 categoriaCRUD.addCategoria(categoria)
             }
         }
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu?,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        menuInflater.inflate(R.menu.context_menu, menu)
+        val info = menuInfo as AdapterView.AdapterContextMenuInfo
+        posicion = info.position
+        menu?.setHeaderTitle(listaCategorias[posicion!!].nombre)
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
+        posicion = info.position
+
+        return when (item.itemId) {
+            R.id.eliminar -> {
+                val dialogo = AlertDialog.Builder(this)
+                    .setTitle("Eliminar " + listaCategorias[posicion!!].nombre)
+                    .setMessage("¿Estás seguro de que quieres eliminar " + listaCategorias[posicion!!].nombre + "?")
+                    .setPositiveButton("ACEPTAR")
+                    { dialogInterface, i ->
+                        categoriaCRUD.deleteCategoria(listaCategorias[posicion!!].id)
+                        adapterList.notifyDataSetChanged()
+                        recargarBDD()}
+                    .setNegativeButton("CANCELAR") { dialogInterface, i -> dialogInterface.cancel() }
+                    .create()
+                dialogo.show()
+
+                true
+
+
+            }
+
+            else -> super.onContextItemSelected(item)
+        }
+    }
+
+    private fun recargarBDD(): Boolean {
+        listaCategorias.clear()
+        listaCategorias.addAll(categoriaCRUD.getAllCategoria())
+        adapterList.notifyDataSetChanged()
+        Toast.makeText(this, "Has recargado la lista", Toast.LENGTH_SHORT).show()
+        return true
     }
 }
