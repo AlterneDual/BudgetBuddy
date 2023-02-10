@@ -83,6 +83,7 @@ drawable libra
 drawable long_button_empty
 drawable long_button_empty2
 drawable long_button_empty3
+drawable long_button_empty4
 drawable long_button_empty_white
 drawable long_button_orange
 drawable lupa
@@ -108,7 +109,6 @@ id GVCategoria
 id GVCategorias2
 id GVCategorias3
 id GVColores
-id ImagenListaGasto
 id RVGastosA
 id RVParticipantes
 id ReclyclerViewB
@@ -293,6 +293,7 @@ id tv3
 id tv4
 id tvAgregarImagen2
 id tvAnho
+id tvCantGasto
 id tvCantidad
 id tvCantidadGasto
 id tvContrasenaOlvidada
