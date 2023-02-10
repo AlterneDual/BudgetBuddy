@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import models.Categoria
+import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgInfoBinding
 import java.sql.Date
@@ -19,6 +20,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 import run.budgetbuddy.adapter.*
+import java.time.LocalDate
 
 class MgInfo : AppCompatActivity() {
     private lateinit var binding: MgInfoBinding
@@ -26,6 +28,7 @@ class MgInfo : AppCompatActivity() {
     var gc: GastoCRUD = GastoCRUD()
     private lateinit var list_view: ListView
     private lateinit var adapterList: myListAdapterInfoGasto
+    private lateinit var lista_gastos: MutableList<Gasto>
 
     //    private lateinit var sharedPreferences: SharedPreferences
 
@@ -41,23 +44,8 @@ class MgInfo : AppCompatActivity() {
         binding.textView10.isVisible = false
         binding.tvIngresos.isVisible = false
 
-
-        var lista_gastos = gc.getAllGastos();
-        inicializarAdapter()
-
-        println("******************************************************************************************************************")
-        for (g in lista_gastos) {
-            println(g.toString())
-        }
-        println("******************************************************************************************************************")
-
-        var total: Double = 0.0;
-        for (l in lista_gastos) {
-            total += l.importe;
-        }
-
-        binding.tvGastos.text = total.toString() + " €";
-//        }
+        if (lista_gastos.isNotEmpty())
+            inicializarAdapter(lista_gastos)
 
 
         binding.btnAtras.setOnClickListener {
@@ -89,6 +77,10 @@ class MgInfo : AppCompatActivity() {
             seleccionado = 5;
             check()
         }
+        binding.butAll.setOnClickListener {
+            seleccionado = 0
+            check()
+        }
 
 
     }
@@ -104,6 +96,39 @@ class MgInfo : AppCompatActivity() {
 
 
         when (seleccionado) {
+            0 -> {
+                binding.tvDia.setTextColor(white)
+                binding.tvDia.paintFlags =
+                    binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+
+                binding.tvSemana.setTextColor(white)
+                binding.tvSemana.paintFlags =
+                    binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+
+                binding.tvMes.setTextColor(white)
+                binding.tvMes.paintFlags =
+                    binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+
+                binding.tvAnho.setTextColor(white)
+                binding.tvAnho.paintFlags =
+                    binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+
+                binding.tvPeriodo.setTextColor(white)
+                binding.tvPeriodo.paintFlags =
+                    binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+                binding.tvResultadoFecha.text = ("Todos")
+
+                // Mostrar en la lista
+                lista_gastos = gc.getAllGastos()
+                inicializarAdapter(lista_gastos)
+                var total: Double = 0.0;
+                for (l in lista_gastos) {
+                    total += l.importe;
+                }
+                binding.tvGastos.text = "-" + total.toString() + " €";
+
+            }
+
             1 -> {
                 var dia_num = calendar.get(Calendar.DAY_OF_MONTH)
                 var dia = calendar.getDisplayName(
@@ -128,6 +153,15 @@ class MgInfo : AppCompatActivity() {
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
                 binding.tvResultadoFecha.text = ("$dia_num $dia")
+
+                // Mostrar en la lista
+                lista_gastos = verInfoDia(Date.valueOf(LocalDate.now().toString()));
+                inicializarAdapter(lista_gastos)
+                var total: Double = 0.0;
+                for (l in lista_gastos) {
+                    total += l.importe;
+                }
+                binding.tvGastos.text = "-" + total.toString() + " €";
 
             }
 
@@ -165,6 +199,8 @@ class MgInfo : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+
+
             }
 
             3 -> {
@@ -192,6 +228,15 @@ class MgInfo : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+
+                // Mostrar en la lista
+                lista_gastos = verInfoMes(Date.valueOf(LocalDate.now().toString()));
+                inicializarAdapter(lista_gastos)
+                var total: Double = 0.0;
+                for (l in lista_gastos) {
+                    total += l.importe;
+                }
+                binding.tvGastos.text = "- " + total.toString() + " €";
             }
 
             4 -> {
@@ -217,6 +262,15 @@ class MgInfo : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+
+                // Mostrar en la lista
+                lista_gastos = verInfoAno(Date.valueOf(LocalDate.now().toString()));
+                inicializarAdapter(lista_gastos)
+                var total: Double = 0.0;
+                for (l in lista_gastos) {
+                    total += l.importe;
+                }
+                binding.tvGastos.text = "-" + total.toString() + " €";
             }
 
             5 -> {
@@ -247,16 +301,61 @@ class MgInfo : AppCompatActivity() {
     }
 
 
-    fun verInfoDia(fecha_hoy: Date) {
+    fun verInfoDia(fecha_hoy: Date): MutableList<Gasto> {
+        var lista_gastos = gc.getAllGastos()
+        var nueva_lista: MutableList<Gasto> = mutableListOf()
+
+        val format = SimpleDateFormat("dd/MM/yyyy")
+        var date = format.format(fecha_hoy);
+
+        for (g in lista_gastos) {
+            val format = SimpleDateFormat("dd/MM/yyyy")
+            var guardada = format.format(g.fecha);
+            if (guardada.equals(date)) {
+                nueva_lista.add(g)
+            }
+        }
+        return nueva_lista
     }
 
     fun verInfoSemana(fecha_inicio: Date, fecha_final: Date) {
+
     }
 
-    fun verInfoMes(fecha_inicio: Date, fecha_fin: Date) {
+    fun verInfoMes(fecha_inicio: Date): MutableList<Gasto> {
+        var lista_gastos = gc.getAllGastos()
+        var nueva_lista: MutableList<Gasto> = mutableListOf()
+
+        val format = SimpleDateFormat("MM/yyyy")
+        var date = format.format(fecha_inicio);
+        println("-----------------------------------------------------------------------Fecha Buscada: $date")
+        for (g in lista_gastos) {
+            val format = SimpleDateFormat("MM/yyyy")
+            var guardada = format.format(g.fecha);
+            println("-----------------------------------------------------------------------Fecha Guardada: $guardada")
+            if (guardada.equals(date)) {
+                nueva_lista.add(g)
+            }
+        }
+        return nueva_lista
     }
 
-    fun verInfoAno(ano: Date) {
+    fun verInfoAno(ano: Date): MutableList<Gasto> {
+        var lista_gastos = gc.getAllGastos()
+        var nueva_lista: MutableList<Gasto> = mutableListOf()
+
+        val format = SimpleDateFormat("yyyy")
+        var date = format.format(ano);
+        println("-----------------------------------------------------------------------Fecha Buscada: $date")
+        for (g in lista_gastos) {
+            val format = SimpleDateFormat("yyyy")
+            var guardada = format.format(g.fecha);
+            println("-----------------------------------------------------------------------Fecha Guardada: $guardada")
+            if (guardada.equals(date)) {
+                nueva_lista.add(g)
+            }
+        }
+        return nueva_lista
     }
 
     fun verInfoPeriodo(fecha_a: Date, fecha_b: Date) {
@@ -291,6 +390,7 @@ class MgInfo : AppCompatActivity() {
 
                         if (startDate != null && endDate != null) {
                             val format = SimpleDateFormat("dd/MM", Locale.getDefault())
+
                             var start = ""
                             var end = ""
                             if (startDate!!.time <= endDate!!.time) {
@@ -320,30 +420,11 @@ class MgInfo : AppCompatActivity() {
         startDatePicker.show()
     }
 
-    @RequiresApi(Build.VERSION_CODES.N)
-    private fun inicializarAdapter() {
-        var lista_gastos = gc.getAllGastos()
-        var elementos = HashMap<Categoria, Double>()
-
-        for (g in lista_gastos) {
-            var cat_temp = g.categoria
-            var total: Double = 0.0
-            if (elementos.isNotEmpty() && elementos[cat_temp] != null) {
-                total = elementos[cat_temp]!!
-                if (cat_temp != null) {
-                    elementos.replace(cat_temp, total + g.importe)
-                }
-
-            } else {
-                if (cat_temp != null) {
-                    elementos[cat_temp] = g.importe
-                }
-            }
-        }
+    private fun inicializarAdapter(lista_gastos: MutableList<Gasto>) {
 
         list_view = findViewById<ListView>(R.id.lista_gastos)
         adapterList =
-            myListAdapterInfoGasto(this, R.layout.mg_info_gasto_ingreso_row, elementos, false)
+            myListAdapterInfoGasto(this, R.layout.mg_info_gasto_ingreso_row, lista_gastos, false)
         list_view.adapter = adapterList
         registerForContextMenu(list_view)
     }

@@ -3064,6 +3064,7 @@ id btnRegistrar
 id btnRembolsoA
 id btnSelectorDivisa
 id butAceptar
+id butAll
 id butInfo
 id butVolver
 id buttonPanel
@@ -3121,6 +3122,7 @@ id default_activity_button
 id deltaRelative
 id dependency_ordering
 id descripcion_grupo
+id descriptionText
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -3272,6 +3274,7 @@ id linearLayout3
 id linearLayout4
 id linearLayout5
 id linearLayout6
+id linearLayout7
 id listMode
 id listView_menu
 id list_item
@@ -3494,6 +3497,7 @@ id tag_window_insets_animation_callback
 id tbSemanal
 id text
 id text2
+id textDescripcion
 id textEnd
 id textSpacerNoButtons
 id textSpacerNoTitle

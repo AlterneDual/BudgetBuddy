@@ -12,6 +12,8 @@ public interface models_GastoRealmProxyInterface {
     public void realmSet$categoria(models.Categoria value);
     public models.Divisa realmGet$divisa();
     public void realmSet$divisa(models.Divisa value);
+    public String realmGet$descripcion();
+    public void realmSet$descripcion(String value);
     public int realmGet$id_user();
     public void realmSet$id_user(int value);
 }

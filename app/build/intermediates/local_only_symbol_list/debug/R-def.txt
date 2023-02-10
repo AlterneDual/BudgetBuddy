@@ -172,6 +172,7 @@ id btnRegistrar
 id btnRembolsoA
 id btnSelectorDivisa
 id butAceptar
+id butAll
 id butInfo
 id butVolver
 id cajaEmail
@@ -183,6 +184,7 @@ id coinSelector
 id constraintLayout
 id custom_list
 id descripcion_grupo
+id descriptionText
 id divider
 id eliminar
 id etCantidad
@@ -243,6 +245,7 @@ id linearLayout3
 id linearLayout4
 id linearLayout5
 id linearLayout6
+id linearLayout7
 id listView_menu
 id list_view
 id lista_categorias
@@ -261,6 +264,7 @@ id recordarPassword
 id recyclerViewA4
 id relativeLayout
 id tbSemanal
+id textDescripcion
 id textTotal
 id textView10
 id textView11

@@ -15,6 +15,7 @@ import models.Categoria
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.ActivityCrearCategoriasBinding
 import run.budgetbuddy.databinding.CrearCategoriaBinding
+import kotlin.properties.Delegates
 
 class CrearCategoria : AppCompatActivity() {
     private lateinit var binding: CrearCategoriaBinding
@@ -25,9 +26,8 @@ class CrearCategoria : AppCompatActivity() {
     private lateinit var grid_view_colores: GridView
     private lateinit var listaIconos: MutableList<Int>
     private lateinit var listaColores: MutableList<Int>
-    private var categoriaSeleccionada: Int = 0
-    private var colorSeleccionado: Int = 0
-    private var nombreSeleccionado: String = ""
+    private var categoriaSeleccionada: Int = -1
+    private var colorSeleccionado: Int = -1
     private lateinit var viewActual: View
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
 
@@ -75,18 +75,25 @@ class CrearCategoria : AppCompatActivity() {
 
         binding.btnAnadir2.setOnClickListener {
 
-            SystemClock.sleep(5000)
-            Toast.makeText(
-                this,
-                "Se ha añadido una Categoria",
-                Toast.LENGTH_LONG
-            ).show()
+            if (!txt_nombre.text.equals("") && categoriaSeleccionada >= 0 && colorSeleccionado >= 0) {
+                crearCategoria()
+                Toast.makeText(
+                    this,
+                    "Se ha añadido una Categoria",
+                    Toast.LENGTH_LONG
+                ).show()
 
-            crearCategoria()
+                val intent = Intent(this, Categorias::class.java)
+                startActivity(intent)
+                finish()
+            } else {
+                Toast.makeText(
+                    this,
+                    "Rellene todos los campos",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
 
-            val intent = Intent(this, Categorias::class.java)
-            startActivity(intent)
-            finish()
         }
 
         binding.btnAtras.setOnClickListener {
@@ -98,12 +105,13 @@ class CrearCategoria : AppCompatActivity() {
     }
 
     private fun crearCategoria() {
+
         var categoria = Categoria()
         categoria.nombre = txt_nombre.text.toString()
         categoria.icono = listaIconos[categoriaSeleccionada]
         categoria.color = listaColores[colorSeleccionado]
-
         categoriaCRUD.addCategoria(categoria)
+
     }
 
     private fun inicializarAdapter() {

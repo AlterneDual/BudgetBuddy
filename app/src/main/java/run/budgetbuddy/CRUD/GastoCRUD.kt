@@ -22,6 +22,7 @@ open class GastoCRUD {
             gastoR.fecha = gasto.fecha
             gastoR.categoria = gasto.categoria
             gastoR.divisa = gasto.divisa
+            gastoR.descripcion = gasto.descripcion
             gastoR.id_user = gasto.id_user
 
 
@@ -70,6 +71,9 @@ open class GastoCRUD {
             }
             if (new_categoria != null) {
                 gasto?.categoria = new_categoria
+            }
+            if (new_desc != null) {
+                gasto?.descripcion = new_desc
             }
             if (new_divisa != null) {
                 gasto?.divisa = new_divisa

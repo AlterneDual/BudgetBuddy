@@ -48,16 +48,18 @@ public class models_GastoRealmProxy extends models.Gasto
         long fechaColKey;
         long categoriaColKey;
         long divisaColKey;
+        long descripcionColKey;
         long id_userColKey;
 
         GastoColumnInfo(OsSchemaInfo schemaInfo) {
-            super(6);
+            super(7);
             OsObjectSchemaInfo objectSchemaInfo = schemaInfo.getObjectSchemaInfo("Gasto");
             this.idColKey = addColumnDetails("id", "id", objectSchemaInfo);
             this.importeColKey = addColumnDetails("importe", "importe", objectSchemaInfo);
             this.fechaColKey = addColumnDetails("fecha", "fecha", objectSchemaInfo);
             this.categoriaColKey = addColumnDetails("categoria", "categoria", objectSchemaInfo);
             this.divisaColKey = addColumnDetails("divisa", "divisa", objectSchemaInfo);
+            this.descripcionColKey = addColumnDetails("descripcion", "descripcion", objectSchemaInfo);
             this.id_userColKey = addColumnDetails("id_user", "id_user", objectSchemaInfo);
         }
 
@@ -80,6 +82,7 @@ public class models_GastoRealmProxy extends models.Gasto
             dst.fechaColKey = src.fechaColKey;
             dst.categoriaColKey = src.categoriaColKey;
             dst.divisaColKey = src.divisaColKey;
+            dst.descripcionColKey = src.descripcionColKey;
             dst.id_userColKey = src.id_userColKey;
         }
     }
@@ -262,6 +265,36 @@ public class models_GastoRealmProxy extends models.Gasto
 
     @Override
     @SuppressWarnings("cast")
+    public String realmGet$descripcion() {
+        proxyState.getRealm$realm().checkIfValid();
+        return (java.lang.String) proxyState.getRow$realm().getString(columnInfo.descripcionColKey);
+    }
+
+    @Override
+    public void realmSet$descripcion(String value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            if (value == null) {
+                row.getTable().setNull(columnInfo.descripcionColKey, row.getObjectKey(), true);
+                return;
+            }
+            row.getTable().setString(columnInfo.descripcionColKey, row.getObjectKey(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        if (value == null) {
+            proxyState.getRow$realm().setNull(columnInfo.descripcionColKey);
+            return;
+        }
+        proxyState.getRow$realm().setString(columnInfo.descripcionColKey, value);
+    }
+
+    @Override
+    @SuppressWarnings("cast")
     public int realmGet$id_user() {
         proxyState.getRealm$realm().checkIfValid();
         return (int) proxyState.getRow$realm().getLong(columnInfo.id_userColKey);
@@ -283,12 +316,13 @@ public class models_GastoRealmProxy extends models.Gasto
     }
 
     private static OsObjectSchemaInfo createExpectedObjectSchemaInfo() {
-        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(NO_ALIAS, "Gasto", false, 6, 0);
+        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(NO_ALIAS, "Gasto", false, 7, 0);
         builder.addPersistedProperty(NO_ALIAS, "id", RealmFieldType.INTEGER, Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "importe", RealmFieldType.DOUBLE, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "fecha", RealmFieldType.DATE, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedLinkProperty(NO_ALIAS, "categoria", RealmFieldType.OBJECT, "Categoria");
         builder.addPersistedLinkProperty(NO_ALIAS, "divisa", RealmFieldType.OBJECT, "Divisa");
+        builder.addPersistedProperty(NO_ALIAS, "descripcion", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, !Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "id_user", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         return builder.build();
     }
@@ -386,6 +420,13 @@ public class models_GastoRealmProxy extends models.Gasto
                 objProxy.realmSet$divisa(divisaObj);
             }
         }
+        if (json.has("descripcion")) {
+            if (json.isNull("descripcion")) {
+                objProxy.realmSet$descripcion(null);
+            } else {
+                objProxy.realmSet$descripcion((String) json.getString("descripcion"));
+            }
+        }
         if (json.has("id_user")) {
             if (json.isNull("id_user")) {
                 throw new IllegalArgumentException("Trying to set non-nullable field 'id_user' to null.");
@@ -449,6 +490,13 @@ public class models_GastoRealmProxy extends models.Gasto
                 } else {
                     models.Divisa divisaObj = models_DivisaRealmProxy.createUsingJsonStream(realm, reader);
                     objProxy.realmSet$divisa(divisaObj);
+                }
+            } else if (name.equals("descripcion")) {
+                if (reader.peek() != JsonToken.NULL) {
+                    objProxy.realmSet$descripcion((String) reader.nextString());
+                } else {
+                    reader.skipValue();
+                    objProxy.realmSet$descripcion(null);
                 }
             } else if (name.equals("id_user")) {
                 if (reader.peek() != JsonToken.NULL) {
@@ -530,6 +578,7 @@ public class models_GastoRealmProxy extends models.Gasto
         builder.addInteger(columnInfo.idColKey, unmanagedSource.realmGet$id());
         builder.addDouble(columnInfo.importeColKey, unmanagedSource.realmGet$importe());
         builder.addDate(columnInfo.fechaColKey, unmanagedSource.realmGet$fecha());
+        builder.addString(columnInfo.descripcionColKey, unmanagedSource.realmGet$descripcion());
         builder.addInteger(columnInfo.id_userColKey, unmanagedSource.realmGet$id_user());
 
         // Create the underlying object and cache it before setting any object/objectlist references
@@ -608,6 +657,10 @@ public class models_GastoRealmProxy extends models.Gasto
             }
             Table.nativeSetLink(tableNativePtr, columnInfo.divisaColKey, objKey, cachedivisa, false);
         }
+        String realmGet$descripcion = ((models_GastoRealmProxyInterface) object).realmGet$descripcion();
+        if (realmGet$descripcion != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
+        }
         Table.nativeSetLong(tableNativePtr, columnInfo.id_userColKey, objKey, ((models_GastoRealmProxyInterface) object).realmGet$id_user(), false);
         return objKey;
     }
@@ -661,6 +714,10 @@ public class models_GastoRealmProxy extends models.Gasto
                 }
                 Table.nativeSetLink(tableNativePtr, columnInfo.divisaColKey, objKey, cachedivisa, false);
             }
+            String realmGet$descripcion = ((models_GastoRealmProxyInterface) object).realmGet$descripcion();
+            if (realmGet$descripcion != null) {
+                Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
+            }
             Table.nativeSetLong(tableNativePtr, columnInfo.id_userColKey, objKey, ((models_GastoRealmProxyInterface) object).realmGet$id_user(), false);
         }
     }
@@ -710,6 +767,12 @@ public class models_GastoRealmProxy extends models.Gasto
             Table.nativeSetLink(tableNativePtr, columnInfo.divisaColKey, objKey, cachedivisa, false);
         } else {
             Table.nativeNullifyLink(tableNativePtr, columnInfo.divisaColKey, objKey);
+        }
+        String realmGet$descripcion = ((models_GastoRealmProxyInterface) object).realmGet$descripcion();
+        if (realmGet$descripcion != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
+        } else {
+            Table.nativeSetNull(tableNativePtr, columnInfo.descripcionColKey, objKey, false);
         }
         Table.nativeSetLong(tableNativePtr, columnInfo.id_userColKey, objKey, ((models_GastoRealmProxyInterface) object).realmGet$id_user(), false);
         return objKey;
@@ -768,6 +831,12 @@ public class models_GastoRealmProxy extends models.Gasto
             } else {
                 Table.nativeNullifyLink(tableNativePtr, columnInfo.divisaColKey, objKey);
             }
+            String realmGet$descripcion = ((models_GastoRealmProxyInterface) object).realmGet$descripcion();
+            if (realmGet$descripcion != null) {
+                Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
+            } else {
+                Table.nativeSetNull(tableNativePtr, columnInfo.descripcionColKey, objKey, false);
+            }
             Table.nativeSetLong(tableNativePtr, columnInfo.id_userColKey, objKey, ((models_GastoRealmProxyInterface) object).realmGet$id_user(), false);
         }
     }
@@ -801,6 +870,7 @@ public class models_GastoRealmProxy extends models.Gasto
 
         // Deep copy of divisa
         unmanagedCopy.realmSet$divisa(models_DivisaRealmProxy.createDetachedCopy(realmSource.realmGet$divisa(), currentDepth + 1, maxDepth, cache));
+        unmanagedCopy.realmSet$descripcion(realmSource.realmGet$descripcion());
         unmanagedCopy.realmSet$id_user(realmSource.realmGet$id_user());
 
         return unmanagedObject;
@@ -838,6 +908,7 @@ public class models_GastoRealmProxy extends models.Gasto
                 builder.addObject(columnInfo.divisaColKey, models_DivisaRealmProxy.copyOrUpdate(realm, (models_DivisaRealmProxy.DivisaColumnInfo) realm.getSchema().getColumnInfo(models.Divisa.class), divisaObj, true, cache, flags));
             }
         }
+        builder.addString(columnInfo.descripcionColKey, realmObjectSource.realmGet$descripcion());
         builder.addInteger(columnInfo.id_userColKey, realmObjectSource.realmGet$id_user());
 
         builder.updateExistingTopLevelObject();

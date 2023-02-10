@@ -18,15 +18,16 @@ import kotlin.properties.Delegates
 open class myListAdapterInfoGasto(
     context: Context,
     layout: Int,
-    gastos: HashMap<Categoria, Double>,
+    gastos: MutableList<Gasto>,
     ingreso: Boolean
 ) :
     BaseAdapter() {
 
     private val mContext: Context = context
-    private val mGastos: HashMap<Categoria, Double> = gastos
+    private val mGastos: MutableList<Gasto> = gastos
     private val ingreso: Boolean = ingreso
     private var nombre = ""
+    private var descripcion = ""
     private var value = 0.0
     private var icono by Delegates.notNull<Int>()
 
@@ -34,7 +35,7 @@ open class myListAdapterInfoGasto(
         return mGastos.size
     }
 
-    override fun getItem(position: Int): HashMap<Categoria, Double>? {
+    override fun getItem(position: Int): MutableList<Gasto>? {
         var cont = 0
         for (g in mGastos) {
             if (cont == position) {
@@ -49,14 +50,16 @@ open class myListAdapterInfoGasto(
         return position.toLong()
     }
 
-    @SuppressLint("ResourceAsColor")
+    @SuppressLint("ResourceAsColor", "SetTextI18n")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         var cont = 0
         for (g in mGastos) {
             if (cont == position) {
-                nombre = g.key.nombre
-                icono = g.key.icono
-                value = g.value
+                nombre = g.categoria?.nombre ?: ""
+                icono = g.categoria?.icono ?: 0
+                value = g.importe
+                descripcion = g.descripcion.toString()
+
             }
             cont++
         }
@@ -73,10 +76,12 @@ open class myListAdapterInfoGasto(
         val categoriaIcono = view.findViewById<ImageView>(R.id.ivIcono)
         val gastoNombre = view.findViewById<TextView>(R.id.tvNombre1)
         val valor = view.findViewById<TextView>(R.id.textTotal)
+        val description = view.findViewById<TextView>(R.id.textDescripcion)
 
         categoriaIcono.setImageResource(icono)
         gastoNombre.text = nombre
-        valor.text = value.toString() + " €"
+        valor.text = "-$value €"
+        description.text = descripcion
         return view
     }
 }

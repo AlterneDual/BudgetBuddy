@@ -8,18 +8,19 @@
 
     <Button
         android:id="@+id/btnAnadir2"
-        android:layout_width="235dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="660dp"
+        android:layout_width="281dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="12dp"
+        android:layout_weight="1"
         android:background="@drawable/long_button_orange"
-        android:fontFamily="@font/oswald"
         android:text="AÑADIR"
-        android:textAllCaps="false"
-        android:textSize="24sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/GVColores"
+        app:layout_constraintVertical_bias="0.733"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -85,49 +86,32 @@
                 android:textColorHint="#615B5B"
                 android:textSize="14sp" />
 
-            <TextView
-                android:layout_width="300dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:paddingLeft="4dp"
-                android:text=" Introduzca un nombre para la categoria"
-                android:textColor="#B25927"
-                android:textSize="12sp" />
         </LinearLayout>
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="10dp"
-        android:text="Simbolos"
-        android:textColor="#615B5B"
-        app:layout_constraintBottom_toTopOf="@+id/GVCategorias3"
-        app:layout_constraintStart_toStartOf="parent" />
 
     <GridView
         android:id="@+id/GVCategorias3"
         android:layout_width="0dp"
         android:layout_height="420dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="152dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="70dp"
         android:numColumns="3"
-        app:layout_constraintBottom_toTopOf="@+id/btnAnadir2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/toolbar" />
 
     <GridView
         android:id="@+id/GVColores"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginTop="16dp"
         android:numColumns="8"
-        app:layout_constraintBottom_toTopOf="@+id/btnAnadir2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/GVCategorias3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

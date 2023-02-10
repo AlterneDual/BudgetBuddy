@@ -19,6 +19,7 @@ open class Gasto() : RealmObject() {
     var fecha: Date = calendar.time
     var categoria: Categoria? = null
     var divisa: Divisa? = null
+    var descripcion: String? = ""
 
     var id_user: Int = 0
 

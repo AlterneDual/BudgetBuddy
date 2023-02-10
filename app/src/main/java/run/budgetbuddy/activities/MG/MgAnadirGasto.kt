@@ -7,7 +7,6 @@ import adapter.myListAdapter_categorias
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
-import android.graphics.Color
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
@@ -23,10 +22,9 @@ import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgAnadirGastoBinding
 
-
 class MgAnadirGasto : AppCompatActivity() {
 
-    private lateinit var binding: run.budgetbuddy.databinding.MgAnadirGastoBinding
+    private lateinit var binding: MgAnadirGastoBinding
 
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
     var divisaCrud: DivisaCRUD = DivisaCRUD()
@@ -80,14 +78,13 @@ class MgAnadirGasto : AppCompatActivity() {
 
         valoresAyerHoyPredeterminados()
 
-
         var tvFechaSeleccionada = binding.tvFechaSeleccionada
         var btnFecha1 = binding.btnFecha1
         var btnFecha2 = binding.btnFecha2
         var btnFecha3 = binding.btnFecha3
         var etCantidad = binding.etCantidad
         var btnIngreso = binding.tvIngresos
-        var gvCategoria = binding.gvCategorias
+        var descripttion = binding.descriptionText
 
         nombreMes = nombreMeses(todayMonth.plus(1))[0]
         tvFechaSeleccionada.setText("$todayDay del $nombreMes de $todayYear")
@@ -96,9 +93,6 @@ class MgAnadirGasto : AppCompatActivity() {
         btnFecha1.setText("$yesterdayDay/$nombreMes")
         btnFecha2.setText("$todayDay/$nombreMes")
         btnFecha3.setText("$tomorrowDay/$nombreMes")
-
-
-
 
         btnIngreso.setOnClickListener {
             val intent = Intent(this, MgAnadirIngreso::class.java)
@@ -109,6 +103,10 @@ class MgAnadirGasto : AppCompatActivity() {
         etCantidad.setOnClickListener {
             etCantidad.setText("")
         }
+        descripttion.setOnClickListener {
+            descripttion.setText("")
+        }
+
 
         binding.btnAnadir.setOnClickListener {
 
@@ -118,11 +116,12 @@ class MgAnadirGasto : AppCompatActivity() {
             var keyDiv = divisaCrud.addDivisa(div)
 
             var gasto = Gasto()
-            if (etCantidad.text != null && fechaGasto != null && categoriaAtributo != null) {
+            if (etCantidad.text != null && fechaGasto != null && categoriaAtributo != null && descripttion.text != null) {
                 gasto.categoria = categoriaAtributo
                 gasto.divisa = divisaCrud.getDivisa(keyDiv)
                 gasto.importe = etCantidad.text.toString().toDouble()
                 gasto.fecha = fechaGasto
+                gasto.descripcion = descripttion.text.toString()
                 gastoCrud.addGasto(gasto)
                 Toast.makeText(
                     this, "Añadido gasto con fecha: ${gasto.fecha}", Toast.LENGTH_SHORT
@@ -137,15 +136,9 @@ class MgAnadirGasto : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-
-
 //            for (gasto in gastoCrud.getAllGastos()) {
-//
-//
 //                println(gasto)
 //            }
-
-
         }
 
         binding.btnAtras3.setOnClickListener {

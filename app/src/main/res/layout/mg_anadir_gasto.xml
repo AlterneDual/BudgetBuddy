@@ -48,25 +48,25 @@
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarA">
 
         <EditText
             android:id="@+id/etCantidad"
-            android:layout_width="103dp"
+            android:layout_width="56dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="#FFF"
             android:ems="10"
+            android:fontFamily="@font/oswald"
             android:hint="0"
             android:inputType="textPersonName"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="#FFF"
             android:textSize="26sp"
             tools:layout_editor_absoluteX="115dp"
             tools:layout_editor_absoluteY="169dp" />
@@ -77,35 +77,23 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="EUR"
+            android:fontFamily="@font/oswald"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
+            android:textSize="26sp"
             tools:layout_editor_absoluteX="217dp"
             tools:layout_editor_absoluteY="190dp" />
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/tvFechaSeleccionada"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="10 de Diciembre de 2023"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCalendario" />
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="52dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaSeleccionada">
 
         <Button
             android:id="@+id/btnFecha1"
@@ -138,6 +126,12 @@
             android:focusedByDefault="false"
             android:text="11/01" />
 
+        <ImageView
+            android:id="@+id/btnCalendario"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/calendar" />
+
     </LinearLayout>
 
     <Button
@@ -150,10 +144,8 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFechaSeleccionada"
-        app:layout_constraintVertical_bias="0.351"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
         tools:ignore="TouchTargetSizeCheck" />
 
     <TextView
@@ -184,28 +176,44 @@
     <GridView
         android:id="@+id/gvCategorias"
         android:layout_width="match_parent"
-        android:layout_height="234dp"
+        android:layout_height="120dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="54dp"
         android:numColumns="4"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
-    <ImageView
-        android:id="@+id/btnCalendario"
-        android:layout_width="56dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="20dp"
+    <TextView
+        android:id="@+id/tvFechaSeleccionada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="10 de Diciembre de 2023"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        app:srcCompat="@drawable/calendar" />
+        app:layout_constraintTop_toBottomOf="@+id/gvCategorias" />
+
+    <EditText
+        android:id="@+id/descriptionText"
+        android:layout_width="243dp"
+        android:layout_height="61dp"
+        android:backgroundTint="#FFF"
+        android:hint="Breve Descripcion ..."
+        android:textSize="24sp"
+        android:fontFamily="@font/oswald"
+        android:inputType="text"
+        android:textColor="#FFF"
+        app:layout_constraintBottom_toTopOf="@+id/gvCategorias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarA"
+        app:layout_constraintVertical_bias="0.827" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

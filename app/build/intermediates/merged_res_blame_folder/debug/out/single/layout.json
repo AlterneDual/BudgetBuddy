@@ -40,6 +40,10 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_editar_gasto_avanzado.xml"
     },
     {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_info_gasto_ingreso_row.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_info_gasto_ingreso_row.xml"
+    },
+    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\activity_crear_categorias.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_crear_categorias.xml"
     },
@@ -94,10 +98,6 @@
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\dialog_info_inicio.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_info_inicio.xml"
-    },
-    {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_anadir_gasto.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/mg_anadir_gasto.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_detalle_gasto.xml",

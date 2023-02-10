@@ -3063,6 +3063,7 @@ int id btnRegistrar 0x7f0900a2
 int id btnRembolsoA 0x7f0900a3
 int id btnSelectorDivisa 0x7f0900a4
 int id butAceptar 0x7f0900a5
+int id butAll 0x7f0902d1
 int id butInfo 0x7f0900a6
 int id butVolver 0x7f0900a7
 int id buttonPanel 0x7f0900a8
@@ -3120,6 +3121,7 @@ int id default_activity_button 0x7f0900db
 int id deltaRelative 0x7f0900dc
 int id dependency_ordering 0x7f0900dd
 int id descripcion_grupo 0x7f0900de
+int id descriptionText 0x7f0902d2
 int id design_bottom_sheet 0x7f0900df
 int id design_menu_item_action_area 0x7f0900e0
 int id design_menu_item_action_area_stub 0x7f0900e1
@@ -3271,6 +3273,7 @@ int id linearLayout3 0x7f090172
 int id linearLayout4 0x7f090173
 int id linearLayout5 0x7f090174
 int id linearLayout6 0x7f090175
+int id linearLayout7 0x7f0902d5
 int id listMode 0x7f090176
 int id listView_menu 0x7f090177
 int id list_item 0x7f090178
@@ -3493,6 +3496,7 @@ int id tag_window_insets_animation_callback 0x7f090250
 int id tbSemanal 0x7f090251
 int id text 0x7f090252
 int id text2 0x7f090253
+int id textDescripcion 0x7f0902d4
 int id textEnd 0x7f090254
 int id textSpacerNoButtons 0x7f090255
 int id textSpacerNoTitle 0x7f090256
