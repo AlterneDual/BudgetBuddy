@@ -1,435 +1,435 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:2:1-12:12
-MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\b1b71b6e9556b4ea48be7bb341272e6a\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\josel\.gradle\caches\transforms-3\349fed3c6b8905fb4cbe9aa4836949e1\transformed\viewbinding-7.3.0\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.material:material:1.8.0] C:\Users\josel\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\josel\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.appcompat:appcompat-resources:1.6.0] C:\Users\josel\.gradle\caches\transforms-3\40117145261b1a736048adf7e688123e\transformed\appcompat-resources-1.6.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.appcompat:appcompat:1.6.0] C:\Users\josel\.gradle\caches\transforms-3\a1cf331c8e237a807a600e0a0a383ef3\transformed\appcompat-1.6.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\8aec6795c8a7cbf020f3b270f10c36a3\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\josel\.gradle\caches\transforms-3\23c073a58e10cd27f9e8a94d8802a78d\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.activity:activity:1.6.0] C:\Users\josel\.gradle\caches\transforms-3\35086e0c280f471472c772640c7153bf\transformed\activity-1.6.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\a9c003b1f9c87d10c4a845739ab684b8\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\062f90518e218ae2c7e996208ee662fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\567d23f711e76f878d2dd7f8fa0c7987\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\35688b5a94ff8bf509a9b171a25d019f\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\54a195ccaf0f1169472eea37e078098a\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\josel\.gradle\caches\transforms-3\e457194528f9855104e8a6c389dbff6a\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\8cf53efdd247f46eb1f22d31db14636d\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\dbe075cae54e97b08f292d3b1e1dd1a3\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\c177c4e92215c132ada631611fc78b21\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.transition:transition:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\7a2b3866b014016d95d2e84904954488\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\7c97df2a8f56b50dbe935351b59cb9fe\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\590044801863ec9bca4ba94a552b985e\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\7056d94fe93b5adab3c4924fba23f584\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\4f1466ae96ce638943530f67c25f8171\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\15aab00c631bae4dc1e576f60cdde113\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
-MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\ea72f15058334f47da93eb3c4b0dbea7\transformed\core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
-MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] C:\Users\josel\.gradle\caches\transforms-3\44ee2ee3baf0f0cd5d65eb2dd31260ff\transformed\relinker-1.4.3\AndroidManifest.xml:2:1-7:12
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\josel\.gradle\caches\transforms-3\9c64c1ff96463510e2d70f157ecaaabf\transformed\rxandroid-2.1.1\AndroidManifest.xml:15:1-20:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\07ec1182ab14dea29e89708654b4be87\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\7a927f5e243565e9876006874919fca0\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\b14fb68bd1de3b376e45e398cce909e6\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\b29fd2418a60566157d0cd797cdb33f0\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\e61d6628d52fb08b081ef39ad47b4a33\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\josel\.gradle\caches\transforms-3\5aaa8105e98f19038297c860faaf25c0\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\a7d1379e0b90cb12df49f09fb3ddd863\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\josel\.gradle\caches\transforms-3\54468170cbd59495dc9f77af36352aaf\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\0bb462024109b6d26f0b9169564fa9d2\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\0977ec3d31916a4c1eced6e92907a9f7\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\b2f8b08a5a46a94bd13ad818e660f057\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\e613a0fa896d155a11cea2ee287d94f1\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\josel\.gradle\caches\transforms-3\e5821dd2dbb6681dbe340f1ba9b2d474\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:2:1-12:12
+MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\b1b71b6e9556b4ea48be7bb341272e6a\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\349fed3c6b8905fb4cbe9aa4836949e1\transformed\viewbinding-7.3.0\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.material:material:1.8.0] C:\Users\Aragon\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Aragon\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.0] C:\Users\Aragon\.gradle\caches\transforms-3\40117145261b1a736048adf7e688123e\transformed\appcompat-resources-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.0] C:\Users\Aragon\.gradle\caches\transforms-3\a1cf331c8e237a807a600e0a0a383ef3\transformed\appcompat-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\8aec6795c8a7cbf020f3b270f10c36a3\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Aragon\.gradle\caches\transforms-3\23c073a58e10cd27f9e8a94d8802a78d\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\Aragon\.gradle\caches\transforms-3\35086e0c280f471472c772640c7153bf\transformed\activity-1.6.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\a9c003b1f9c87d10c4a845739ab684b8\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\062f90518e218ae2c7e996208ee662fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\567d23f711e76f878d2dd7f8fa0c7987\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\35688b5a94ff8bf509a9b171a25d019f\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\54a195ccaf0f1169472eea37e078098a\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\e457194528f9855104e8a6c389dbff6a\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\8cf53efdd247f46eb1f22d31db14636d\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\dbe075cae54e97b08f292d3b1e1dd1a3\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\c177c4e92215c132ada631611fc78b21\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\7a2b3866b014016d95d2e84904954488\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\7c97df2a8f56b50dbe935351b59cb9fe\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\590044801863ec9bca4ba94a552b985e\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\7056d94fe93b5adab3c4924fba23f584\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\4f1466ae96ce638943530f67c25f8171\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\15aab00c631bae4dc1e576f60cdde113\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\ea72f15058334f47da93eb3c4b0dbea7\transformed\core-ktx-1.9.0\AndroidManifest.xml:2:1-7:12
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] C:\Users\Aragon\.gradle\caches\transforms-3\44ee2ee3baf0f0cd5d65eb2dd31260ff\transformed\relinker-1.4.3\AndroidManifest.xml:2:1-7:12
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\9c64c1ff96463510e2d70f157ecaaabf\transformed\rxandroid-2.1.1\AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\07ec1182ab14dea29e89708654b4be87\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\7a927f5e243565e9876006874919fca0\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\b14fb68bd1de3b376e45e398cce909e6\transformed\savedstate-1.2.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\b29fd2418a60566157d0cd797cdb33f0\transformed\cardview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\e61d6628d52fb08b081ef39ad47b4a33\transformed\tracing-1.0.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\5aaa8105e98f19038297c860faaf25c0\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\a7d1379e0b90cb12df49f09fb3ddd863\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\54468170cbd59495dc9f77af36352aaf\transformed\core-runtime-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\0bb462024109b6d26f0b9169564fa9d2\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\0977ec3d31916a4c1eced6e92907a9f7\transformed\documentfile-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\b2f8b08a5a46a94bd13ad818e660f057\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\e613a0fa896d155a11cea2ee287d94f1\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\e5821dd2dbb6681dbe340f1ba9b2d474\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
 	package
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:5:5-80
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:5:5-80
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:5:22-77
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:5:22-77
 application
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:6:5-193:19
-MERGED from [com.google.android.material:material:1.8.0] C:\Users\josel\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
-MERGED from [com.google.android.material:material:1.8.0] C:\Users\josel\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\josel\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\josel\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
-MERGED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:6:5-193:19
+MERGED from [com.google.android.material:material:1.8.0] C:\Users\Aragon\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.8.0] C:\Users\Aragon\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Aragon\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Aragon\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:25:5-31:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:12:9-41
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:12:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:10:9-54
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:10:9-54
 	android:roundIcon
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:13:9-54
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:13:9-54
 	tools:targetApi
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:16:9-29
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:16:9-29
 	android:icon
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:11:9-43
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:8:9-35
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:15:9-49
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:15:9-49
 	android:dataExtractionRules
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:9:9-65
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:9:9-65
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:7:9-40
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:7:9-40
 activity#run.budgetbuddy.activities.MG.MgInicio
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:17:9-29:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:17:9-29:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:19:13-36
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:19:13-36
 	android:theme
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:20:13-53
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:20:13-53
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:18:13-51
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:18:13-51
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:21:13-25:29
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:22:17-69
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:22:25-66
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:24:17-77
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:24:27-74
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:24:27-74
 meta-data#android.app.lib_name
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:26:13-28:36
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:26:13-28:36
 	android:value
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:28:17-33
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:28:17-33
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-52
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-52
 activity#run.budgetbuddy.activities.MG.MgInicioIngresos
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:30:9-36:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:30:9-36:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:32:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:31:13-59
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:31:13-59
 activity#run.budgetbuddy.activities.MG.MgAnadirGasto
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:37:9-43:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:37:9-43:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:39:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:39:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:38:13-56
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:38:13-56
 activity#run.budgetbuddy.activities.MG.MgAnadirIngreso
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:44:9-50:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:44:9-50:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:46:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:46:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:45:13-58
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:45:13-58
 activity#run.budgetbuddy.activities.menu.MenuLateral3G
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:51:9-57:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:51:9-57:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:53:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:53:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:52:13-58
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:52:13-58
 activity#run.budgetbuddy.activities.MG.MgInfo
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:58:9-64:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:58:9-64:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:60:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:60:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:59:13-49
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:59:13-49
 activity#run.budgetbuddy.activities.categoria.AddCategoria
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:65:9-71:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:65:9-71:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:67:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:67:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:66:13-62
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:66:13-62
 activity#run.budgetbuddy.activities.categoria.Categorias
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:72:9-78:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:72:9-78:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:74:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:74:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:73:13-60
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:73:13-60
 activity#run.budgetbuddy.activities.categoria.CrearCategoria
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:79:9-85:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:79:9-85:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:81:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:81:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:80:13-64
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:80:13-64
 activity#run.budgetbuddy.activities.app.Register
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:86:9-92:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:86:9-92:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:88:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:88:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:87:13-52
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:87:13-52
 activity#run.budgetbuddy.activities.app.Login
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:93:9-99:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:93:9-99:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:95:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:95:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:94:13-49
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:94:13-49
 activity#run.budgetbuddy.activities.app.CargaInicio
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:100:9-107:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:100:9-107:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:102:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:102:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:101:13-55
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:101:13-55
 activity#run.budgetbuddy.activities.GG.CrearGrupo3G
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:108:9-114:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:108:9-114:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:110:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:110:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:109:13-55
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:109:13-55
 activity#run.budgetbuddy.activities.GG.EditarGasto3G
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:115:9-121:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:115:9-121:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:117:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:117:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:116:13-56
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:116:13-56
 activity#run.budgetbuddy.activities.GG.Gastos3G
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:122:9-128:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:122:9-128:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:124:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:124:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:123:13-51
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:123:13-51
 activity#run.budgetbuddy.activities.GG.NuevoGasto3G
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:129:9-135:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:129:9-135:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:131:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:131:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:130:13-55
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:130:13-55
 activity#run.budgetbuddy.activities.GG.Principal3G
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:136:9-142:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:136:9-142:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:138:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:138:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:137:13-54
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:137:13-54
 activity#run.budgetbuddy.activities.GG.Saldos3G
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:143:9-149:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:143:9-149:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:145:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:145:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:144:13-51
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:144:13-51
 activity#run.budgetbuddy.activities.GG.UnirGrupo3G
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:150:9-156:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:150:9-156:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:152:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:152:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:151:13-54
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:151:13-54
 activity#run.budgetbuddy.activities.GG.reembolso.AllReembolsos
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:157:9-163:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:157:9-163:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:159:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:159:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:158:13-66
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:158:13-66
 activity#run.budgetbuddy.activities.GG.reembolso.Reembolso3G
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:164:9-170:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:164:9-170:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:166:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:166:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:165:13-64
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:165:13-64
 activity#run.budgetbuddy.activities.menu.MenuLateralMG
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:171:9-177:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:171:9-177:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:173:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:173:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:172:13-58
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:172:13-58
 activity#run.budgetbuddy.activities.ajustes.Ajustes
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:178:9-184:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:178:9-184:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:180:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:180:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:179:13-55
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:179:13-55
 activity#run.budgetbuddy.activities.divisa.Divisas
-ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:185:9-191:20
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:185:9-191:20
 	android:exported
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:187:13-37
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:187:13-37
 	android:name
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml:186:13-54
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:186:13-54
 uses-sdk
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\b1b71b6e9556b4ea48be7bb341272e6a\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
-MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\b1b71b6e9556b4ea48be7bb341272e6a\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\josel\.gradle\caches\transforms-3\349fed3c6b8905fb4cbe9aa4836949e1\transformed\viewbinding-7.3.0\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\josel\.gradle\caches\transforms-3\349fed3c6b8905fb4cbe9aa4836949e1\transformed\viewbinding-7.3.0\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.material:material:1.8.0] C:\Users\josel\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.material:material:1.8.0] C:\Users\josel\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\josel\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\josel\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.appcompat:appcompat-resources:1.6.0] C:\Users\josel\.gradle\caches\transforms-3\40117145261b1a736048adf7e688123e\transformed\appcompat-resources-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat-resources:1.6.0] C:\Users\josel\.gradle\caches\transforms-3\40117145261b1a736048adf7e688123e\transformed\appcompat-resources-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.0] C:\Users\josel\.gradle\caches\transforms-3\a1cf331c8e237a807a600e0a0a383ef3\transformed\appcompat-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.appcompat:appcompat:1.6.0] C:\Users\josel\.gradle\caches\transforms-3\a1cf331c8e237a807a600e0a0a383ef3\transformed\appcompat-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\8aec6795c8a7cbf020f3b270f10c36a3\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\8aec6795c8a7cbf020f3b270f10c36a3\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\josel\.gradle\caches\transforms-3\23c073a58e10cd27f9e8a94d8802a78d\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\josel\.gradle\caches\transforms-3\23c073a58e10cd27f9e8a94d8802a78d\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.6.0] C:\Users\josel\.gradle\caches\transforms-3\35086e0c280f471472c772640c7153bf\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.6.0] C:\Users\josel\.gradle\caches\transforms-3\35086e0c280f471472c772640c7153bf\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\a9c003b1f9c87d10c4a845739ab684b8\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\a9c003b1f9c87d10c4a845739ab684b8\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\062f90518e218ae2c7e996208ee662fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\062f90518e218ae2c7e996208ee662fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\567d23f711e76f878d2dd7f8fa0c7987\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\567d23f711e76f878d2dd7f8fa0c7987\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\35688b5a94ff8bf509a9b171a25d019f\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\35688b5a94ff8bf509a9b171a25d019f\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\54a195ccaf0f1169472eea37e078098a\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\54a195ccaf0f1169472eea37e078098a\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\josel\.gradle\caches\transforms-3\e457194528f9855104e8a6c389dbff6a\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
-MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\josel\.gradle\caches\transforms-3\e457194528f9855104e8a6c389dbff6a\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\8cf53efdd247f46eb1f22d31db14636d\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\8cf53efdd247f46eb1f22d31db14636d\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\dbe075cae54e97b08f292d3b1e1dd1a3\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\dbe075cae54e97b08f292d3b1e1dd1a3\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\c177c4e92215c132ada631611fc78b21\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\c177c4e92215c132ada631611fc78b21\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\7a2b3866b014016d95d2e84904954488\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\7a2b3866b014016d95d2e84904954488\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\7c97df2a8f56b50dbe935351b59cb9fe\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\7c97df2a8f56b50dbe935351b59cb9fe\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\590044801863ec9bca4ba94a552b985e\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\590044801863ec9bca4ba94a552b985e\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\7056d94fe93b5adab3c4924fba23f584\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\7056d94fe93b5adab3c4924fba23f584\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\4f1466ae96ce638943530f67c25f8171\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\4f1466ae96ce638943530f67c25f8171\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\15aab00c631bae4dc1e576f60cdde113\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.1.0] C:\Users\josel\.gradle\caches\transforms-3\15aab00c631bae4dc1e576f60cdde113\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\ea72f15058334f47da93eb3c4b0dbea7\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
-MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\ea72f15058334f47da93eb3c4b0dbea7\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
-MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] C:\Users\josel\.gradle\caches\transforms-3\44ee2ee3baf0f0cd5d65eb2dd31260ff\transformed\relinker-1.4.3\AndroidManifest.xml:5:5-43
-MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] C:\Users\josel\.gradle\caches\transforms-3\44ee2ee3baf0f0cd5d65eb2dd31260ff\transformed\relinker-1.4.3\AndroidManifest.xml:5:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\josel\.gradle\caches\transforms-3\9c64c1ff96463510e2d70f157ecaaabf\transformed\rxandroid-2.1.1\AndroidManifest.xml:18:5-43
-MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\josel\.gradle\caches\transforms-3\9c64c1ff96463510e2d70f157ecaaabf\transformed\rxandroid-2.1.1\AndroidManifest.xml:18:5-43
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\07ec1182ab14dea29e89708654b4be87\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\07ec1182ab14dea29e89708654b4be87\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\7a927f5e243565e9876006874919fca0\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\7a927f5e243565e9876006874919fca0\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\b14fb68bd1de3b376e45e398cce909e6\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\b14fb68bd1de3b376e45e398cce909e6\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\b29fd2418a60566157d0cd797cdb33f0\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\b29fd2418a60566157d0cd797cdb33f0\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\e61d6628d52fb08b081ef39ad47b4a33\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\e61d6628d52fb08b081ef39ad47b4a33\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\josel\.gradle\caches\transforms-3\5aaa8105e98f19038297c860faaf25c0\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\josel\.gradle\caches\transforms-3\5aaa8105e98f19038297c860faaf25c0\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\a7d1379e0b90cb12df49f09fb3ddd863\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\josel\.gradle\caches\transforms-3\a7d1379e0b90cb12df49f09fb3ddd863\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\josel\.gradle\caches\transforms-3\54468170cbd59495dc9f77af36352aaf\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\josel\.gradle\caches\transforms-3\54468170cbd59495dc9f77af36352aaf\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\0bb462024109b6d26f0b9169564fa9d2\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\0bb462024109b6d26f0b9169564fa9d2\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\0977ec3d31916a4c1eced6e92907a9f7\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\0977ec3d31916a4c1eced6e92907a9f7\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\b2f8b08a5a46a94bd13ad818e660f057\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\b2f8b08a5a46a94bd13ad818e660f057\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\e613a0fa896d155a11cea2ee287d94f1\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] C:\Users\josel\.gradle\caches\transforms-3\e613a0fa896d155a11cea2ee287d94f1\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\josel\.gradle\caches\transforms-3\e5821dd2dbb6681dbe340f1ba9b2d474\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\josel\.gradle\caches\transforms-3\e5821dd2dbb6681dbe340f1ba9b2d474\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\b1b71b6e9556b4ea48be7bb341272e6a\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
+MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\b1b71b6e9556b4ea48be7bb341272e6a\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\349fed3c6b8905fb4cbe9aa4836949e1\transformed\viewbinding-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\349fed3c6b8905fb4cbe9aa4836949e1\transformed\viewbinding-7.3.0\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.material:material:1.8.0] C:\Users\Aragon\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.8.0] C:\Users\Aragon\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Aragon\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Aragon\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.0] C:\Users\Aragon\.gradle\caches\transforms-3\40117145261b1a736048adf7e688123e\transformed\appcompat-resources-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.0] C:\Users\Aragon\.gradle\caches\transforms-3\40117145261b1a736048adf7e688123e\transformed\appcompat-resources-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.0] C:\Users\Aragon\.gradle\caches\transforms-3\a1cf331c8e237a807a600e0a0a383ef3\transformed\appcompat-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.0] C:\Users\Aragon\.gradle\caches\transforms-3\a1cf331c8e237a807a600e0a0a383ef3\transformed\appcompat-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\8aec6795c8a7cbf020f3b270f10c36a3\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\8aec6795c8a7cbf020f3b270f10c36a3\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Aragon\.gradle\caches\transforms-3\23c073a58e10cd27f9e8a94d8802a78d\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\Aragon\.gradle\caches\transforms-3\23c073a58e10cd27f9e8a94d8802a78d\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\Aragon\.gradle\caches\transforms-3\35086e0c280f471472c772640c7153bf\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.0] C:\Users\Aragon\.gradle\caches\transforms-3\35086e0c280f471472c772640c7153bf\transformed\activity-1.6.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\a9c003b1f9c87d10c4a845739ab684b8\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\a9c003b1f9c87d10c4a845739ab684b8\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\062f90518e218ae2c7e996208ee662fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\062f90518e218ae2c7e996208ee662fc\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\567d23f711e76f878d2dd7f8fa0c7987\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\567d23f711e76f878d2dd7f8fa0c7987\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\35688b5a94ff8bf509a9b171a25d019f\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\35688b5a94ff8bf509a9b171a25d019f\transformed\lifecycle-viewmodel-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\54a195ccaf0f1169472eea37e078098a\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\54a195ccaf0f1169472eea37e078098a\transformed\lifecycle-viewmodel-savedstate-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\e457194528f9855104e8a6c389dbff6a\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\e457194528f9855104e8a6c389dbff6a\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\8cf53efdd247f46eb1f22d31db14636d\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\8cf53efdd247f46eb1f22d31db14636d\transformed\emoji2-views-helper-1.2.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\dbe075cae54e97b08f292d3b1e1dd1a3\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\dbe075cae54e97b08f292d3b1e1dd1a3\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\c177c4e92215c132ada631611fc78b21\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\c177c4e92215c132ada631611fc78b21\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\7a2b3866b014016d95d2e84904954488\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\7a2b3866b014016d95d2e84904954488\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\7c97df2a8f56b50dbe935351b59cb9fe\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\7c97df2a8f56b50dbe935351b59cb9fe\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\590044801863ec9bca4ba94a552b985e\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\590044801863ec9bca4ba94a552b985e\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\7056d94fe93b5adab3c4924fba23f584\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\7056d94fe93b5adab3c4924fba23f584\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\4f1466ae96ce638943530f67c25f8171\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\4f1466ae96ce638943530f67c25f8171\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\15aab00c631bae4dc1e576f60cdde113\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\15aab00c631bae4dc1e576f60cdde113\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\ea72f15058334f47da93eb3c4b0dbea7\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\ea72f15058334f47da93eb3c4b0dbea7\transformed\core-ktx-1.9.0\AndroidManifest.xml:5:5-44
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] C:\Users\Aragon\.gradle\caches\transforms-3\44ee2ee3baf0f0cd5d65eb2dd31260ff\transformed\relinker-1.4.3\AndroidManifest.xml:5:5-43
+MERGED from [com.getkeepsafe.relinker:relinker:1.4.3] C:\Users\Aragon\.gradle\caches\transforms-3\44ee2ee3baf0f0cd5d65eb2dd31260ff\transformed\relinker-1.4.3\AndroidManifest.xml:5:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\9c64c1ff96463510e2d70f157ecaaabf\transformed\rxandroid-2.1.1\AndroidManifest.xml:18:5-43
+MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\9c64c1ff96463510e2d70f157ecaaabf\transformed\rxandroid-2.1.1\AndroidManifest.xml:18:5-43
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\07ec1182ab14dea29e89708654b4be87\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\07ec1182ab14dea29e89708654b4be87\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\7a927f5e243565e9876006874919fca0\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\7a927f5e243565e9876006874919fca0\transformed\lifecycle-runtime-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\b14fb68bd1de3b376e45e398cce909e6\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\b14fb68bd1de3b376e45e398cce909e6\transformed\savedstate-1.2.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\b29fd2418a60566157d0cd797cdb33f0\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\b29fd2418a60566157d0cd797cdb33f0\transformed\cardview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\683bc281d3ba5f946b0c9281847d0177\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\e61d6628d52fb08b081ef39ad47b4a33\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\e61d6628d52fb08b081ef39ad47b4a33\transformed\tracing-1.0.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\5aaa8105e98f19038297c860faaf25c0\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\5aaa8105e98f19038297c860faaf25c0\transformed\lifecycle-livedata-2.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\a7d1379e0b90cb12df49f09fb3ddd863\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] C:\Users\Aragon\.gradle\caches\transforms-3\a7d1379e0b90cb12df49f09fb3ddd863\transformed\lifecycle-livedata-core-2.5.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\54468170cbd59495dc9f77af36352aaf\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] C:\Users\Aragon\.gradle\caches\transforms-3\54468170cbd59495dc9f77af36352aaf\transformed\core-runtime-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\0bb462024109b6d26f0b9169564fa9d2\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\0bb462024109b6d26f0b9169564fa9d2\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\0977ec3d31916a4c1eced6e92907a9f7\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\0977ec3d31916a4c1eced6e92907a9f7\transformed\documentfile-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\b2f8b08a5a46a94bd13ad818e660f057\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\b2f8b08a5a46a94bd13ad818e660f057\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\e613a0fa896d155a11cea2ee287d94f1\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\e613a0fa896d155a11cea2ee287d94f1\transformed\print-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\e5821dd2dbb6681dbe340f1ba9b2d474\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\e5821dd2dbb6681dbe340f1ba9b2d474\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:20:5-44
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\josel\Documents\GitHub\BudgetBuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:5-79
+ADDED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:5-79
 	android:name
-		ADDED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:22-76
+		ADDED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:9:22-76
 uses-permission#android.permission.INTERNET
-ADDED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:5-67
+ADDED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:5-67
 	android:name
-		ADDED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\josel\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:22-64
+		ADDED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:10:22-64
 provider#androidx.startup.InitializationProvider
-ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
-MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\josel\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\Aragon\.gradle\caches\transforms-3\d81468d0e124a957240d234a8fd2dfa6\transformed\startup-runtime-1.1.1\AndroidManifest.xml:26:9-30:34
 	tools:node
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:28:13-31
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:28:13-31
 	android:authorities
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
 	android:exported
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
 meta-data#androidx.emoji2.text.EmojiCompatInitializer
-ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
 	android:value
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
 	android:name
-		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\josel\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+		ADDED from [androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
 permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 permission#run.budgetbuddy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
-		ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
 	android:name
-		ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
 uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 uses-permission#run.budgetbuddy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
-ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
 	android:name
-		ADDED from [androidx.core:core:1.9.0] C:\Users\josel\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+		ADDED from [androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 meta-data#androidx.lifecycle.ProcessLifecycleInitializer
-ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
 	android:value
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
 	android:name
-		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\josel\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78

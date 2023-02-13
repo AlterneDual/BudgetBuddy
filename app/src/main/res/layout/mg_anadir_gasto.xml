@@ -21,16 +21,17 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:fontFamily="@font/oswald_bold"
         android:text="Añadir Gasto"
         android:textColor="#FFFFFF"
         android:textSize="32sp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbarA"
         app:layout_constraintEnd_toEndOf="@+id/toolbarA"
+        app:layout_constraintHorizontal_bias="0.268"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050000012" />
+        app:layout_constraintVertical_bias="0.098" />
 
     <ImageView
         android:id="@+id/btnAtras3"
@@ -64,7 +65,7 @@
             android:ems="10"
             android:fontFamily="@font/oswald"
             android:hint="0"
-            android:inputType="textPersonName"
+            android:inputType="numberDecimal"
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="26sp"
@@ -76,8 +77,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="EUR"
             android:fontFamily="@font/oswald"
+            android:text="EUR"
             android:textColor="#FFFFFF"
             android:textSize="26sp"
             tools:layout_editor_absoluteX="217dp"
@@ -102,6 +103,7 @@
             android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:background="@color/vidrian_green"
+            android:fontFamily="@font/oswald"
             android:text="09/01"
             android:textAlignment="center" />
 
@@ -114,6 +116,7 @@
             android:layout_weight="1"
             android:background="@color/vidrian_light_green"
             android:focusedByDefault="true"
+            android:fontFamily="@font/oswald"
             android:text="10/01" />
 
         <Button
@@ -124,6 +127,7 @@
             android:layout_weight="1"
             android:background="@color/vidrian_green"
             android:focusedByDefault="false"
+            android:fontFamily="@font/oswald"
             android:text="11/01" />
 
         <ImageView
@@ -140,6 +144,7 @@
         android:layout_height="44dp"
         android:layout_weight="1"
         android:background="@drawable/long_button_orange"
+        android:fontFamily="@font/oswald"
         android:text="AÑADIR"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -164,12 +169,12 @@
         android:id="@+id/tvIngresos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/oswald"
         android:text="@string/ingresos"
         android:textColor="#C6BEBE"
-        android:textSize="28sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -178,7 +183,7 @@
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="100dp"
         android:layout_marginEnd="5dp"
         android:numColumns="4"
         app:layout_constraintEnd_toEndOf="parent"
@@ -191,6 +196,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
+        android:fontFamily="@font/oswald"
         android:text="10 de Diciembre de 2023"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
@@ -205,15 +211,15 @@
         android:layout_width="243dp"
         android:layout_height="61dp"
         android:backgroundTint="#FFF"
-        android:hint="Breve Descripcion ..."
-        android:textSize="24sp"
         android:fontFamily="@font/oswald"
+        android:hint="Breve Descripcion ..."
         android:inputType="text"
         android:textColor="#FFF"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/gvCategorias"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarA"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintVertical_bias="0.726" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

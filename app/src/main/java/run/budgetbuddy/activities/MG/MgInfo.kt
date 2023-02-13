@@ -91,7 +91,6 @@ class MgInfo : AppCompatActivity() {
         // Colores
         var green = resources.getColor(R.color.vidrian_green)
         var white = resources.getColor(R.color.white)
-
         var calendar = Calendar.getInstance()
 
 
@@ -132,7 +131,7 @@ class MgInfo : AppCompatActivity() {
             1 -> {
                 var dia_num = calendar.get(Calendar.DAY_OF_MONTH)
                 var dia = calendar.getDisplayName(
-                    Calendar.DAY_OF_WEEK, Calendar.SHORT, Locale.getDefault()
+                    Calendar.DAY_OF_WEEK, Calendar.LONG, Locale.getDefault()
                 )
                 binding.tvDia.setTextColor(green)
                 binding.tvDia.paintFlags = binding.tvPeriodo.paintFlags or Paint.UNDERLINE_TEXT_FLAG
@@ -152,7 +151,7 @@ class MgInfo : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-                binding.tvResultadoFecha.text = ("$dia_num $dia")
+                binding.tvResultadoFecha.text = ("${dia.uppercase()} $dia_num")
 
                 // Mostrar en la lista
                 lista_gastos = verInfoDia(Date.valueOf(LocalDate.now().toString()));
@@ -199,8 +198,6 @@ class MgInfo : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-
-
             }
 
             3 -> {
@@ -236,7 +233,7 @@ class MgInfo : AppCompatActivity() {
                 for (l in lista_gastos) {
                     total += l.importe;
                 }
-                binding.tvGastos.text = "- " + total.toString() + " €";
+                binding.tvGastos.text = "-" + total.toString() + " €";
             }
 
             4 -> {
@@ -328,11 +325,9 @@ class MgInfo : AppCompatActivity() {
 
         val format = SimpleDateFormat("MM/yyyy")
         var date = format.format(fecha_inicio);
-        println("-----------------------------------------------------------------------Fecha Buscada: $date")
         for (g in lista_gastos) {
             val format = SimpleDateFormat("MM/yyyy")
             var guardada = format.format(g.fecha);
-            println("-----------------------------------------------------------------------Fecha Guardada: $guardada")
             if (guardada.equals(date)) {
                 nueva_lista.add(g)
             }
@@ -346,11 +341,9 @@ class MgInfo : AppCompatActivity() {
 
         val format = SimpleDateFormat("yyyy")
         var date = format.format(ano);
-        println("-----------------------------------------------------------------------Fecha Buscada: $date")
         for (g in lista_gastos) {
             val format = SimpleDateFormat("yyyy")
             var guardada = format.format(g.fecha);
-            println("-----------------------------------------------------------------------Fecha Guardada: $guardada")
             if (guardada.equals(date)) {
                 nueva_lista.add(g)
             }

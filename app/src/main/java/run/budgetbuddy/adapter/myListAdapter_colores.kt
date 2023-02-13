@@ -2,6 +2,7 @@ package adapter
 
 
 import android.content.Context
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,11 +11,11 @@ import models.Categoria
 import models.ItemGenerico
 import run.budgetbuddy.R
 
-class myListAdapter_colores(private val context: Context,
-                            private val layout: Int,
-                            private val listaOpciones: MutableList<Int>
-)
-                    : BaseAdapter(){
+class myListAdapter_colores(
+    private val context: Context,
+    private val layout: Int,
+    private val listaOpciones: MutableList<Int>
+) : BaseAdapter() {
 
     override fun getCount(): Int {
         return listaOpciones.size
@@ -28,12 +29,13 @@ class myListAdapter_colores(private val context: Context,
         return id.toLong()
     }
 
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         var cView = convertView
-        val holder : ViewHolder
-        if( cView == null){
+        val holder: ViewHolder
+        if (cView == null) {
 
-            cView = LayoutInflater.from(context).inflate(layout,null)
+            cView = LayoutInflater.from(context).inflate(layout, null)
             holder = ViewHolder(
 
                 cView.findViewById(R.id.ivIconoCategoria)
@@ -41,12 +43,13 @@ class myListAdapter_colores(private val context: Context,
             )
             cView.tag = holder
 
-        } else{
+        } else {
             holder = cView.tag as ViewHolder
         }
 
-        val opcionActual = listaOpciones[position]
 
+
+        val opcionActual = listaOpciones[position]
         holder.icono.setImageResource(opcionActual)
 
         return cView!!
@@ -55,6 +58,6 @@ class myListAdapter_colores(private val context: Context,
     internal class ViewHolder(
         var icono: ImageView
 
-        )
+    )
 
 }

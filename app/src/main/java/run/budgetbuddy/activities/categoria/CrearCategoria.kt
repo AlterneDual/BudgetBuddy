@@ -28,7 +28,8 @@ class CrearCategoria : AppCompatActivity() {
     private lateinit var listaColores: MutableList<Int>
     private var categoriaSeleccionada: Int = -1
     private var colorSeleccionado: Int = -1
-    private lateinit var viewActual: View
+    private var viewActual: View? = null
+    private var viewcol: View? = null
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +46,13 @@ class CrearCategoria : AppCompatActivity() {
         grid_view = binding.GVCategorias3
         grid_view.setOnItemClickListener() { parent, view, position, id ->
             categoriaSeleccionada = position
+
+            if (viewActual != null && viewActual != view) {
+                viewActual?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
+                view.setBackgroundColor(Color.parseColor("#988C8C"))
+            } else {
+                view.setBackgroundColor(Color.parseColor("#988C8C"))
+            }
             viewActual = view
         }
 
@@ -52,30 +60,71 @@ class CrearCategoria : AppCompatActivity() {
 
         grid_view_colores = binding.GVColores
         grid_view_colores.setOnItemClickListener() { parent, view, position, id ->
-            //colorSeleccionado = parent.getItemAtPosition(position) as Int
             colorSeleccionado = position
+            if (viewcol != null && viewcol != view) {
+                viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
+                if (position == 0) {
+                    view?.setBackgroundColor(Color.rgb(69, 119, 193))
+                } else if (position == 1) {
+                    view?.setBackgroundColor(Color.rgb(232, 84, 217))
+                } else if (position == 2) {
+                    view?.setBackgroundColor(Color.rgb(104, 201, 172))
+                } else if (position == 3) {
+                    view?.setBackgroundColor(Color.rgb(84, 202, 117))
+                } else if (position == 4) {
+                    view?.setBackgroundColor(Color.rgb(220, 45, 45))
+                } else if (position == 5) {
+                    view?.setBackgroundColor(Color.rgb(237, 229, 33))
+                } else if (position == 6) {
+                    view?.setBackgroundColor(Color.rgb(42, 205, 27))
+                } else if (position == 7) {
+                    view?.setBackgroundColor(Color.rgb(255, 157, 10))
+                }
+
+            } else {
+                if (position == 0) {
+                    view?.setBackgroundColor(Color.rgb(69, 119, 193))
+                } else if (position == 1) {
+                    view?.setBackgroundColor(Color.rgb(232, 84, 217))
+                } else if (position == 2) {
+                    view?.setBackgroundColor(Color.rgb(104, 201, 172))
+                } else if (position == 3) {
+                    view?.setBackgroundColor(Color.rgb(84, 202, 117))
+                } else if (position == 4) {
+                    view?.setBackgroundColor(Color.rgb(220, 45, 45))
+                } else if (position == 5) {
+                    view?.setBackgroundColor(Color.rgb(237, 229, 33))
+                } else if (position == 6) {
+                    view?.setBackgroundColor(Color.rgb(42, 205, 27))
+                } else if (position == 7) {
+                    view?.setBackgroundColor(Color.rgb(255, 157, 10))
+                }
+            }
+            viewcol = view
+
             if (position == 0) {
-                viewActual.setBackgroundColor(Color.rgb(69, 119, 193))
+                viewActual?.setBackgroundColor(Color.rgb(69, 119, 193))
             } else if (position == 1) {
-                viewActual.setBackgroundColor(Color.rgb(232, 84, 217))
+                viewActual?.setBackgroundColor(Color.rgb(232, 84, 217))
             } else if (position == 2) {
-                viewActual.setBackgroundColor(Color.rgb(104, 201, 172))
+                viewActual?.setBackgroundColor(Color.rgb(104, 201, 172))
             } else if (position == 3) {
-                viewActual.setBackgroundColor(Color.rgb(84, 202, 117))
+                viewActual?.setBackgroundColor(Color.rgb(84, 202, 117))
             } else if (position == 4) {
-                viewActual.setBackgroundColor(Color.rgb(220, 45, 45))
+                viewActual?.setBackgroundColor(Color.rgb(220, 45, 45))
             } else if (position == 5) {
-                viewActual.setBackgroundColor(Color.rgb(237, 229, 33))
+                viewActual?.setBackgroundColor(Color.rgb(237, 229, 33))
             } else if (position == 6) {
-                viewActual.setBackgroundColor(Color.rgb(42, 205, 27))
+                viewActual?.setBackgroundColor(Color.rgb(42, 205, 27))
             } else if (position == 7) {
-                viewActual.setBackgroundColor(Color.rgb(255, 157, 10))
+                viewActual?.setBackgroundColor(Color.rgb(255, 157, 10))
             }
         }
 
         binding.btnAnadir2.setOnClickListener {
 
-            if (!txt_nombre.text.equals("") && categoriaSeleccionada >= 0 && colorSeleccionado >= 0) {
+            if (txt_nombre.text.toString() != "" && categoriaSeleccionada >= 0 && colorSeleccionado >= 0
+            ) {
                 crearCategoria()
                 Toast.makeText(
                     this,
@@ -93,7 +142,6 @@ class CrearCategoria : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-
         }
 
         binding.btnAtras.setOnClickListener {
@@ -101,7 +149,6 @@ class CrearCategoria : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
-
     }
 
     private fun crearCategoria() {
@@ -111,13 +158,13 @@ class CrearCategoria : AppCompatActivity() {
         categoria.icono = listaIconos[categoriaSeleccionada]
         categoria.color = listaColores[colorSeleccionado]
         categoriaCRUD.addCategoria(categoria)
-
     }
 
     private fun inicializarAdapter() {
 
         grid_view = binding.GVCategorias3
-        adapterList = myListAdapter_colores(this, R.layout.custom_grid_categorias, listaIconos)
+        adapterList =
+            myListAdapter_colores(this, R.layout.custom_grid_crear_categorias, listaIconos)
         grid_view.adapter = adapterList
         registerForContextMenu(grid_view)
     }

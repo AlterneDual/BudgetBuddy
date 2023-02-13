@@ -10,6 +10,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.res.ResourcesCompat.getColor
+import androidx.core.content.res.ResourcesCompat.getDrawable
 import models.Categoria
 import models.Gasto
 import run.budgetbuddy.R
@@ -29,6 +30,7 @@ open class myListAdapterInfoGasto(
     private var nombre = ""
     private var descripcion = ""
     private var value = 0.0
+    private var color = 0
     private var icono by Delegates.notNull<Int>()
 
     override fun getCount(): Int {
@@ -57,6 +59,7 @@ open class myListAdapterInfoGasto(
             if (cont == position) {
                 nombre = g.categoria?.nombre ?: ""
                 icono = g.categoria?.icono ?: 0
+                color = g.categoria?.color!!
                 value = g.importe
                 descripcion = g.descripcion.toString()
 
@@ -74,11 +77,13 @@ open class myListAdapterInfoGasto(
 
 
         val categoriaIcono = view.findViewById<ImageView>(R.id.ivIcono)
+        val categoriaColor = view.findViewById<ImageView>(R.id.ivColor)
         val gastoNombre = view.findViewById<TextView>(R.id.tvNombre1)
         val valor = view.findViewById<TextView>(R.id.textTotal)
         val description = view.findViewById<TextView>(R.id.textDescripcion)
 
         categoriaIcono.setImageResource(icono)
+        categoriaColor.setImageResource(color)
         gastoNombre.text = nombre
         valor.text = "-$value €"
         description.text = descripcion

@@ -87,7 +87,7 @@ class MgAnadirGasto : AppCompatActivity() {
         var descripttion = binding.descriptionText
 
         nombreMes = nombreMeses(todayMonth.plus(1))[0]
-        tvFechaSeleccionada.setText("$todayDay del $nombreMes de $todayYear")
+        tvFechaSeleccionada.setText("$todayDay de $nombreMes de $todayYear")
 
         nombreMes = nombreMeses(todayMonth.plus(1))[1]
         btnFecha1.setText("$yesterdayDay/$nombreMes")
@@ -117,22 +117,31 @@ class MgAnadirGasto : AppCompatActivity() {
 
             var gasto = Gasto()
             if (etCantidad.text != null && fechaGasto != null && categoriaAtributo != null && descripttion.text != null) {
-                gasto.categoria = categoriaAtributo
-                gasto.divisa = divisaCrud.getDivisa(keyDiv)
-                gasto.importe = etCantidad.text.toString().toDouble()
-                gasto.fecha = fechaGasto
-                gasto.descripcion = descripttion.text.toString()
-                gastoCrud.addGasto(gasto)
-                Toast.makeText(
-                    this, "Añadido gasto con fecha: ${gasto.fecha}", Toast.LENGTH_SHORT
-                ).show()
-                val intent = Intent(this, MgInicio::class.java)
-                startActivity(intent)
-                finish()
+                if (etCantidad.text.toString() != "" && descripttion.text.toString() != "") {
+                    gasto.categoria = categoriaAtributo
+                    gasto.divisa = divisaCrud.getDivisa(keyDiv)
+                    gasto.importe = etCantidad.text.toString().toDouble()
+                    gasto.fecha = fechaGasto
+                    gasto.descripcion = descripttion.text.toString()
+                    gastoCrud.addGasto(gasto)
+                    Toast.makeText(
+                        this, "Añadido gasto con fecha: ${gasto.fecha}", Toast.LENGTH_SHORT
+                    ).show()
+                    val intent = Intent(this, MgInicio::class.java)
+                    startActivity(intent)
+                    finish()
+                } else {
+                    Toast.makeText(
+                        this,
+                        "Por favor, rellene correctamente la descripcion y cantidad",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+
             } else {
                 Toast.makeText(
                     this,
-                    "Por favor, rellene correctamente la Cantidad, la categoria y la fecha",
+                    "Por favor, rellene correctamente la Cantidad, descripcion, categoria y fecha",
                     Toast.LENGTH_LONG
                 ).show()
             }
@@ -158,7 +167,7 @@ class MgAnadirGasto : AppCompatActivity() {
 
             updateFecha(yesterday)
             nombreMes = nombreMeses(yesterdayMonth.plus(1))[0]
-            tvFechaSeleccionada.setText("$yesterdayDay del $nombreMes de $yesterdayYear")
+            tvFechaSeleccionada.setText("$yesterdayDay de $nombreMes de $yesterdayYear")
 
         }
 
@@ -168,7 +177,7 @@ class MgAnadirGasto : AppCompatActivity() {
             btnFecha3.setBackgroundColor(resources.getColor(R.color.vidrian_green))
             updateFecha(today)
             nombreMes = nombreMeses(todayMonth.plus(1))[0]
-            tvFechaSeleccionada.setText("$todayDay del $nombreMes de $todayYear")
+            tvFechaSeleccionada.setText("$todayDay de $nombreMes de $todayYear")
 
         }
 
@@ -178,7 +187,7 @@ class MgAnadirGasto : AppCompatActivity() {
             btnFecha2.setBackgroundColor(resources.getColor(R.color.vidrian_green))
             updateFecha(tomorrow)
             nombreMes = nombreMeses(yesterdayMonth.plus(1))[0]
-            tvFechaSeleccionada.setText("$tomorrowDay del $nombreMes de $tomorrowYear")
+            tvFechaSeleccionada.setText("$tomorrowDay de $nombreMes de $tomorrowYear")
 
         }
 
@@ -218,7 +227,7 @@ class MgAnadirGasto : AppCompatActivity() {
                 fecha3.setText("$tomorrowDay de $nombreMes")
 
                 nombreMes = nombreMeses(month.plus(1))[0]
-                tvFechaSeleccionada.setText("$dayOfMonth del $nombreMes de $year")
+                tvFechaSeleccionada.setText("$dayOfMonth de $nombreMes de $year")
 
             },
             selectedDate.get(Calendar.YEAR),
@@ -287,9 +296,9 @@ class MgAnadirGasto : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
             adapterList.selectedItem = position
-            println("------------------------------")
-            println(listaCategorias[position].nombre + " ID: " + listaCategorias[position].id)
-            println("----------------------------------")
+//            println("------------------------------")
+//            println(listaCategorias[position].nombre + " ID: " + listaCategorias[position].id)
+//            println("----------------------------------")
             adapterList.notifyDataSetChanged()
 
             categoriaAtributo = listaCategorias[position]

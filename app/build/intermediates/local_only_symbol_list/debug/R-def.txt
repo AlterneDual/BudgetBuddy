@@ -212,6 +212,7 @@ id etPsw
 id frameLayout
 id frameLayout2
 id frameLayout3
+id frameLayout4
 id gif
 id grid_view
 id groupList
@@ -229,15 +230,14 @@ id ivBuscarA
 id ivBuscarA2
 id ivCalendarioA
 id ivCategoria
+id ivColor
 id ivColorCategoria
 id ivIcono
 id ivIconoCategoria
 id ivMenu
 id ivNext1
-id ivNext2
 id ivNotifiacionA
 id ivNotifiacionA2
-id ivPrevious
 id ivPrevious4
 id linearLayout
 id linearLayout2
@@ -246,6 +246,7 @@ id linearLayout4
 id linearLayout5
 id linearLayout6
 id linearLayout7
+id linearLayout_5
 id listView_menu
 id list_view
 id lista_categorias
@@ -266,12 +267,13 @@ id relativeLayout
 id tbSemanal
 id textDescripcion
 id textTotal
+id textView
 id textView10
 id textView11
 id textView2
-id textView28
 id textView3
 id textView4
+id textView5
 id textView6
 id textView8
 id textViewA
@@ -291,7 +293,6 @@ id tv1
 id tv2
 id tv3
 id tv4
-id tvAgregarImagen2
 id tvAnho
 id tvCantGasto
 id tvCantidad
@@ -324,7 +325,6 @@ id tvPeriodo
 id tvReceptor
 id tvResultadoFecha
 id tvSaldoA
-id tvSaldoRestante1
 id tvSaldoRestante2
 id tvSemana
 id tvTipoGasto
@@ -332,7 +332,6 @@ id tvTitulo
 id tvTituloGasto
 id tvTotalA
 id tvUser
-id tvYear
 id tvYear2
 id txtEditarPerfil
 id txtTitulo
@@ -349,6 +348,7 @@ layout anadir_categoria
 layout categorias
 layout crear_categoria
 layout custom_grid_categorias
+layout custom_grid_crear_categorias
 layout custom_list
 layout custom_list_ajustes
 layout custom_list_colores
