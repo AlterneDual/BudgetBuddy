@@ -4,7 +4,6 @@ import CRUD.CategoriaCRUD
 import CRUD.DivisaCRUD
 import CRUD.GastoCRUD
 import adapter.myListAdapter_categorias
-import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.icu.util.Calendar
@@ -14,6 +13,7 @@ import android.view.View
 import android.widget.GridView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import models.Categoria
 import models.Divisa
@@ -37,12 +37,13 @@ class MgAnadirGasto : AppCompatActivity() {
     private var vistaActual: View? = null
 
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private var selectedDate: Calendar = Calendar.getInstance()
-
+    @RequiresApi(Build.VERSION_CODES.N)
     private var today: Calendar = Calendar.getInstance()
-
+    @RequiresApi(Build.VERSION_CODES.N)
     private var yesterday: Calendar = Calendar.getInstance()
-
+    @RequiresApi(Build.VERSION_CODES.N)
     private var tomorrow: Calendar = Calendar.getInstance()
 
     private var todayDay: Int = 0
@@ -57,9 +58,10 @@ class MgAnadirGasto : AppCompatActivity() {
     private var tomorrowMonth: Int = 0
     private var tomorrowYear: Int = 0
 
+    @RequiresApi(Build.VERSION_CODES.N)
     var fechaGasto = selectedDate.time
 
-    @SuppressLint("NewApi", "ResourceAsColor")
+    @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgAnadirGastoBinding.inflate(layoutInflater)
@@ -195,7 +197,7 @@ class MgAnadirGasto : AppCompatActivity() {
         registerForContextMenu(grid_view)
     }
 
-    @SuppressLint("NewApi")
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun showDatePickerDialog(
         tvFechaSeleccionada: TextView,
         fecha1: TextView,
@@ -231,11 +233,13 @@ class MgAnadirGasto : AppCompatActivity() {
     }
 
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun updateFecha(new_fecha: Calendar) {
         fechaGasto = new_fecha.time
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun valoresAyerHoyPredeterminados() {
         todayDay = today.get(Calendar.DAY_OF_MONTH)
         todayMonth = today.get(Calendar.MONTH)
@@ -254,6 +258,7 @@ class MgAnadirGasto : AppCompatActivity() {
 
     }
 
+    @RequiresApi(Build.VERSION_CODES.N)
     private fun actualizarYesterdayTomorrow() {
 
         today.setTime(selectedDate.getTime())
