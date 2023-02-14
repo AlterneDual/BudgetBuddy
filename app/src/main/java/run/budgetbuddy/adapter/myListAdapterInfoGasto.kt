@@ -62,7 +62,6 @@ open class myListAdapterInfoGasto(
                 color = g.categoria?.color!!
                 value = g.importe
                 descripcion = g.descripcion.toString()
-
             }
             cont++
         }

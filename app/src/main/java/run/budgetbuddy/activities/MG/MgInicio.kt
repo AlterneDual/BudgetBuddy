@@ -1,18 +1,13 @@
 package run.budgetbuddy.activities.MG
 
-import CRUD.CategoriaCRUD
-import CRUD.DivisaCRUD
 import CRUD.GastoCRUD
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Paint
-import android.graphics.Typeface
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.animation.Easing
@@ -20,11 +15,8 @@ import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
-import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
-import io.realm.RealmList
 import models.Categoria
-import models.Divisa
 import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.menu.MenuLateralMG
@@ -35,26 +27,23 @@ import java.text.SimpleDateFormat
 import java.time.LocalDate
 import java.util.Calendar
 import java.util.Locale
+import android.graphics.Typeface
+import androidx.core.content.res.ResourcesCompat
 
 class MgInicio : AppCompatActivity() {
 
     private lateinit var binding: MgInicioGastosBinding
     private lateinit var adapter: myListAdapter_gasto
-    var listagastosBD: RealmList<Gasto> = RealmList()
-    var gastoCRUD = GastoCRUD()
-    private var seleccionado: Int = 1;
-
+    private var listagastosBD: HashMap<Categoria, Float> = HashMap()
+    var gc = GastoCRUD()
+    private var seleccionado: Int = 0;
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        IniciarAdapter()
-        GetAllGastos()
-        verGrafico()
-
+        check()
 
         var btnIngresos = binding.tvIngresos
         btnIngresos.setOnClickListener {
@@ -64,6 +53,7 @@ class MgInicio : AppCompatActivity() {
         }
         var btnAnadirGasto = binding.btnAddGroup2
         btnAnadirGasto.setOnClickListener {
+            btnAnadirGasto.setBackgroundColor(Color.parseColor("#FFFFFF"))
             val intent = Intent(this, MgAnadirGasto::class.java)
             startActivity(intent)
             finish()
@@ -75,10 +65,8 @@ class MgInicio : AppCompatActivity() {
             finish()
         }
 
-
         binding.tvDia.setOnClickListener {
             seleccionado = 1;
-
             check()
         }
 
@@ -101,7 +89,6 @@ class MgInicio : AppCompatActivity() {
         }
 
         binding.butInfo.setOnClickListener {
-            GetAllGastos()
             val intent = Intent(this, MgInfo::class.java)
             startActivity(intent)
             finish()
@@ -109,7 +96,7 @@ class MgInicio : AppCompatActivity() {
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
-    private fun verGrafico() {
+    private fun verGrafico(gastos: MutableList<Gasto>) {
         val pieChart = findViewById<PieChart>(R.id.pieChart)
         pieChart.setUsePercentValues(false)
         pieChart.description.isEnabled = false
@@ -120,20 +107,28 @@ class MgInicio : AppCompatActivity() {
         pieChart.setTransparentCircleColor(Color.TRANSPARENT)
         pieChart.setTransparentCircleAlpha(0)
         pieChart.transparentCircleRadius = 40F
-        pieChart.holeRadius = 35F
+        pieChart.holeRadius = 50F
 
         pieChart.setDrawCenterText(true)
-        pieChart.centerText = "Hola"
+
+        var total: Float = 0.0F
+        for (g in gastos) {
+            total += (g.importe).toFloat()
+        }
+
+        pieChart.centerText = "$total €"
+        pieChart.setCenterTextSize(20f)
+        val tf: Typeface? = ResourcesCompat.getFont(this, R.font.oswald)
+        pieChart.setCenterTextTypeface(tf)
         pieChart.rotationAngle = 0f
         pieChart.isRotationEnabled = false
         pieChart.isHighlightPerTapEnabled = false
-        pieChart.animateY(1400, Easing.EaseInOutQuad)
-        pieChart.legend.isEnabled = true
+        pieChart.animateY(1000, Easing.EaseInOutQuad)
+        pieChart.legend.isEnabled = false
         pieChart.setEntryLabelColor(ContextCompat.getColor(this, R.color.transparent))
-        pieChart.setEntryLabelTextSize(12f)
+        pieChart.setEntryLabelTextSize(20f)
 
         var elementos: HashMap<Categoria, Float> = HashMap()
-        var gastos = gastoCRUD.getAllGastos()
         for (g in gastos) {
             var cat_temp = g.categoria
             var total: Float = 0.0F
@@ -150,66 +145,135 @@ class MgInicio : AppCompatActivity() {
             }
         }
         val pieEntries = mutableListOf<PieEntry>()
-        val colors: ArrayList<Int> = ArrayList()
+        var colors: ArrayList<String> = ArrayList()
 
         for (el in elementos) {
             pieEntries.add(PieEntry(el.value, el.key.nombre))
-            colors.add(el.key.color)
+            colors.add(el.key.color_hex)
         }
 
         val dataSet = PieDataSet(pieEntries, "")
         dataSet.setDrawIcons(false)
         dataSet.setDrawValues(false)
-        dataSet.valueTextSize = 10f
 
         // Ajustes de Slice
         dataSet.sliceSpace = 3f
         dataSet.iconsOffset = MPPointF(10f, 40f)
-        dataSet.selectionShift = 10f
+        dataSet.selectionShift = 20f
 
-        dataSet.colors = colors
+        var colors_parsed: ArrayList<Int> = ArrayList()
+        for (col in colors) {
+            colors_parsed.add(Color.parseColor(col))
+        }
+        dataSet.colors = colors_parsed
 
         val data = PieData(dataSet)
-        data.setDrawValues(true)
+        data.setDrawValues(false)
         data.setValueFormatter(null)
-        data.setValueTextSize(15f)
+        data.setValueTextSize(20.0F)
+
         data.setValueTypeface(Typeface.SANS_SERIF)
         data.setValueTextColor(Color.BLACK)
         pieChart.data = data
-
-//        val pieDataSet = PieDataSet(pieEntries, "")
-//        pieDataSet.setColors(*ColorTemplate.COLORFUL_COLORS)
-//
-//        val pieData = PieData(pieDataSet)
 
         pieChart.data = data
         pieChart.invalidate()
     }
 
-
     private fun IniciarAdapter() {
-
-
         val listView = binding.lvInicioGastos
-        adapter = myListAdapter_gasto(this, listagastosBD)
+        var gsts: ArrayList<Categoria> = ArrayList()
+        var cant: ArrayList<Float> = ArrayList()
+        for (g in listagastosBD) {
+            gsts.add(g.key)
+            cant.add(g.value)
+        }
+        adapter = myListAdapter_gasto(this, gsts, cant)
         listView.adapter = adapter
+        adapter.notifyDataSetChanged()
     }
 
-    private fun GetAllGastos() {
-        for (gasto in gastoCRUD.getAllGastos()) {
-            listagastosBD.add(gasto)
-            adapter.notifyDataSetChanged()
+    fun verInfoDia(fecha_hoy: Date): MutableList<Gasto> {
+        var lista_gastos = gc.getAllGastos()
+        var nueva_lista: MutableList<Gasto> = mutableListOf()
+
+        val format = SimpleDateFormat("dd/MM/yyyy")
+        var date = format.format(fecha_hoy);
+
+        for (g in lista_gastos) {
+            val format = SimpleDateFormat("dd/MM/yyyy")
+            var guardada = format.format(g.fecha);
+            if (guardada.equals(date)) {
+                nueva_lista.add(g)
+            }
+        }
+        return nueva_lista
+    }
+
+    fun verInfoSemana(fecha_inicio: Date, fecha_final: Date) {
+
+    }
+
+    fun verInfoMes(fecha_inicio: Date): MutableList<Gasto> {
+        var lista_gastos = gc.getAllGastos()
+        var nueva_lista: MutableList<Gasto> = mutableListOf()
+
+        val format = SimpleDateFormat("MM/yyyy")
+        var date = format.format(fecha_inicio);
+        for (g in lista_gastos) {
+            val format = SimpleDateFormat("MM/yyyy")
+            var guardada = format.format(g.fecha);
+            if (guardada.equals(date)) {
+                nueva_lista.add(g)
+            }
+        }
+        return nueva_lista
+    }
+
+    fun verInfoAno(ano: Date): MutableList<Gasto> {
+        var lista_gastos = gc.getAllGastos()
+        var nueva_lista: MutableList<Gasto> = mutableListOf()
+
+        val format = SimpleDateFormat("yyyy")
+        var date = format.format(ano);
+        for (g in lista_gastos) {
+            val format = SimpleDateFormat("yyyy")
+            var guardada = format.format(g.fecha);
+            if (guardada.equals(date)) {
+                nueva_lista.add(g)
+            }
+        }
+        return nueva_lista
+    }
+
+    fun verInfoPeriodo(fecha_a: Date, fecha_b: Date) {
+    }
+
+    fun getAllDistGastos(gastos: MutableList<Gasto>) {
+        listagastosBD.clear()
+        for (g in gastos) {
+            var cat_temp = g.categoria
+            var total: Float = 0.0F
+            if (listagastosBD.isNotEmpty() && listagastosBD[cat_temp] != null) {
+                total = listagastosBD[cat_temp]!!
+                if (cat_temp != null) {
+                    listagastosBD.replace(cat_temp, (total + g.importe).toFloat())
+                }
+
+            } else {
+                if (cat_temp != null) {
+                    listagastosBD[cat_temp] = g.importe.toFloat()
+                }
+            }
         }
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
     fun check() {
-
         // Colores
         var green = resources.getColor(R.color.vidrian_green)
         var white = resources.getColor(R.color.white)
         var calendar = Calendar.getInstance()
-
 
         when (seleccionado) {
             0 -> {
@@ -234,6 +298,11 @@ class MgInicio : AppCompatActivity() {
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
                 binding.tvResultadoFecha.text = ("Todos")
 
+                // Rellenar el pieChart + Listado
+                var gastos = gc.getAllGastos()
+                getAllDistGastos(gastos)
+                IniciarAdapter()
+                verGrafico(gastos)
 
             }
 
@@ -261,8 +330,10 @@ class MgInicio : AppCompatActivity() {
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
                 binding.tvResultadoFecha.text = ("${dia.uppercase()} $dia_num")
-
-
+                var gastos = verInfoDia(Date.valueOf(LocalDate.now().toString()))
+                getAllDistGastos(gastos)
+                IniciarAdapter()
+                verGrafico(gastos)
             }
 
             2 -> {
@@ -299,6 +370,11 @@ class MgInicio : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+//                var gastos = verInfoSemana(Date.valueOf(LocalDate.now().toString()))
+//                getAllDistGastos(gastos)
+//                IniciarAdapter()
+//                verGrafico(gastos)
+//                adapter.notifyDataSetChanged()
             }
 
             3 -> {
@@ -326,6 +402,10 @@ class MgInicio : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+                var gastos = verInfoMes(Date.valueOf(LocalDate.now().toString()))
+                getAllDistGastos(gastos)
+                IniciarAdapter()
+                verGrafico(gastos)
 
             }
 
@@ -352,7 +432,10 @@ class MgInicio : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-
+                var gastos = verInfoAno(Date.valueOf(LocalDate.now().toString()))
+                getAllDistGastos(gastos)
+                IniciarAdapter()
+                verGrafico(gastos)
             }
 
             5 -> {
@@ -376,6 +459,11 @@ class MgInicio : AppCompatActivity() {
                 binding.tvAnho.setTextColor(white)
                 binding.tvAnho.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+//                var gastos = verInfoPeriodo(Date.valueOf(LocalDate.now().toString()))
+//                getAllDistGastos(gastos)
+//                IniciarAdapter()
+//                verGrafico(gastos)
+//                adapter.notifyDataSetChanged()
             }
 
             else -> println("Default")

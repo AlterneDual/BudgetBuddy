@@ -32,12 +32,12 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_cambio_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_info.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_info.xml"
-    },
-    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_editar_gasto_avanzado.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_editar_gasto_avanzado.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_info.xml",
+        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_info.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\activity_crear_categorias.xml",
@@ -148,12 +148,12 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_ajustes.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\login.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\login.xml"
-    },
-    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\main_view_3g.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\main_view_3g.xml"
+    },
+    {
+        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\login.xml",
+        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\login.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_grid_crear_categorias.xml",

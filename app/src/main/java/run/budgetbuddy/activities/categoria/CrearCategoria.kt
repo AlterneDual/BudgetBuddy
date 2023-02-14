@@ -26,11 +26,13 @@ class CrearCategoria : AppCompatActivity() {
     private lateinit var grid_view_colores: GridView
     private lateinit var listaIconos: MutableList<Int>
     private lateinit var listaColores: MutableList<Int>
+    private lateinit var lista_colores_hex: MutableList<String>
     private var categoriaSeleccionada: Int = -1
     private var colorSeleccionado: Int = -1
     private var viewActual: View? = null
     private var viewcol: View? = null
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,12 +45,15 @@ class CrearCategoria : AppCompatActivity() {
         listaColores = crearColores()
         inicializarAdapterColores()
 
+        lista_colores_hex = colores()
+
         grid_view = binding.GVCategorias3
         grid_view.setOnItemClickListener() { parent, view, position, id ->
             categoriaSeleccionada = position
 
             if (viewActual != null && viewActual != view) {
                 viewActual?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
+                viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
                 view.setBackgroundColor(Color.parseColor("#988C8C"))
             } else {
                 view.setBackgroundColor(Color.parseColor("#988C8C"))
@@ -62,22 +67,30 @@ class CrearCategoria : AppCompatActivity() {
         grid_view_colores.setOnItemClickListener() { parent, view, position, id ->
             colorSeleccionado = position
             if (viewcol != null && viewcol != view) {
-                viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
+
                 if (position == 0) {
+                    viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
                     view?.setBackgroundColor(Color.rgb(69, 119, 193))
                 } else if (position == 1) {
+                    viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
                     view?.setBackgroundColor(Color.rgb(232, 84, 217))
                 } else if (position == 2) {
+                    viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
                     view?.setBackgroundColor(Color.rgb(104, 201, 172))
                 } else if (position == 3) {
+                    viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
                     view?.setBackgroundColor(Color.rgb(84, 202, 117))
                 } else if (position == 4) {
+                    viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
                     view?.setBackgroundColor(Color.rgb(220, 45, 45))
                 } else if (position == 5) {
+                    viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
                     view?.setBackgroundColor(Color.rgb(237, 229, 33))
                 } else if (position == 6) {
+                    viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
                     view?.setBackgroundColor(Color.rgb(42, 205, 27))
                 } else if (position == 7) {
+                    viewcol?.setBackgroundColor(Color.parseColor("#00FFFFFF"))
                     view?.setBackgroundColor(Color.rgb(255, 157, 10))
                 }
 
@@ -157,6 +170,7 @@ class CrearCategoria : AppCompatActivity() {
         categoria.nombre = txt_nombre.text.toString()
         categoria.icono = listaIconos[categoriaSeleccionada]
         categoria.color = listaColores[colorSeleccionado]
+        categoria.color_hex = lista_colores_hex[colorSeleccionado]
         categoriaCRUD.addCategoria(categoria)
     }
 
@@ -199,5 +213,12 @@ class CrearCategoria : AppCompatActivity() {
         )
 
         return listaColores
+    }
+
+    private fun colores(): MutableList<String> {
+        var colores = mutableListOf<String>(
+            "#010efe", "#f610fe", "#97b5fe", "#00ffff", "#EF5757", "#F4D35E", "#2ACD1B", "#FF9D0A"
+        )
+        return colores
     }
 }

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_inicio">
 
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarA"
         android:layout_width="match_parent"
@@ -18,19 +17,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/btnAddGroup2"
-        android:layout_width="76dp"
-        android:layout_height="72dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="275dp"
-        android:background="@color/transparent"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/plus_button"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"
@@ -53,7 +39,6 @@
             android:textSize="12sp"
             android:textStyle="bold" />
 
-
         <Button
             android:id="@+id/tvSemana"
             android:layout_width="80dp"
@@ -66,7 +51,6 @@
             android:textSize="12sp"
             android:textStyle="bold" />
 
-
         <Button
             android:id="@+id/tvMes"
             android:layout_width="56dp"
@@ -78,7 +62,6 @@
             android:textColor="@color/white"
             android:textSize="12sp"
             android:textStyle="bold" />
-
 
         <Button
             android:id="@+id/tvAnho"
@@ -155,10 +138,25 @@
         android:layout_width="match_parent"
         android:layout_height="221dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvResultadoFecha" />
+
+    <ImageButton
+        android:id="@+id/btnAddGroup2"
+        android:layout_width="76dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="275dp"
+        android:background="@color/transparent"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/plus_button"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/btnMenu1"

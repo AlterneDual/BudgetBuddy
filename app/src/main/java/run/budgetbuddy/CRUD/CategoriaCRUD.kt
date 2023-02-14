@@ -9,14 +9,15 @@ open class CategoriaCRUD {
 
     var realm: Realm = Realm.getDefaultInstance()
 
-    fun addCategoria(categoria: Categoria) : Int{
+    fun addCategoria(categoria: Categoria): Int {
         var key = getKey()
 
-        realm.executeTransaction{ r:Realm  ->
+        realm.executeTransaction { r: Realm ->
             var categoriaR = r.createObject(Categoria::class.java, key)
             categoriaR.nombre = categoria.nombre
             categoriaR.icono = categoria.icono
             categoriaR.color = categoria.color
+            categoriaR.color_hex = categoria.color_hex
             categoriaR.descripcion = categoria.descripcion
 
 
@@ -25,64 +26,74 @@ open class CategoriaCRUD {
         return key
     }
 
-    fun getKey():Int{
+    fun getKey(): Int {
 
         return try {
             val number: Number? = realm.where<Categoria>().max("id")
-            if(number!= null){
+            if (number != null) {
                 number.toInt() + 1
             } else {
                 0
             }
 
-        }catch (e : ArrayIndexOutOfBoundsException){
+        } catch (e: ArrayIndexOutOfBoundsException) {
             0
         }
     }
 
-    fun getCategoria(id:Int): Categoria?{
+    fun getCategoria(id: Int): Categoria? {
 
-        return realm.where(Categoria::class.java).equalTo("id",id).findFirst()
+        return realm.where(Categoria::class.java).equalTo("id", id).findFirst()
 
     }
 
-    fun updateCategoria(id: Int, new_nombre: String?, new_icono: Int?, new_desc: String?, new_color : Int?){
+    fun updateCategoria(
+        id: Int,
+        new_nombre: String?,
+        new_icono: Int?,
+        new_desc: String?,
+        new_color: Int?,
+        new_color_hex: String?
+    ) {
         var categoria = getCategoria(id)
-        realm.executeTransaction{
-            if(new_nombre != null){
+        realm.executeTransaction {
+            if (new_nombre != null) {
                 categoria?.nombre = new_nombre
             }
-            if(new_icono != null) {
+            if (new_icono != null) {
                 categoria?.icono = new_icono
             }
-            if(new_color != null) {
+            if (new_color != null) {
                 categoria?.color = new_color
             }
-            if(new_desc != null) {
+            if (new_color_hex != null) {
+                categoria?.color_hex = new_color_hex
+            }
+            if (new_desc != null) {
                 categoria?.descripcion = new_desc
             }
             realm.insertOrUpdate(categoria)
         }
     }
 
-    fun deleteCategoria(id:Int){
+    fun deleteCategoria(id: Int) {
 
         val user = getCategoria(id)
-        realm.executeTransaction{
+        realm.executeTransaction {
             user!!.deleteFromRealm()
         }
     }
 
-    fun cleanAll(){
+    fun cleanAll() {
 
         realm.executeTransaction { r: Realm ->
             r.delete(Categoria::class.java)
         }
     }
 
-    fun getAllCategoria():MutableList<Categoria>{
+    fun getAllCategoria(): MutableList<Categoria> {
 
-        var list =  mutableListOf<Categoria>()
+        var list = mutableListOf<Categoria>()
         var categoria_list = realm.where(Categoria::class.java).findAll()
         list.addAll(categoria_list)
         return list

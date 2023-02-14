@@ -46,15 +46,17 @@ public class models_CategoriaRealmProxy extends models.Categoria
         long nombreColKey;
         long colorColKey;
         long iconoColKey;
+        long color_hexColKey;
         long idColKey;
         long descripcionColKey;
 
         CategoriaColumnInfo(OsSchemaInfo schemaInfo) {
-            super(5);
+            super(6);
             OsObjectSchemaInfo objectSchemaInfo = schemaInfo.getObjectSchemaInfo("Categoria");
             this.nombreColKey = addColumnDetails("nombre", "nombre", objectSchemaInfo);
             this.colorColKey = addColumnDetails("color", "color", objectSchemaInfo);
             this.iconoColKey = addColumnDetails("icono", "icono", objectSchemaInfo);
+            this.color_hexColKey = addColumnDetails("color_hex", "color_hex", objectSchemaInfo);
             this.idColKey = addColumnDetails("id", "id", objectSchemaInfo);
             this.descripcionColKey = addColumnDetails("descripcion", "descripcion", objectSchemaInfo);
         }
@@ -76,6 +78,7 @@ public class models_CategoriaRealmProxy extends models.Categoria
             dst.nombreColKey = src.nombreColKey;
             dst.colorColKey = src.colorColKey;
             dst.iconoColKey = src.iconoColKey;
+            dst.color_hexColKey = src.color_hexColKey;
             dst.idColKey = src.idColKey;
             dst.descripcionColKey = src.descripcionColKey;
         }
@@ -179,6 +182,34 @@ public class models_CategoriaRealmProxy extends models.Categoria
 
     @Override
     @SuppressWarnings("cast")
+    public String realmGet$color_hex() {
+        proxyState.getRealm$realm().checkIfValid();
+        return (java.lang.String) proxyState.getRow$realm().getString(columnInfo.color_hexColKey);
+    }
+
+    @Override
+    public void realmSet$color_hex(String value) {
+        if (proxyState.isUnderConstruction()) {
+            if (!proxyState.getAcceptDefaultValue$realm()) {
+                return;
+            }
+            final Row row = proxyState.getRow$realm();
+            if (value == null) {
+                throw new IllegalArgumentException("Trying to set non-nullable field 'color_hex' to null.");
+            }
+            row.getTable().setString(columnInfo.color_hexColKey, row.getObjectKey(), value, true);
+            return;
+        }
+
+        proxyState.getRealm$realm().checkIfValid();
+        if (value == null) {
+            throw new IllegalArgumentException("Trying to set non-nullable field 'color_hex' to null.");
+        }
+        proxyState.getRow$realm().setString(columnInfo.color_hexColKey, value);
+    }
+
+    @Override
+    @SuppressWarnings("cast")
     public int realmGet$id() {
         proxyState.getRealm$realm().checkIfValid();
         return (int) proxyState.getRow$realm().getLong(columnInfo.idColKey);
@@ -224,10 +255,11 @@ public class models_CategoriaRealmProxy extends models.Categoria
     }
 
     private static OsObjectSchemaInfo createExpectedObjectSchemaInfo() {
-        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(NO_ALIAS, "Categoria", false, 5, 0);
+        OsObjectSchemaInfo.Builder builder = new OsObjectSchemaInfo.Builder(NO_ALIAS, "Categoria", false, 6, 0);
         builder.addPersistedProperty(NO_ALIAS, "nombre", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "color", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "icono", RealmFieldType.INTEGER, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "color_hex", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "id", RealmFieldType.INTEGER, Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "descripcion", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         return builder.build();
@@ -306,6 +338,13 @@ public class models_CategoriaRealmProxy extends models.Categoria
                 objProxy.realmSet$icono((int) json.getInt("icono"));
             }
         }
+        if (json.has("color_hex")) {
+            if (json.isNull("color_hex")) {
+                objProxy.realmSet$color_hex(null);
+            } else {
+                objProxy.realmSet$color_hex((String) json.getString("color_hex"));
+            }
+        }
         if (json.has("descripcion")) {
             if (json.isNull("descripcion")) {
                 objProxy.realmSet$descripcion(null);
@@ -347,6 +386,13 @@ public class models_CategoriaRealmProxy extends models.Categoria
                 } else {
                     reader.skipValue();
                     throw new IllegalArgumentException("Trying to set non-nullable field 'icono' to null.");
+                }
+            } else if (name.equals("color_hex")) {
+                if (reader.peek() != JsonToken.NULL) {
+                    objProxy.realmSet$color_hex((String) reader.nextString());
+                } else {
+                    reader.skipValue();
+                    objProxy.realmSet$color_hex(null);
                 }
             } else if (name.equals("id")) {
                 if (reader.peek() != JsonToken.NULL) {
@@ -436,6 +482,7 @@ public class models_CategoriaRealmProxy extends models.Categoria
         builder.addString(columnInfo.nombreColKey, unmanagedSource.realmGet$nombre());
         builder.addInteger(columnInfo.colorColKey, unmanagedSource.realmGet$color());
         builder.addInteger(columnInfo.iconoColKey, unmanagedSource.realmGet$icono());
+        builder.addString(columnInfo.color_hexColKey, unmanagedSource.realmGet$color_hex());
         builder.addInteger(columnInfo.idColKey, unmanagedSource.realmGet$id());
         builder.addString(columnInfo.descripcionColKey, unmanagedSource.realmGet$descripcion());
 
@@ -473,6 +520,10 @@ public class models_CategoriaRealmProxy extends models.Categoria
         }
         Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
         Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
+        String realmGet$color_hex = ((models_CategoriaRealmProxyInterface) object).realmGet$color_hex();
+        if (realmGet$color_hex != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.color_hexColKey, objKey, realmGet$color_hex, false);
+        }
         String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
         if (realmGet$descripcion != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -512,6 +563,10 @@ public class models_CategoriaRealmProxy extends models.Categoria
             }
             Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
             Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
+            String realmGet$color_hex = ((models_CategoriaRealmProxyInterface) object).realmGet$color_hex();
+            if (realmGet$color_hex != null) {
+                Table.nativeSetString(tableNativePtr, columnInfo.color_hexColKey, objKey, realmGet$color_hex, false);
+            }
             String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
             if (realmGet$descripcion != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -544,6 +599,12 @@ public class models_CategoriaRealmProxy extends models.Categoria
         }
         Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
         Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
+        String realmGet$color_hex = ((models_CategoriaRealmProxyInterface) object).realmGet$color_hex();
+        if (realmGet$color_hex != null) {
+            Table.nativeSetString(tableNativePtr, columnInfo.color_hexColKey, objKey, realmGet$color_hex, false);
+        } else {
+            Table.nativeSetNull(tableNativePtr, columnInfo.color_hexColKey, objKey, false);
+        }
         String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
         if (realmGet$descripcion != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -585,6 +646,12 @@ public class models_CategoriaRealmProxy extends models.Categoria
             }
             Table.nativeSetLong(tableNativePtr, columnInfo.colorColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$color(), false);
             Table.nativeSetLong(tableNativePtr, columnInfo.iconoColKey, objKey, ((models_CategoriaRealmProxyInterface) object).realmGet$icono(), false);
+            String realmGet$color_hex = ((models_CategoriaRealmProxyInterface) object).realmGet$color_hex();
+            if (realmGet$color_hex != null) {
+                Table.nativeSetString(tableNativePtr, columnInfo.color_hexColKey, objKey, realmGet$color_hex, false);
+            } else {
+                Table.nativeSetNull(tableNativePtr, columnInfo.color_hexColKey, objKey, false);
+            }
             String realmGet$descripcion = ((models_CategoriaRealmProxyInterface) object).realmGet$descripcion();
             if (realmGet$descripcion != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.descripcionColKey, objKey, realmGet$descripcion, false);
@@ -617,6 +684,7 @@ public class models_CategoriaRealmProxy extends models.Categoria
         unmanagedCopy.realmSet$nombre(realmSource.realmGet$nombre());
         unmanagedCopy.realmSet$color(realmSource.realmGet$color());
         unmanagedCopy.realmSet$icono(realmSource.realmGet$icono());
+        unmanagedCopy.realmSet$color_hex(realmSource.realmGet$color_hex());
         unmanagedCopy.realmSet$id(realmSource.realmGet$id());
         unmanagedCopy.realmSet$descripcion(realmSource.realmGet$descripcion());
 
@@ -631,6 +699,7 @@ public class models_CategoriaRealmProxy extends models.Categoria
         builder.addString(columnInfo.nombreColKey, realmObjectSource.realmGet$nombre());
         builder.addInteger(columnInfo.colorColKey, realmObjectSource.realmGet$color());
         builder.addInteger(columnInfo.iconoColKey, realmObjectSource.realmGet$icono());
+        builder.addString(columnInfo.color_hexColKey, realmObjectSource.realmGet$color_hex());
         builder.addInteger(columnInfo.idColKey, realmObjectSource.realmGet$id());
         builder.addString(columnInfo.descripcionColKey, realmObjectSource.realmGet$descripcion());
 

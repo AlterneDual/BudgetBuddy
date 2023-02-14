@@ -25,6 +25,7 @@ class Categorias : AppCompatActivity() {
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
     private var posicion: Int = 0
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = CategoriasBinding.inflate(layoutInflater)
@@ -43,7 +44,7 @@ class Categorias : AppCompatActivity() {
         }
 
         binding.btnAtras1.setOnClickListener {
-            val intent = Intent(this,MenuLateralMG::class.java)
+            val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
             finish()
         }
@@ -53,7 +54,8 @@ class Categorias : AppCompatActivity() {
     private fun inicializarAdapter() {
 
         grid_view = binding.GVCategoria
-        adapterList = myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
+        adapterList =
+            myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
         grid_view.adapter = adapterList
         registerForContextMenu(grid_view)
     }
@@ -62,31 +64,41 @@ class Categorias : AppCompatActivity() {
 
         val listaCategorias = mutableListOf<Categoria>(
 
-            Categoria("Avion", R.drawable.circulo_naranja, R.drawable.cat_avion),
-            Categoria("Cine", R.drawable.circulo_verde, R.drawable.cat_cine),
-            Categoria("Bolos", R.drawable.circulo_rojo, R.drawable.cat_bolos),
-            Categoria("Coctel", R.drawable.circulo_amarillo, R.drawable.cat_coctel),
-            Categoria("Compras", R.drawable.circulo_turquesa, R.drawable.cat_compras),
-            Categoria("Hotele", R.drawable.circulo_celeste, R.drawable.cat_hotel),
-            Categoria("Limpieza", R.drawable.circulo_azul, R.drawable.cat_limpieza),
-            Categoria("Regalos", R.drawable.circulo_rosa, R.drawable.cat_regalo),
-            Categoria("Restaurante", R.drawable.circulo_celeste, R.drawable.cat_restaurante),
-            Categoria("Videojuegos", R.drawable.circulo_naranja, R.drawable.cat_videojuego)
+            Categoria("Avion", R.drawable.circulo_naranja, R.drawable.cat_avion, "#FF9D0A"),
+            Categoria("Cine", R.drawable.circulo_verde, R.drawable.cat_cine, "#2ACD1B"),
+            Categoria("Bolos", R.drawable.circulo_rojo, R.drawable.cat_bolos, "#EF5757"),
+            Categoria("Coctel", R.drawable.circulo_amarillo, R.drawable.cat_coctel, "#F4D35E"),
+            Categoria("Compras", R.drawable.circulo_turquesa, R.drawable.cat_compras, "#00ffff"),
+            Categoria("Hotele", R.drawable.circulo_celeste, R.drawable.cat_hotel, "##97b5fe"),
+            Categoria("Limpieza", R.drawable.circulo_azul, R.drawable.cat_limpieza, "#010efe"),
+            Categoria("Regalos", R.drawable.circulo_rosa, R.drawable.cat_regalo, "#f610fe"),
+            Categoria(
+                "Restaurante",
+                R.drawable.circulo_celeste,
+                R.drawable.cat_restaurante,
+                "#97b5fe"
+            ),
+            Categoria(
+                "Videojuegos",
+                R.drawable.circulo_naranja,
+                R.drawable.cat_videojuego,
+                "#FF9D0A"
+            )
 
         )
 
         return listaCategorias
     }
 
-    private fun vaciar_bd_categorias(){
-        for(categoria in categoriaCRUD.getAllCategoria()){
+    private fun vaciar_bd_categorias() {
+        for (categoria in categoriaCRUD.getAllCategoria()) {
             categoriaCRUD.deleteCategoria(categoria.id)
         }
     }
 
-    private fun rellenar_bd_categorias(){
-        if(categoriaCRUD.getAllCategoria().isEmpty()){
-            for(categoria in listaCategorias){
+    private fun rellenar_bd_categorias() {
+        if (categoriaCRUD.getAllCategoria().isEmpty()) {
+            for (categoria in listaCategorias) {
                 categoriaCRUD.addCategoria(categoria)
             }
         }
@@ -117,7 +129,8 @@ class Categorias : AppCompatActivity() {
                     { dialogInterface, i ->
                         categoriaCRUD.deleteCategoria(listaCategorias[posicion!!].id)
                         adapterList.notifyDataSetChanged()
-                        recargarBDD()}
+                        recargarBDD()
+                    }
                     .setNegativeButton("CANCELAR") { dialogInterface, i -> dialogInterface.cancel() }
                     .create()
                 dialogo.show()

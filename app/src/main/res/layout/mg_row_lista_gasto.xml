@@ -19,19 +19,19 @@
 
         <FrameLayout
             android:layout_width="wrap_content"
-            android:layout_height="32dp">
+            android:layout_height="wrap_content">
 
             <ImageView
                 android:id="@+id/ivColorCategoria"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:src="@drawable/circulo_negro" />
 
             <ImageView
                 android:id="@+id/ivIconoCategoria"
-                android:layout_width="18dp"
-                android:layout_height="18dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 app:srcCompat="@drawable/cat_avion_" />
@@ -41,12 +41,13 @@
         <TextView
             android:id="@+id/tvListaGasto"
             android:layout_width="wrap_content"
-            android:layout_height="33dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="5dp"
+            android:fontFamily="@font/oswald"
             android:gravity="center"
-            android:text="   nombre1"
+            android:text="nombre1"
             android:textColor="@color/white"
-            android:textSize="16sp" />
+            android:textSize="24sp" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -56,7 +57,9 @@
                 android:id="@+id/tvCantGasto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/oswald"
                 android:text="TextView"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
