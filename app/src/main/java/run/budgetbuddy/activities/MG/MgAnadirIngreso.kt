@@ -1,7 +1,6 @@
 package run.budgetbuddy.activities.MG
 
 import CRUD.DivisaCRUD
-import CRUD.GastoCRUD
 import CRUD.IngresoCRUD
 import android.annotation.SuppressLint
 import android.app.DatePickerDialog
@@ -9,7 +8,6 @@ import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
-import android.os.SystemClock
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.widget.TextView
@@ -18,7 +16,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import run.budgetbuddy.R
 import models.Divisa
-import models.Gasto
 import run.budgetbuddy.databinding.MgAnadirIngresoBinding
 import run.budgetbuddy.model.Ingreso
 
