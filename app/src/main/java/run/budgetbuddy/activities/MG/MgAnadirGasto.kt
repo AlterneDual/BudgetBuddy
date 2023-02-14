@@ -37,8 +37,6 @@ class MgAnadirGasto : AppCompatActivity() {
     var nombreMes: String = String()
     private lateinit var gestos: GestureDetector
 
-    private var vistaActual: View? = null
-
 
     @RequiresApi(Build.VERSION_CODES.N)
     private var selectedDate: Calendar = Calendar.getInstance()
@@ -145,9 +143,7 @@ class MgAnadirGasto : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-//            for (gasto in gastoCrud.getAllGastos()) {
-//                println(gasto)
-//            }
+
         }
 
         binding.btnAtras3.setOnClickListener {
@@ -221,9 +217,9 @@ class MgAnadirGasto : AppCompatActivity() {
                 actualizarYesterdayTomorrow()
 
                 nombreMes = nombreMeses(month.plus(1))[1]
-                fecha1.setText("$yesterdayDay de $nombreMes")
-                fecha2.setText("$todayDay de $nombreMes")
-                fecha3.setText("$tomorrowDay de $nombreMes")
+                fecha1.setText("$yesterdayDay/$nombreMes")
+                fecha2.setText("$todayDay/$nombreMes")
+                fecha3.setText("$tomorrowDay/$nombreMes")
 
                 nombreMes = nombreMeses(month.plus(1))[0]
                 tvFechaSeleccionada.setText("$dayOfMonth de $nombreMes de $year")
@@ -295,9 +291,7 @@ class MgAnadirGasto : AppCompatActivity() {
                 Toast.LENGTH_LONG
             ).show()
             adapterList.selectedItem = position
-//            println("------------------------------")
-//            println(listaCategorias[position].nombre + " ID: " + listaCategorias[position].id)
-//            println("----------------------------------")
+
             adapterList.notifyDataSetChanged()
 
             categoriaAtributo = listaCategorias[position]

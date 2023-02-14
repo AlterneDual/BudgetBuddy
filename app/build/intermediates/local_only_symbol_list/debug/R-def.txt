@@ -314,6 +314,7 @@ id tvGastos
 id tvGroupInfo
 id tvGroupName
 id tvIngresos
+id tvIngresos2
 id tvListaGasto
 id tvMes
 id tvNombre1
