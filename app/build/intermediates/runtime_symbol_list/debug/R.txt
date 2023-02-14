@@ -3576,6 +3576,7 @@ int id tvGastos 0x7f0902a2
 int id tvGroupInfo 0x7f0902a3
 int id tvGroupName 0x7f0902a4
 int id tvIngresos 0x7f0902a5
+int id tvIngresos2 0x7f0902d4
 int id tvListaGasto 0x7f0902a6
 int id tvMes 0x7f0902a7
 int id tvNombre1 0x7f0902a8

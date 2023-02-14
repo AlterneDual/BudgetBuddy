@@ -66,12 +66,16 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
   @NonNull
   public final TextView tvGastos;
 
+  @NonNull
+  public final TextView tvIngresos2;
+
   private MgAnadirIngresoBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAnadir,
       @NonNull ImageView btnAtras4, @NonNull ImageView btnCalendario2, @NonNull Button btnFecha6,
       @NonNull Button btnFecha7, @NonNull Button btnFecha8, @NonNull EditText etCantidad2,
       @NonNull EditText etComentario1, @NonNull LinearLayout linearLayout2,
       @NonNull LinearLayout linearLayout3, @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa1,
-      @NonNull TextView tvFechaSeleccionada2, @NonNull TextView tvGastos) {
+      @NonNull TextView tvFechaSeleccionada2, @NonNull TextView tvGastos,
+      @NonNull TextView tvIngresos2) {
     this.rootView = rootView;
     this.btnAnadir = btnAnadir;
     this.btnAtras4 = btnAtras4;
@@ -87,6 +91,7 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
     this.tvDivisa1 = tvDivisa1;
     this.tvFechaSeleccionada2 = tvFechaSeleccionada2;
     this.tvGastos = tvGastos;
+    this.tvIngresos2 = tvIngresos2;
   }
 
   @Override
@@ -200,9 +205,16 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvIngresos2;
+      TextView tvIngresos2 = ViewBindings.findChildViewById(rootView, id);
+      if (tvIngresos2 == null) {
+        break missingId;
+      }
+
       return new MgAnadirIngresoBinding((ConstraintLayout) rootView, btnAnadir, btnAtras4,
           btnCalendario2, btnFecha6, btnFecha7, btnFecha8, etCantidad2, etComentario1,
-          linearLayout2, linearLayout3, toolbarA, tvDivisa1, tvFechaSeleccionada2, tvGastos);
+          linearLayout2, linearLayout3, toolbarA, tvDivisa1, tvFechaSeleccionada2, tvGastos,
+          tvIngresos2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

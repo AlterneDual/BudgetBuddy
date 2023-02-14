@@ -16,24 +16,24 @@ public final class CrearCategoria extends androidx.appcompat.app.AppCompatActivi
     private int colorSeleccionado = -1;
     private android.view.View viewActual;
     private android.view.View viewcol;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private CRUD.CategoriaCRUD categoriaCRUD;
     
     public CrearCategoria() {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final CRUD.CategoriaCRUD getCategoriaCRUD() {
         return null;
     }
     
-    public final void setCategoriaCRUD(@org.jetbrains.annotations.NotNull
+    public final void setCategoriaCRUD(@org.jetbrains.annotations.NotNull()
     CRUD.CategoriaCRUD p0) {
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     

@@ -4,7 +4,24 @@
             "outputFile": "run.budgetbuddy.app-mergeDebugResources-27:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Aragon\\Desktop\\Alterne Dual\\BudgetBuddy\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "source": "C:\\Users\\Syzer\\.gradle\\caches\\transforms-3\\a1cf331c8e237a807a600e0a0a383ef3\\transformed\\appcompat-1.6.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,687",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,771"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,42",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,125,209,293,389,491,593,3951",
+                        "endColumns": "69,83,83,95,101,101,93,88",
+                        "endOffsets": "120,204,288,384,486,588,682,4035"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Syzer\\AndroidStudioProjects\\BudgetBuddy\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -23,7 +40,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\Aragon\\.gradle\\caches\\transforms-3\\f0209ecd0c904b43df0928ab3def9ccf\\transformed\\material-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
+                    "source": "C:\\Users\\Syzer\\.gradle\\caches\\transforms-3\\f0209ecd0c904b43df0928ab3def9ccf\\transformed\\material-1.8.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -37,23 +54,6 @@
                         "startOffsets": "1190,1265,1376,1465,1566,1673,1780,1879,1986,2089,2177,2301,2403,2505,2621,2723,2837,2965,3081,3203,3339,3459,3593,3713,3825,4040,4157,4281,4411,4533,4671,4805,4921",
                         "endColumns": "74,110,88,100,106,106,98,106,102,87,123,101,101,115,101,113,127,115,121,135,119,133,119,111,125,116,123,129,121,137,133,115,119",
                         "endOffsets": "1260,1371,1460,1561,1668,1775,1874,1981,2084,2172,2296,2398,2500,2616,2718,2832,2960,3076,3198,3334,3454,3588,3708,3820,3946,4152,4276,4406,4528,4666,4800,4916,5036"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\Aragon\\.gradle\\caches\\transforms-3\\a1cf331c8e237a807a600e0a0a383ef3\\transformed\\appcompat-1.6.0\\res\\values-night-v8\\values-night-v8.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,687",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,771"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,42",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,125,209,293,389,491,593,3951",
-                        "endColumns": "69,83,83,95,101,101,93,88",
-                        "endOffsets": "120,204,288,384,486,588,682,4035"
                     }
                 }
             ]

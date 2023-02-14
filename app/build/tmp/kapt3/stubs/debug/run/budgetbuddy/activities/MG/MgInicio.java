@@ -6,9 +6,9 @@ import java.lang.System;
 public final class MgInicio extends androidx.appcompat.app.AppCompatActivity {
     private run.budgetbuddy.databinding.MgInicioGastosBinding binding;
     private run.budgetbuddy.adapter.myListAdapter_gasto adapter;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private io.realm.RealmList<models.Gasto> listagastosBD;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private CRUD.GastoCRUD gastoCRUD;
     private int seleccionado = 1;
     
@@ -16,27 +16,27 @@ public final class MgInicio extends androidx.appcompat.app.AppCompatActivity {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final io.realm.RealmList<models.Gasto> getListagastosBD() {
         return null;
     }
     
-    public final void setListagastosBD(@org.jetbrains.annotations.NotNull
+    public final void setListagastosBD(@org.jetbrains.annotations.NotNull()
     io.realm.RealmList<models.Gasto> p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final CRUD.GastoCRUD getGastoCRUD() {
         return null;
     }
     
-    public final void setGastoCRUD(@org.jetbrains.annotations.NotNull
+    public final void setGastoCRUD(@org.jetbrains.annotations.NotNull()
     CRUD.GastoCRUD p0) {
     }
     
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.M)
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
