@@ -10,6 +10,8 @@ import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
+import android.view.GestureDetector
+import android.view.MotionEvent
 import android.view.View
 import android.widget.GridView
 import android.widget.TextView
@@ -34,6 +36,7 @@ class MgAnadirGasto : AppCompatActivity() {
     private lateinit var grid_view: GridView
     private lateinit var listaCategorias: MutableList<Categoria>
     var nombreMes: String = String()
+    private lateinit var gestos: GestureDetector
 
     private var vistaActual: View? = null
 
@@ -75,6 +78,7 @@ class MgAnadirGasto : AppCompatActivity() {
         listaCategorias = categoriaCRUD.getAllCategoria()
         inicializarAdapter()
         mostrarMensaje()
+        gestos = GestureDetector(this, EscuchaGestos())
 
         valoresAyerHoyPredeterminados()
 
@@ -97,6 +101,7 @@ class MgAnadirGasto : AppCompatActivity() {
         btnIngreso.setOnClickListener {
             val intent = Intent(this, MgAnadirIngreso::class.java)
             startActivity(intent)
+            overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
             finish()
         }
 
@@ -348,5 +353,29 @@ class MgAnadirGasto : AppCompatActivity() {
         mesesCortoLargos.add(monthName2)
 
         return mesesCortoLargos
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        gestos.onTouchEvent(event!!)
+        return super.onTouchEvent(event)
+
+    }
+
+    inner class EscuchaGestos() : GestureDetector.SimpleOnGestureListener() {
+
+        override fun onFling(
+            e1: MotionEvent,
+            e2: MotionEvent,
+            velocityX: Float,
+            velocityY: Float
+        ): Boolean {
+            if (e2.x < e1.x) {
+                val intent = Intent(this@MgAnadirGasto, MgAnadirIngreso::class.java)
+                startActivity(intent)
+                overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+                finish()
+            }
+            return true
+        }
     }
 }
