@@ -8,6 +8,11 @@ import android.graphics.Paint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.GestureDetector
+import android.view.MotionEvent
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.animation.Easing
@@ -37,18 +42,20 @@ class MgInicio : AppCompatActivity() {
     private var listagastosBD: HashMap<Categoria, Float> = HashMap()
     var gc = GastoCRUD()
     private var seleccionado: Int = 0;
-
+    private lateinit var gestos: GestureDetector
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
         check()
+        gestos = GestureDetector(this, EscuchaGestos())
 
         var btnIngresos = binding.tvIngresos
         btnIngresos.setOnClickListener {
             val intent = Intent(this, MgInicioIngresos::class.java)
             startActivity(intent)
+            overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
             finish()
         }
         var btnAnadirGasto = binding.btnAddGroup2
@@ -467,6 +474,29 @@ class MgInicio : AppCompatActivity() {
             }
 
             else -> println("Default")
+        }
+    }
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        gestos.onTouchEvent(event!!)
+        return super.onTouchEvent(event)
+
+    }
+
+    inner class EscuchaGestos() : GestureDetector.SimpleOnGestureListener() {
+
+        override fun onFling(
+            e1: MotionEvent,
+            e2: MotionEvent,
+            velocityX: Float,
+            velocityY: Float
+        ): Boolean {
+            if (e2.x < e1.x) {
+                val intent = Intent(this@MgInicio, MgInicioIngresos::class.java)
+                startActivity(intent)
+                overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+                finish()
+            }
+            return true
         }
     }
 
