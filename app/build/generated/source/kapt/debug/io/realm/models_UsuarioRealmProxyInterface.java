@@ -10,8 +10,8 @@ public interface models_UsuarioRealmProxyInterface {
     public void realmSet$password(String value);
     public String realmGet$email();
     public void realmSet$email(String value);
-    public String realmGet$rol();
-    public void realmSet$rol(String value);
+    public double realmGet$saldo();
+    public void realmSet$saldo(double value);
     public RealmList<models.Gasto> realmGet$listaGastos();
     public void realmSet$listaGastos(RealmList<models.Gasto> value);
 }

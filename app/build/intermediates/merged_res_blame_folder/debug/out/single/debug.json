@@ -544,12 +544,20 @@
         "source": "run.budgetbuddy.app-main-31:/drawable/circulo_turquesa.png"
     },
     {
+        "merged": "run.budgetbuddy.app-merged_res-29:/drawable_slide_out_left.xml.flat",
+        "source": "run.budgetbuddy.app-main-31:/drawable/slide_out_left.xml"
+    },
+    {
         "merged": "run.budgetbuddy.app-merged_res-29:/drawable_confirmar.png.flat",
         "source": "run.budgetbuddy.app-main-31:/drawable/confirmar.png"
     },
     {
         "merged": "run.budgetbuddy.app-merged_res-29:/drawable_saldo_blanco.png.flat",
         "source": "run.budgetbuddy.app-main-31:/drawable/saldo_blanco.png"
+    },
+    {
+        "merged": "run.budgetbuddy.app-merged_res-29:/drawable_slide_out_right.xml.flat",
+        "source": "run.budgetbuddy.app-main-31:/drawable/slide_out_right.xml"
     },
     {
         "merged": "run.budgetbuddy.app-merged_res-29:/drawable_circulo_verde.png.flat",

@@ -3,6 +3,7 @@ package run.budgetbuddy.activities.MG
 import CRUD.CategoriaCRUD
 import CRUD.DivisaCRUD
 import CRUD.GastoCRUD
+import CRUD.UsuarioCRUD
 import adapter.myListAdapter_categorias
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -20,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity
 import models.Categoria
 import models.Divisa
 import models.Gasto
+import models.Usuario
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgAnadirGastoBinding
 
@@ -143,6 +145,29 @@ class MgAnadirGasto : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
+
+            var usCRUD : UsuarioCRUD = UsuarioCRUD()
+            var us1 : Usuario = Usuario()
+            us1.nombre = "Sam"
+            us1.saldo = 0.0
+
+            usCRUD.addUser(us1)
+
+            for(u in usCRUD.getAllUser()){
+                println(u.toString())
+            }
+            println("-----------------")
+
+            us1.nombre = "Sam Galvan Jamai"
+            us1.saldo = 10000.0
+            usCRUD.updateUser(us1)
+
+            for(u in usCRUD.getAllUser()){
+                println(u.toString())
+            }
+            println("-----------------")
+
+
 
         }
 

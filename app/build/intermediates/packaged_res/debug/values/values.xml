@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/apk/res/android">
-    <color ns1:forceDefault="true" name="black">#0E0D0D</color>
-    <color ns1:forceDefault="true" name="brown">#BF5A494F</color>
-    <color ns1:forceDefault="true" name="crayola">#F4D35E</color>
-    <color ns1:forceDefault="true" name="dark_black">#000</color>
-    <color ns1:forceDefault="true" name="dark_liver">#5A494F</color>
-    <color ns1:forceDefault="true" name="dark_orange">#80FF9D0A</color>
-    <color ns1:forceDefault="true" name="dark_silver">#615B5B</color>
-    <color ns1:forceDefault="true" name="green">#2ACD1B</color>
-    <color ns1:forceDefault="true" name="light_black">#80000000</color>
-    <color ns1:forceDefault="true" name="light_black_2">#CC000000</color>
-    <color ns1:forceDefault="true" name="orange">#FF9D0A</color>
-    <color ns1:forceDefault="true" name="red">#EF5757</color>
-    <color ns1:forceDefault="true" name="silver">#988C8C</color>
-    <color ns1:forceDefault="true" name="transparent">#00FFFFFF</color>
-    <color ns1:forceDefault="true" name="vidrian_green">#11928E</color>
-    <color ns1:forceDefault="true" name="vidrian_green_darker">#2D7977</color>
-    <color ns1:forceDefault="true" name="vidrian_light_green">#68C9AC</color>
-    <color ns1:forceDefault="true" name="white">#FFF</color>
+    <color name="black" ns1:forceDefault="true">#0E0D0D</color>
+    <color name="brown" ns1:forceDefault="true">#BF5A494F</color>
+    <color name="crayola" ns1:forceDefault="true">#F4D35E</color>
+    <color name="dark_black" ns1:forceDefault="true">#000</color>
+    <color name="dark_liver" ns1:forceDefault="true">#5A494F</color>
+    <color name="dark_orange" ns1:forceDefault="true">#80FF9D0A</color>
+    <color name="dark_silver" ns1:forceDefault="true">#615B5B</color>
+    <color name="green" ns1:forceDefault="true">#2ACD1B</color>
+    <color name="light_black" ns1:forceDefault="true">#80000000</color>
+    <color name="light_black_2" ns1:forceDefault="true">#CC000000</color>
+    <color name="orange" ns1:forceDefault="true">#FF9D0A</color>
+    <color name="red" ns1:forceDefault="true">#EF5757</color>
+    <color name="silver" ns1:forceDefault="true">#988C8C</color>
+    <color name="transparent" ns1:forceDefault="true">#00FFFFFF</color>
+    <color name="vidrian_green" ns1:forceDefault="true">#11928E</color>
+    <color name="vidrian_green_darker" ns1:forceDefault="true">#2D7977</color>
+    <color name="vidrian_light_green" ns1:forceDefault="true">#68C9AC</color>
+    <color name="white" ns1:forceDefault="true">#FFF</color>
     <string name="aceptar">Aceptar</string>
     <string name="ajustes">Ajustes</string>
     <string name="anual">Anual</string>

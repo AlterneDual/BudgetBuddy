@@ -4,6 +4,7 @@ import adapter.myListAdapter_menu_Lateral
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.ListView
 import run.budgetbuddy.activities.divisa.Divisas
 import models.ItemGenerico

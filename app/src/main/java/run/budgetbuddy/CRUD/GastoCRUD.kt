@@ -53,32 +53,26 @@ open class GastoCRUD {
 
     }
 
-    fun updateGasto(
-        id: Int,
-        new_importe: Double?,
-        new_fecha: Date?,
-        new_categoria: Categoria?,
-        new_desc: String?,
-        new_divisa: Divisa?
-    ) {
-        var gasto = getGasto(id)
+    fun updateGasto(gasto: Gasto) {
+
+        var gas = getGasto(gasto.id)
         realm.executeTransaction {
-            if (new_importe != null) {
-                gasto?.importe = new_importe
+            if (gasto.importe != null) {
+                gas?.importe = gasto.importe
             }
-            if (new_fecha != null) {
-                gasto?.fecha = new_fecha
+            if (gasto.fecha != null) {
+                gas?.fecha = gasto.fecha
             }
-            if (new_categoria != null) {
-                gasto?.categoria = new_categoria
+            if (gasto.categoria != null) {
+                gas?.categoria = gasto.categoria
             }
-            if (new_desc != null) {
-                gasto?.descripcion = new_desc
+            if (gasto.descripcion != null) {
+                gas?.descripcion = gasto.descripcion
             }
-            if (new_divisa != null) {
-                gasto?.divisa = new_divisa
+            if (gasto.divisa != null) {
+                gas?.divisa = gasto.divisa
             }
-            realm.insertOrUpdate(gasto)
+            realm.insertOrUpdate(gas)
         }
     }
 

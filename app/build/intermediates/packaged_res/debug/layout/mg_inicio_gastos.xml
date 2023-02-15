@@ -169,6 +169,7 @@
         app:layout_constraintTop_toTopOf="@+id/toolbarA"
         app:srcCompat="@drawable/menu_button" />
 
+
     <ImageView
         android:id="@+id/butInfo"
         android:layout_width="44dp"

@@ -47,30 +47,24 @@ open class CategoriaCRUD {
 
     }
 
-    fun updateCategoria(
-        id: Int,
-        new_nombre: String?,
-        new_icono: Int?,
-        new_desc: String?,
-        new_color: Int?,
-        new_color_hex: String?
-    ) {
-        var categoria = getCategoria(id)
+    fun updateCategoria(categoria: Categoria) {
+
+        var cat = getCategoria(categoria.id)
         realm.executeTransaction {
-            if (new_nombre != null) {
-                categoria?.nombre = new_nombre
+            if (categoria.nombre != null) {
+                cat?.nombre = categoria.nombre
             }
-            if (new_icono != null) {
-                categoria?.icono = new_icono
+            if (categoria.icono != null) {
+                cat?.icono = categoria.icono
             }
-            if (new_color != null) {
-                categoria?.color = new_color
+            if (categoria.color != null) {
+                cat?.color = categoria.color
             }
-            if (new_color_hex != null) {
-                categoria?.color_hex = new_color_hex
+            if (categoria.color_hex != null) {
+                cat?.color_hex = categoria.color_hex
             }
-            if (new_desc != null) {
-                categoria?.descripcion = new_desc
+            if (categoria.descripcion != null) {
+                cat?.descripcion = categoria.descripcion
             }
             realm.insertOrUpdate(categoria)
         }
