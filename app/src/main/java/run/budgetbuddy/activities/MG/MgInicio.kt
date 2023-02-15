@@ -8,8 +8,6 @@ import android.graphics.Paint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.GestureDetector
-import android.view.MotionEvent
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.animation.Easing
@@ -30,6 +28,9 @@ import java.time.LocalDate
 import java.util.Calendar
 import java.util.Locale
 import android.graphics.Typeface
+import android.view.*
+import android.widget.AdapterView
+import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 
 class MgInicio : AppCompatActivity() {
@@ -556,6 +557,9 @@ class MgInicio : AppCompatActivity() {
         )
         startDatePicker.show()
     }
+
+
+
 
 
 }

@@ -389,6 +389,7 @@ layout mg_inicio_ingresos
 layout mg_row_lista_gasto
 layout register
 menu context_menu
+menu context_menu2
 mipmap ic_launcher
 mipmap ic_launcher_round
 string aceptar
@@ -403,6 +404,7 @@ string diario
 string divisa
 string editar_categorias
 string editar_perfil
+string eliminar
 string eliminarDatos
 string email
 string espanyol

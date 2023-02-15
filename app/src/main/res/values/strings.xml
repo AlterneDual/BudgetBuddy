@@ -44,5 +44,6 @@
     <string name="nombre1">nombre1</string>
     <string name="nombre2">nombre2</string>
     <string name="email">Email</string>
+    <string name="eliminar">eliminar</string>
 
 </resources>

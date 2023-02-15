@@ -6,7 +6,12 @@ import android.content.Intent
 import android.graphics.Paint
 import android.os.Build
 import android.os.Bundle
+import android.view.ContextMenu
+import android.view.MenuItem
+import android.view.View
+import android.widget.AdapterView
 import android.widget.ListView
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -29,6 +34,7 @@ class MgInfo : AppCompatActivity() {
     private lateinit var list_view: ListView
     private lateinit var adapterList: myListAdapterInfoGasto
     private lateinit var lista_gastos: MutableList<Gasto>
+    var posActualGasto : Int = 0
 
     //    private lateinit var sharedPreferences: SharedPreferences
 
@@ -267,7 +273,7 @@ class MgInfo : AppCompatActivity() {
                 for (l in lista_gastos) {
                     total += l.importe;
                 }
-                binding.tvGastos.text = "-" + total.toString() + " €";
+                binding.tvGastos.text = "-" + total.toString() + " €"
             }
 
             5 -> {
@@ -420,6 +426,73 @@ class MgInfo : AppCompatActivity() {
             myListAdapterInfoGasto(this, R.layout.mg_info_gasto_ingreso_row, lista_gastos, false)
         list_view.adapter = adapterList
         registerForContextMenu(list_view)
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo
+    ) {
+        super.onCreateContextMenu(menu, v, menuInfo)
+        val inflater = menuInflater
+        val info = menuInfo as AdapterView.AdapterContextMenuInfo
+        menu.setHeaderTitle(lista_gastos[info.position].descripcion)
+        inflater.inflate(R.menu.context_menu2, menu)
+        posActualGasto = info.position
+
+
+    }
+
+    //Seleccionando elementos del menu contextual
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
+        posActualGasto = info.position
+
+        return when (item.itemId) {
+
+            R.id.btnBorrar -> {
+
+                var gastoTemp = Gasto()
+                gastoTemp.descripcion = lista_gastos[info.position].descripcion
+
+
+                gc.deleteGasto((lista_gastos[info.position]).id)
+                lista_gastos.clear()
+                lista_gastos.addAll(gc.getAllGastos())
+                adapterList.notifyDataSetChanged()
+
+                //reiniciar vistaGastos
+                var total: Double = 0.0;
+                for (l in lista_gastos) {
+                    total += l.importe;
+                }
+                binding.tvGastos.text = "-" + total.toString() + " €"
+
+
+                Toast.makeText(
+                    this, "Has borrado ${gastoTemp.descripcion}",
+                    Toast.LENGTH_SHORT
+                ).show()
+                true
+
+            }
+
+            R.id.btnEditar -> {
+//                //Aqui se envía las variables nombre y bandera a la pantalla "editar"
+//                var nombre: String = listaComunidades[info.position].nombre
+//                var bandera: Int = listaComunidades[info.position].bandera
+//
+//                val intent = Intent(this, PantallaEditar::class.java)
+//                intent.putExtra("Nombre", nombre)
+//                intent.putExtra("Bandera", bandera)
+//                intentLaunch.launch(intent)
+
+
+                true
+            }
+            else -> super.onContextItemSelected(item)
+        }
     }
 
 
