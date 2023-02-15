@@ -34,6 +34,7 @@ import java.util.Calendar
 import java.util.Locale
 import android.graphics.Typeface
 import androidx.core.content.res.ResourcesCompat
+import java.time.ZoneId
 
 class MgInicio : AppCompatActivity() {
 
@@ -43,6 +44,7 @@ class MgInicio : AppCompatActivity() {
     var gc = GastoCRUD()
     private var seleccionado: Int = 0;
     private lateinit var gestos: GestureDetector
+
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -217,7 +219,11 @@ class MgInicio : AppCompatActivity() {
         return nueva_lista
     }
 
-    fun verInfoSemana(fecha_inicio: Date, fecha_final: Date) {
+    fun verInfoSemana(
+        fecha_inicio: java.util.Date,
+        fecha_final: java.util.Date
+    ): MutableList<Gasto> {
+        return gc.getAllByDates(fecha_inicio, fecha_final)
 
     }
 
@@ -253,7 +259,12 @@ class MgInicio : AppCompatActivity() {
         return nueva_lista
     }
 
-    fun verInfoPeriodo(fecha_a: Date, fecha_b: Date) {
+    fun verInfoPeriodo(
+        fecha_inicio: java.util.Date,
+        fecha_final: java.util.Date
+    ): MutableList<Gasto> {
+        return gc.getAllByDates(fecha_inicio, fecha_final)
+
     }
 
     fun getAllDistGastos(gastos: MutableList<Gasto>) {
@@ -266,7 +277,6 @@ class MgInicio : AppCompatActivity() {
                 if (cat_temp != null) {
                     listagastosBD.replace(cat_temp, (total + g.importe).toFloat())
                 }
-
             } else {
                 if (cat_temp != null) {
                     listagastosBD[cat_temp] = g.importe.toFloat()
@@ -377,11 +387,23 @@ class MgInicio : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-//                var gastos = verInfoSemana(Date.valueOf(LocalDate.now().toString()))
-//                getAllDistGastos(gastos)
-//                IniciarAdapter()
-//                verGrafico(gastos)
-//                adapter.notifyDataSetChanged()
+                val today = java.util.Date.from(
+                    LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()
+                )
+                val cal = Calendar.getInstance()
+                cal.time = today
+                cal.set(Calendar.DAY_OF_WEEK, cal.firstDayOfWeek)
+                val startOfWeek = cal.time
+                cal.add(Calendar.DAY_OF_WEEK, 6)
+                val endOfWeek = cal.time
+
+                var gastos = verInfoSemana(
+                    startOfWeek,
+                    endOfWeek
+                )
+                getAllDistGastos(gastos)
+                IniciarAdapter()
+                verGrafico(gastos)
             }
 
             3 -> {
@@ -476,6 +498,7 @@ class MgInicio : AppCompatActivity() {
             else -> println("Default")
         }
     }
+
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         gestos.onTouchEvent(event!!)
         return super.onTouchEvent(event)
@@ -542,6 +565,15 @@ class MgInicio : AppCompatActivity() {
                                 start = format.format(startDate!!.time)
                                 end = format.format(endDate!!.time)
                             }
+
+                            var gastos = verInfoPeriodo(
+                                startDate!!.time,
+                                endDate!!.time
+                            )
+                            getAllDistGastos(gastos)
+                            IniciarAdapter()
+                            verGrafico(gastos)
+
                             binding.tvResultadoFecha.text =
                                 ("${start.toString()} - ${end.toString()}")
                         }

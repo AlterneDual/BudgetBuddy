@@ -2889,6 +2889,8 @@ drawable previous
 drawable rounded_corner
 drawable saldo
 drawable saldo_blanco
+drawable slide_out_left
+drawable slide_out_right
 drawable tema
 drawable test_level_drawable
 drawable tienda_comestibles

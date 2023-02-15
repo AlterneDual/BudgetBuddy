@@ -97,12 +97,24 @@ open class GastoCRUD {
         }
     }
 
-    public fun getAllGastos(): MutableList<Gasto> {
+    fun getAllGastos(): MutableList<Gasto> {
 
         var list = mutableListOf<Gasto>()
         var gasto_list = realm.where(Gasto::class.java).findAll()
         list.addAll(gasto_list)
         return list
+    }
+
+    fun getAllByDates(
+        fecha_inicio: Date,
+        fecha_fin: Date
+    ): MutableList<Gasto> {
+        var gastos = mutableListOf<Gasto>()
+        var gastos_realm = realm.where<Gasto>().between("fecha", fecha_inicio, fecha_fin).findAll()
+        for (g in gastos_realm) {
+            gastos.add(g)
+        }
+        return gastos
     }
 
 

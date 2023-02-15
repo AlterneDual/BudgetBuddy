@@ -21,6 +21,7 @@ import java.util.Calendar
 import java.util.Locale
 import run.budgetbuddy.adapter.*
 import java.time.LocalDate
+import java.time.ZoneId
 
 class MgInfo : AppCompatActivity() {
     private lateinit var binding: MgInfoBinding
@@ -198,6 +199,29 @@ class MgInfo : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+
+                val today = java.util.Date.from(
+                    LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant()
+                )
+                val cal = Calendar.getInstance()
+                cal.time = today
+                cal.set(Calendar.DAY_OF_WEEK, cal.firstDayOfWeek)
+                val startOfWeek = cal.time
+                cal.add(Calendar.DAY_OF_WEEK, 6)
+                val endOfWeek = cal.time
+
+                lista_gastos = verInfoSemana(
+                    startOfWeek,
+                    endOfWeek
+                )
+
+                inicializarAdapter(lista_gastos)
+                var total: Double = 0.0;
+                for (l in lista_gastos) {
+                    total += l.importe;
+                }
+                binding.tvGastos.text = "-" + total.toString() + " €";
+
             }
 
             3 -> {
@@ -291,6 +315,12 @@ class MgInfo : AppCompatActivity() {
                 binding.tvAnho.setTextColor(white)
                 binding.tvAnho.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+                var total: Double = 0.0
+                for (l in lista_gastos) {
+                    total += l.importe;
+                }
+                binding.tvGastos.text = "-" + total.toString() + " €";
+
             }
 
             else -> println("Default")
@@ -315,7 +345,11 @@ class MgInfo : AppCompatActivity() {
         return nueva_lista
     }
 
-    fun verInfoSemana(fecha_inicio: Date, fecha_final: Date) {
+    fun verInfoSemana(
+        fecha_inicio: java.util.Date,
+        fecha_final: java.util.Date
+    ): MutableList<Gasto> {
+        return gc.getAllByDates(fecha_inicio, fecha_final)
 
     }
 
@@ -351,7 +385,12 @@ class MgInfo : AppCompatActivity() {
         return nueva_lista
     }
 
-    fun verInfoPeriodo(fecha_a: Date, fecha_b: Date) {
+    fun verInfoPeriodo(
+        fecha_inicio: java.util.Date,
+        fecha_final: java.util.Date
+    ): MutableList<Gasto> {
+        return gc.getAllByDates(fecha_inicio, fecha_final)
+
     }
 
     private fun showDatePicker() {
@@ -396,8 +435,20 @@ class MgInfo : AppCompatActivity() {
                                 start = format.format(startDate!!.time)
                                 end = format.format(endDate!!.time)
                             }
+
+                            lista_gastos = verInfoPeriodo(
+                                startDate!!.time,
+                                endDate!!.time
+                            )
+                            inicializarAdapter(lista_gastos)
+                            var total: Double = 0.0;
+                            for (l in lista_gastos) {
+                                total += l.importe;
+                            }
                             binding.tvResultadoFecha.text =
                                 ("${start.toString()} - ${end.toString()}")
+
+
                         }
                     },
                     selectedYear,
@@ -411,6 +462,8 @@ class MgInfo : AppCompatActivity() {
             dayOfMonth
         )
         startDatePicker.show()
+
+
     }
 
     private fun inicializarAdapter(lista_gastos: MutableList<Gasto>) {
