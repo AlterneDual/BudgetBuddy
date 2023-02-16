@@ -51,7 +51,6 @@ class MgInfo : AppCompatActivity() {
         binding.btnAtras.setOnClickListener {
             val intent = Intent(this, MgInicio::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.tvDia.setOnClickListener {

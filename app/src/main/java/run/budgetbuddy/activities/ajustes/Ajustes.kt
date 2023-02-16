@@ -34,10 +34,7 @@ class Ajustes : AppCompatActivity() {
         binding.btnMenu.setOnClickListener {
             val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
-            finish()
         }
-
-
     }
 
     private fun inicializarAdapter() {

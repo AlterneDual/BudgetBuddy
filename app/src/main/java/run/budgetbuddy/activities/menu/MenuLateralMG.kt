@@ -27,7 +27,6 @@ class MenuLateralMG : AppCompatActivity() {
         inicializarAdapter()
         abrirOpcion()
 
-
     }
 
     private fun inicializarAdapter() {
@@ -63,26 +62,22 @@ class MenuLateralMG : AppCompatActivity() {
                 0 -> {
                     val intent = Intent(this, MgInicio::class.java)
                     startActivity(intent)
-                    finish()
                 }
 
                 1 -> {
                     val intent = Intent(this, Categorias::class.java)
                     startActivity(intent)
-                    finish()
 
                 }
 
                 2 -> {
                     val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
-                    finish()
                 }
 
                 3 -> {
                     val intent = Intent(this, Ajustes::class.java)
                     startActivity(intent)
-                    finish()
 
                 }
 

@@ -27,7 +27,6 @@ class MgAnadirIngreso : AppCompatActivity() {
             val intent = Intent(this, MgAnadirGasto::class.java)
             startActivity(intent)
             overridePendingTransition(0, R.drawable.slide_out_right)
-            finish()
         }
 
         binding.btnAnadir.setOnClickListener {
@@ -39,13 +38,11 @@ class MgAnadirIngreso : AppCompatActivity() {
             ).show()
             val intent = Intent(this, MgInicioIngresos::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnAtras4.setOnClickListener {
             val intent = Intent(this, MgInicioIngresos::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnCalendario2.setOnClickListener {
@@ -99,7 +96,6 @@ class MgAnadirIngreso : AppCompatActivity() {
                 val intent = Intent(this@MgAnadirIngreso, MgAnadirGasto::class.java)
                 startActivity(intent)
                 overridePendingTransition(0, R.drawable.slide_out_right)
-                finish()
             }
             return true
         }

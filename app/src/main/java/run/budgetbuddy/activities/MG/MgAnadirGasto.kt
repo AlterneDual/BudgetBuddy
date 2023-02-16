@@ -102,16 +102,7 @@ class MgAnadirGasto : AppCompatActivity() {
             val intent = Intent(this, MgAnadirIngreso::class.java)
             startActivity(intent)
             overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
-            finish()
         }
-
-        etCantidad.setOnClickListener {
-            etCantidad.setText("")
-        }
-        descripttion.setOnClickListener {
-            descripttion.setText("")
-        }
-
 
         binding.btnAnadir.setOnClickListener {
 
@@ -134,7 +125,6 @@ class MgAnadirGasto : AppCompatActivity() {
                     ).show()
                     val intent = Intent(this, MgInicio::class.java)
                     startActivity(intent)
-                    finish()
                 } else {
                     Toast.makeText(
                         this,
@@ -158,7 +148,6 @@ class MgAnadirGasto : AppCompatActivity() {
         binding.btnAtras3.setOnClickListener {
             val intent = Intent(this, MgInicio::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnCalendario.setOnClickListener {
@@ -373,7 +362,6 @@ class MgAnadirGasto : AppCompatActivity() {
                 val intent = Intent(this@MgAnadirGasto, MgAnadirIngreso::class.java)
                 startActivity(intent)
                 overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
-                finish()
             }
             return true
         }
