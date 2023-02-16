@@ -9,7 +9,7 @@ open class UsuarioCRUD {
 
     var realm: Realm = Realm.getDefaultInstance()
 
-    //fun addUser(name : String, pss: String, email: String, rol: String, listaGastos: RealmList<Gasto>)
+
     fun addUser(usuario : Usuario) : Int{
         var key = getKey()
 
@@ -21,9 +21,7 @@ open class UsuarioCRUD {
             user.saldo = usuario.saldo
             user.listaGastos = usuario.listaGastos
 
-//            if(usuario.listaGastos!!.size <= 0){
-//                user.listaGastos = usuario.listaGastos
-//            }
+
             realm.insertOrUpdate(user)
         }
         return key
@@ -48,6 +46,13 @@ open class UsuarioCRUD {
 
         return realm.where(Usuario::class.java).equalTo("id",id).findFirst()
 
+    }
+
+    fun getUserByPassword(email: String, password: String): Usuario? {
+        return realm.where(Usuario::class.java)
+            .equalTo("email", email)
+            .equalTo("password", password)
+            .findFirst()
     }
 
 
