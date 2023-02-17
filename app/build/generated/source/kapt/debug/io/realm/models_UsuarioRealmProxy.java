@@ -47,7 +47,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
         long nombreColKey;
         long passwordColKey;
         long emailColKey;
-        long rolColKey;
+        long saldoColKey;
         long listaGastosColKey;
 
         UsuarioColumnInfo(OsSchemaInfo schemaInfo) {
@@ -57,7 +57,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
             this.nombreColKey = addColumnDetails("nombre", "nombre", objectSchemaInfo);
             this.passwordColKey = addColumnDetails("password", "password", objectSchemaInfo);
             this.emailColKey = addColumnDetails("email", "email", objectSchemaInfo);
-            this.rolColKey = addColumnDetails("rol", "rol", objectSchemaInfo);
+            this.saldoColKey = addColumnDetails("saldo", "saldo", objectSchemaInfo);
             this.listaGastosColKey = addColumnDetails("listaGastos", "listaGastos", objectSchemaInfo);
         }
 
@@ -79,7 +79,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
             dst.nombreColKey = src.nombreColKey;
             dst.passwordColKey = src.passwordColKey;
             dst.emailColKey = src.emailColKey;
-            dst.rolColKey = src.rolColKey;
+            dst.saldoColKey = src.saldoColKey;
             dst.listaGastosColKey = src.listaGastosColKey;
         }
     }
@@ -213,30 +213,24 @@ public class models_UsuarioRealmProxy extends models.Usuario
 
     @Override
     @SuppressWarnings("cast")
-    public String realmGet$rol() {
+    public double realmGet$saldo() {
         proxyState.getRealm$realm().checkIfValid();
-        return (java.lang.String) proxyState.getRow$realm().getString(columnInfo.rolColKey);
+        return (double) proxyState.getRow$realm().getDouble(columnInfo.saldoColKey);
     }
 
     @Override
-    public void realmSet$rol(String value) {
+    public void realmSet$saldo(double value) {
         if (proxyState.isUnderConstruction()) {
             if (!proxyState.getAcceptDefaultValue$realm()) {
                 return;
             }
             final Row row = proxyState.getRow$realm();
-            if (value == null) {
-                throw new IllegalArgumentException("Trying to set non-nullable field 'rol' to null.");
-            }
-            row.getTable().setString(columnInfo.rolColKey, row.getObjectKey(), value, true);
+            row.getTable().setDouble(columnInfo.saldoColKey, row.getObjectKey(), value, true);
             return;
         }
 
         proxyState.getRealm$realm().checkIfValid();
-        if (value == null) {
-            throw new IllegalArgumentException("Trying to set non-nullable field 'rol' to null.");
-        }
-        proxyState.getRow$realm().setString(columnInfo.rolColKey, value);
+        proxyState.getRow$realm().setDouble(columnInfo.saldoColKey, value);
     }
 
     @Override
@@ -306,7 +300,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
         builder.addPersistedProperty(NO_ALIAS, "nombre", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "password", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedProperty(NO_ALIAS, "email", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
-        builder.addPersistedProperty(NO_ALIAS, "rol", RealmFieldType.STRING, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
+        builder.addPersistedProperty(NO_ALIAS, "saldo", RealmFieldType.DOUBLE, !Property.PRIMARY_KEY, !Property.INDEXED, Property.REQUIRED);
         builder.addPersistedLinkProperty(NO_ALIAS, "listaGastos", RealmFieldType.LIST, "Gasto");
         return builder.build();
     }
@@ -387,11 +381,11 @@ public class models_UsuarioRealmProxy extends models.Usuario
                 objProxy.realmSet$email((String) json.getString("email"));
             }
         }
-        if (json.has("rol")) {
-            if (json.isNull("rol")) {
-                objProxy.realmSet$rol(null);
+        if (json.has("saldo")) {
+            if (json.isNull("saldo")) {
+                throw new IllegalArgumentException("Trying to set non-nullable field 'saldo' to null.");
             } else {
-                objProxy.realmSet$rol((String) json.getString("rol"));
+                objProxy.realmSet$saldo((double) json.getDouble("saldo"));
             }
         }
         if (json.has("listaGastos")) {
@@ -449,12 +443,12 @@ public class models_UsuarioRealmProxy extends models.Usuario
                     reader.skipValue();
                     objProxy.realmSet$email(null);
                 }
-            } else if (name.equals("rol")) {
+            } else if (name.equals("saldo")) {
                 if (reader.peek() != JsonToken.NULL) {
-                    objProxy.realmSet$rol((String) reader.nextString());
+                    objProxy.realmSet$saldo((double) reader.nextDouble());
                 } else {
                     reader.skipValue();
-                    objProxy.realmSet$rol(null);
+                    throw new IllegalArgumentException("Trying to set non-nullable field 'saldo' to null.");
                 }
             } else if (name.equals("listaGastos")) {
                 if (reader.peek() == JsonToken.NULL) {
@@ -543,7 +537,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
         builder.addString(columnInfo.nombreColKey, unmanagedSource.realmGet$nombre());
         builder.addString(columnInfo.passwordColKey, unmanagedSource.realmGet$password());
         builder.addString(columnInfo.emailColKey, unmanagedSource.realmGet$email());
-        builder.addString(columnInfo.rolColKey, unmanagedSource.realmGet$rol());
+        builder.addDouble(columnInfo.saldoColKey, unmanagedSource.realmGet$saldo());
 
         // Create the underlying object and cache it before setting any object/objectlist references
         // This will allow us to break any circular dependencies by using the object cache.
@@ -601,10 +595,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
         if (realmGet$email != null) {
             Table.nativeSetString(tableNativePtr, columnInfo.emailColKey, objKey, realmGet$email, false);
         }
-        String realmGet$rol = ((models_UsuarioRealmProxyInterface) object).realmGet$rol();
-        if (realmGet$rol != null) {
-            Table.nativeSetString(tableNativePtr, columnInfo.rolColKey, objKey, realmGet$rol, false);
-        }
+        Table.nativeSetDouble(tableNativePtr, columnInfo.saldoColKey, objKey, ((models_UsuarioRealmProxyInterface) object).realmGet$saldo(), false);
 
         RealmList<models.Gasto> listaGastosList = ((models_UsuarioRealmProxyInterface) object).realmGet$listaGastos();
         if (listaGastosList != null) {
@@ -658,10 +649,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
             if (realmGet$email != null) {
                 Table.nativeSetString(tableNativePtr, columnInfo.emailColKey, objKey, realmGet$email, false);
             }
-            String realmGet$rol = ((models_UsuarioRealmProxyInterface) object).realmGet$rol();
-            if (realmGet$rol != null) {
-                Table.nativeSetString(tableNativePtr, columnInfo.rolColKey, objKey, realmGet$rol, false);
-            }
+            Table.nativeSetDouble(tableNativePtr, columnInfo.saldoColKey, objKey, ((models_UsuarioRealmProxyInterface) object).realmGet$saldo(), false);
 
             RealmList<models.Gasto> listaGastosList = ((models_UsuarioRealmProxyInterface) object).realmGet$listaGastos();
             if (listaGastosList != null) {
@@ -712,12 +700,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
         } else {
             Table.nativeSetNull(tableNativePtr, columnInfo.emailColKey, objKey, false);
         }
-        String realmGet$rol = ((models_UsuarioRealmProxyInterface) object).realmGet$rol();
-        if (realmGet$rol != null) {
-            Table.nativeSetString(tableNativePtr, columnInfo.rolColKey, objKey, realmGet$rol, false);
-        } else {
-            Table.nativeSetNull(tableNativePtr, columnInfo.rolColKey, objKey, false);
-        }
+        Table.nativeSetDouble(tableNativePtr, columnInfo.saldoColKey, objKey, ((models_UsuarioRealmProxyInterface) object).realmGet$saldo(), false);
 
         OsList listaGastosOsList = new OsList(table.getUncheckedRow(objKey), columnInfo.listaGastosColKey);
         RealmList<models.Gasto> listaGastosList = ((models_UsuarioRealmProxyInterface) object).realmGet$listaGastos();
@@ -790,12 +773,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
             } else {
                 Table.nativeSetNull(tableNativePtr, columnInfo.emailColKey, objKey, false);
             }
-            String realmGet$rol = ((models_UsuarioRealmProxyInterface) object).realmGet$rol();
-            if (realmGet$rol != null) {
-                Table.nativeSetString(tableNativePtr, columnInfo.rolColKey, objKey, realmGet$rol, false);
-            } else {
-                Table.nativeSetNull(tableNativePtr, columnInfo.rolColKey, objKey, false);
-            }
+            Table.nativeSetDouble(tableNativePtr, columnInfo.saldoColKey, objKey, ((models_UsuarioRealmProxyInterface) object).realmGet$saldo(), false);
 
             OsList listaGastosOsList = new OsList(table.getUncheckedRow(objKey), columnInfo.listaGastosColKey);
             RealmList<models.Gasto> listaGastosList = ((models_UsuarioRealmProxyInterface) object).realmGet$listaGastos();
@@ -850,7 +828,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
         unmanagedCopy.realmSet$nombre(realmSource.realmGet$nombre());
         unmanagedCopy.realmSet$password(realmSource.realmGet$password());
         unmanagedCopy.realmSet$email(realmSource.realmGet$email());
-        unmanagedCopy.realmSet$rol(realmSource.realmGet$rol());
+        unmanagedCopy.realmSet$saldo(realmSource.realmGet$saldo());
 
         // Deep copy of listaGastos
         if (currentDepth == maxDepth) {
@@ -879,7 +857,7 @@ public class models_UsuarioRealmProxy extends models.Usuario
         builder.addString(columnInfo.nombreColKey, realmObjectSource.realmGet$nombre());
         builder.addString(columnInfo.passwordColKey, realmObjectSource.realmGet$password());
         builder.addString(columnInfo.emailColKey, realmObjectSource.realmGet$email());
-        builder.addString(columnInfo.rolColKey, realmObjectSource.realmGet$rol());
+        builder.addDouble(columnInfo.saldoColKey, realmObjectSource.realmGet$saldo());
 
         RealmList<models.Gasto> listaGastosUnmanagedList = realmObjectSource.realmGet$listaGastos();
         if (listaGastosUnmanagedList != null) {

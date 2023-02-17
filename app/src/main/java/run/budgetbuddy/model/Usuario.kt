@@ -21,7 +21,7 @@ open class Usuario(): RealmObject() {
 
     var email : String = ""
 
-    var rol : String = ""
+    var saldo : Double = 0.0
 
     var listaGastos : RealmList<Gasto>? = RealmList<Gasto>()
 
@@ -40,6 +40,6 @@ open class Usuario(): RealmObject() {
 
 
     override fun toString(): String {
-        return "USER: ID: $id, NOMBRE: $nombre, PASS: $password, GASTOS: $listaGastos"
+        return "USER: ID: $id, NOMBRE: $nombre, PASS: $password, SALDO: $saldo"
     }
 }

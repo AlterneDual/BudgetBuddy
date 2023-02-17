@@ -18,7 +18,7 @@ open class UsuarioCRUD {
             user.nombre = usuario.nombre
             user.password = usuario.password
             user.email = usuario.email
-            user.rol = usuario.rol
+            user.saldo = usuario.saldo
             user.listaGastos = usuario.listaGastos
 
 //            if(usuario.listaGastos!!.size <= 0){
@@ -51,25 +51,27 @@ open class UsuarioCRUD {
     }
 
 
-    fun updateUser(id: Int, new_name: String?, new_pass: String?, new_email: String?, new_rol: String?, new_listaGastos: RealmList<Gasto>?){
-        var usuario = getUser(id)
-        realm.executeTransaction{
-            if(new_name != null){
-                usuario?.nombre = new_name
+    fun updateUser(usuario: Usuario){
+
+        realm.executeTransaction{ r:Realm  ->
+            var user = getUser(usuario.id)
+
+            if(usuario.nombre != null){
+                user!!.nombre = usuario.nombre
             }
-            if(new_pass != null) {
-                usuario?.password = new_pass
+            if(usuario.password != null) {
+                user!!.password = usuario.password
             }
-            if(new_email != null) {
-                usuario?.email = new_email
+            if(usuario.email != null) {
+                user!!.email = usuario.email
             }
-            if(new_rol != null) {
-                usuario?.rol = new_rol
+            if(usuario.saldo != null) {
+                user!!.saldo = usuario.saldo
             }
-            if(new_listaGastos != null) {
-                usuario?.listaGastos = new_listaGastos
+            if(usuario.listaGastos != null) {
+                user!!.listaGastos = usuario.listaGastos
             }
-            realm.insertOrUpdate(usuario)
+            realm.insertOrUpdate(user)
         }
     }
 

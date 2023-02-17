@@ -50,28 +50,23 @@ open class IngresoCRUD {
 
     }
 
-    fun updateingreso(
-        id: Int,
-        new_importe: Double?,
-        new_fecha: Date?,
-        new_desc: String?,
-        new_divisa: Divisa?
-    ) {
-        var ingreso = getingreso(id)
+    fun updateingreso(ingreso: Ingreso) {
+
+        var ing = getingreso(ingreso.id)
         realm.executeTransaction {
-            if (new_importe != null) {
-                ingreso?.importe = new_importe
+            if (ingreso!!.importe != null) {
+                ing?.importe = ingreso!!.importe
             }
-            if (new_fecha != null) {
-                ingreso?.fecha = new_fecha
+            if (ingreso.fecha != null) {
+                ing?.fecha = ingreso.fecha
             }
-            if (new_desc != null) {
-                ingreso?.descripcion = new_desc
+            if (ingreso.descripcion != null) {
+                ing?.descripcion = ingreso.descripcion
             }
-            if (new_divisa != null) {
-                ingreso?.divisa = new_divisa
+            if (ingreso.divisa != null) {
+                ing?.divisa = ingreso.divisa
             }
-            realm.insertOrUpdate(ingreso)
+            realm.insertOrUpdate(ing)
         }
     }
 

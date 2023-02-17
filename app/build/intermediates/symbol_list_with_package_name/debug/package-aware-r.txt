@@ -3858,6 +3858,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu context_menu
+menu context_menu2
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
@@ -3912,6 +3913,7 @@ string diario
 string divisa
 string editar_categorias
 string editar_perfil
+string eliminar
 string eliminarDatos
 string email
 string error_a11y_label

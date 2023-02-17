@@ -46,28 +46,23 @@ open class DivisaCRUD {
 
     }
 
-    fun updateDivisa(
-        id: Int,
-        new_nombre: String?,
-        new_simbolo: String?,
-        new_divOrigen: String?,
-        new_divDestino: String?
-    ) {
-        var divisa = getDivisa(id)
+    fun updateDivisa(divisa: Divisa) {
+
+        var div = getDivisa(divisa.id)
         realm.executeTransaction {
-            if (new_nombre != null) {
-                divisa?.nombre = new_nombre
+            if (divisa.nombre != null) {
+                div?.nombre = divisa.nombre
             }
-            if (new_simbolo != null) {
-                divisa?.simbolo = new_simbolo
+            if (divisa.simbolo != null) {
+                div?.simbolo = divisa.simbolo
             }
-            if (new_divOrigen != null) {
-                divisa?.divOrigen = new_divOrigen
+            if (divisa.divOrigen != null) {
+                div?.divOrigen = divisa.divOrigen
             }
-            if (new_divDestino != null) {
-                divisa?.divDestino = new_divDestino
+            if (divisa.divOrigen != null) {
+                div?.divDestino = divisa.divOrigen
             }
-            realm.insertOrUpdate(divisa)
+            realm.insertOrUpdate(div)
         }
     }
 
