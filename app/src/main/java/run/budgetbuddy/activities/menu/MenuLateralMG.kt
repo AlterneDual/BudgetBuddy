@@ -11,7 +11,10 @@ import models.ItemGenerico
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.ajustes.Ajustes
 import run.budgetbuddy.activities.MG.MgInicio
+import run.budgetbuddy.activities.app.Register
 import run.budgetbuddy.activities.categoria.Categorias
+import run.budgetbuddy.activities.profile.CheckProfile
+import run.budgetbuddy.activities.profile.EditProfile
 
 class MenuLateralMG : AppCompatActivity() {
 
@@ -48,7 +51,7 @@ class MenuLateralMG : AppCompatActivity() {
             ItemGenerico("Editar Categorias", "", R.drawable.editar),
             ItemGenerico("Divisa", "", R.drawable.divisa),
             ItemGenerico("Ajustes", "", R.drawable.ajustes),
-            ItemGenerico("Grupal", "", R.drawable.group)
+            ItemGenerico("Registro", "", R.drawable.group)
 
         )
 
@@ -88,9 +91,9 @@ class MenuLateralMG : AppCompatActivity() {
                 }
 
                 4 -> {
-//                    val intent = Intent(this, MenuLateral3G::class.java)
-//                    startActivity(intent)
-//                    finish()
+                   val intent = Intent(this, Register::class.java)
+                  startActivity(intent)
+                   finish()
 
                 }
 
