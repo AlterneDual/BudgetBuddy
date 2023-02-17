@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.menu.MenuLateralMG
@@ -27,20 +28,17 @@ class MgInicioIngresos : AppCompatActivity() {
             val intent = Intent(this, MgInicio::class.java)
             startActivity(intent)
             overridePendingTransition(0, R.drawable.slide_out_right)
-            finish()
         }
 
         var btnAnadirIngreso = binding.btnAddGroup3
         btnAnadirIngreso.setOnClickListener {
             val intent = Intent(this, MgAnadirIngreso::class.java)
             startActivity(intent)
-            finish()
         }
         var btnAjustes = binding.btnMenu2
         btnAjustes.setOnClickListener {
             val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.tvDia.setOnClickListener {
@@ -83,7 +81,6 @@ class MgInicioIngresos : AppCompatActivity() {
         binding.butInfo.setOnClickListener {
             val intent = Intent(this, MgInfo::class.java)
             startActivity(intent)
-            finish()
         }
     }
 

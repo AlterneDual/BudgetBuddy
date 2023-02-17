@@ -46,16 +46,11 @@ class Login : AppCompatActivity() {
         binding.btnMenu1.setOnClickListener {
             val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnRegistrar.setOnClickListener {
             val intent = Intent(this, Register::class.java)
             startActivity(intent)
-            finish()
         }
-
-
-
     }
 }

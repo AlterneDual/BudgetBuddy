@@ -62,34 +62,26 @@ class MenuLateral3G : AppCompatActivity() {
                 0 -> {
                     val intent = Intent(this, Principal3G::class.java)
                     startActivity(intent)
-                    finish()
                 }
 
                 1 -> {
                     val intent = Intent(this, Categorias::class.java)
                     startActivity(intent)
-                    finish()
-
                 }
 
                 2 -> {
                     val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
-                    finish()
                 }
 
                 3 -> {
                     val intent = Intent(this, Ajustes::class.java)
                     startActivity(intent)
-                    finish()
-
                 }
 
                 4 -> {
                     val intent = Intent(this, MenuLateralMG::class.java)
                     startActivity(intent)
-                    finish()
-
                 }
 
             }

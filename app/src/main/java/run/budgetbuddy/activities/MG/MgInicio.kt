@@ -8,6 +8,12 @@ import android.graphics.Paint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.GestureDetector
+import android.view.MotionEvent
+import android.widget.LinearLayout
+import android.widget.TextView
+import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.animation.Easing
@@ -42,14 +48,19 @@ class MgInicio : AppCompatActivity() {
     var gc = GastoCRUD()
     private var seleccionado: Int = 0;
     private lateinit var gestos: GestureDetector
+    private lateinit var listaCategorias: MutableList<Categoria>
+    var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
+
+
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
         check()
+        listaCategorias = crearCategorias()
+        rellenar_bd_categorias()
         gestos = GestureDetector(this, EscuchaGestos())
 
         var btnIngresos = binding.tvIngresos
@@ -57,20 +68,17 @@ class MgInicio : AppCompatActivity() {
             val intent = Intent(this, MgInicioIngresos::class.java)
             startActivity(intent)
             overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
-            finish()
         }
         var btnAnadirGasto = binding.btnAddGroup2
         btnAnadirGasto.setOnClickListener {
             btnAnadirGasto.setBackgroundColor(Color.parseColor("#FFFFFF"))
             val intent = Intent(this, MgAnadirGasto::class.java)
             startActivity(intent)
-            finish()
         }
         var btnAjustes = binding.btnMenu1
         btnAjustes.setOnClickListener {
             val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.tvDia.setOnClickListener {
@@ -99,8 +107,9 @@ class MgInicio : AppCompatActivity() {
         binding.butInfo.setOnClickListener {
             val intent = Intent(this, MgInfo::class.java)
             startActivity(intent)
-            finish()
         }
+
+
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -590,8 +599,33 @@ class MgInicio : AppCompatActivity() {
         startDatePicker.show()
     }
 
+    private fun crearCategorias(): MutableList<Categoria> {
 
+        val listaCategorias = mutableListOf<Categoria>(
 
+            Categoria("Avion", R.drawable.circulo_naranja, R.drawable.cat_avion),
+            Categoria("Cine", R.drawable.circulo_verde, R.drawable.cat_cine),
+            Categoria("Bolos", R.drawable.circulo_rojo, R.drawable.cat_bolos),
+            Categoria("Coctel", R.drawable.circulo_amarillo, R.drawable.cat_coctel),
+            Categoria("Compras", R.drawable.circulo_turquesa, R.drawable.cat_compras),
+            Categoria("Hotele", R.drawable.circulo_celeste, R.drawable.cat_hotel),
+            Categoria("Limpieza", R.drawable.circulo_azul, R.drawable.cat_limpieza),
+            Categoria("Regalos", R.drawable.circulo_rosa, R.drawable.cat_regalo),
+            Categoria("Restaurante", R.drawable.circulo_celeste, R.drawable.cat_restaurante),
+            Categoria("Videojuegos", R.drawable.circulo_naranja, R.drawable.cat_videojuego)
+
+        )
+
+        return listaCategorias
+    }
+
+    private fun rellenar_bd_categorias(){
+        if(categoriaCRUD.getAllCategoria().isEmpty()){
+            for(categoria in listaCategorias){
+                categoriaCRUD.addCategoria(categoria)
+            }
+        }
+    }
 
 
 }

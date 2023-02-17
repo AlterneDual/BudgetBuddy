@@ -147,7 +147,6 @@ class CrearCategoria : AppCompatActivity() {
 
                 val intent = Intent(this, Categorias::class.java)
                 startActivity(intent)
-                finish()
             } else {
                 Toast.makeText(
                     this,
@@ -160,7 +159,6 @@ class CrearCategoria : AppCompatActivity() {
         binding.btnAtras.setOnClickListener {
             val intent = Intent(this, Categorias::class.java)
             startActivity(intent)
-            finish()
         }
     }
 

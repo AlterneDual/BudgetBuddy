@@ -25,14 +25,10 @@ class Categorias : AppCompatActivity() {
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
     private var posicion: Int = 0
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = CategoriasBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        listaCategorias = crearCategorias()
-        rellenar_bd_categorias()
 
         listaCategorias = categoriaCRUD.getAllCategoria()
         inicializarAdapter()
@@ -40,13 +36,11 @@ class Categorias : AppCompatActivity() {
         binding.btnAddCategoria2.setOnClickListener {
             val intent = Intent(this, CrearCategoria::class.java)
             startActivity(intent)
-            finish()
         }
 
         binding.btnAtras1.setOnClickListener {
             val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
-            finish()
         }
 
     }
@@ -54,8 +48,7 @@ class Categorias : AppCompatActivity() {
     private fun inicializarAdapter() {
 
         grid_view = binding.GVCategoria
-        adapterList =
-            myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
+        adapterList = myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
         grid_view.adapter = adapterList
         registerForContextMenu(grid_view)
     }
@@ -96,9 +89,9 @@ class Categorias : AppCompatActivity() {
         }
     }
 
-    private fun rellenar_bd_categorias() {
-        if (categoriaCRUD.getAllCategoria().isEmpty()) {
-            for (categoria in listaCategorias) {
+    private fun rellenar_bd_categorias(){
+        if(categoriaCRUD.getAllCategoria().isEmpty()){
+            for(categoria in listaCategorias){
                 categoriaCRUD.addCategoria(categoria)
             }
         }
@@ -129,8 +122,7 @@ class Categorias : AppCompatActivity() {
                     { dialogInterface, i ->
                         categoriaCRUD.deleteCategoria(listaCategorias[posicion!!].id)
                         adapterList.notifyDataSetChanged()
-                        recargarBDD()
-                    }
+                        recargarBDD()}
                     .setNegativeButton("CANCELAR") { dialogInterface, i -> dialogInterface.cancel() }
                     .create()
                 dialogo.show()

@@ -63,13 +63,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".activities.categoria.AddCategoria"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name=".activities.categoria.Categorias"
             android:exported="false">
             <meta-data

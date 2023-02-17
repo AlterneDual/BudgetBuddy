@@ -88,7 +88,6 @@ class MgAnadirIngreso : AppCompatActivity() {
             val intent = Intent(this, MgAnadirGasto::class.java)
             startActivity(intent)
             overridePendingTransition(0, R.drawable.slide_out_right)
-            finish()
         }
 
         binding.etComentario1.setOnClickListener {
@@ -326,7 +325,6 @@ class MgAnadirIngreso : AppCompatActivity() {
                 val intent = Intent(this@MgAnadirIngreso, MgAnadirGasto::class.java)
                 startActivity(intent)
                 overridePendingTransition(0, R.drawable.slide_out_right)
-                finish()
             }
             return true
         }
