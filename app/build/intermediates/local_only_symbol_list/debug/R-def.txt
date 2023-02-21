@@ -95,6 +95,7 @@ drawable pantallainicial
 drawable pantallamygroup
 drawable plus_button
 drawable previous
+drawable rectangulo
 drawable rounded_corner
 drawable saldo
 drawable saldo_blanco
@@ -188,6 +189,7 @@ id custom_list
 id descripcion_grupo
 id descriptionText
 id divider
+id drawer_layout
 id eliminar
 id etCantidad
 id etCantidad2
@@ -224,6 +226,8 @@ id icCategoriaA2
 id icPerfil
 id imageView11
 id imageView12
+id imageView2
+id imageView3
 id imageView8
 id imageViewA
 id imageViewA2
@@ -254,6 +258,12 @@ id list_view
 id lista_categorias
 id lista_gastos
 id lvInicioGastos
+id nav_ajustes
+id nav_cerrar_sesion
+id nav_divisa
+id nav_edit_cat
+id nav_home
+id nav_view
 id nombreCategoria
 id nuevoGrupo
 id optionsGrupo
@@ -277,6 +287,7 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textView7
 id textView8
 id textViewA
 id textViewA2
@@ -284,6 +295,7 @@ id textViewB2
 id textViewB6
 id textViewN
 id textViewN2
+id third_section
 id titulo_grupo
 id toolbar
 id toolbar2
@@ -387,11 +399,14 @@ layout mg_info_gasto_ingreso_row_ingreso
 layout mg_inicio_gastos
 layout mg_inicio_ingresos
 layout mg_row_lista_gasto
+layout n_nav_header_main
 layout register
 menu context_menu
 menu context_menu2
+menu nav_view_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+string Home
 string aceptar
 string ajustes
 string anual
@@ -399,6 +414,7 @@ string aplicarCambios
 string app_name
 string borrar_datos
 string cancelar
+string cerrar_sesion
 string dia
 string diario
 string divisa
@@ -419,6 +435,8 @@ string ingresos_underline
 string inicio
 string mensual
 string my_gestor
+string navigation_drawer_close
+string navigation_drawer_open
 string noche
 string nombre1
 string nombre2

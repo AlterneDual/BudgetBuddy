@@ -32,6 +32,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.BudgetBuddy" >
         <activity
+            android:name="run.budgetbuddy.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name="run.budgetbuddy.activities.MG.MgInicio"
             android:exported="true"
             android:theme="@style/Theme.BudgetBuddy" >
@@ -75,13 +78,6 @@
         </activity>
         <activity
             android:name="run.budgetbuddy.activities.MG.MgInfo"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.categoria.AddCategoria"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"

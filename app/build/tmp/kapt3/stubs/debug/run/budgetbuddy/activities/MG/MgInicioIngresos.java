@@ -11,13 +11,13 @@ public final class MgInicioIngresos extends androidx.appcompat.app.AppCompatActi
         super();
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
-    @java.lang.Override
-    public boolean onTouchEvent(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    public boolean onTouchEvent(@org.jetbrains.annotations.Nullable()
     android.view.MotionEvent event) {
         return false;
     }
@@ -29,9 +29,9 @@ public final class MgInicioIngresos extends androidx.appcompat.app.AppCompatActi
             super();
         }
         
-        @java.lang.Override
-        public boolean onFling(@org.jetbrains.annotations.NotNull
-        android.view.MotionEvent e1, @org.jetbrains.annotations.NotNull
+        @java.lang.Override()
+        public boolean onFling(@org.jetbrains.annotations.NotNull()
+        android.view.MotionEvent e1, @org.jetbrains.annotations.NotNull()
         android.view.MotionEvent e2, float velocityX, float velocityY) {
             return false;
         }

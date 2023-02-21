@@ -2886,6 +2886,7 @@ drawable pantallainicial
 drawable pantallamygroup
 drawable plus_button
 drawable previous
+drawable rectangulo
 drawable rounded_corner
 drawable saldo
 drawable saldo_blanco
@@ -3147,6 +3148,7 @@ id dragLeft
 id dragRight
 id dragStart
 id dragUp
+id drawer_layout
 id dropdown_menu
 id easeIn
 id easeInOut
@@ -3235,6 +3237,8 @@ id ignoreRequest
 id image
 id imageView11
 id imageView12
+id imageView2
+id imageView3
 id imageView8
 id imageViewA
 id imageViewA2
@@ -3345,6 +3349,12 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id nav_ajustes
+id nav_cerrar_sesion
+id nav_divisa
+id nav_edit_cat
+id nav_home
+id nav_view
 id navigation_bar_item_active_indicator_view
 id navigation_bar_item_icon_container
 id navigation_bar_item_icon_view
@@ -3515,6 +3525,7 @@ id textView3
 id textView4
 id textView5
 id textView6
+id textView7
 id textView8
 id textViewA
 id textViewA2
@@ -3531,6 +3542,7 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
+id third_section
 id time
 id title
 id titleDividerNoCustom
@@ -3846,6 +3858,7 @@ layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
 layout mtrl_search_bar
 layout mtrl_search_view
+layout n_nav_header_main
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -3859,9 +3872,11 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu context_menu
 menu context_menu2
+menu nav_view_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string Home
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -3904,6 +3919,7 @@ string bottomsheet_action_expand_halfway
 string bottomsheet_drag_handle_clicked
 string bottomsheet_drag_handle_content_description
 string cancelar
+string cerrar_sesion
 string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
@@ -4031,6 +4047,8 @@ string mtrl_switch_track_path
 string mtrl_timepicker_cancel
 string mtrl_timepicker_confirm
 string my_gestor
+string navigation_drawer_close
+string navigation_drawer_open
 string noche
 string nombre1
 string nombre2
