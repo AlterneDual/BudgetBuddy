@@ -1,5 +1,6 @@
 package run.budgetbuddy.activities.MG
 
+import CRUD.CategoriaCRUD
 import CRUD.GastoCRUD
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -10,10 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.MotionEvent
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.animation.Easing
@@ -35,8 +32,6 @@ import java.util.Calendar
 import java.util.Locale
 import android.graphics.Typeface
 import android.view.*
-import android.widget.AdapterView
-import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import java.time.ZoneId
 
@@ -71,7 +66,6 @@ class MgInicio : AppCompatActivity() {
         }
         var btnAnadirGasto = binding.btnAddGroup2
         btnAnadirGasto.setOnClickListener {
-            btnAnadirGasto.setBackgroundColor(Color.parseColor("#FFFFFF"))
             val intent = Intent(this, MgAnadirGasto::class.java)
             startActivity(intent)
         }
@@ -603,16 +597,16 @@ class MgInicio : AppCompatActivity() {
 
         val listaCategorias = mutableListOf<Categoria>(
 
-            Categoria("Avion", R.drawable.circulo_naranja, R.drawable.cat_avion),
-            Categoria("Cine", R.drawable.circulo_verde, R.drawable.cat_cine),
-            Categoria("Bolos", R.drawable.circulo_rojo, R.drawable.cat_bolos),
-            Categoria("Coctel", R.drawable.circulo_amarillo, R.drawable.cat_coctel),
-            Categoria("Compras", R.drawable.circulo_turquesa, R.drawable.cat_compras),
-            Categoria("Hotele", R.drawable.circulo_celeste, R.drawable.cat_hotel),
-            Categoria("Limpieza", R.drawable.circulo_azul, R.drawable.cat_limpieza),
-            Categoria("Regalos", R.drawable.circulo_rosa, R.drawable.cat_regalo),
-            Categoria("Restaurante", R.drawable.circulo_celeste, R.drawable.cat_restaurante),
-            Categoria("Videojuegos", R.drawable.circulo_naranja, R.drawable.cat_videojuego)
+            Categoria("Avion", R.drawable.circulo_naranja, R.drawable.cat_avion, "#FF9D0A"),
+            Categoria("Cine", R.drawable.circulo_verde, R.drawable.cat_cine, "#2ACD1B"),
+            Categoria("Bolos", R.drawable.circulo_rojo, R.drawable.cat_bolos, "#EF5757"),
+            Categoria("Coctel", R.drawable.circulo_amarillo, R.drawable.cat_coctel, "#F4D35E"),
+            Categoria("Compras", R.drawable.circulo_turquesa, R.drawable.cat_compras, "#00ffff"),
+            Categoria("Hotele", R.drawable.circulo_celeste, R.drawable.cat_hotel, "##97b5fe"),
+            Categoria("Limpieza", R.drawable.circulo_azul, R.drawable.cat_limpieza, "#010efe"),
+            Categoria("Regalos", R.drawable.circulo_rosa, R.drawable.cat_regalo, "#f610fe"),
+            Categoria("Restaurante", R.drawable.circulo_celeste,R.drawable.cat_restaurante,"#97b5fe"),
+            Categoria("Videojuegos",R.drawable.circulo_naranja,R.drawable.cat_videojuego,"#FF9D0A")
 
         )
 
