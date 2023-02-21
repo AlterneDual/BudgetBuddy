@@ -30,21 +30,21 @@
                 android:layout_gravity="center">
 
                 <RadioButton
-                    android:id="@+id/rbDiario"
+                    android:id="@+id/rbEspañol"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:minHeight="48dp"
-                    android:text="Español"
+                    android:text="@string/español"
                     android:textSize="24dp" />
 
                 <RadioButton
-                    android:id="@+id/tbSemanal"
+                    android:id="@+id/rbEnglish"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:minHeight="48dp"
-                    android:text="English"
+                    android:text="@string/english"
                     android:textSize="24dp" />
 
                 <RadioButton
@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:minHeight="48dp"
-                    android:text="Français"
+                    android:text="@string/fran_ais"
                     android:textSize="24dp" />
 
                 <RadioButton
@@ -62,7 +62,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="5dp"
                     android:minHeight="48dp"
-                    android:text="Deutsche"
+                    android:text="@string/deutsche"
                     android:textSize="24dp" />
 
                 <RadioButton
@@ -71,13 +71,13 @@
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="10dp"
                     android:minHeight="48dp"
-                    android:text="Português"
+                    android:text="@string/portugu_s"
                     android:textSize="24dp" />
 
             </RadioGroup>
 
             <Button
-                android:id="@+id/btnAceptar"
+                android:id="@+id/btnAceptarr"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_marginBottom="5dp"

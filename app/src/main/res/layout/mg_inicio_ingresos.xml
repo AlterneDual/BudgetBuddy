@@ -59,7 +59,7 @@
             android:layout_width="55dp"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:text="Día"
+            android:text="@string/dia"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
@@ -69,7 +69,7 @@
             android:layout_width="58dp"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:text="Semana"
+            android:text="@string/semana"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
@@ -79,7 +79,7 @@
             android:layout_width="58dp"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:text="Mes"
+            android:text="@string/mes"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
@@ -99,7 +99,7 @@
             android:layout_width="58dp"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:text="Periodo"
+            android:text="@string/periodo"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textStyle="bold" />
@@ -174,7 +174,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_weight="1"
-        android:text="Saldo Restante"
+        android:text="@string/saldo_restante"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"

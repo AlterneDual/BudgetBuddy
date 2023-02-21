@@ -1,16 +1,21 @@
 package run.budgetbuddy.activities.ajustes
 
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.app.AlertDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ListView
+import android.widget.RadioButton
+import android.widget.Toast
 import models.ItemGenerico
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.adapter.myListAdapter
 import run.budgetbuddy.databinding.ActivityAjustesBinding
+import java.util.*
 
 class Ajustes : AppCompatActivity() {
 
@@ -35,6 +40,7 @@ class Ajustes : AppCompatActivity() {
             val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
         }
+
     }
 
     private fun inicializarAdapter() {
@@ -50,17 +56,11 @@ class Ajustes : AppCompatActivity() {
         val listaAjustes = mutableListOf<ItemGenerico>(
 
             ItemGenerico("Idioma", "Español", R.drawable.idioma),
-            ItemGenerico("Periodo por defecto", "Semanal", R.drawable.calendario),
-            ItemGenerico("Redondeo", "Sin redondear", R.drawable.decimal),
             ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
             ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
             ItemGenerico("Pantalla inicial MyGestor", "Semanal", R.drawable.group),
-            ItemGenerico(
-                "Eliminar datos", "Borrar todos los datos", R.drawable.eliminar
-            )
-
+            ItemGenerico("Eliminar datos", "Borrar todos los datos", R.drawable.eliminar)
         )
-
         return listaAjustes
     }
 
@@ -74,9 +74,35 @@ class Ajustes : AppCompatActivity() {
                 0 -> {
                     val builder = AlertDialog.Builder(this)
                     val inflater = layoutInflater
-                    builder.setView(inflater.inflate(R.layout.dialog_idioma, null))
+                    val dialogLayout = inflater.inflate(R.layout.dialog_idioma, null)
+                    builder.setView(dialogLayout)
+                    val dialog = builder.create()
 
-                    builder.show()
+                    val btnEspañol = dialogLayout.findViewById<RadioButton>(R.id.rbEspañol)
+                    val btnIngles = dialogLayout.findViewById<RadioButton>(R.id.rbEnglish)
+                    val btnAceptar = dialogLayout.findViewById<Button>(R.id.btnAceptarr)
+                    val btnCancelar = dialogLayout.findViewById<Button>(R.id.btnCancelar)
+                    btnAceptar.setOnClickListener{
+                        if(btnEspañol.isChecked){
+                            val toast = Toast.makeText(applicationContext, "Español seleccionado", Toast.LENGTH_SHORT)
+                            toast.show()
+                            setLocale(this, "es")
+                            finish()
+                            startActivity(intent)
+
+                        }else if(btnIngles.isChecked){
+                            val toast = Toast.makeText(applicationContext, "Ingles seleccionado", Toast.LENGTH_SHORT)
+                            toast.show()
+                            setLocale(this, "en")
+                            finish()
+                            startActivity(intent)
+                        }
+                        dialog.dismiss()
+                    }
+                    btnCancelar.setOnClickListener{
+                        dialog.dismiss()
+                    }
+                    dialog.show()
                 }
 
                 1 -> {
@@ -131,5 +157,14 @@ class Ajustes : AppCompatActivity() {
             }
         }
         registerForContextMenu(list_view)
+    }
+
+    fun setLocale(activity: Activity, langCode: String) {
+        val locale = Locale(langCode)
+        Locale.setDefault(locale)
+        val resources = activity.resources
+        val configuration = resources.configuration
+        configuration.setLocale(locale)
+        resources.updateConfiguration(configuration, resources.displayMetrics)
     }
 }

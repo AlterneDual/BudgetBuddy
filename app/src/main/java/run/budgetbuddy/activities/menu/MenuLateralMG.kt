@@ -4,17 +4,14 @@ import adapter.myListAdapter_menu_Lateral
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
 import android.widget.ListView
+import run.budgetbuddy.activities.ajustes.Ajustes
 import run.budgetbuddy.activities.divisa.Divisas
 import models.ItemGenerico
 import run.budgetbuddy.R
-import run.budgetbuddy.activities.ajustes.Ajustes
 import run.budgetbuddy.activities.MG.MgInicio
 import run.budgetbuddy.activities.app.Register
 import run.budgetbuddy.activities.categoria.Categorias
-import run.budgetbuddy.activities.profile.CheckProfile
-import run.budgetbuddy.activities.profile.EditProfile
 
 class MenuLateralMG : AppCompatActivity() {
 
