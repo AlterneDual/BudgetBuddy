@@ -372,6 +372,10 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\drawable\\tema.png"
     },
     {
+        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\menu_context_menu2.xml.flat",
+        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\menu\\context_menu2.xml"
+    },
+    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\layout_activity_ajustes.xml.flat",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_ajustes.xml"
     },

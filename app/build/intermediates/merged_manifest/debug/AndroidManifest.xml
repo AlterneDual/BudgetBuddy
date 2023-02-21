@@ -81,13 +81,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="run.budgetbuddy.activities.categoria.AddCategoria"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name="run.budgetbuddy.activities.categoria.Categorias"
             android:exported="false" >
             <meta-data

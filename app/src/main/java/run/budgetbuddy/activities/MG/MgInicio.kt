@@ -1,5 +1,6 @@
 package run.budgetbuddy.activities.MG
 
+import CRUD.CategoriaCRUD
 import CRUD.GastoCRUD
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -10,10 +11,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.MotionEvent
-import android.widget.LinearLayout
-import android.widget.TextView
-import android.widget.Toast
-import androidx.activity.OnBackPressedCallback
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import com.github.mikephil.charting.animation.Easing
@@ -35,8 +32,6 @@ import java.util.Calendar
 import java.util.Locale
 import android.graphics.Typeface
 import android.view.*
-import android.widget.AdapterView
-import android.widget.Toast
 import androidx.core.content.res.ResourcesCompat
 import java.time.ZoneId
 
@@ -52,15 +47,14 @@ class MgInicio : AppCompatActivity() {
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
 
 
-
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
         check()
-        listaCategorias = crearCategorias()
-        rellenar_bd_categorias()
+//        listaCategorias = crearCategorias()
+//        rellenar_bd_categorias()
         gestos = GestureDetector(this, EscuchaGestos())
 
         var btnIngresos = binding.tvIngresos
@@ -69,7 +63,7 @@ class MgInicio : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
         }
-        var btnAnadirGasto = binding.btnAddGroup2
+        var btnAnadirGasto = binding.btnAddGroup3
         btnAnadirGasto.setOnClickListener {
             btnAnadirGasto.setBackgroundColor(Color.parseColor("#FFFFFF"))
             val intent = Intent(this, MgAnadirGasto::class.java)
@@ -88,7 +82,6 @@ class MgInicio : AppCompatActivity() {
 
         binding.tvSemana.setOnClickListener {
             seleccionado = 2;
-
             check()
         }
         binding.tvMes.setOnClickListener {
@@ -599,33 +592,33 @@ class MgInicio : AppCompatActivity() {
         startDatePicker.show()
     }
 
-    private fun crearCategorias(): MutableList<Categoria> {
-
-        val listaCategorias = mutableListOf<Categoria>(
-
-            Categoria("Avion", R.drawable.circulo_naranja, R.drawable.cat_avion),
-            Categoria("Cine", R.drawable.circulo_verde, R.drawable.cat_cine),
-            Categoria("Bolos", R.drawable.circulo_rojo, R.drawable.cat_bolos),
-            Categoria("Coctel", R.drawable.circulo_amarillo, R.drawable.cat_coctel),
-            Categoria("Compras", R.drawable.circulo_turquesa, R.drawable.cat_compras),
-            Categoria("Hotele", R.drawable.circulo_celeste, R.drawable.cat_hotel),
-            Categoria("Limpieza", R.drawable.circulo_azul, R.drawable.cat_limpieza),
-            Categoria("Regalos", R.drawable.circulo_rosa, R.drawable.cat_regalo),
-            Categoria("Restaurante", R.drawable.circulo_celeste, R.drawable.cat_restaurante),
-            Categoria("Videojuegos", R.drawable.circulo_naranja, R.drawable.cat_videojuego)
-
-        )
-
-        return listaCategorias
-    }
-
-    private fun rellenar_bd_categorias(){
-        if(categoriaCRUD.getAllCategoria().isEmpty()){
-            for(categoria in listaCategorias){
-                categoriaCRUD.addCategoria(categoria)
-            }
-        }
-    }
+//    private fun crearCategorias(): MutableList<Categoria> {
+//
+//        val listaCategorias = mutableListOf<Categoria>(
+//
+//            Categoria("Avion", R.drawable.circulo_naranja, R.drawable.cat_avion),
+//            Categoria("Cine", R.drawable.circulo_verde, R.drawable.cat_cine),
+//            Categoria("Bolos", R.drawable.circulo_rojo, R.drawable.cat_bolos),
+//            Categoria("Coctel", R.drawable.circulo_amarillo, R.drawable.cat_coctel),
+//            Categoria("Compras", R.drawable.circulo_turquesa, R.drawable.cat_compras),
+//            Categoria("Hotele", R.drawable.circulo_celeste, R.drawable.cat_hotel),
+//            Categoria("Limpieza", R.drawable.circulo_azul, R.drawable.cat_limpieza),
+//            Categoria("Regalos", R.drawable.circulo_rosa, R.drawable.cat_regalo),
+//            Categoria("Restaurante", R.drawable.circulo_celeste, R.drawable.cat_restaurante),
+//            Categoria("Videojuegos", R.drawable.circulo_naranja, R.drawable.cat_videojuego)
+//
+//        )
+//
+//        return listaCategorias
+//    }
+//
+//    private fun rellenar_bd_categorias(){
+//        if(categoriaCRUD.getAllCategoria().isEmpty()){
+//            for(categoria in listaCategorias){
+//                categoriaCRUD.addCategoria(categoria)
+//            }
+//        }
+//    }
 
 
 }

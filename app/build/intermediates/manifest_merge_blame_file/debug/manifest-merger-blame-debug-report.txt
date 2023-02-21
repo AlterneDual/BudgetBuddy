@@ -32,7 +32,7 @@
 19-->[androidx.core:core:1.9.0] C:\Users\Aragon\.gradle\caches\transforms-3\5c3eab597878a525ce2f92d112e02019\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
 20
 21    <application
-21-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:6:5-193:19
+21-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:6:5-186:19
 22        android:name="run.budgetbuddy.utils.RealmHelp"
 22-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:7:9-40
 23        android:allowBackup="true"
@@ -148,8 +148,8 @@
 82        </activity>
 83        <activity
 83-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:65:9-71:20
-84            android:name="run.budgetbuddy.activities.categoria.AddCategoria"
-84-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:66:13-62
+84            android:name="run.budgetbuddy.activities.categoria.Categorias"
+84-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:66:13-60
 85            android:exported="false" >
 85-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:67:13-37
 86            <meta-data
@@ -161,8 +161,8 @@
 89        </activity>
 90        <activity
 90-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:72:9-78:20
-91            android:name="run.budgetbuddy.activities.categoria.Categorias"
-91-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:73:13-60
+91            android:name="run.budgetbuddy.activities.categoria.CrearCategoria"
+91-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:73:13-64
 92            android:exported="false" >
 92-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:74:13-37
 93            <meta-data
@@ -174,8 +174,8 @@
 96        </activity>
 97        <activity
 97-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:79:9-85:20
-98            android:name="run.budgetbuddy.activities.categoria.CrearCategoria"
-98-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:80:13-64
+98            android:name="run.budgetbuddy.activities.app.Register"
+98-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:80:13-52
 99            android:exported="false" >
 99-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:81:13-37
 100            <meta-data
@@ -187,8 +187,8 @@
 103        </activity>
 104        <activity
 104-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:86:9-92:20
-105            android:name="run.budgetbuddy.activities.app.Register"
-105-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:87:13-52
+105            android:name="run.budgetbuddy.activities.app.Login"
+105-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:87:13-49
 106            android:exported="false" >
 106-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:88:13-37
 107            <meta-data
@@ -199,9 +199,9 @@
 109-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:28:17-33
 110        </activity>
 111        <activity
-111-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:93:9-99:20
-112            android:name="run.budgetbuddy.activities.app.Login"
-112-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:94:13-49
+111-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:93:9-100:20
+112            android:name="run.budgetbuddy.activities.app.CargaInicio"
+112-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:94:13-55
 113            android:exported="false" >
 113-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:95:13-37
 114            <meta-data
@@ -212,11 +212,11 @@
 116-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:28:17-33
 117        </activity>
 118        <activity
-118-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:100:9-107:20
-119            android:name="run.budgetbuddy.activities.app.CargaInicio"
-119-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:101:13-55
+118-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:101:9-107:20
+119            android:name="run.budgetbuddy.activities.GG.CrearGrupo3G"
+119-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:102:13-55
 120            android:exported="false" >
-120-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:102:13-37
+120-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:103:13-37
 121            <meta-data
 121-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:26:13-28:36
 122                android:name="android.app.lib_name"
@@ -226,8 +226,8 @@
 124        </activity>
 125        <activity
 125-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:108:9-114:20
-126            android:name="run.budgetbuddy.activities.GG.CrearGrupo3G"
-126-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:109:13-55
+126            android:name="run.budgetbuddy.activities.GG.EditarGasto3G"
+126-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:109:13-56
 127            android:exported="false" >
 127-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:110:13-37
 128            <meta-data
@@ -239,8 +239,8 @@
 131        </activity>
 132        <activity
 132-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:115:9-121:20
-133            android:name="run.budgetbuddy.activities.GG.EditarGasto3G"
-133-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:116:13-56
+133            android:name="run.budgetbuddy.activities.GG.Gastos3G"
+133-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:116:13-51
 134            android:exported="false" >
 134-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:117:13-37
 135            <meta-data
@@ -252,8 +252,8 @@
 138        </activity>
 139        <activity
 139-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:122:9-128:20
-140            android:name="run.budgetbuddy.activities.GG.Gastos3G"
-140-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:123:13-51
+140            android:name="run.budgetbuddy.activities.GG.NuevoGasto3G"
+140-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:123:13-55
 141            android:exported="false" >
 141-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:124:13-37
 142            <meta-data
@@ -265,8 +265,8 @@
 145        </activity>
 146        <activity
 146-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:129:9-135:20
-147            android:name="run.budgetbuddy.activities.GG.NuevoGasto3G"
-147-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:130:13-55
+147            android:name="run.budgetbuddy.activities.GG.Principal3G"
+147-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:130:13-54
 148            android:exported="false" >
 148-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:131:13-37
 149            <meta-data
@@ -278,8 +278,8 @@
 152        </activity>
 153        <activity
 153-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:136:9-142:20
-154            android:name="run.budgetbuddy.activities.GG.Principal3G"
-154-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:137:13-54
+154            android:name="run.budgetbuddy.activities.GG.Saldos3G"
+154-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:137:13-51
 155            android:exported="false" >
 155-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:138:13-37
 156            <meta-data
@@ -291,8 +291,8 @@
 159        </activity>
 160        <activity
 160-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:143:9-149:20
-161            android:name="run.budgetbuddy.activities.GG.Saldos3G"
-161-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:144:13-51
+161            android:name="run.budgetbuddy.activities.GG.UnirGrupo3G"
+161-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:144:13-54
 162            android:exported="false" >
 162-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:145:13-37
 163            <meta-data
@@ -304,8 +304,8 @@
 166        </activity>
 167        <activity
 167-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:150:9-156:20
-168            android:name="run.budgetbuddy.activities.GG.UnirGrupo3G"
-168-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:151:13-54
+168            android:name="run.budgetbuddy.activities.GG.reembolso.AllReembolsos"
+168-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:151:13-66
 169            android:exported="false" >
 169-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:152:13-37
 170            <meta-data
@@ -317,8 +317,8 @@
 173        </activity>
 174        <activity
 174-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:157:9-163:20
-175            android:name="run.budgetbuddy.activities.GG.reembolso.AllReembolsos"
-175-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:158:13-66
+175            android:name="run.budgetbuddy.activities.GG.reembolso.Reembolso3G"
+175-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:158:13-64
 176            android:exported="false" >
 176-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:159:13-37
 177            <meta-data
@@ -330,8 +330,8 @@
 180        </activity>
 181        <activity
 181-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:164:9-170:20
-182            android:name="run.budgetbuddy.activities.GG.reembolso.Reembolso3G"
-182-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:165:13-64
+182            android:name="run.budgetbuddy.activities.menu.MenuLateralMG"
+182-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:165:13-58
 183            android:exported="false" >
 183-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:166:13-37
 184            <meta-data
@@ -343,8 +343,8 @@
 187        </activity>
 188        <activity
 188-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:171:9-177:20
-189            android:name="run.budgetbuddy.activities.menu.MenuLateralMG"
-189-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:172:13-58
+189            android:name="run.budgetbuddy.activities.ajustes.Ajustes"
+189-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:172:13-55
 190            android:exported="false" >
 190-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:173:13-37
 191            <meta-data
@@ -356,8 +356,8 @@
 194        </activity>
 195        <activity
 195-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:178:9-184:20
-196            android:name="run.budgetbuddy.activities.ajustes.Ajustes"
-196-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:179:13-55
+196            android:name="run.budgetbuddy.activities.divisa.Divisas"
+196-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:179:13-54
 197            android:exported="false" >
 197-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:180:13-37
 198            <meta-data
@@ -367,41 +367,28 @@
 200                android:value="" />
 200-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:28:17-33
 201        </activity>
-202        <activity
-202-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:185:9-191:20
-203            android:name="run.budgetbuddy.activities.divisa.Divisas"
-203-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:186:13-54
-204            android:exported="false" >
-204-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:187:13-37
-205            <meta-data
-205-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:26:13-28:36
-206                android:name="android.app.lib_name"
-206-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:27:17-52
-207                android:value="" />
-207-->C:\Users\Aragon\Desktop\BudgetBuddy_AlterneDual\BudgetBuddy\app\src\main\AndroidManifest.xml:28:17-33
-208        </activity>
-209
-210        <provider
-210-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-211            android:name="androidx.startup.InitializationProvider"
-211-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
-212            android:authorities="run.budgetbuddy.androidx-startup"
-212-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
-213            android:exported="false" >
-213-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
-214            <meta-data
-214-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-215                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-215-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
-216                android:value="androidx.startup" />
-216-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
-217            <meta-data
-217-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-218                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-218-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
-219                android:value="androidx.startup" />
-219-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-220        </provider>
-221    </application>
-222
-223</manifest>
+202
+203        <provider
+203-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+204            android:name="androidx.startup.InitializationProvider"
+204-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+205            android:authorities="run.budgetbuddy.androidx-startup"
+205-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+206            android:exported="false" >
+206-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+207            <meta-data
+207-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+208                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+208-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+209                android:value="androidx.startup" />
+209-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Aragon\.gradle\caches\transforms-3\154d137873fe2fec394a122282955d39\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+210            <meta-data
+210-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+211                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+211-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+212                android:value="androidx.startup" />
+212-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Aragon\.gradle\caches\transforms-3\bc43f9df7777cdaca20cd9b75d287de5\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+213        </provider>
+214    </application>
+215
+216</manifest>

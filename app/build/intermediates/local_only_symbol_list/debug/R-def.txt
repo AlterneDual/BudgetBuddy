@@ -122,7 +122,6 @@ id addGrupoEnlace
 id btnAceptar
 id btnAddCategoria
 id btnAddCategoria2
-id btnAddGroup2
 id btnAddGroup3
 id btnAllReembolsos
 id btnAnadir

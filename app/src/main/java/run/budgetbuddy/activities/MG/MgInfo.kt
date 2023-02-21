@@ -35,9 +35,7 @@ class MgInfo : AppCompatActivity() {
     private lateinit var list_view: ListView
     private lateinit var adapterList: myListAdapterInfoGasto
     private lateinit var lista_gastos: MutableList<Gasto>
-    var posActualGasto : Int = 0
-
-    //    private lateinit var sharedPreferences: SharedPreferences
+    var posActualGasto: Int = 0
 
     private var MYGESTORVIEWINGRESOS_SETTING = "MyGestorView"
 
@@ -543,6 +541,7 @@ class MgInfo : AppCompatActivity() {
 
                 true
             }
+
             else -> super.onContextItemSelected(item)
         }
     }
