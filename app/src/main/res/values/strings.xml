@@ -44,6 +44,11 @@
     <string name="nombre2">nombre2</string>
     <string name="email">Email</string>
     <string name="eliminar">eliminar</string>
+    <string name="Home">Home</string>
+    <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="navigation_drawer_open">Se ha abierto el menu</string>
+    <string name="navigation_drawer_close">Se ha cerrado el menu</string>
+
     <string name="nombre">Nombre</string>
     <string name="español">Español</string>
     <string name="english">English</string>

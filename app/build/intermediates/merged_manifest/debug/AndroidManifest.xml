@@ -32,6 +32,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.BudgetBuddy" >
         <activity
+            android:name="run.budgetbuddy.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name="run.budgetbuddy.activities.MG.MgInicio"
             android:exported="true"
             android:theme="@style/Theme.BudgetBuddy" >

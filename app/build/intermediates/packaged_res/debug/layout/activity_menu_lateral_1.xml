@@ -107,7 +107,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/oswald"
                 android:paddingTop="5dp"
-                android:text="Cerrar Sesión"
+                android:text="@string/cerrar_sesion"
                 android:textSize="24dp" />
         </LinearLayout>
     </FrameLayout>

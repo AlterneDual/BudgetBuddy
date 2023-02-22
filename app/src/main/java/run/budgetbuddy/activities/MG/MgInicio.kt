@@ -32,7 +32,15 @@ import java.util.Calendar
 import java.util.Locale
 import android.graphics.Typeface
 import android.view.*
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
+import run.budgetbuddy.activities.ajustes.Ajustes
+import run.budgetbuddy.activities.categoria.Categorias
+import run.budgetbuddy.activities.divisa.Divisas
 import java.time.ZoneId
 
 class MgInicio : AppCompatActivity() {
@@ -45,16 +53,71 @@ class MgInicio : AppCompatActivity() {
     private lateinit var gestos: GestureDetector
     private lateinit var listaCategorias: MutableList<Categoria>
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
+    lateinit var drawerLayout : DrawerLayout
+
 
 
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //Inicializar drawerLayout
+        drawerLayout = findViewById(R.id.drawer_layout)
+        // Declarar la toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolbarA)
+
+        // Configurar la toolbar
+        setSupportActionBar(toolbar)
+
+        // Agregar el icono de hamburguesa
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.menu_button)
+
+        // Manejar la acción de hamburguesa
+        toolbar.setNavigationOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
+
+//        val navigationView = findViewById<NavigationView>(R.menu.nav_view_menu)
+//        val menu = navigationView.menu
+//        val nav_home1 = menu.findItem(R.id.nav_home)
+//        val nav_cat1 = menu.findItem(R.id.nav_edit_cat)
+//        val nav_div1 = menu.findItem(R.id.nav_divisa)
+//        val nav_ajustes1 = menu.findItem(R.id.nav_ajustes)
+//
+//        navigationView.setNavigationItemSelectedListener { menuItem ->
+//            when (menuItem.itemId) {
+//                R.id.nav_home -> {
+//                    val intent = Intent(this, MgInicio::class.java)
+//                    startActivity(intent)
+//                    true
+//                }
+//                R.id.nav_edit_cat -> {
+//                    val intent = Intent(this, Categorias::class.java)
+//                    startActivity(intent)
+//                    true
+//                }
+//                R.id.nav_home -> {
+//                    val intent = Intent(this, Divisas::class.java)
+//                    startActivity(intent)
+//                    true
+//                }
+//                R.id.nav_ajustes -> {
+//                    val intent = Intent(this, Ajustes::class.java)
+//                    startActivity(intent)
+//                    true
+//                }
+//                else -> false
+//            }
+//        }
+
+
         check()
-//        listaCategorias = crearCategorias()
-//        rellenar_bd_categorias()
+        listaCategorias = crearCategorias()
+        rellenar_bd_categorias()
         gestos = GestureDetector(this, EscuchaGestos())
 
         var btnIngresos = binding.tvIngresos
@@ -65,15 +128,10 @@ class MgInicio : AppCompatActivity() {
         }
         var btnAnadirGasto = binding.btnAddGroup3
         btnAnadirGasto.setOnClickListener {
-            btnAnadirGasto.setBackgroundColor(Color.parseColor("#FFFFFF"))
             val intent = Intent(this, MgAnadirGasto::class.java)
             startActivity(intent)
         }
-        var btnAjustes = binding.btnMenu1
-        btnAjustes.setOnClickListener {
-            val intent = Intent(this, MenuLateralMG::class.java)
-            startActivity(intent)
-        }
+
 
         binding.tvDia.setOnClickListener {
             seleccionado = 1;
