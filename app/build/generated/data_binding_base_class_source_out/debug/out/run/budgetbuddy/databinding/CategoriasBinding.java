@@ -6,13 +6,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
+import com.google.android.material.navigation.NavigationView;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,7 +20,7 @@ import run.budgetbuddy.R;
 
 public final class CategoriasBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final DrawerLayout rootView;
 
   @NonNull
   public final GridView GVCategoria;
@@ -29,24 +29,28 @@ public final class CategoriasBinding implements ViewBinding {
   public final ImageButton btnAddCategoria2;
 
   @NonNull
-  public final ImageView btnAtras1;
+  public final DrawerLayout drawerLayout;
+
+  @NonNull
+  public final NavigationView navView;
 
   @NonNull
   public final Toolbar toolbar3;
 
-  private CategoriasBinding(@NonNull ConstraintLayout rootView, @NonNull GridView GVCategoria,
-      @NonNull ImageButton btnAddCategoria2, @NonNull ImageView btnAtras1,
-      @NonNull Toolbar toolbar3) {
+  private CategoriasBinding(@NonNull DrawerLayout rootView, @NonNull GridView GVCategoria,
+      @NonNull ImageButton btnAddCategoria2, @NonNull DrawerLayout drawerLayout,
+      @NonNull NavigationView navView, @NonNull Toolbar toolbar3) {
     this.rootView = rootView;
     this.GVCategoria = GVCategoria;
     this.btnAddCategoria2 = btnAddCategoria2;
-    this.btnAtras1 = btnAtras1;
+    this.drawerLayout = drawerLayout;
+    this.navView = navView;
     this.toolbar3 = toolbar3;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -83,9 +87,11 @@ public final class CategoriasBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnAtras1;
-      ImageView btnAtras1 = ViewBindings.findChildViewById(rootView, id);
-      if (btnAtras1 == null) {
+      DrawerLayout drawerLayout = (DrawerLayout) rootView;
+
+      id = R.id.nav_view;
+      NavigationView navView = ViewBindings.findChildViewById(rootView, id);
+      if (navView == null) {
         break missingId;
       }
 
@@ -95,8 +101,8 @@ public final class CategoriasBinding implements ViewBinding {
         break missingId;
       }
 
-      return new CategoriasBinding((ConstraintLayout) rootView, GVCategoria, btnAddCategoria2,
-          btnAtras1, toolbar3);
+      return new CategoriasBinding((DrawerLayout) rootView, GVCategoria, btnAddCategoria2,
+          drawerLayout, navView, toolbar3);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

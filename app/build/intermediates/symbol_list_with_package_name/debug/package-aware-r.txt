@@ -3059,9 +3059,7 @@ id btnFotoA2
 id btnFotoA3
 id btnGuardar
 id btnInicioSesion
-id btnMenu
 id btnMenu1
-id btnMenu2
 id btnModificarA2
 id btnPagadorSelector
 id btnRegistrar
@@ -3455,6 +3453,7 @@ id search_view_status_bar_spacer
 id search_view_toolbar
 id search_view_toolbar_container
 id search_voice_btn
+id second_section
 id select_dialog_listview
 id selected
 id selection_type
@@ -3544,7 +3543,6 @@ id textinput_helper_text
 id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
-id third_section
 id time
 id title
 id titleDividerNoCustom
@@ -3556,6 +3554,7 @@ id toolbar2
 id toolbar3
 id toolbarA
 id toolbarA2
+id toolbar_main
 id top
 id topPanel
 id touch_outside
@@ -3752,6 +3751,7 @@ layout activity_edit_profile
 layout activity_menu_lateral_1
 layout activity_menu_lateral_2
 layout anadir_categoria
+layout app_bar_main
 layout categorias
 layout crear_categoria
 layout custom_dialog
@@ -3876,6 +3876,7 @@ menu nav_view_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
+string Divisas
 string Home
 string abc_action_bar_home_description
 string abc_action_bar_up_description
@@ -3931,6 +3932,7 @@ string character_counter_content_description
 string character_counter_overflowed_content_description
 string character_counter_pattern
 string clear_text_end_icon_content_description
+string close
 string comentario_editable
 string crear_categoria
 string crear_usuario
@@ -4078,6 +4080,7 @@ string nombre2
 string nombre_de_la_categoria
 string nombre_usuario
 string ocio
+string open
 string oscuro
 string pantallaInicial
 string pantallaInicialMygestor

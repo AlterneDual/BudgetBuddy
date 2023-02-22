@@ -31,9 +31,6 @@ public final class MgInicioGastosBinding implements ViewBinding {
   public final ImageButton btnAddGroup3;
 
   @NonNull
-  public final ImageView btnMenu1;
-
-  @NonNull
   public final ImageView butInfo;
 
   @NonNull
@@ -76,7 +73,7 @@ public final class MgInicioGastosBinding implements ViewBinding {
   public final Button tvSemana;
 
   private MgInicioGastosBinding(@NonNull DrawerLayout rootView, @NonNull ImageButton btnAddGroup3,
-      @NonNull ImageView btnMenu1, @NonNull ImageView butInfo, @NonNull DrawerLayout drawerLayout,
+      @NonNull ImageView butInfo, @NonNull DrawerLayout drawerLayout,
       @NonNull LinearLayout linearLayout5, @NonNull ListView lvInicioGastos,
       @NonNull NavigationView navView, @NonNull PieChart pieChart, @NonNull Toolbar toolbarA,
       @NonNull Button tvAnho, @NonNull Button tvDia, @NonNull TextView tvIngresos,
@@ -84,7 +81,6 @@ public final class MgInicioGastosBinding implements ViewBinding {
       @NonNull Button tvSemana) {
     this.rootView = rootView;
     this.btnAddGroup3 = btnAddGroup3;
-    this.btnMenu1 = btnMenu1;
     this.butInfo = butInfo;
     this.drawerLayout = drawerLayout;
     this.linearLayout5 = linearLayout5;
@@ -131,12 +127,6 @@ public final class MgInicioGastosBinding implements ViewBinding {
       id = R.id.btnAddGroup3;
       ImageButton btnAddGroup3 = ViewBindings.findChildViewById(rootView, id);
       if (btnAddGroup3 == null) {
-        break missingId;
-      }
-
-      id = R.id.btnMenu1;
-      ImageView btnMenu1 = ViewBindings.findChildViewById(rootView, id);
-      if (btnMenu1 == null) {
         break missingId;
       }
 
@@ -220,9 +210,9 @@ public final class MgInicioGastosBinding implements ViewBinding {
         break missingId;
       }
 
-      return new MgInicioGastosBinding((DrawerLayout) rootView, btnAddGroup3, btnMenu1, butInfo,
-          drawerLayout, linearLayout5, lvInicioGastos, navView, pieChart, toolbarA, tvAnho, tvDia,
-          tvIngresos, tvMes, tvPeriodo, tvResultadoFecha, tvSemana);
+      return new MgInicioGastosBinding((DrawerLayout) rootView, btnAddGroup3, butInfo, drawerLayout,
+          linearLayout5, lvInicioGastos, navView, pieChart, toolbarA, tvAnho, tvDia, tvIngresos,
+          tvMes, tvPeriodo, tvResultadoFecha, tvSemana);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

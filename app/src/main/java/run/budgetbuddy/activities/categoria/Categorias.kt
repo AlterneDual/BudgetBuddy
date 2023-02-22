@@ -10,10 +10,18 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.GridView
 import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
 import models.Categoria
 import run.budgetbuddy.R
+import run.budgetbuddy.activities.MG.MgInicio
+import run.budgetbuddy.activities.ajustes.Ajustes
+import run.budgetbuddy.activities.divisa.Divisas
 import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.databinding.CategoriasBinding
 
@@ -25,21 +33,100 @@ class Categorias : AppCompatActivity() {
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
     private var posicion: Int = 0
 
+    //----------------------------------Atributos y metodos Menu lateral----------------------------------
+    lateinit var drawerLayout : DrawerLayout
+    lateinit var navigationView: NavigationView
+    lateinit var drawerToggle: ActionBarDrawerToggle
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(drawerToggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+
+            drawerLayout.closeDrawer(GravityCompat.START)
+        }
+        else{
+            super.onBackPressed()
+        }
+    }
+    //----------------------------------Atributos y metodos Menu lateral----------------------------------
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = CategoriasBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //-------------------------------------------Menu lateral-------------------------------------------
+        //Inicializar drawerLayout
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navigationView = findViewById(R.id.nav_view)
+        drawerToggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(drawerToggle)
+        drawerToggle.syncState()
+
+        // Declarar la toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolbar3)
+
+        // Configurar la toolbar
+        setSupportActionBar(toolbar)
+
+        // Agregar el icono de hamburguesa y quitar titulo
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.menu_button)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        // El icono menu abre el desplegable
+        toolbar.setNavigationOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
+
+        val menu = navigationView.menu
+        val nav_home1 = menu.findItem(R.id.nav_home)
+        val nav_cat1 = menu.findItem(R.id.nav_edit_cat)
+        val nav_div1 = menu.findItem(R.id.nav_divisa)
+        val nav_ajustes1 = menu.findItem(R.id.nav_ajustes)
+
+        navigationView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                nav_home1.itemId -> {
+                    val intent = Intent(this, MgInicio::class.java)
+                    startActivity(intent)
+                    true
+                }
+                nav_cat1.itemId -> {
+                    val intent = Intent(this, Categorias::class.java)
+                    startActivity(intent)
+                    true
+                }
+                nav_div1.itemId -> {
+                    val intent = Intent(this, Divisas::class.java)
+                    startActivity(intent)
+                    true
+                }
+                nav_ajustes1.itemId -> {
+                    val intent = Intent(this, Ajustes::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+
+            }
+        }
+
+
+        //-------------------------------------------Menu lateral-------------------------------------------
 
         listaCategorias = categoriaCRUD.getAllCategoria()
         inicializarAdapter()
 
         binding.btnAddCategoria2.setOnClickListener {
             val intent = Intent(this, CrearCategoria::class.java)
-            startActivity(intent)
-        }
-
-        binding.btnAtras1.setOnClickListener {
-            val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
         }
 

@@ -9,11 +9,10 @@
             <item
                 android:id="@+id/nav_home"
                 android:icon="@drawable/home"
-                android:title="@string/Home" />
+                android:title="@string/Home"/>
             <item
                 android:id="@+id/nav_edit_cat"
                 android:icon="@drawable/editar"
-
                 android:title="@string/editar_categorias" />
             <item
                 android:id="@+id/nav_divisa"
@@ -27,14 +26,14 @@
         </group>
 
         <group
-            android:id="@+id/third_section"
+            android:id="@+id/second_section"
             android:checkableBehavior="none">
 
             <item
                 android:id="@+id/nav_cerrar_sesion"
                 android:icon="@drawable/cerrar"
                 android:title="@string/cerrar_sesion"
-                />
+                app:layout_constraintBottom_toBottomOf="parent"/>
         </group>
 
 </menu>
