@@ -148,10 +148,6 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_info_inicio.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-merged_res-29:/layout_mg_inicio_gastos.xml.flat",
-        "source": "run.budgetbuddy.app-main-31:/layout/mg_inicio_gastos.xml"
-    },
-    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\drawable_cat_regalo.png.flat",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\drawable\\cat_regalo.png"
     },
@@ -344,6 +340,10 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\drawable\\default_button_cancel.xml"
     },
     {
+        "merged": "run.budgetbuddy.app-merged_res-29:/drawable_rounded.xml.flat",
+        "source": "run.budgetbuddy.app-main-31:/drawable/rounded.xml"
+    },
+    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-pngs-24:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
     },
@@ -434,6 +434,10 @@
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\drawable_individual.png.flat",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\drawable\\individual.png"
+    },
+    {
+        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\drawable_rounded.xml.flat",
+        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\drawable\\rounded.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-merged_res-29:\\drawable_interrogacion.png.flat",

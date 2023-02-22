@@ -6,22 +6,11 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_inicio">
 
-    <ImageView
-        android:id="@+id/ivPrevious4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
-        android:clickable="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:srcCompat="@drawable/previous" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarA"
-        android:layout_width="407dp"
+        android:layout_width="match_parent"
         android:layout_height="122dp"
-        android:layout_marginTop="4dp"
         android:background="@drawable/toolbarmenu_format"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
@@ -30,103 +19,102 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageButton
-        android:id="@+id/btnAddGroup3"
-        android:layout_width="76dp"
-        android:layout_height="72dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="268dp"
-        android:background="@color/transparent"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/plus_button"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="wrap_content"
-        android:layout_height="51dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarA">
 
-        <TextView
+        <Button
             android:id="@+id/tvDia"
-            android:layout_width="55dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:text="Día"
+            android:fontFamily="@font/oswald"
+            android:text="Dia"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
-        <TextView
+        <Button
             android:id="@+id/tvSemana"
-            android:layout_width="58dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/oswald"
             android:text="Semana"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
-        <TextView
+        <Button
             android:id="@+id/tvMes"
-            android:layout_width="58dp"
+            android:layout_width="56dp"
             android:layout_height="wrap_content"
             android:clickable="true"
+            android:fontFamily="@font/oswald"
             android:text="Mes"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
-        <TextView
+        <Button
             android:id="@+id/tvAnho"
-            android:layout_width="58dp"
+            android:layout_width="56dp"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:text="@string/year_underline"
+            android:fontFamily="@font/oswald"
+            android:text="Año"
             android:textAlignment="center"
-            android:textColor="#11928E"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
-        <TextView
+        <Button
             android:id="@+id/tvPeriodo"
-            android:layout_width="58dp"
+            android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:text="Periodo"
+            android:fontFamily="@font/oswald"
+            android:text="@string/periodo_underline"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold" />
+
 
     </LinearLayout>
 
 
     <com.github.mikephil.charting.charts.PieChart
         android:id="@+id/pieChart"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="match_parent"
+        android:layout_height="221dp"
         android:layout_centerHorizontal="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvYear2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvResultadoFecha" />
 
     <TextView
-        android:id="@+id/tvGastos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="70dp"
         android:clickable="true"
         android:fontFamily="@font/oswald"
         android:text="@string/gastos"
         android:textColor="#C6BEBE"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@+id/toolbarA"
         app:layout_constraintTop_toTopOf="@+id/toolbarA" />
 
@@ -134,26 +122,29 @@
         android:id="@+id/tvIngresos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="40dp"
-        android:clickable="true"
         android:fontFamily="@font/oswald"
-        android:minHeight="48dp"
         android:text="@string/ingresos_underline"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvYear2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="2022"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
+        android:id="@+id/tvResultadoFecha"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:fontFamily="@font/oswald"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout5" />
 
@@ -168,70 +159,72 @@
         app:layout_constraintTop_toTopOf="@+id/toolbarA"
         app:srcCompat="@drawable/menu_button" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_weight="1"
-        android:text="Saldo Restante"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--    <TextView-->
+    <!--        android:id="@+id/textView11"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="15dp"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:text="Saldo Restante"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textColor="#FFFFFF"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/tvSaldoRestante2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_weight="1"
-        android:text="800 €"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+    <!--    <TextView-->
+    <!--        android:id="@+id/tvSaldoRestante2"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="7dp"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:text="800 €"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textColor="#FFFFFF"-->
+    <!--        android:textSize="20sp"-->
+    <!--        android:textStyle="bold"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/textView11" />-->
 
     <ImageView
         android:id="@+id/butInfo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="15dp"
+        android:layout_width="44dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_weight="1"
         android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/factura" />
 
-    <ImageView
-        android:id="@+id/ivNext1"
-        android:layout_width="8dp"
-        android:layout_height="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="45dp"
-        android:clickable="true"
-        android:rotationX="2"
-        android:rotationY="179"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
-        app:srcCompat="@drawable/previous" />
-
     <ListView
-        android:id="@+id/lvInicioGastos"
+        android:id="@+id/lvInicioIngreso"
         android:layout_width="match_parent"
-        android:layout_height="266dp"
+        android:layout_height="275dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pieChart" />
+
+    <ImageButton
+        android:id="@+id/btnAddGroup3"
+        android:layout_width="76dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="268dp"
+        android:background="@color/transparent"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/plus_button"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

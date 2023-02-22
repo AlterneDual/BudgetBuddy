@@ -2886,6 +2886,7 @@ drawable pantallainicial
 drawable pantallamygroup
 drawable plus_button
 drawable previous
+drawable rounded
 drawable rounded_corner
 drawable saldo
 drawable saldo_blanco
@@ -3097,6 +3098,7 @@ id clockwise
 id closest
 id coinSelector
 id collapseActionView
+id color
 id compress
 id confirm_button
 id constraint
@@ -3255,10 +3257,8 @@ id ivColorCategoria
 id ivIcono
 id ivIconoCategoria
 id ivMenu
-id ivNext1
 id ivNotifiacionA
 id ivNotifiacionA2
-id ivPrevious4
 id jumpToEnd
 id jumpToStart
 id labeled
@@ -3284,6 +3284,7 @@ id list_view
 id lista_categorias
 id lista_gastos
 id lvInicioGastos
+id lvInicioIngreso
 id m3_side_sheet
 id marquee
 id masked
@@ -3508,7 +3509,6 @@ id textTop
 id textTotal
 id textView
 id textView10
-id textView11
 id textView2
 id textView3
 id textView4
@@ -3590,14 +3590,12 @@ id tvPeriodo
 id tvReceptor
 id tvResultadoFecha
 id tvSaldoA
-id tvSaldoRestante2
 id tvSemana
 id tvTipoGasto
 id tvTitulo
 id tvTituloGasto
 id tvTotalA
 id tvUser
-id tvYear2
 id txtEditarPerfil
 id txtTitulo
 id unchecked

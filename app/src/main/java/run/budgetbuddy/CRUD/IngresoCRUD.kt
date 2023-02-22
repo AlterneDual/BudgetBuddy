@@ -3,6 +3,7 @@ package CRUD
 import io.realm.*
 import io.realm.kotlin.where
 import models.Divisa
+import models.Gasto
 import run.budgetbuddy.model.Ingreso
 import java.util.Date
 
@@ -91,6 +92,17 @@ open class IngresoCRUD {
         var ingreso_list = realm.where(Ingreso::class.java).findAll()
         list.addAll(ingreso_list)
         return list
+    }
+    fun getAllByDates(
+        fecha_inicio: Date,
+        fecha_fin: Date
+    ): MutableList<Ingreso> {
+        var ingreso = mutableListOf<Ingreso>()
+        var gastos_realm = realm.where<Ingreso>().between("fecha", fecha_inicio, fecha_fin).findAll()
+        for (g in gastos_realm) {
+            ingreso.add(g)
+        }
+        return ingreso
     }
 
 

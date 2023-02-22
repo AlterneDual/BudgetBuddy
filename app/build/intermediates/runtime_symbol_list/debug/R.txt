@@ -2885,6 +2885,7 @@ int drawable pantallainicial 0x7f070123
 int drawable pantallamygroup 0x7f070124
 int drawable plus_button 0x7f070125
 int drawable previous 0x7f070126
+int drawable rounded 0x7f070133
 int drawable rounded_corner 0x7f070127
 int drawable saldo 0x7f070128
 int drawable saldo_blanco 0x7f070129
@@ -3096,6 +3097,7 @@ int id clockwise 0x7f0900c0
 int id closest 0x7f0900c1
 int id coinSelector 0x7f0900c2
 int id collapseActionView 0x7f0900c3
+int id color 0x7f0902d6
 int id compress 0x7f0900c4
 int id confirm_button 0x7f0900c5
 int id constraint 0x7f0900c6
@@ -3254,10 +3256,8 @@ int id ivColorCategoria 0x7f09015e
 int id ivIcono 0x7f09015f
 int id ivIconoCategoria 0x7f090160
 int id ivMenu 0x7f090161
-int id ivNext1 0x7f090162
 int id ivNotifiacionA 0x7f090163
 int id ivNotifiacionA2 0x7f090164
-int id ivPrevious4 0x7f090165
 int id jumpToEnd 0x7f090166
 int id jumpToStart 0x7f090167
 int id labeled 0x7f090168
@@ -3283,6 +3283,7 @@ int id list_view 0x7f09017b
 int id lista_categorias 0x7f09017c
 int id lista_gastos 0x7f09017d
 int id lvInicioGastos 0x7f09017e
+int id lvInicioIngreso 0x7f0902d4
 int id m3_side_sheet 0x7f09017f
 int id marquee 0x7f090180
 int id masked 0x7f090181
@@ -3507,7 +3508,6 @@ int id textTop 0x7f09025b
 int id textTotal 0x7f09025c
 int id textView 0x7f09025d
 int id textView10 0x7f09025e
-int id textView11 0x7f09025f
 int id textView2 0x7f090260
 int id textView3 0x7f090261
 int id textView4 0x7f090262
@@ -3589,14 +3589,12 @@ int id tvPeriodo 0x7f0902ad
 int id tvReceptor 0x7f0902ae
 int id tvResultadoFecha 0x7f0902af
 int id tvSaldoA 0x7f0902b0
-int id tvSaldoRestante2 0x7f0902b1
 int id tvSemana 0x7f0902b2
 int id tvTipoGasto 0x7f0902b3
 int id tvTitulo 0x7f0902b4
 int id tvTituloGasto 0x7f0902b5
 int id tvTotalA 0x7f0902b6
 int id tvUser 0x7f0902b7
-int id tvYear2 0x7f0902b8
 int id txtEditarPerfil 0x7f0902b9
 int id txtTitulo 0x7f0902ba
 int id unchecked 0x7f0902bb

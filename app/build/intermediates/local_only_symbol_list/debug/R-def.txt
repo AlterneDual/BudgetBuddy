@@ -95,6 +95,7 @@ drawable pantallainicial
 drawable pantallamygroup
 drawable plus_button
 drawable previous
+drawable rounded
 drawable rounded_corner
 drawable saldo
 drawable saldo_blanco
@@ -182,6 +183,7 @@ id cajaPassword
 id cajaPassword2
 id cantidad
 id coinSelector
+id color
 id constraintLayout
 id custom_list
 id descripcion_grupo
@@ -236,10 +238,8 @@ id ivColorCategoria
 id ivIcono
 id ivIconoCategoria
 id ivMenu
-id ivNext1
 id ivNotifiacionA
 id ivNotifiacionA2
-id ivPrevious4
 id linearLayout
 id linearLayout2
 id linearLayout3
@@ -253,6 +253,7 @@ id list_view
 id lista_categorias
 id lista_gastos
 id lvInicioGastos
+id lvInicioIngreso
 id nombreCategoria
 id nuevoGrupo
 id optionsGrupo
@@ -270,7 +271,6 @@ id textDescripcion
 id textTotal
 id textView
 id textView10
-id textView11
 id textView2
 id textView3
 id textView4
@@ -327,14 +327,12 @@ id tvPeriodo
 id tvReceptor
 id tvResultadoFecha
 id tvSaldoA
-id tvSaldoRestante2
 id tvSemana
 id tvTipoGasto
 id tvTitulo
 id tvTituloGasto
 id tvTotalA
 id tvUser
-id tvYear2
 id txtEditarPerfil
 id txtTitulo
 id userImage

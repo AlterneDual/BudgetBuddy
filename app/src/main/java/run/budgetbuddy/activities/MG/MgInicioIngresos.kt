@@ -1,7 +1,6 @@
 package run.budgetbuddy.activities.MG
 
 import CRUD.CategoriaCRUD
-import CRUD.GastoCRUD
 import CRUD.IngresoCRUD
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -21,12 +20,14 @@ import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
 import models.Categoria
 import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.adapter.myListAdapter_gasto
+import run.budgetbuddy.adapter.myListAdapter_ingreso
 import run.budgetbuddy.databinding.MgInicioIngresosBinding
 import run.budgetbuddy.model.Ingreso
 import java.sql.Date
@@ -39,21 +40,18 @@ import java.util.Locale
 class MgInicioIngresos : AppCompatActivity() {
 
     private lateinit var binding: MgInicioIngresosBinding
-    private lateinit var adapter: myListAdapter_gasto
+    private lateinit var adapter: myListAdapter_ingreso
     private var listaIngresosBD = mutableListOf<Ingreso>()
     var ic = IngresoCRUD()
     private var seleccionado: Int = 0;
     private lateinit var gestos: GestureDetector
-    private lateinit var listaCategorias: MutableList<Categoria>
-    var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
+    private var lista_colores: ArrayList<Int> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgInicioIngresosBinding.inflate(layoutInflater)
         setContentView(binding.root)
         check()
-//        listaCategorias = crearCategorias()
-//        rellenar_bd_categorias()
         gestos = GestureDetector(this, EscuchaGestos())
 
         var btnIngresos = binding.tvIngresos
@@ -101,11 +99,10 @@ class MgInicioIngresos : AppCompatActivity() {
             startActivity(intent)
         }
 
-
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
-    private fun verGrafico(gastos: MutableList<Ingreso>) {
+    private fun verGrafico(ingresos: MutableList<Ingreso>) {
         val pieChart = findViewById<PieChart>(R.id.pieChart)
         pieChart.setUsePercentValues(false)
         pieChart.description.isEnabled = false
@@ -121,8 +118,8 @@ class MgInicioIngresos : AppCompatActivity() {
         pieChart.setDrawCenterText(true)
 
         var total: Float = 0.0F
-        for (g in gastos) {
-            total += (g.importe).toFloat()
+        for (ing in ingresos) {
+            total += (ing.importe).toFloat()
         }
 
         pieChart.centerText = "$total €"
@@ -138,11 +135,9 @@ class MgInicioIngresos : AppCompatActivity() {
         pieChart.setEntryLabelTextSize(20f)
 
         val pieEntries = mutableListOf<PieEntry>()
-        var colors: ArrayList<String> = ArrayList()
 
         for (ing in listaIngresosBD) {
             pieEntries.add(PieEntry(ing.importe.toFloat(), ing.descripcion.toString()))
-            colors.add(el.key.color_hex)
         }
 
         val dataSet = PieDataSet(pieEntries, "")
@@ -153,12 +148,9 @@ class MgInicioIngresos : AppCompatActivity() {
         dataSet.sliceSpace = 3f
         dataSet.iconsOffset = MPPointF(10f, 40f)
         dataSet.selectionShift = 20f
-
-        var colors_parsed: ArrayList<Int> = ArrayList()
-        for (col in colors) {
-            colors_parsed.add(Color.parseColor(col))
-        }
-        dataSet.colors = colors_parsed
+        var color_list = ColorTemplate.COLORFUL_COLORS.toList()
+        lista_colores.addAll(color_list)
+        dataSet.colors = color_list
 
         val data = PieData(dataSet)
         data.setDrawValues(false)
@@ -174,21 +166,16 @@ class MgInicioIngresos : AppCompatActivity() {
     }
 
     private fun IniciarAdapter() {
-        val listView = binding.lvInicioGastos
-        var gsts: ArrayList<Categoria> = ArrayList()
-        var cant: ArrayList<Float> = ArrayList()
-        for (g in listagastosBD) {
-            gsts.add(g.key)
-            cant.add(g.value)
-        }
-        adapter = myListAdapter_gasto(this, gsts, cant)
+        val listView = binding.lvInicioIngreso
+
+        adapter = myListAdapter_ingreso(this, listaIngresosBD, lista_colores)
         listView.adapter = adapter
         adapter.notifyDataSetChanged()
     }
 
-    fun verInfoDia(fecha_hoy: Date): MutableList<Gasto> {
-        var lista_gastos = ic.getAllGastos()
-        var nueva_lista: MutableList<Gasto> = mutableListOf()
+    fun verInfoDia(fecha_hoy: Date): MutableList<Ingreso> {
+        var lista_gastos = ic.getAllingresos()
+        var nueva_lista: MutableList<Ingreso> = mutableListOf()
 
         val format = SimpleDateFormat("dd/MM/yyyy")
         var date = format.format(fecha_hoy);
@@ -206,14 +193,13 @@ class MgInicioIngresos : AppCompatActivity() {
     fun verInfoSemana(
         fecha_inicio: java.util.Date,
         fecha_final: java.util.Date
-    ): MutableList<Gasto> {
+    ): MutableList<Ingreso> {
         return ic.getAllByDates(fecha_inicio, fecha_final)
-
     }
 
-    fun verInfoMes(fecha_inicio: Date): MutableList<Gasto> {
-        var lista_gastos = ic.getAllGastos()
-        var nueva_lista: MutableList<Gasto> = mutableListOf()
+    fun verInfoMes(fecha_inicio: Date): MutableList<Ingreso> {
+        var lista_gastos = ic.getAllingresos()
+        var nueva_lista: MutableList<Ingreso> = mutableListOf()
 
         val format = SimpleDateFormat("MM/yyyy")
         var date = format.format(fecha_inicio);
@@ -227,9 +213,9 @@ class MgInicioIngresos : AppCompatActivity() {
         return nueva_lista
     }
 
-    fun verInfoAno(ano: Date): MutableList<Gasto> {
-        var lista_gastos = ic.getAllGastos()
-        var nueva_lista: MutableList<Gasto> = mutableListOf()
+    fun verInfoAno(ano: Date): MutableList<Ingreso> {
+        var lista_gastos = ic.getAllingresos()
+        var nueva_lista: MutableList<Ingreso> = mutableListOf()
 
         val format = SimpleDateFormat("yyyy")
         var date = format.format(ano);
@@ -246,9 +232,8 @@ class MgInicioIngresos : AppCompatActivity() {
     fun verInfoPeriodo(
         fecha_inicio: java.util.Date,
         fecha_final: java.util.Date
-    ): MutableList<Gasto> {
+    ): MutableList<Ingreso> {
         return ic.getAllByDates(fecha_inicio, fecha_final)
-
     }
 
 
@@ -282,11 +267,10 @@ class MgInicioIngresos : AppCompatActivity() {
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
                 binding.tvResultadoFecha.text = ("Todos")
 
-                // Rellenar el pieChart + Listado
-                var gastos = ic.getAllingresos()
-
+                var ing = ic.getAllingresos()
+                inicializarIngresos(ing)
                 IniciarAdapter()
-                verGrafico(gastos)
+                verGrafico(ing)
 
             }
 
@@ -314,10 +298,10 @@ class MgInicioIngresos : AppCompatActivity() {
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
                 binding.tvResultadoFecha.text = ("${dia.uppercase()} $dia_num")
-                var gastos = verInfoDia(Date.valueOf(LocalDate.now().toString()))
-                getAllDistGastos(gastos)
+                var ing = verInfoDia(Date.valueOf(LocalDate.now().toString()))
+                inicializarIngresos(ing)
                 IniciarAdapter()
-                verGrafico(gastos)
+                verGrafico(ing)
             }
 
             2 -> {
@@ -364,13 +348,13 @@ class MgInicioIngresos : AppCompatActivity() {
                 cal.add(Calendar.DAY_OF_WEEK, 6)
                 val endOfWeek = cal.time
 
-                var gastos = verInfoSemana(
+                var ing = verInfoSemana(
                     startOfWeek,
                     endOfWeek
                 )
-                getAllDistGastos(gastos)
+                inicializarIngresos(ing)
                 IniciarAdapter()
-                verGrafico(gastos)
+                verGrafico(ing)
             }
 
             3 -> {
@@ -398,10 +382,10 @@ class MgInicioIngresos : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-                var gastos = verInfoMes(Date.valueOf(LocalDate.now().toString()))
-                getAllDistGastos(gastos)
+                var ing = verInfoMes(Date.valueOf(LocalDate.now().toString()))
+                inicializarIngresos(ing)
                 IniciarAdapter()
-                verGrafico(gastos)
+                verGrafico(ing)
 
             }
 
@@ -428,10 +412,10 @@ class MgInicioIngresos : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-                var gastos = verInfoAno(Date.valueOf(LocalDate.now().toString()))
-                getAllDistGastos(gastos)
+                var ing = verInfoAno(Date.valueOf(LocalDate.now().toString()))
+                inicializarIngresos(ing)
                 IniciarAdapter()
-                verGrafico(gastos)
+                verGrafico(ing)
             }
 
             5 -> {
@@ -455,10 +439,10 @@ class MgInicioIngresos : AppCompatActivity() {
                 binding.tvAnho.setTextColor(white)
                 binding.tvAnho.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-//                var gastos = verInfoPeriodo(Date.valueOf(LocalDate.now().toString()))
-//                getAllDistGastos(gastos)
+//                var ing = verInfoPeriodo(Date.valueOf(LocalDate.now().toString()))
+//                inicializarIngresos(ing)
 //                IniciarAdapter()
-//                verGrafico(gastos)
+//                verGrafico(ing)
 //                adapter.notifyDataSetChanged()
             }
 
@@ -510,13 +494,13 @@ class MgInicioIngresos : AppCompatActivity() {
                                 end = format.format(endDate!!.time)
                             }
 
-                            var gastos = verInfoPeriodo(
+                            var ing = verInfoPeriodo(
                                 startDate!!.time,
                                 endDate!!.time
                             )
-                            getAllDistGastos(gastos)
+                            inicializarIngresos(ing)
                             IniciarAdapter()
-                            verGrafico(gastos)
+                            verGrafico(ing)
 
                             binding.tvResultadoFecha.text =
                                 ("${start.toString()} - ${end.toString()}")
@@ -533,6 +517,11 @@ class MgInicioIngresos : AppCompatActivity() {
             dayOfMonth
         )
         startDatePicker.show()
+    }
+
+    fun inicializarIngresos(gastos: MutableList<Ingreso>) {
+        listaIngresosBD.clear()
+        listaIngresosBD = gastos
     }
 
     override fun onTouchEvent(event: MotionEvent?): Boolean {
