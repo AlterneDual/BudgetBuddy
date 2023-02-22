@@ -167,9 +167,7 @@ id btnFotoA2
 id btnFotoA3
 id btnGuardar
 id btnInicioSesion
-id btnMenu
 id btnMenu1
-id btnMenu2
 id btnModificarA2
 id btnPagadorSelector
 id btnRegistrar
@@ -279,6 +277,7 @@ id rbPortugues
 id recordarPassword
 id recyclerViewA4
 id relativeLayout
+id second_section
 id tbSemanal
 id textDescripcion
 id textTotal
@@ -297,13 +296,13 @@ id textViewB2
 id textViewB6
 id textViewN
 id textViewN2
-id third_section
 id titulo_grupo
 id toolbar
 id toolbar2
 id toolbar3
 id toolbarA
 id toolbarA2
+id toolbar_main
 id tv0
 id tv1
 id tv2
@@ -360,6 +359,7 @@ layout activity_edit_profile
 layout activity_menu_lateral_1
 layout activity_menu_lateral_2
 layout anadir_categoria
+layout app_bar_main
 layout categorias
 layout crear_categoria
 layout custom_grid_categorias
@@ -406,6 +406,7 @@ menu context_menu2
 menu nav_view_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
+string Divisas
 string Home
 string aceptar
 string ajustes
@@ -422,6 +423,7 @@ string breve_descripcion
 string cancelar
 string categorias
 string cerrar_sesion
+string close
 string comentario_editable
 string crear_categoria
 string crear_usuario
@@ -466,6 +468,7 @@ string nombre2
 string nombre_de_la_categoria
 string nombre_usuario
 string ocio
+string open
 string oscuro
 string pantallaInicial
 string pantallaInicialMygestor

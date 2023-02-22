@@ -10,12 +10,17 @@ import android.graphics.Typeface
 import android.os.Build
 import android.os.Bundle
 import android.view.GestureDetector
+import android.view.MenuItem
 import android.view.MotionEvent
 import android.widget.Toast
 import androidx.annotation.RequiresApi
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import androidx.core.content.res.ResourcesCompat
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import com.github.mikephil.charting.animation.Easing
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
@@ -23,9 +28,13 @@ import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
+import com.google.android.material.navigation.NavigationView
 import models.Categoria
 import models.Gasto
 import run.budgetbuddy.R
+import run.budgetbuddy.activities.ajustes.Ajustes
+import run.budgetbuddy.activities.categoria.Categorias
+import run.budgetbuddy.activities.divisa.Divisas
 import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.adapter.myListAdapter_gasto
 import run.budgetbuddy.adapter.myListAdapter_ingreso
@@ -46,6 +55,30 @@ class MgInicioIngresos : AppCompatActivity() {
     var ic = IngresoCRUD()
     private var seleccionado: Int = 0;
     private lateinit var gestos: GestureDetector
+//    private var lista_colores: ArrayList<Int> = ArrayList()
+    //----------------------------------Atributos y metodos Menu lateral----------------------------------
+    lateinit var drawerLayout : DrawerLayout
+    lateinit var navigationView: NavigationView
+    lateinit var drawerToggle: ActionBarDrawerToggle
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(drawerToggle.onOptionsItemSelected(item)){
+            return true
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+    override fun onBackPressed() {
+
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+
+            drawerLayout.closeDrawer(GravityCompat.START)
+        }
+        else{
+            super.onBackPressed()
+        }
+    }
+    //----------------------------------Atributos y metodos Menu lateral----------------------------------
 
     val color_list = mutableListOf<Int>(
         Color.parseColor("#4eb4e4"),
@@ -126,6 +159,66 @@ class MgInicioIngresos : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = MgInicioIngresosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //-------------------------------------------Menu lateral-------------------------------------------
+        //Inicializar drawerLayout
+        drawerLayout = findViewById(R.id.drawer_layout)
+        navigationView = findViewById(R.id.nav_view)
+        drawerToggle = ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close)
+        drawerLayout.addDrawerListener(drawerToggle)
+        drawerToggle.syncState()
+
+        // Declarar la toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolbarA)
+
+        // Configurar la toolbar
+        setSupportActionBar(toolbar)
+
+        // Agregar el icono de hamburguesa y quitar titulo
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeAsUpIndicator(R.drawable.menu_button)
+        supportActionBar?.setDisplayShowTitleEnabled(false)
+
+        // El icono menu abre el desplegable
+        toolbar.setNavigationOnClickListener {
+            drawerLayout.openDrawer(GravityCompat.START)
+        }
+
+        val menu = navigationView.menu
+        val nav_home1 = menu.findItem(R.id.nav_home)
+        val nav_cat1 = menu.findItem(R.id.nav_edit_cat)
+        val nav_div1 = menu.findItem(R.id.nav_divisa)
+        val nav_ajustes1 = menu.findItem(R.id.nav_ajustes)
+
+        navigationView.setNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                nav_home1.itemId -> {
+                    val intent = Intent(this, MgInicio::class.java)
+                    startActivity(intent)
+                    true
+                }
+                nav_cat1.itemId -> {
+                    val intent = Intent(this, Categorias::class.java)
+                    startActivity(intent)
+                    true
+                }
+                nav_div1.itemId -> {
+                    val intent = Intent(this, Divisas::class.java)
+                    startActivity(intent)
+                    true
+                }
+                nav_ajustes1.itemId -> {
+                    val intent = Intent(this, Ajustes::class.java)
+                    startActivity(intent)
+                    true
+                }
+                else -> false
+
+            }
+        }
+
+
+        //-------------------------------------------Menu lateral-------------------------------------------
         check()
         gestos = GestureDetector(this, EscuchaGestos())
 
@@ -138,11 +231,6 @@ class MgInicioIngresos : AppCompatActivity() {
         var btnAnadirGasto = binding.btnAddGroup3
         btnAnadirGasto.setOnClickListener {
             val intent = Intent(this, MgAnadirIngreso::class.java)
-            startActivity(intent)
-        }
-        var btnAjustes = binding.btnMenu2
-        btnAjustes.setOnClickListener {
-            val intent = Intent(this, MenuLateralMG::class.java)
             startActivity(intent)
         }
 

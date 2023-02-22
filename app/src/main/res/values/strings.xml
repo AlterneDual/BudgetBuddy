@@ -84,4 +84,9 @@
     <string name="nombre_usuario">Nombre Usuario</string>
     <string name="user">USER</string>
     <string name="ejemplo_mail_com">ejemplo@mail.com</string>
+
+    <string name="open">Open Navigation Drawer</string>
+    <string name="close">Close Navigation Drawer</string>
+    <string name="Divisas">Divisas</string>
+
 </resources>
