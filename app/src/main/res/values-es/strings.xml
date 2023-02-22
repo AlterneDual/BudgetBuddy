@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">BudgetBuddy</string>
     <string name="ingresos_underline"><u>INGRESOS</u></string>
@@ -78,5 +79,5 @@
     <string name="añadir_categoria">Añadir Categoría</string>
     <string name="nombre_usuario">Nombre Usuario</string>
     <string name="user">USER</string>
-    <string name="ejemplo_mail_com">ejemplo@mail.com</string>
+    <string name="ejemplo_mail_com">example@mail.com</string>
 </resources>

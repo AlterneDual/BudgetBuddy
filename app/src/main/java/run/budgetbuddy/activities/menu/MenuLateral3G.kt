@@ -5,10 +5,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
+import run.budgetbuddy.activities.ajustes.Ajustes
 import run.budgetbuddy.activities.divisa.Divisas
 import models.ItemGenerico
 import run.budgetbuddy.R
-import run.budgetbuddy.activities.ajustes.Ajustes
 import run.budgetbuddy.activities.GG.Principal3G
 import run.budgetbuddy.activities.categoria.Categorias
 
