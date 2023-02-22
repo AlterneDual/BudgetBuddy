@@ -32,6 +32,7 @@ import java.util.Calendar
 import java.util.Locale
 import android.graphics.Typeface
 import android.view.*
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.res.ResourcesCompat
@@ -53,8 +54,7 @@ class MgInicio : AppCompatActivity() {
     private lateinit var gestos: GestureDetector
     private lateinit var listaCategorias: MutableList<Categoria>
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
-    lateinit var drawerLayout : DrawerLayout
-
+    lateinit var drawerLayout: DrawerLayout
 
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -586,6 +586,7 @@ class MgInicio : AppCompatActivity() {
     private fun showDatePicker() {
         var startDate: Calendar? = null
         var endDate: Calendar? = null
+        var startDateReal: Calendar? = null
 
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
@@ -596,6 +597,11 @@ class MgInicio : AppCompatActivity() {
             this,
             DatePickerDialog.OnDateSetListener { view, selectedYear, selectedMonth, selectedDay ->
                 startDate = Calendar.getInstance().apply {
+                    set(Calendar.YEAR, selectedYear)
+                    set(Calendar.MONTH, selectedMonth)
+                    set(Calendar.DAY_OF_MONTH, selectedDay.minus(1))
+                }
+                startDateReal = Calendar.getInstance().apply {
                     set(Calendar.YEAR, selectedYear)
                     set(Calendar.MONTH, selectedMonth)
                     set(Calendar.DAY_OF_MONTH, selectedDay)
@@ -616,26 +622,26 @@ class MgInicio : AppCompatActivity() {
                             var start = ""
                             var end = ""
                             if (startDate!!.time <= endDate!!.time) {
-                                start = format.format(startDate!!.time)
+                                start = format.format(startDateReal!!.time)
                                 end = format.format(endDate!!.time)
+
+                                var gastos = verInfoPeriodo(
+                                    startDate!!.time,
+                                    endDate!!.time
+                                )
+                                getAllDistGastos(gastos)
+                                IniciarAdapter()
+                                verGrafico(gastos)
+
+                                binding.tvResultadoFecha.text =
+                                    ("${start.toString()} - ${end.toString()}")
                             } else {
-                                var storeData = endDate
-                                endDate = startDate
-                                startDate = storeData
-                                start = format.format(startDate!!.time)
-                                end = format.format(endDate!!.time)
+                                Toast.makeText(
+                                    this,
+                                    "Introduzca un Periodo que tenga sentido: Primero fecha inicial y Segundo fecha final",
+                                    Toast.LENGTH_LONG
+                                ).show()
                             }
-
-                            var gastos = verInfoPeriodo(
-                                startDate!!.time,
-                                endDate!!.time
-                            )
-                            getAllDistGastos(gastos)
-                            IniciarAdapter()
-                            verGrafico(gastos)
-
-                            binding.tvResultadoFecha.text =
-                                ("${start.toString()} - ${end.toString()}")
                         }
                     },
                     selectedYear,
@@ -663,17 +669,27 @@ class MgInicio : AppCompatActivity() {
             Categoria("Hotele", R.drawable.circulo_celeste, R.drawable.cat_hotel, "##97b5fe"),
             Categoria("Limpieza", R.drawable.circulo_azul, R.drawable.cat_limpieza, "#010efe"),
             Categoria("Regalos", R.drawable.circulo_rosa, R.drawable.cat_regalo, "#f610fe"),
-            Categoria("Restaurante", R.drawable.circulo_celeste,R.drawable.cat_restaurante,"#97b5fe"),
-            Categoria("Videojuegos",R.drawable.circulo_naranja,R.drawable.cat_videojuego,"#FF9D0A")
+            Categoria(
+                "Restaurante",
+                R.drawable.circulo_celeste,
+                R.drawable.cat_restaurante,
+                "#97b5fe"
+            ),
+            Categoria(
+                "Videojuegos",
+                R.drawable.circulo_naranja,
+                R.drawable.cat_videojuego,
+                "#FF9D0A"
+            )
 
         )
 
         return listaCategorias
     }
 
-    private fun rellenar_bd_categorias(){
-        if(categoriaCRUD.getAllCategoria().isEmpty()){
-            for(categoria in listaCategorias){
+    private fun rellenar_bd_categorias() {
+        if (categoriaCRUD.getAllCategoria().isEmpty()) {
+            for (categoria in listaCategorias) {
                 categoriaCRUD.addCategoria(categoria)
             }
         }

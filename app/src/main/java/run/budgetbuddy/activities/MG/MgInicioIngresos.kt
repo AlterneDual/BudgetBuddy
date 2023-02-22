@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.MotionEvent
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
@@ -45,7 +46,81 @@ class MgInicioIngresos : AppCompatActivity() {
     var ic = IngresoCRUD()
     private var seleccionado: Int = 0;
     private lateinit var gestos: GestureDetector
-    private var lista_colores: ArrayList<Int> = ArrayList()
+
+    val color_list = mutableListOf<Int>(
+        Color.parseColor("#4eb4e4"),
+        Color.parseColor("#791eed"),
+        Color.parseColor("#56b73c"),
+        Color.parseColor("#83e8d3"),
+        Color.parseColor("#7899a3"),
+        Color.parseColor("#c054ec"),
+        Color.parseColor("#8c00a4"),
+        Color.parseColor("#0b01c2"),
+        Color.parseColor("#bfbb13"),
+        Color.parseColor("#5c5ae5"),
+        Color.parseColor("#d08b2e"),
+        Color.parseColor("#6c719b"),
+        Color.parseColor("#f7bc91"),
+        Color.parseColor("#6b5d6e"),
+        Color.parseColor("#c30c7f"),
+        Color.parseColor("#de12f8"),
+        Color.parseColor("#2c56e2"),
+        Color.parseColor("#a40c88"),
+        Color.parseColor("#09b8f9"),
+        Color.parseColor("#03e524"),
+        Color.parseColor("#ab20c4"),
+        Color.parseColor("#e4c4f4"),
+        Color.parseColor("#4a2c4e"),
+        Color.parseColor("#f2c9d1"),
+        Color.parseColor("#0a0c60"),
+        Color.parseColor("#bc1667"),
+        Color.parseColor("#84c0d3"),
+        Color.parseColor("#e0e3f3"),
+        Color.parseColor("#9d9776"),
+        Color.parseColor("#7b85f3"),
+        Color.parseColor("#3c2e08"),
+        Color.parseColor("#d5f5d5"),
+        Color.parseColor("#c98f95"),
+        Color.parseColor("#e7d5dc"),
+        Color.parseColor("#5b50f6"),
+        Color.parseColor("#a6bced"),
+        Color.parseColor("#c0ff1d"),
+        Color.parseColor("#caed84"),
+        Color.parseColor("#48a8a8"),
+        Color.parseColor("#6b7c0a"),
+        Color.parseColor("#757772"),
+        Color.parseColor("#3d3d04"),
+        Color.parseColor("#71c52a"),
+        Color.parseColor("#b56e6d"),
+        Color.parseColor("#0f7f9e"),
+        Color.parseColor("#18245f"),
+        Color.parseColor("#8ee2a1"),
+        Color.parseColor("#84c6f7"),
+        Color.parseColor("#734c8a"),
+        Color.parseColor("#87645a"),
+        Color.parseColor("#853676"),
+        Color.parseColor("#6b3f3b"),
+        Color.parseColor("#6e3012"),
+        Color.parseColor("#f1d69b"),
+        Color.parseColor("#e7d6af"),
+        Color.parseColor("#1972aa"),
+        Color.parseColor("#dfc8e7"),
+        Color.parseColor("#93787a"),
+        Color.parseColor("#f7aa67"),
+        Color.parseColor("#3d3877"),
+        Color.parseColor("#9eb1a4"),
+        Color.parseColor("#e4b8e4"),
+        Color.parseColor("#4a5c97"),
+        Color.parseColor("#40a0d8"),
+        Color.parseColor("#5f5a9a"),
+        Color.parseColor("#b5e4c4"),
+        Color.parseColor("#4d4b95"),
+        Color.parseColor("#5e5fc5"),
+        Color.parseColor("#8f2e1b"),
+        Color.parseColor("#c2be79"),
+        Color.parseColor("#f8c7af"),
+        Color.parseColor("#eebeca")
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,7 +137,6 @@ class MgInicioIngresos : AppCompatActivity() {
         }
         var btnAnadirGasto = binding.btnAddGroup3
         btnAnadirGasto.setOnClickListener {
-            btnAnadirGasto.setBackgroundColor(Color.parseColor("#FFFFFF"))
             val intent = Intent(this, MgAnadirIngreso::class.java)
             startActivity(intent)
         }
@@ -148,8 +222,7 @@ class MgInicioIngresos : AppCompatActivity() {
         dataSet.sliceSpace = 3f
         dataSet.iconsOffset = MPPointF(10f, 40f)
         dataSet.selectionShift = 20f
-        var color_list = ColorTemplate.COLORFUL_COLORS.toList()
-        lista_colores.addAll(color_list)
+
         dataSet.colors = color_list
 
         val data = PieData(dataSet)
@@ -168,7 +241,7 @@ class MgInicioIngresos : AppCompatActivity() {
     private fun IniciarAdapter() {
         val listView = binding.lvInicioIngreso
 
-        adapter = myListAdapter_ingreso(this, listaIngresosBD, lista_colores)
+        adapter = myListAdapter_ingreso(this, listaIngresosBD, color_list)
         listView.adapter = adapter
         adapter.notifyDataSetChanged()
     }
@@ -454,6 +527,7 @@ class MgInicioIngresos : AppCompatActivity() {
     private fun showDatePicker() {
         var startDate: Calendar? = null
         var endDate: Calendar? = null
+        var startDateReal: Calendar? = null
 
         val calendar = Calendar.getInstance()
         val year = calendar.get(Calendar.YEAR)
@@ -464,6 +538,11 @@ class MgInicioIngresos : AppCompatActivity() {
             this,
             DatePickerDialog.OnDateSetListener { view, selectedYear, selectedMonth, selectedDay ->
                 startDate = Calendar.getInstance().apply {
+                    set(Calendar.YEAR, selectedYear)
+                    set(Calendar.MONTH, selectedMonth)
+                    set(Calendar.DAY_OF_MONTH, selectedDay.minus(1))
+                }
+                startDateReal = Calendar.getInstance().apply {
                     set(Calendar.YEAR, selectedYear)
                     set(Calendar.MONTH, selectedMonth)
                     set(Calendar.DAY_OF_MONTH, selectedDay)
@@ -484,26 +563,28 @@ class MgInicioIngresos : AppCompatActivity() {
                             var start = ""
                             var end = ""
                             if (startDate!!.time <= endDate!!.time) {
-                                start = format.format(startDate!!.time)
+                                start = format.format(startDateReal!!.time)
                                 end = format.format(endDate!!.time)
+
+
+                                var ing = verInfoPeriodo(
+                                    startDate!!.time,
+                                    endDate!!.time
+                                )
+                                inicializarIngresos(ing)
+                                IniciarAdapter()
+                                verGrafico(ing)
+
+                                binding.tvResultadoFecha.text =
+                                    ("${start.toString()} - ${end.toString()}")
                             } else {
-                                var storeData = endDate
-                                endDate = startDate
-                                startDate = storeData
-                                start = format.format(startDate!!.time)
-                                end = format.format(endDate!!.time)
+                                Toast.makeText(
+                                    this,
+                                    "Introduzca un Periodo que tenga sentido: Primero fecha inicial y Segundo fecha final",
+                                    Toast.LENGTH_LONG
+                                ).show()
+
                             }
-
-                            var ing = verInfoPeriodo(
-                                startDate!!.time,
-                                endDate!!.time
-                            )
-                            inicializarIngresos(ing)
-                            IniciarAdapter()
-                            verGrafico(ing)
-
-                            binding.tvResultadoFecha.text =
-                                ("${start.toString()} - ${end.toString()}")
                         }
                     },
                     selectedYear,
