@@ -27,7 +27,7 @@ public final class MgInicioGastosBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageButton btnAddGroup2;
+  public final ImageButton btnAddGroup3;
 
   @NonNull
   public final ImageView btnMenu1;
@@ -69,13 +69,13 @@ public final class MgInicioGastosBinding implements ViewBinding {
   public final Button tvSemana;
 
   private MgInicioGastosBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ImageButton btnAddGroup2, @NonNull ImageView btnMenu1, @NonNull ImageView butInfo,
+      @NonNull ImageButton btnAddGroup3, @NonNull ImageView btnMenu1, @NonNull ImageView butInfo,
       @NonNull LinearLayout linearLayout5, @NonNull ListView lvInicioGastos,
       @NonNull PieChart pieChart, @NonNull Toolbar toolbarA, @NonNull Button tvAnho,
       @NonNull Button tvDia, @NonNull TextView tvIngresos, @NonNull Button tvMes,
       @NonNull Button tvPeriodo, @NonNull TextView tvResultadoFecha, @NonNull Button tvSemana) {
     this.rootView = rootView;
-    this.btnAddGroup2 = btnAddGroup2;
+    this.btnAddGroup3 = btnAddGroup3;
     this.btnMenu1 = btnMenu1;
     this.butInfo = butInfo;
     this.linearLayout5 = linearLayout5;
@@ -118,9 +118,9 @@ public final class MgInicioGastosBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnAddGroup2;
-      ImageButton btnAddGroup2 = ViewBindings.findChildViewById(rootView, id);
-      if (btnAddGroup2 == null) {
+      id = R.id.btnAddGroup3;
+      ImageButton btnAddGroup3 = ViewBindings.findChildViewById(rootView, id);
+      if (btnAddGroup3 == null) {
         break missingId;
       }
 
@@ -202,7 +202,7 @@ public final class MgInicioGastosBinding implements ViewBinding {
         break missingId;
       }
 
-      return new MgInicioGastosBinding((ConstraintLayout) rootView, btnAddGroup2, btnMenu1, butInfo,
+      return new MgInicioGastosBinding((ConstraintLayout) rootView, btnAddGroup3, btnMenu1, butInfo,
           linearLayout5, lvInicioGastos, pieChart, toolbarA, tvAnho, tvDia, tvIngresos, tvMes,
           tvPeriodo, tvResultadoFecha, tvSemana);
     }

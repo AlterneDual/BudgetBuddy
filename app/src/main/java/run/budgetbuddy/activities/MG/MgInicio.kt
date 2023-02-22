@@ -47,15 +47,14 @@ class MgInicio : AppCompatActivity() {
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
 
 
-
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
         check()
-        listaCategorias = crearCategorias()
-        rellenar_bd_categorias()
+//        listaCategorias = crearCategorias()
+//        rellenar_bd_categorias()
         gestos = GestureDetector(this, EscuchaGestos())
 
         var btnIngresos = binding.tvIngresos
@@ -64,8 +63,9 @@ class MgInicio : AppCompatActivity() {
             startActivity(intent)
             overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
         }
-        var btnAnadirGasto = binding.btnAddGroup2
+        var btnAnadirGasto = binding.btnAddGroup3
         btnAnadirGasto.setOnClickListener {
+            btnAnadirGasto.setBackgroundColor(Color.parseColor("#FFFFFF"))
             val intent = Intent(this, MgAnadirGasto::class.java)
             startActivity(intent)
         }

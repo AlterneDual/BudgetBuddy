@@ -110,6 +110,4 @@ open class GastoCRUD {
         }
         return gastos
     }
-
-
 }

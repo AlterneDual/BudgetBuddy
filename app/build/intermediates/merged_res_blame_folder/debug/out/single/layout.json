@@ -160,16 +160,16 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_grid_crear_categorias.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_inicio_gastos.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/mg_inicio_gastos.xml"
-    },
-    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_saldo.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_saldo.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_row_reembolso.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_row_reembolso.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_info_gasto_ingreso_row_ingreso.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_info_gasto_ingreso_row_ingreso.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_inicio_ingresos.xml",

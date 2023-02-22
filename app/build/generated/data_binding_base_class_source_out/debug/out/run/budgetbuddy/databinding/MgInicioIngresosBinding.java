@@ -4,6 +4,7 @@ package run.budgetbuddy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -35,81 +36,59 @@ public final class MgInicioIngresosBinding implements ViewBinding {
   public final ImageView butInfo;
 
   @NonNull
-  public final ImageView ivNext1;
-
-  @NonNull
-  public final ImageView ivPrevious4;
-
-  @NonNull
   public final LinearLayout linearLayout5;
 
   @NonNull
-  public final ListView lvInicioGastos;
+  public final ListView lvInicioIngreso;
 
   @NonNull
   public final PieChart pieChart;
 
   @NonNull
-  public final TextView textView11;
-
-  @NonNull
   public final Toolbar toolbarA;
 
   @NonNull
-  public final TextView tvAnho;
+  public final Button tvAnho;
 
   @NonNull
-  public final TextView tvDia;
-
-  @NonNull
-  public final TextView tvGastos;
+  public final Button tvDia;
 
   @NonNull
   public final TextView tvIngresos;
 
   @NonNull
-  public final TextView tvMes;
+  public final Button tvMes;
 
   @NonNull
-  public final TextView tvPeriodo;
+  public final Button tvPeriodo;
 
   @NonNull
-  public final TextView tvSaldoRestante2;
+  public final TextView tvResultadoFecha;
 
   @NonNull
-  public final TextView tvSemana;
-
-  @NonNull
-  public final TextView tvYear2;
+  public final Button tvSemana;
 
   private MgInicioIngresosBinding(@NonNull ConstraintLayout rootView,
       @NonNull ImageButton btnAddGroup3, @NonNull ImageView btnMenu2, @NonNull ImageView butInfo,
-      @NonNull ImageView ivNext1, @NonNull ImageView ivPrevious4,
-      @NonNull LinearLayout linearLayout5, @NonNull ListView lvInicioGastos,
-      @NonNull PieChart pieChart, @NonNull TextView textView11, @NonNull Toolbar toolbarA,
-      @NonNull TextView tvAnho, @NonNull TextView tvDia, @NonNull TextView tvGastos,
-      @NonNull TextView tvIngresos, @NonNull TextView tvMes, @NonNull TextView tvPeriodo,
-      @NonNull TextView tvSaldoRestante2, @NonNull TextView tvSemana, @NonNull TextView tvYear2) {
+      @NonNull LinearLayout linearLayout5, @NonNull ListView lvInicioIngreso,
+      @NonNull PieChart pieChart, @NonNull Toolbar toolbarA, @NonNull Button tvAnho,
+      @NonNull Button tvDia, @NonNull TextView tvIngresos, @NonNull Button tvMes,
+      @NonNull Button tvPeriodo, @NonNull TextView tvResultadoFecha, @NonNull Button tvSemana) {
     this.rootView = rootView;
     this.btnAddGroup3 = btnAddGroup3;
     this.btnMenu2 = btnMenu2;
     this.butInfo = butInfo;
-    this.ivNext1 = ivNext1;
-    this.ivPrevious4 = ivPrevious4;
     this.linearLayout5 = linearLayout5;
-    this.lvInicioGastos = lvInicioGastos;
+    this.lvInicioIngreso = lvInicioIngreso;
     this.pieChart = pieChart;
-    this.textView11 = textView11;
     this.toolbarA = toolbarA;
     this.tvAnho = tvAnho;
     this.tvDia = tvDia;
-    this.tvGastos = tvGastos;
     this.tvIngresos = tvIngresos;
     this.tvMes = tvMes;
     this.tvPeriodo = tvPeriodo;
-    this.tvSaldoRestante2 = tvSaldoRestante2;
+    this.tvResultadoFecha = tvResultadoFecha;
     this.tvSemana = tvSemana;
-    this.tvYear2 = tvYear2;
   }
 
   @Override
@@ -157,39 +136,21 @@ public final class MgInicioIngresosBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.ivNext1;
-      ImageView ivNext1 = ViewBindings.findChildViewById(rootView, id);
-      if (ivNext1 == null) {
-        break missingId;
-      }
-
-      id = R.id.ivPrevious4;
-      ImageView ivPrevious4 = ViewBindings.findChildViewById(rootView, id);
-      if (ivPrevious4 == null) {
-        break missingId;
-      }
-
       id = R.id.linearLayout5;
       LinearLayout linearLayout5 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout5 == null) {
         break missingId;
       }
 
-      id = R.id.lvInicioGastos;
-      ListView lvInicioGastos = ViewBindings.findChildViewById(rootView, id);
-      if (lvInicioGastos == null) {
+      id = R.id.lvInicioIngreso;
+      ListView lvInicioIngreso = ViewBindings.findChildViewById(rootView, id);
+      if (lvInicioIngreso == null) {
         break missingId;
       }
 
       id = R.id.pieChart;
       PieChart pieChart = ViewBindings.findChildViewById(rootView, id);
       if (pieChart == null) {
-        break missingId;
-      }
-
-      id = R.id.textView11;
-      TextView textView11 = ViewBindings.findChildViewById(rootView, id);
-      if (textView11 == null) {
         break missingId;
       }
 
@@ -200,20 +161,14 @@ public final class MgInicioIngresosBinding implements ViewBinding {
       }
 
       id = R.id.tvAnho;
-      TextView tvAnho = ViewBindings.findChildViewById(rootView, id);
+      Button tvAnho = ViewBindings.findChildViewById(rootView, id);
       if (tvAnho == null) {
         break missingId;
       }
 
       id = R.id.tvDia;
-      TextView tvDia = ViewBindings.findChildViewById(rootView, id);
+      Button tvDia = ViewBindings.findChildViewById(rootView, id);
       if (tvDia == null) {
-        break missingId;
-      }
-
-      id = R.id.tvGastos;
-      TextView tvGastos = ViewBindings.findChildViewById(rootView, id);
-      if (tvGastos == null) {
         break missingId;
       }
 
@@ -224,39 +179,32 @@ public final class MgInicioIngresosBinding implements ViewBinding {
       }
 
       id = R.id.tvMes;
-      TextView tvMes = ViewBindings.findChildViewById(rootView, id);
+      Button tvMes = ViewBindings.findChildViewById(rootView, id);
       if (tvMes == null) {
         break missingId;
       }
 
       id = R.id.tvPeriodo;
-      TextView tvPeriodo = ViewBindings.findChildViewById(rootView, id);
+      Button tvPeriodo = ViewBindings.findChildViewById(rootView, id);
       if (tvPeriodo == null) {
         break missingId;
       }
 
-      id = R.id.tvSaldoRestante2;
-      TextView tvSaldoRestante2 = ViewBindings.findChildViewById(rootView, id);
-      if (tvSaldoRestante2 == null) {
+      id = R.id.tvResultadoFecha;
+      TextView tvResultadoFecha = ViewBindings.findChildViewById(rootView, id);
+      if (tvResultadoFecha == null) {
         break missingId;
       }
 
       id = R.id.tvSemana;
-      TextView tvSemana = ViewBindings.findChildViewById(rootView, id);
+      Button tvSemana = ViewBindings.findChildViewById(rootView, id);
       if (tvSemana == null) {
         break missingId;
       }
 
-      id = R.id.tvYear2;
-      TextView tvYear2 = ViewBindings.findChildViewById(rootView, id);
-      if (tvYear2 == null) {
-        break missingId;
-      }
-
       return new MgInicioIngresosBinding((ConstraintLayout) rootView, btnAddGroup3, btnMenu2,
-          butInfo, ivNext1, ivPrevious4, linearLayout5, lvInicioGastos, pieChart, textView11,
-          toolbarA, tvAnho, tvDia, tvGastos, tvIngresos, tvMes, tvPeriodo, tvSaldoRestante2,
-          tvSemana, tvYear2);
+          butInfo, linearLayout5, lvInicioIngreso, pieChart, toolbarA, tvAnho, tvDia, tvIngresos,
+          tvMes, tvPeriodo, tvResultadoFecha, tvSemana);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

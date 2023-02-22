@@ -156,18 +156,6 @@
         app:layout_constraintTop_toTopOf="@+id/toolbarA"
         app:srcCompat="@drawable/menu_button" />
 
-    <ImageButton
-        android:id="@+id/btnAddGroup2"
-        android:layout_width="76dp"
-        android:layout_height="72dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="275dp"
-        android:background="@color/transparent"
-        android:clickable="true"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/plus_button"
-        tools:ignore="SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/butInfo"
@@ -192,6 +180,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/pieChart" />
+
+    <ImageButton
+        android:id="@+id/btnAddGroup3"
+        android:layout_width="76dp"
+        android:layout_height="72dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="268dp"
+        android:background="@color/transparent"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/plus_button"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
