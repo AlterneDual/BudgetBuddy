@@ -7,12 +7,12 @@ public final class MgInicio extends androidx.appcompat.app.AppCompatActivity {
     private run.budgetbuddy.databinding.MgInicioGastosBinding binding;
     private run.budgetbuddy.adapter.myListAdapter_gasto adapter;
     private java.util.HashMap<models.Categoria, java.lang.Float> listagastosBD;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private CRUD.GastoCRUD gc;
     private int seleccionado = 0;
     private android.view.GestureDetector gestos;
     private java.util.List<models.Categoria> listaCategorias;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private CRUD.CategoriaCRUD categoriaCRUD;
     public androidx.drawerlayout.widget.DrawerLayout drawerLayout;
     
@@ -20,36 +20,36 @@ public final class MgInicio extends androidx.appcompat.app.AppCompatActivity {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final CRUD.GastoCRUD getGc() {
         return null;
     }
     
-    public final void setGc(@org.jetbrains.annotations.NotNull
+    public final void setGc(@org.jetbrains.annotations.NotNull()
     CRUD.GastoCRUD p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final CRUD.CategoriaCRUD getCategoriaCRUD() {
         return null;
     }
     
-    public final void setCategoriaCRUD(@org.jetbrains.annotations.NotNull
+    public final void setCategoriaCRUD(@org.jetbrains.annotations.NotNull()
     CRUD.CategoriaCRUD p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final androidx.drawerlayout.widget.DrawerLayout getDrawerLayout() {
         return null;
     }
     
-    public final void setDrawerLayout(@org.jetbrains.annotations.NotNull
+    public final void setDrawerLayout(@org.jetbrains.annotations.NotNull()
     androidx.drawerlayout.widget.DrawerLayout p0) {
     }
     
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.M)
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
@@ -60,39 +60,39 @@ public final class MgInicio extends androidx.appcompat.app.AppCompatActivity {
     private final void IniciarAdapter() {
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<models.Gasto> verInfoDia(@org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<models.Gasto> verInfoDia(@org.jetbrains.annotations.NotNull()
     java.sql.Date fecha_hoy) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<models.Gasto> verInfoSemana(@org.jetbrains.annotations.NotNull
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<models.Gasto> verInfoSemana(@org.jetbrains.annotations.NotNull()
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
     java.util.Date fecha_final) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<models.Gasto> verInfoMes(@org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<models.Gasto> verInfoMes(@org.jetbrains.annotations.NotNull()
     java.sql.Date fecha_inicio) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<models.Gasto> verInfoAno(@org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<models.Gasto> verInfoAno(@org.jetbrains.annotations.NotNull()
     java.sql.Date ano) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<models.Gasto> verInfoPeriodo(@org.jetbrains.annotations.NotNull
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<models.Gasto> verInfoPeriodo(@org.jetbrains.annotations.NotNull()
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
     java.util.Date fecha_final) {
         return null;
     }
     
-    public final void getAllDistGastos(@org.jetbrains.annotations.NotNull
+    public final void getAllDistGastos(@org.jetbrains.annotations.NotNull()
     java.util.List<models.Gasto> gastos) {
     }
     
@@ -100,8 +100,8 @@ public final class MgInicio extends androidx.appcompat.app.AppCompatActivity {
     public final void check() {
     }
     
-    @java.lang.Override
-    public boolean onTouchEvent(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    public boolean onTouchEvent(@org.jetbrains.annotations.Nullable()
     android.view.MotionEvent event) {
         return false;
     }
@@ -123,9 +123,9 @@ public final class MgInicio extends androidx.appcompat.app.AppCompatActivity {
             super();
         }
         
-        @java.lang.Override
-        public boolean onFling(@org.jetbrains.annotations.NotNull
-        android.view.MotionEvent e1, @org.jetbrains.annotations.NotNull
+        @java.lang.Override()
+        public boolean onFling(@org.jetbrains.annotations.NotNull()
+        android.view.MotionEvent e1, @org.jetbrains.annotations.NotNull()
         android.view.MotionEvent e2, float velocityX, float velocityY) {
             return false;
         }

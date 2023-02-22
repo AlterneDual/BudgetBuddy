@@ -21,6 +21,7 @@ open class Gasto() : RealmObject() {
     var divisa: Divisa? = null
     var descripcion: String? = ""
 
+
     var id_user: Int = 0
 
     override fun toString(): String {
