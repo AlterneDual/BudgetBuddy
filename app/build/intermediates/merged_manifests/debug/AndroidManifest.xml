@@ -67,6 +67,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name="run.budgetbuddy.activities.MG.MgEditarEliminarGasto"
+            android:exported="false" >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name="run.budgetbuddy.activities.menu.MenuLateral3G"
             android:exported="false" >
             <meta-data

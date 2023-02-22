@@ -529,14 +529,16 @@ class MgInfo : AppCompatActivity() {
             }
 
             R.id.btnEditar -> {
-//                //Aqui se envía las variables nombre y bandera a la pantalla "editar"
-//                var nombre: String = listaComunidades[info.position].nombre
-//                var bandera: Int = listaComunidades[info.position].bandera
-//
-//                val intent = Intent(this, PantallaEditar::class.java)
-//                intent.putExtra("Nombre", nombre)
-//                intent.putExtra("Bandera", bandera)
-//                intentLaunch.launch(intent)
+                val gastoSeleccionado = lista_gastos[posActualGasto]
+                val nombre = gastoSeleccionado.descripcion
+                val importe = gastoSeleccionado.importe
+                val id = gastoSeleccionado.id
+
+                val intent = Intent(this, MgEditarEliminarGasto::class.java)
+                intent.putExtra("nombre", nombre)
+                intent.putExtra("importe", importe.toString())
+                intent.putExtra("id", id)
+                startActivity(intent)
 
 
                 true
