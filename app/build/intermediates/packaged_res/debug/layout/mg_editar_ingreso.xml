@@ -23,7 +23,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="6dp"
         android:fontFamily="@font/oswald"
-        android:text="Editar Ingreso"
+        android:text="@string/editar_ingreso"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/btnAnadirFoto"
@@ -51,7 +51,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:paddingTop="15dp"
-        android:text="Salario"
+        android:text="@string/salario"
         android:textColor="#615B5B"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -180,7 +180,7 @@
             android:layout_weight="1"
             android:background="@drawable/long_button_orange"
             android:backgroundTint="#D11010"
-            android:text="Eliminar"
+            android:text="@string/eliminar"
             android:textStyle="bold" />
 
         <Button
@@ -190,7 +190,7 @@
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/long_button_orange"
-            android:text="EDITAR"
+            android:text="@string/editar"
             android:textStyle="bold" />
     </LinearLayout>
 
@@ -206,7 +206,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:paddingTop="15dp"
-        android:text="Comentario editable"
+        android:text="@string/comentario_editable"
         android:textColor="#615B5B"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"

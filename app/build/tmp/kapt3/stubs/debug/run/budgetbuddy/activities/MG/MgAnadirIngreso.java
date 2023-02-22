@@ -6,11 +6,11 @@ import java.lang.System;
 public final class MgAnadirIngreso extends androidx.appcompat.app.AppCompatActivity {
     private run.budgetbuddy.databinding.MgAnadirIngresoBinding binding;
     private android.view.GestureDetector gestos;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private CRUD.DivisaCRUD divisaCrud;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private CRUD.IngresoCRUD ingresoCrud;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private java.lang.String nombreMes;
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.N)
     private android.icu.util.Calendar selectedDate;
@@ -36,30 +36,30 @@ public final class MgAnadirIngreso extends androidx.appcompat.app.AppCompatActiv
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final CRUD.DivisaCRUD getDivisaCrud() {
         return null;
     }
     
-    public final void setDivisaCrud(@org.jetbrains.annotations.NotNull()
+    public final void setDivisaCrud(@org.jetbrains.annotations.NotNull
     CRUD.DivisaCRUD p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final CRUD.IngresoCRUD getIngresoCrud() {
         return null;
     }
     
-    public final void setIngresoCrud(@org.jetbrains.annotations.NotNull()
+    public final void setIngresoCrud(@org.jetbrains.annotations.NotNull
     CRUD.IngresoCRUD p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.lang.String getNombreMes() {
         return null;
     }
     
-    public final void setNombreMes(@org.jetbrains.annotations.NotNull()
+    public final void setNombreMes(@org.jetbrains.annotations.NotNull
     java.lang.String p0) {
     }
     
@@ -71,12 +71,12 @@ public final class MgAnadirIngreso extends androidx.appcompat.app.AppCompatActiv
     }
     
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.N)
-    @java.lang.Override()
-    protected void onCreate(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    protected void onCreate(@org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.util.ArrayList<java.lang.String> nombreMeses(int mes) {
         return null;
     }
@@ -98,8 +98,8 @@ public final class MgAnadirIngreso extends androidx.appcompat.app.AppCompatActiv
     private final void showDatePickerDialog(android.widget.TextView tvFechaSeleccionada22, android.widget.TextView fecha1, android.widget.TextView fecha2, android.widget.TextView fecha3) {
     }
     
-    @java.lang.Override()
-    public boolean onTouchEvent(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    public boolean onTouchEvent(@org.jetbrains.annotations.Nullable
     android.view.MotionEvent event) {
         return false;
     }
@@ -111,9 +111,9 @@ public final class MgAnadirIngreso extends androidx.appcompat.app.AppCompatActiv
             super();
         }
         
-        @java.lang.Override()
-        public boolean onFling(@org.jetbrains.annotations.NotNull()
-        android.view.MotionEvent e1, @org.jetbrains.annotations.NotNull()
+        @java.lang.Override
+        public boolean onFling(@org.jetbrains.annotations.NotNull
+        android.view.MotionEvent e1, @org.jetbrains.annotations.NotNull
         android.view.MotionEvent e2, float velocityX, float velocityY) {
             return false;
         }

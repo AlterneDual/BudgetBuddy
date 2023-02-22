@@ -21,7 +21,7 @@ public final class DialogIdiomaBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnAceptar;
+  public final Button btnAceptarr;
 
   @NonNull
   public final Button btnCancelar;
@@ -30,7 +30,10 @@ public final class DialogIdiomaBinding implements ViewBinding {
   public final RadioButton rbAnual;
 
   @NonNull
-  public final RadioButton rbDiario;
+  public final RadioButton rbEnglish;
+
+  @NonNull
+  public final RadioButton rbEspaOl;
 
   @NonNull
   public final RadioButton rbMensual;
@@ -38,21 +41,18 @@ public final class DialogIdiomaBinding implements ViewBinding {
   @NonNull
   public final RadioButton rbPortugues;
 
-  @NonNull
-  public final RadioButton tbSemanal;
-
-  private DialogIdiomaBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAceptar,
-      @NonNull Button btnCancelar, @NonNull RadioButton rbAnual, @NonNull RadioButton rbDiario,
-      @NonNull RadioButton rbMensual, @NonNull RadioButton rbPortugues,
-      @NonNull RadioButton tbSemanal) {
+  private DialogIdiomaBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAceptarr,
+      @NonNull Button btnCancelar, @NonNull RadioButton rbAnual, @NonNull RadioButton rbEnglish,
+      @NonNull RadioButton rbEspaOl, @NonNull RadioButton rbMensual,
+      @NonNull RadioButton rbPortugues) {
     this.rootView = rootView;
-    this.btnAceptar = btnAceptar;
+    this.btnAceptarr = btnAceptarr;
     this.btnCancelar = btnCancelar;
     this.rbAnual = rbAnual;
-    this.rbDiario = rbDiario;
+    this.rbEnglish = rbEnglish;
+    this.rbEspaOl = rbEspaOl;
     this.rbMensual = rbMensual;
     this.rbPortugues = rbPortugues;
-    this.tbSemanal = tbSemanal;
   }
 
   @Override
@@ -82,9 +82,9 @@ public final class DialogIdiomaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnAceptar;
-      Button btnAceptar = ViewBindings.findChildViewById(rootView, id);
-      if (btnAceptar == null) {
+      id = R.id.btnAceptarr;
+      Button btnAceptarr = ViewBindings.findChildViewById(rootView, id);
+      if (btnAceptarr == null) {
         break missingId;
       }
 
@@ -100,9 +100,15 @@ public final class DialogIdiomaBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.rbDiario;
-      RadioButton rbDiario = ViewBindings.findChildViewById(rootView, id);
-      if (rbDiario == null) {
+      id = R.id.rbEnglish;
+      RadioButton rbEnglish = ViewBindings.findChildViewById(rootView, id);
+      if (rbEnglish == null) {
+        break missingId;
+      }
+
+      id = R.id.rbEspañol;
+      RadioButton rbEspaOl = ViewBindings.findChildViewById(rootView, id);
+      if (rbEspaOl == null) {
         break missingId;
       }
 
@@ -118,14 +124,8 @@ public final class DialogIdiomaBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tbSemanal;
-      RadioButton tbSemanal = ViewBindings.findChildViewById(rootView, id);
-      if (tbSemanal == null) {
-        break missingId;
-      }
-
-      return new DialogIdiomaBinding((ConstraintLayout) rootView, btnAceptar, btnCancelar, rbAnual,
-          rbDiario, rbMensual, rbPortugues, tbSemanal);
+      return new DialogIdiomaBinding((ConstraintLayout) rootView, btnAceptarr, btnCancelar, rbAnual,
+          rbEnglish, rbEspaOl, rbMensual, rbPortugues);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

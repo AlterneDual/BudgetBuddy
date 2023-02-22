@@ -1,198 +1,198 @@
 [
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_crear_gasto_avanzado.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_crear_gasto_avanzado.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/anadir_categoria.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/anadir_categoria.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_editar_gastos.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_editar_gastos.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_periodo.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/dialog_periodo.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_info_gasto_ingreso_row_ingreso.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_info_gasto_ingreso_row_ingreso.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/register.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/register.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\activity_edit_profile.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_edit_profile.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/categorias.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/categorias.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\divisas_list.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\divisas_list.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/crear_categoria.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/crear_categoria.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_list_ajustes.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_list_ajustes.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_menu_lateral_1.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_menu_lateral_1.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\categorias.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\categorias.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_borrar_datos.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/dialog_borrar_datos.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\dialog_cambio_inicio.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_cambio_inicio.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_detalle_gasto.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_detalle_gasto.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_editar_gasto_avanzado.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_editar_gasto_avanzado.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/login.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/login.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_info.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_info.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_info_inicio.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/dialog_info_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\activity_crear_categorias.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_crear_categorias.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_info_gasto_ingreso_row.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_info_gasto_ingreso_row.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_crear_grupo.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_crear_grupo.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_grid_crear_categorias.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/custom_grid_crear_categorias.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\anadir_categoria.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\anadir_categoria.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/main_view_3g.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/main_view_3g.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_grid_categorias.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_grid_categorias.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_reembolso_list.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_reembolso_list.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_info_gasto_ingreso_row.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_info_gasto_ingreso_row.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_idioma.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/dialog_idioma.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\crear_categoria.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\crear_categoria.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_anadir_gasto.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_anadir_gasto.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\activity_menu_lateral_2.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_menu_lateral_2.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_editar_gasto_avanzado.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_editar_gasto_avanzado.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_anadir_gasto.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_anadir_gasto.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_saldo.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_saldo.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_row_group.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_row_group.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list_colores.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/custom_list_colores.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\register.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\register.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_crear_categorias.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_crear_categorias.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_inicio_gastos.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_inicio_gastos.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/n_nav_header_main.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/n_nav_header_main.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_list_menu_lateral.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_list_menu_lateral.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/divisas_list.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/divisas_list.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_reembolso.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_reembolso.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list_menu_lateral.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/custom_list_menu_lateral.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\dialog_info_inicio.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_info_inicio.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_row_reembolso.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_row_reembolso.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_detalle_gasto.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_detalle_gasto.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_crear_grupo.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_crear_grupo.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\activity_check_profile.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_check_profile.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_cambio_inicio.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/dialog_cambio_inicio.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_anadir_ingreso.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_anadir_ingreso.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_anadir_ingreso.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_anadir_ingreso.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\activity_divisas.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_divisas.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_inicio_ingresos.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_inicio_ingresos.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_list.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_list.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/load_screen.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/load_screen.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\activity_menu_lateral_1.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_menu_lateral_1.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_gastos.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_gastos.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\dialog_borrar_datos.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_borrar_datos.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_inicio_gastos.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_inicio_gastos.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_reembolso_list.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_reembolso_list.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_divisas.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_divisas.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_list_colores.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_list_colores.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/custom_list.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_list_divisas.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_list_divisas.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list_ajustes.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/custom_list_ajustes.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\load_screen.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\load_screen.xml"
-    },
-    {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_gastos.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_gastos.xml"
-    },
-    {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\activity_ajustes.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\activity_ajustes.xml"
-    },
-    {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\main_view_3g.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\main_view_3g.xml"
-    },
-    {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\login.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\login.xml"
-    },
-    {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_grid_crear_categorias.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_grid_crear_categorias.xml"
-    },
-    {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_saldo.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_saldo.xml"
-    },
-    {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_row_reembolso.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_row_reembolso.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_edit_profile.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_edit_profile.xml"
     },
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_info_gasto_ingreso_row_ingreso.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/mg_info_gasto_ingreso_row_ingreso.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_inicio_ingresos.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_inicio_ingresos.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_info.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_info.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_row_lista_gasto.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_row_lista_gasto.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_grid_categorias.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/custom_grid_categorias.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\dialog_periodo.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_periodo.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_tema.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/dialog_tema.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\dialog_idioma.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_idioma.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_crear_gasto_avanzado.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_crear_gasto_avanzado.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\dialog_tema.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\dialog_tema.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_ajustes.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_ajustes.xml"
     },
     {
-        "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\mg_editar_ingreso.xml",
-        "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\mg_editar_ingreso.xml"
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list_divisas.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/custom_list_divisas.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_editar_ingreso.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_editar_ingreso.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_check_profile.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_check_profile.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_menu_lateral_2.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_menu_lateral_2.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_reembolso.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_reembolso.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_editar_gastos.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_editar_gastos.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_row_lista_gasto.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_row_lista_gasto.xml"
+    },
+    {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_row_group.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/gp_row_group.xml"
     }
 ]

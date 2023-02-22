@@ -35,7 +35,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="6dp"
         android:fontFamily="@font/oswald"
-        android:text="Categorías"
+        android:text="@string/categorias"
         android:textColor="#FFFFFF"
 
         android:textSize="30sp"

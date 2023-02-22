@@ -1,71 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/apk/res/android">
-    <color name="black" ns1:forceDefault="true">#0E0D0D</color>
-    <color name="brown" ns1:forceDefault="true">#BF5A494F</color>
-    <color name="crayola" ns1:forceDefault="true">#F4D35E</color>
-    <color name="dark_black" ns1:forceDefault="true">#000</color>
-    <color name="dark_liver" ns1:forceDefault="true">#5A494F</color>
-    <color name="dark_orange" ns1:forceDefault="true">#80FF9D0A</color>
-    <color name="dark_silver" ns1:forceDefault="true">#615B5B</color>
-    <color name="green" ns1:forceDefault="true">#2ACD1B</color>
-    <color name="light_black" ns1:forceDefault="true">#80000000</color>
-    <color name="light_black_2" ns1:forceDefault="true">#CC000000</color>
-    <color name="orange" ns1:forceDefault="true">#FF9D0A</color>
-    <color name="red" ns1:forceDefault="true">#EF5757</color>
-    <color name="silver" ns1:forceDefault="true">#988C8C</color>
-    <color name="transparent" ns1:forceDefault="true">#00FFFFFF</color>
-    <color name="vidrian_green" ns1:forceDefault="true">#11928E</color>
-    <color name="vidrian_green_darker" ns1:forceDefault="true">#2D7977</color>
-    <color name="vidrian_light_green" ns1:forceDefault="true">#68C9AC</color>
-    <color name="white" ns1:forceDefault="true">#FFF</color>
+    <color ns1:forceDefault="true" name="black">#0E0D0D</color>
+    <color ns1:forceDefault="true" name="brown">#BF5A494F</color>
+    <color ns1:forceDefault="true" name="crayola">#F4D35E</color>
+    <color ns1:forceDefault="true" name="dark_black">#000</color>
+    <color ns1:forceDefault="true" name="dark_liver">#5A494F</color>
+    <color ns1:forceDefault="true" name="dark_orange">#80FF9D0A</color>
+    <color ns1:forceDefault="true" name="dark_silver">#615B5B</color>
+    <color ns1:forceDefault="true" name="green">#2ACD1B</color>
+    <color ns1:forceDefault="true" name="light_black">#80000000</color>
+    <color ns1:forceDefault="true" name="light_black_2">#CC000000</color>
+    <color ns1:forceDefault="true" name="orange">#FF9D0A</color>
+    <color ns1:forceDefault="true" name="red">#EF5757</color>
+    <color ns1:forceDefault="true" name="silver">#988C8C</color>
+    <color ns1:forceDefault="true" name="transparent">#00FFFFFF</color>
+    <color ns1:forceDefault="true" name="vidrian_green">#11928E</color>
+    <color ns1:forceDefault="true" name="vidrian_green_darker">#2D7977</color>
+    <color ns1:forceDefault="true" name="vidrian_light_green">#68C9AC</color>
+    <color ns1:forceDefault="true" name="white">#FFF</color>
     <string name="Home">Home</string>
     <string name="aceptar">Aceptar</string>
     <string name="ajustes">Ajustes</string>
     <string name="anual">Anual</string>
     <string name="aplicarCambios">Aplicar Cambios</string>
     <string name="app_name">BudgetBuddy</string>
+    <string name="añadir">AÑADIR</string>
+    <string name="añadir_categoria">Añadir Categoría</string>
+    <string name="añadir_gasto">Añadir Gasto</string>
+    <string name="añadir_ingreso">Añadir Ingreso</string>
+    <string name="año">Año</string>
     <string name="borrar_datos">Borrar Datos</string>
+    <string name="breve_descripcion">Breve Descripcion...</string>
     <string name="cancelar">Cancelar</string>
+    <string name="categorias">Categorías</string>
     <string name="cerrar_sesion">Cerrar Sesión</string>
+    <string name="comentario_editable">Comentario editable</string>
+    <string name="crear_categoria">Crear Categoría</string>
+    <string name="crear_usuario">CREAR USUARIO</string>
+    <string name="cuentas">Cuentas</string>
+    <string name="deutsche">Deutsche</string>
     <string name="dia">Dia</string>
     <string name="diario">Diario</string>
     <string name="divisa">Divisa</string>
+    <string name="editar">EDITAR</string>
     <string name="editar_categorias">Editar Categorias</string>
+    <string name="editar_gasto">Editar Gasto</string>
+    <string name="editar_ingreso">Editar Ingreso</string>
     <string name="editar_perfil">Editar Perfil</string>
+    <string name="ejemplo_mail_com">ejemplo@mail.com</string>
     <string name="eliminar">eliminar</string>
     <string name="eliminarDatos">Eliminar todos los datos</string>
     <string name="email">Email</string>
+    <string name="english">English</string>
     <string name="espanyol">Español</string>
+    <string name="español">Español</string>
+    <string name="fran_ais">Français</string>
     <string name="gastos">GASTOS</string>
     <string name="gastos_underline"><u>GASTOS</u></string>
+    <string name="gestor_con_ingresos">Gestor con Ingresos</string>
     <string name="gestor_con_saldo">Gestor con Saldo</string>
     <string name="gestor_gastos_grupal">Gestor Gastos Grupal</string>
     <string name="grupal">Grupal</string>
     <string name="idioma">Idioma</string>
     <string name="ingresos">INGRESOS</string>
     <string name="ingresos_underline"><u>INGRESOS</u></string>
+    <string name="iniciar_sesion">INICIAR SESION</string>
     <string name="inicio">Inicio</string>
     <string name="mensual">Mensual</string>
+    <string name="mes">Mes</string>
     <string name="my_gestor">My Gestor</string>
     <string name="navigation_drawer_close">Se ha cerrado el menu</string>
     <string name="navigation_drawer_open">Se ha abierto el menu</string>
     <string name="noche">NOCHE</string>
+    <string name="nombre">Nombre</string>
     <string name="nombre1">nombre1</string>
     <string name="nombre2">nombre2</string>
+    <string name="nombre_de_la_categoria">Nombre de la categoria</string>
+    <string name="nombre_usuario">Nombre Usuario</string>
+    <string name="ocio">Ocio</string>
     <string name="oscuro">OSCURO</string>
     <string name="pantallaInicial">Pantalla Inicial</string>
     <string name="pantallaInicialMygestor">Pantalla Inicial My Gestor</string>
     <string name="password">Contraseña</string>
+    <string name="periodo">Periodo</string>
     <string name="periodoDefecto">Periodo por defecto</string>
     <string name="periodo_underline">Periodo</string>
+    <string name="portugu_s">Português</string>
     <string name="predeterminado">Predeterminado</string>
     <string name="recordar"><u>¿Has olvidado tu contraseña?</u></string>
+    <string name="recuerdame">Recuerdame</string>
+    <string name="registrarme">REGISTRARME</string>
     <string name="repetirPass">Repetir Contraseña</string>
+    <string name="salario">Salario</string>
+    <string name="saldo_restante">Saldo Restante</string>
     <string name="seleccioneTema">Seleccione el tema</string>
+    <string name="semana">Semana</string>
     <string name="semana_underline"><u>12 dic. - 19 dic.</u></string>
     <string name="semanal">Semanal</string>
     <string name="sinRedondear">Sin redondear</string>
     <string name="todo">TODO</string>
+    <string name="user">USER</string>
+    <string name="ver_todos">Ver Todos</string>
     <string name="year_underline"><u>Año</u></string>
     <style name="Theme.BudgetBuddy" parent="Theme.Design.NoActionBar">
         <item name="android:colorPrimary">@color/vidrian_green</item>

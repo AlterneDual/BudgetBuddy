@@ -46,7 +46,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="6dp"
         android:fontFamily="@font/oswald"
-        android:text="Añadir Categoría"
+        android:text="@string/añadir_categoria"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/btnAtras1"
