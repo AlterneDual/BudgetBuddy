@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -28,7 +29,7 @@ public final class MgEditarGastosBinding implements ViewBinding {
   public final ImageView btnAtras2;
 
   @NonNull
-  public final ImageView btnCalendario3;
+  public final ImageView btnCalendario;
 
   @NonNull
   public final Button btnEditar;
@@ -37,22 +38,22 @@ public final class MgEditarGastosBinding implements ViewBinding {
   public final Button btnEliminar1;
 
   @NonNull
-  public final Button btnFecha;
+  public final Button btnFecha1;
 
   @NonNull
-  public final Button btnFecha4;
+  public final Button btnFecha2;
 
   @NonNull
-  public final Button btnFecha5;
+  public final Button btnFecha3;
 
   @NonNull
-  public final EditText etCantidad3;
-
-  @NonNull
-  public final EditText etComentario;
+  public final EditText etCantidad;
 
   @NonNull
   public final EditText etNombreGasto;
+
+  @NonNull
+  public final GridView gvCategorias;
 
   @NonNull
   public final LinearLayout linearLayout2;
@@ -73,23 +74,23 @@ public final class MgEditarGastosBinding implements ViewBinding {
   public final TextView tvFechaActual;
 
   private MgEditarGastosBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnAtras2,
-      @NonNull ImageView btnCalendario3, @NonNull Button btnEditar, @NonNull Button btnEliminar1,
-      @NonNull Button btnFecha, @NonNull Button btnFecha4, @NonNull Button btnFecha5,
-      @NonNull EditText etCantidad3, @NonNull EditText etComentario,
-      @NonNull EditText etNombreGasto, @NonNull LinearLayout linearLayout2,
-      @NonNull LinearLayout linearLayout3, @NonNull LinearLayout linearLayout4,
-      @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa1, @NonNull TextView tvFechaActual) {
+      @NonNull ImageView btnCalendario, @NonNull Button btnEditar, @NonNull Button btnEliminar1,
+      @NonNull Button btnFecha1, @NonNull Button btnFecha2, @NonNull Button btnFecha3,
+      @NonNull EditText etCantidad, @NonNull EditText etNombreGasto, @NonNull GridView gvCategorias,
+      @NonNull LinearLayout linearLayout2, @NonNull LinearLayout linearLayout3,
+      @NonNull LinearLayout linearLayout4, @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa1,
+      @NonNull TextView tvFechaActual) {
     this.rootView = rootView;
     this.btnAtras2 = btnAtras2;
-    this.btnCalendario3 = btnCalendario3;
+    this.btnCalendario = btnCalendario;
     this.btnEditar = btnEditar;
     this.btnEliminar1 = btnEliminar1;
-    this.btnFecha = btnFecha;
-    this.btnFecha4 = btnFecha4;
-    this.btnFecha5 = btnFecha5;
-    this.etCantidad3 = etCantidad3;
-    this.etComentario = etComentario;
+    this.btnFecha1 = btnFecha1;
+    this.btnFecha2 = btnFecha2;
+    this.btnFecha3 = btnFecha3;
+    this.etCantidad = etCantidad;
     this.etNombreGasto = etNombreGasto;
+    this.gvCategorias = gvCategorias;
     this.linearLayout2 = linearLayout2;
     this.linearLayout3 = linearLayout3;
     this.linearLayout4 = linearLayout4;
@@ -131,9 +132,9 @@ public final class MgEditarGastosBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnCalendario3;
-      ImageView btnCalendario3 = ViewBindings.findChildViewById(rootView, id);
-      if (btnCalendario3 == null) {
+      id = R.id.btnCalendario;
+      ImageView btnCalendario = ViewBindings.findChildViewById(rootView, id);
+      if (btnCalendario == null) {
         break missingId;
       }
 
@@ -149,39 +150,39 @@ public final class MgEditarGastosBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnFecha;
-      Button btnFecha = ViewBindings.findChildViewById(rootView, id);
-      if (btnFecha == null) {
+      id = R.id.btnFecha1;
+      Button btnFecha1 = ViewBindings.findChildViewById(rootView, id);
+      if (btnFecha1 == null) {
         break missingId;
       }
 
-      id = R.id.btnFecha4;
-      Button btnFecha4 = ViewBindings.findChildViewById(rootView, id);
-      if (btnFecha4 == null) {
+      id = R.id.btnFecha2;
+      Button btnFecha2 = ViewBindings.findChildViewById(rootView, id);
+      if (btnFecha2 == null) {
         break missingId;
       }
 
-      id = R.id.btnFecha5;
-      Button btnFecha5 = ViewBindings.findChildViewById(rootView, id);
-      if (btnFecha5 == null) {
+      id = R.id.btnFecha3;
+      Button btnFecha3 = ViewBindings.findChildViewById(rootView, id);
+      if (btnFecha3 == null) {
         break missingId;
       }
 
-      id = R.id.etCantidad3;
-      EditText etCantidad3 = ViewBindings.findChildViewById(rootView, id);
-      if (etCantidad3 == null) {
-        break missingId;
-      }
-
-      id = R.id.etComentario;
-      EditText etComentario = ViewBindings.findChildViewById(rootView, id);
-      if (etComentario == null) {
+      id = R.id.etCantidad;
+      EditText etCantidad = ViewBindings.findChildViewById(rootView, id);
+      if (etCantidad == null) {
         break missingId;
       }
 
       id = R.id.etNombreGasto;
       EditText etNombreGasto = ViewBindings.findChildViewById(rootView, id);
       if (etNombreGasto == null) {
+        break missingId;
+      }
+
+      id = R.id.gvCategorias;
+      GridView gvCategorias = ViewBindings.findChildViewById(rootView, id);
+      if (gvCategorias == null) {
         break missingId;
       }
 
@@ -221,9 +222,9 @@ public final class MgEditarGastosBinding implements ViewBinding {
         break missingId;
       }
 
-      return new MgEditarGastosBinding((ConstraintLayout) rootView, btnAtras2, btnCalendario3,
-          btnEditar, btnEliminar1, btnFecha, btnFecha4, btnFecha5, etCantidad3, etComentario,
-          etNombreGasto, linearLayout2, linearLayout3, linearLayout4, toolbarA, tvDivisa1,
+      return new MgEditarGastosBinding((ConstraintLayout) rootView, btnAtras2, btnCalendario,
+          btnEditar, btnEliminar1, btnFecha1, btnFecha2, btnFecha3, etCantidad, etNombreGasto,
+          gvCategorias, linearLayout2, linearLayout3, linearLayout4, toolbarA, tvDivisa1,
           tvFechaActual);
     }
     String missingId = rootView.getResources().getResourceName(id);

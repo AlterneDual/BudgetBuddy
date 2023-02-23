@@ -17,12 +17,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <GridView
+        android:id="@+id/gvCategorias"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="5dp"
+        android:numColumns="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etNombreGasto" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="6dp"
-        android:fontFamily="@font/oswald"
+        android:fontFamily="@font/oswald_bold"
         android:text="Editar Gasto"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
@@ -41,18 +54,13 @@
 
     <EditText
         android:id="@+id/etNombreGasto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="120dp"
-        android:layout_weight="1"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingTop="15dp"
-        android:text="Ocio"
-        android:textColor="#615B5B"
+        android:layout_width="243dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#FFF"
+        android:fontFamily="@font/oswald"
+        android:inputType="text"
+        android:textColor="#FFF"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,24 +70,27 @@
         android:id="@+id/linearLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="250dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etNombreGasto">
 
         <EditText
-            android:id="@+id/etCantidad3"
-            android:layout_width="103dp"
+            android:id="@+id/etCantidad"
+            android:layout_width="56dp"
             android:layout_height="70dp"
             android:layout_weight="1"
-            android:backgroundTint="#FFFFFF"
+            android:backgroundTint="#FFF"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="900"
+            android:fontFamily="@font/oswald"
+            android:hint="0"
+            android:inputType="numberDecimal"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
-            android:textSize="26sp" />
+            android:textColor="#FFF"
+            android:textSize="26sp"
+            tools:layout_editor_absoluteX="115dp"
+            tools:layout_editor_absoluteY="169dp" />
 
         <TextView
             android:id="@+id/tvDivisa1"
@@ -88,130 +99,110 @@
             android:layout_weight="1"
             android:text="EUR"
             android:textColor="#FFFFFF"
-            android:textSize="20sp" />
+            android:textSize="26sp" />
 
-        <ImageView
-            android:layout_width="41dp"
-            android:layout_height="43dp"
-            android:layout_marginTop="15dp"
-            android:layout_weight="1"
-            app:srcCompat="@drawable/calculadora" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/tvFechaActual"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/oswald"
         android:text="10 de Diciembre de 2023"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvFechaActual">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
         <Button
-            android:id="@+id/btnFecha"
+            android:id="@+id/btnFecha1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#68C9AC"
+            android:background="@color/vidrian_green"
+            android:fontFamily="@font/oswald"
             android:text="09/01"
             android:textAlignment="center" />
 
         <Button
-            android:id="@+id/btnFecha4"
+            android:id="@+id/btnFecha2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
+            android:background="@color/vidrian_light_green"
+            android:focusedByDefault="true"
+            android:fontFamily="@font/oswald"
             android:text="10/01" />
 
         <Button
-            android:id="@+id/btnFecha5"
+            android:id="@+id/btnFecha3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:backgroundTint="#68C9AC"
+            android:background="@color/vidrian_green"
+            android:focusedByDefault="false"
+            android:fontFamily="@font/oswald"
             android:text="11/01" />
 
         <ImageView
-            android:id="@+id/btnCalendario3"
+            android:id="@+id/btnCalendario"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginRight="20dp"
-            android:layout_weight="1"
             app:srcCompat="@drawable/calendar" />
+
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout4"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginTop="28dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaActual">
 
         <Button
             android:id="@+id/btnEliminar1"
             android:layout_width="175dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="20dp"
             android:layout_weight="1"
             android:background="@drawable/long_button_orange"
             android:backgroundTint="#D11010"
-            android:text="Eliminar"
+            android:fontFamily="@font/oswald"
+            android:text="Eliminar Gasto"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/btnEditar"
             android:layout_width="175dp"
-            android:layout_height="40dp"
+            android:layout_height="wrap_content"
             android:layout_marginRight="10dp"
             android:layout_weight="1"
             android:background="@drawable/long_button_orange"
+            android:fontFamily="@font/oswald"
             android:text="EDITAR"
             android:textStyle="bold" />
     </LinearLayout>
-
-    <EditText
-        android:id="@+id/etComentario"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="50dp"
-        android:layout_weight="1"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:paddingTop="15dp"
-        android:text="Comentario editable"
-        android:textColor="#615B5B"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/linearLayout4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

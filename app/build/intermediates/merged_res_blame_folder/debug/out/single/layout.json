@@ -136,6 +136,10 @@
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\app_bar_main.xml"
     },
     {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/mg_anadir_ingreso.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/mg_anadir_ingreso.xml"
+    },
+    {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\custom_list_colores.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\custom_list_colores.xml"
     },
@@ -170,10 +174,6 @@
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_saldo.xml",
         "source": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-main-31:\\layout\\gp_saldo.xml"
-    },
-    {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list_ajustes.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/custom_list_ajustes.xml"
     },
     {
         "merged": "C:\\Users\\Aragon\\.gradle\\daemon\\7.5\\run.budgetbuddy.app-mergeDebugResources-28:\\layout\\gp_row_reembolso.xml",

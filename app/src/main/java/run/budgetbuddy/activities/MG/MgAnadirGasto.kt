@@ -3,7 +3,6 @@ package run.budgetbuddy.activities.MG
 import CRUD.CategoriaCRUD
 import CRUD.DivisaCRUD
 import CRUD.GastoCRUD
-import CRUD.UsuarioCRUD
 import adapter.myListAdapter_categorias
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -12,7 +11,6 @@ import android.os.Build
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.MotionEvent
-import android.view.View
 import android.widget.GridView
 import android.widget.TextView
 import android.widget.Toast
@@ -21,7 +19,6 @@ import androidx.appcompat.app.AppCompatActivity
 import models.Categoria
 import models.Divisa
 import models.Gasto
-import models.Usuario
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgAnadirGastoBinding
 
@@ -72,7 +69,7 @@ class MgAnadirGasto : AppCompatActivity() {
 
         listaCategorias = categoriaCRUD.getAllCategoria()
         inicializarAdapter()
-        mostrarMensaje()
+        configurarSeleccion()
         gestos = GestureDetector(this, EscuchaGestos())
 
         valoresAyerHoyPredeterminados()
@@ -277,14 +274,10 @@ class MgAnadirGasto : AppCompatActivity() {
     }
 
 
-    fun mostrarMensaje() {
+    fun configurarSeleccion() {
 
         binding.gvCategorias.setOnItemClickListener() { adapterView, view, position, id ->
-            Toast.makeText(
-                this,
-                "Has seleccionado ${listaCategorias[position].nombre}",
-                Toast.LENGTH_LONG
-            ).show()
+
             adapterList.selectedItem = position
 
             adapterList.notifyDataSetChanged()

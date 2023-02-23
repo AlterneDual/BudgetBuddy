@@ -145,8 +145,6 @@ id btnAtrasC3
 id btnAtrasC5
 id btnBorrar
 id btnCalendario
-id btnCalendario2
-id btnCalendario3
 id btnCancelar
 id btnCategoria
 id btnCerrar
@@ -156,12 +154,9 @@ id btnDesactivar
 id btnEditar
 id btnEliminar
 id btnEliminar1
-id btnFecha
 id btnFecha1
 id btnFecha2
 id btnFecha3
-id btnFecha4
-id btnFecha5
 id btnFecha6
 id btnFecha7
 id btnFecha8
@@ -195,7 +190,6 @@ id drawer_layout
 id eliminar
 id etCantidad
 id etCantidad2
-id etCantidad3
 id etCantidadPagada
 id etComentario
 id etComentario1

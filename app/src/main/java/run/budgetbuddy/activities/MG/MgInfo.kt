@@ -5,6 +5,7 @@ import android.app.DatePickerDialog
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.os.Bundle
@@ -14,6 +15,8 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.Toast
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -51,6 +54,7 @@ class MgInfo : AppCompatActivity() {
 
 
 
+
         binding.btnAtras.setOnClickListener {
             val intent = Intent(this, MgInicio::class.java)
             startActivity(intent)
@@ -80,7 +84,6 @@ class MgInfo : AppCompatActivity() {
             check()
         }
         val back = binding.butAll.background as GradientDrawable
-//        val gBack = back.getStateDrawable(1) as GradientDrawable
         back.setColor(Color.parseColor("#FF9D0A"))
         binding.butAll.setOnClickListener {
             seleccionado = 0
@@ -531,8 +534,6 @@ class MgInfo : AppCompatActivity() {
         menu.setHeaderTitle(lista_gastos[info.position].descripcion)
         inflater.inflate(R.menu.context_menu2, menu)
         posActualGasto = info.position
-
-
     }
 
     //Seleccionando elementos del menu contextual
@@ -542,37 +543,24 @@ class MgInfo : AppCompatActivity() {
         posActualGasto = info.position
 
         return when (item.itemId) {
-
             R.id.btnBorrar -> {
-
-                var gastoTemp = Gasto()
-                gastoTemp.descripcion = lista_gastos[info.position].descripcion
-
-
+                var gastoInfo = ""
+                gastoInfo = lista_gastos[info.position].descripcion.toString()
                 gc.deleteGasto((lista_gastos[info.position]).id)
                 check()
-
                 Toast.makeText(
-                    this, "Has borrado ${gastoTemp.descripcion}",
+                    this, "Has borrado ${gastoInfo}",
                     Toast.LENGTH_SHORT
                 ).show()
                 true
-
             }
 
             R.id.btnEditar -> {
-                val gastoSeleccionado = lista_gastos[posActualGasto]
-                val nombre = gastoSeleccionado.descripcion
-                val importe = gastoSeleccionado.importe
-                val id = gastoSeleccionado.id
+                val id = lista_gastos[posActualGasto].id
 
                 val intent = Intent(this, MgEditarEliminarGasto::class.java)
-                intent.putExtra("nombre", nombre)
-                intent.putExtra("importe", importe.toString())
                 intent.putExtra("id", id)
                 startActivity(intent)
-
-
                 true
             }
 

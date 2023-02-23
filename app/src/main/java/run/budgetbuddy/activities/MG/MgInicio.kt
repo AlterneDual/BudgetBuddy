@@ -31,6 +31,7 @@ import java.time.LocalDate
 import java.util.Calendar
 import java.util.Locale
 import android.graphics.Typeface
+import android.graphics.drawable.ColorDrawable
 import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -288,6 +289,8 @@ class MgInicio : AppCompatActivity() {
 
     private fun IniciarAdapter() {
         val listView = binding.lvInicioGastos
+        listView.selector = ColorDrawable(Color.TRANSPARENT)
+
         var gsts: ArrayList<Categoria> = ArrayList()
         var cant: ArrayList<Float> = ArrayList()
         for (g in listagastosBD) {
@@ -410,7 +413,7 @@ class MgInicio : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-                binding.tvResultadoFecha.text = ("Todos")
+                binding.tvResultadoFecha.text = ("All")
 
                 // Rellenar el pieChart + Listado
                 var gastos = gc.getAllGastos()

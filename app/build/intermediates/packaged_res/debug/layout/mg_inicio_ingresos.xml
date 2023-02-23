@@ -128,7 +128,6 @@
             app:layout_constraintTop_toTopOf="@+id/toolbarA" />
 
         <TextView
-            android:id="@+id/tvIngresos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="70dp"
@@ -215,8 +214,8 @@
 
         <ImageButton
             android:id="@+id/btnAddGroup3"
-            android:layout_width="76dp"
-            android:layout_height="72dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="268dp"
             android:background="@color/transparent"

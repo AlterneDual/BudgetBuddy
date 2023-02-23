@@ -16,6 +16,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import run.budgetbuddy.R
 import models.Divisa
+import run.budgetbuddy.databinding.MgAnadirGastoBinding
 import run.budgetbuddy.databinding.MgAnadirIngresoBinding
 import run.budgetbuddy.model.Ingreso
 
@@ -26,9 +27,7 @@ class MgAnadirIngreso : AppCompatActivity() {
 
     var divisaCrud: DivisaCRUD = DivisaCRUD()
     var ingresoCrud: IngresoCRUD = IngresoCRUD()
-
     var nombreMes: String = String()
-
 
     @RequiresApi(Build.VERSION_CODES.N)
     private var selectedDate: Calendar = Calendar.getInstance()
@@ -65,13 +64,11 @@ class MgAnadirIngreso : AppCompatActivity() {
         setContentView(binding.root)
         valoresAyerHoyPredeterminados()
 
-
         var tvFechaSeleccionada2 = binding.tvFechaSeleccionada2
         var btnFecha6 = binding.btnFecha6
         var btnFecha7 = binding.btnFecha7
         var btnFecha8 = binding.btnFecha8
         var etCantidad2 = binding.etCantidad2
-        var btnIngreso = binding.tvIngresos2
         var etComentario1 = binding.etComentario1
 
         nombreMes = nombreMeses(todayMonth.plus(1))[0]
@@ -91,12 +88,7 @@ class MgAnadirIngreso : AppCompatActivity() {
             overridePendingTransition(0, R.drawable.slide_out_right)
         }
 
-        binding.etComentario1.setOnClickListener {
-            etComentario1.setText("")
-
-        }
         binding.btnAnadir.setOnClickListener {
-
 
             var div = Divisa()
             div.nombre = "Euro"
@@ -111,12 +103,9 @@ class MgAnadirIngreso : AppCompatActivity() {
                     ingreso.fecha = fechaIngreso
                     ingreso.descripcion = etComentario1.text.toString()
                     ingresoCrud.addIngreso(ingreso)
-                    Toast.makeText(
-                        this, "Añadido ingreso con fecha: ${ingreso.fecha}", Toast.LENGTH_SHORT
-                    ).show()
-//                    val intent = Intent(this, MgInicio::class.java)
-//                    startActivity(intent)
-//                    finish()
+                    val intent = Intent(this, MgInicioIngresos::class.java)
+                    startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(
                         this,
@@ -133,14 +122,11 @@ class MgAnadirIngreso : AppCompatActivity() {
                 ).show()
             }
 
-
             println("-------------")
             println("------------")
             for (ing in ingresoCrud.getAllingresos()) {
                 print(ing.toString())
             }
-
-
         }
 
         binding.btnAtras4.setOnClickListener {
@@ -149,7 +135,7 @@ class MgAnadirIngreso : AppCompatActivity() {
             finish()
         }
 
-        binding.btnCalendario2.setOnClickListener {
+        binding.btnCalendario.setOnClickListener {
             showDatePickerDialog(tvFechaSeleccionada2, btnFecha6, btnFecha7, btnFecha8)
         }
 
@@ -157,7 +143,6 @@ class MgAnadirIngreso : AppCompatActivity() {
             btnFecha6.setBackgroundColor(resources.getColor(R.color.vidrian_light_green))
             btnFecha7.setBackgroundColor(resources.getColor(R.color.vidrian_green))
             btnFecha8.setBackgroundColor(resources.getColor(R.color.vidrian_green))
-
             updateFecha(yesterday)
             nombreMes = nombreMeses(yesterdayMonth.plus(1))[0]
             tvFechaSeleccionada2.setText("$yesterdayDay de $nombreMes de $yesterdayYear")
@@ -185,7 +170,6 @@ class MgAnadirIngreso : AppCompatActivity() {
     fun nombreMeses(mes: Int): ArrayList<String> {
 
         var mesesCortoLargos = arrayListOf<String>()
-
         val monthNames = arrayOf(
             "Enero",
             "Febrero",
@@ -221,7 +205,6 @@ class MgAnadirIngreso : AppCompatActivity() {
         val monthNumber2 = mes
         val monthName2 = monthNames2[monthNumber2 - 1]
         mesesCortoLargos.add(monthName2)
-
         return mesesCortoLargos
     }
 
@@ -244,7 +227,6 @@ class MgAnadirIngreso : AppCompatActivity() {
         tomorrowDay = tomorrow.get(Calendar.DAY_OF_MONTH)
         tomorrowMonth = tomorrow.get(Calendar.MONTH)
         tomorrowYear = tomorrow.get(Calendar.YEAR)
-
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -262,14 +244,11 @@ class MgAnadirIngreso : AppCompatActivity() {
         tomorrowDay = tomorrow.get(Calendar.DAY_OF_MONTH)
         tomorrowMonth = tomorrow.get(Calendar.MONTH)
         tomorrowYear = tomorrow.get(Calendar.YEAR)
-
-
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
     private fun updateFecha(new_fecha: Calendar) {
         fechaIngreso = new_fecha.time
-
     }
 
     @SuppressLint("NewApi")
@@ -303,7 +282,6 @@ class MgAnadirIngreso : AppCompatActivity() {
             selectedDate.get(Calendar.YEAR),
             selectedDate.get(Calendar.MONTH),
             selectedDate.get(Calendar.DAY_OF_MONTH)
-
         )
         datePicker.show()
     }
@@ -311,7 +289,6 @@ class MgAnadirIngreso : AppCompatActivity() {
     override fun onTouchEvent(event: MotionEvent?): Boolean {
         gestos.onTouchEvent(event!!)
         return super.onTouchEvent(event)
-
     }
 
     inner class EscuchaGestos() : GestureDetector.SimpleOnGestureListener() {

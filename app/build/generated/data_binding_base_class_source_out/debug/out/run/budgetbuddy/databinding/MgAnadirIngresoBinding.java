@@ -31,7 +31,7 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
   public final ImageView btnAtras4;
 
   @NonNull
-  public final ImageView btnCalendario2;
+  public final ImageView btnCalendario;
 
   @NonNull
   public final Button btnFecha6;
@@ -70,7 +70,7 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
   public final TextView tvIngresos2;
 
   private MgAnadirIngresoBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAnadir,
-      @NonNull ImageView btnAtras4, @NonNull ImageView btnCalendario2, @NonNull Button btnFecha6,
+      @NonNull ImageView btnAtras4, @NonNull ImageView btnCalendario, @NonNull Button btnFecha6,
       @NonNull Button btnFecha7, @NonNull Button btnFecha8, @NonNull EditText etCantidad2,
       @NonNull EditText etComentario1, @NonNull LinearLayout linearLayout2,
       @NonNull LinearLayout linearLayout3, @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa1,
@@ -79,7 +79,7 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
     this.rootView = rootView;
     this.btnAnadir = btnAnadir;
     this.btnAtras4 = btnAtras4;
-    this.btnCalendario2 = btnCalendario2;
+    this.btnCalendario = btnCalendario;
     this.btnFecha6 = btnFecha6;
     this.btnFecha7 = btnFecha7;
     this.btnFecha8 = btnFecha8;
@@ -133,9 +133,9 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnCalendario2;
-      ImageView btnCalendario2 = ViewBindings.findChildViewById(rootView, id);
-      if (btnCalendario2 == null) {
+      id = R.id.btnCalendario;
+      ImageView btnCalendario = ViewBindings.findChildViewById(rootView, id);
+      if (btnCalendario == null) {
         break missingId;
       }
 
@@ -212,9 +212,8 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
       }
 
       return new MgAnadirIngresoBinding((ConstraintLayout) rootView, btnAnadir, btnAtras4,
-          btnCalendario2, btnFecha6, btnFecha7, btnFecha8, etCantidad2, etComentario1,
-          linearLayout2, linearLayout3, toolbarA, tvDivisa1, tvFechaSeleccionada2, tvGastos,
-          tvIngresos2);
+          btnCalendario, btnFecha6, btnFecha7, btnFecha8, etCantidad2, etComentario1, linearLayout2,
+          linearLayout3, toolbarA, tvDivisa1, tvFechaSeleccionada2, tvGastos, tvIngresos2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

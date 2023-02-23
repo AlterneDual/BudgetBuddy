@@ -7,6 +7,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Typeface
+import android.graphics.drawable.ColorDrawable
 import android.os.Build
 import android.os.Bundle
 import android.view.GestureDetector
@@ -234,12 +235,6 @@ class MgInicioIngresos : AppCompatActivity() {
             overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
         }
 
-        var btnIngresos = binding.tvIngresos
-        btnIngresos.setOnClickListener {
-            val intent = Intent(this, MgInicioIngresos::class.java)
-            startActivity(intent)
-            overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
-        }
         var btnAnadirGasto = binding.btnAddGroup3
         btnAnadirGasto.setOnClickListener {
             val intent = Intent(this, MgAnadirIngreso::class.java)
@@ -341,6 +336,7 @@ class MgInicioIngresos : AppCompatActivity() {
 
     private fun IniciarAdapter() {
         val listView = binding.lvInicioIngreso
+        listView.selector = ColorDrawable(Color.TRANSPARENT)
 
         adapter = myListAdapter_ingreso(this, listaIngresosBD, color_list)
         listView.adapter = adapter
@@ -439,7 +435,7 @@ class MgInicioIngresos : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-                binding.tvResultadoFecha.text = ("Todos")
+                binding.tvResultadoFecha.text = ("All")
 
                 var ing = ic.getAllingresos()
                 inicializarIngresos(ing)

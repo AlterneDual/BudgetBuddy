@@ -157,11 +157,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="70dp"
         android:fontFamily="@font/oswald"
         android:text="@string/gastos_underline"
         android:textColor="#FFFFFF"
-        android:textSize="24sp"
+        android:textSize="28sp"
         app:layout_constraintStart_toStartOf="@+id/toolbarA"
         app:layout_constraintTop_toTopOf="@+id/toolbarA" />
 
@@ -169,12 +169,12 @@
         android:id="@+id/tvIngresos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="70dp"
         android:layout_marginEnd="40dp"
         android:fontFamily="@font/oswald"
         android:text="@string/ingresos"
         android:textColor="#C6BEBE"
-        android:textSize="24sp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -199,7 +199,7 @@
         android:fontFamily="@font/oswald"
         android:text="10 de Diciembre de 2023"
         android:textColor="#FFFFFF"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
