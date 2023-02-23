@@ -65,6 +65,7 @@ class MgAnadirIngreso : AppCompatActivity() {
         setContentView(binding.root)
         valoresAyerHoyPredeterminados()
 
+
         var tvFechaSeleccionada2 = binding.tvFechaSeleccionada2
         var btnFecha6 = binding.btnFecha6
         var btnFecha7 = binding.btnFecha7
@@ -135,7 +136,7 @@ class MgAnadirIngreso : AppCompatActivity() {
 
             println("-------------")
             println("------------")
-            for (ing in ingresoCrud.getAllingresos()){
+            for (ing in ingresoCrud.getAllingresos()) {
                 print(ing.toString())
             }
 

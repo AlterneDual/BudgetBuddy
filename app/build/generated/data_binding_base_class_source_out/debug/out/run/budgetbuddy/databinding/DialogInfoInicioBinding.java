@@ -20,16 +20,16 @@ public final class DialogInfoInicioBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnAceptar;
+  public final Button btnActivar;
 
   @NonNull
-  public final Button btnCancelar;
+  public final Button btnDesactivar;
 
-  private DialogInfoInicioBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAceptar,
-      @NonNull Button btnCancelar) {
+  private DialogInfoInicioBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnActivar,
+      @NonNull Button btnDesactivar) {
     this.rootView = rootView;
-    this.btnAceptar = btnAceptar;
-    this.btnCancelar = btnCancelar;
+    this.btnActivar = btnActivar;
+    this.btnDesactivar = btnDesactivar;
   }
 
   @Override
@@ -59,19 +59,19 @@ public final class DialogInfoInicioBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnAceptar;
-      Button btnAceptar = ViewBindings.findChildViewById(rootView, id);
-      if (btnAceptar == null) {
+      id = R.id.btnActivar;
+      Button btnActivar = ViewBindings.findChildViewById(rootView, id);
+      if (btnActivar == null) {
         break missingId;
       }
 
-      id = R.id.btnCancelar;
-      Button btnCancelar = ViewBindings.findChildViewById(rootView, id);
-      if (btnCancelar == null) {
+      id = R.id.btnDesactivar;
+      Button btnDesactivar = ViewBindings.findChildViewById(rootView, id);
+      if (btnDesactivar == null) {
         break missingId;
       }
 
-      return new DialogInfoInicioBinding((ConstraintLayout) rootView, btnAceptar, btnCancelar);
+      return new DialogInfoInicioBinding((ConstraintLayout) rootView, btnActivar, btnDesactivar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

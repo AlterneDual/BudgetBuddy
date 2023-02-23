@@ -6,7 +6,7 @@ import java.lang.System;
 public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
     private run.budgetbuddy.databinding.MgInfoBinding binding;
     private int seleccionado = 1;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private CRUD.GastoCRUD gc;
     private android.widget.ListView list_view;
     private run.budgetbuddy.adapter.myListAdapterInfoGasto adapterList;
@@ -18,12 +18,12 @@ public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final CRUD.GastoCRUD getGc() {
         return null;
     }
     
-    public final void setGc(@org.jetbrains.annotations.NotNull()
+    public final void setGc(@org.jetbrains.annotations.NotNull
     CRUD.GastoCRUD p0) {
     }
     
@@ -35,8 +35,8 @@ public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
     }
     
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.M)
-    @java.lang.Override()
-    protected void onCreate(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    protected void onCreate(@org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
@@ -44,34 +44,34 @@ public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
     public final void check() {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoDia(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoDia(@org.jetbrains.annotations.NotNull
     java.sql.Date fecha_hoy) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoSemana(@org.jetbrains.annotations.NotNull()
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoSemana(@org.jetbrains.annotations.NotNull
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
     java.util.Date fecha_final) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoMes(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoMes(@org.jetbrains.annotations.NotNull
     java.sql.Date fecha_inicio) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoAno(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoAno(@org.jetbrains.annotations.NotNull
     java.sql.Date ano) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoPeriodo(@org.jetbrains.annotations.NotNull()
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoPeriodo(@org.jetbrains.annotations.NotNull
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
     java.util.Date fecha_final) {
         return null;
     }
@@ -82,15 +82,15 @@ public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
     private final void inicializarAdapter(java.util.List<models.Gasto> lista_gastos) {
     }
     
-    @java.lang.Override()
-    public void onCreateContextMenu(@org.jetbrains.annotations.NotNull()
-    android.view.ContextMenu menu, @org.jetbrains.annotations.Nullable()
-    android.view.View v, @org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void onCreateContextMenu(@org.jetbrains.annotations.NotNull
+    android.view.ContextMenu menu, @org.jetbrains.annotations.Nullable
+    android.view.View v, @org.jetbrains.annotations.NotNull
     android.view.ContextMenu.ContextMenuInfo menuInfo) {
     }
     
-    @java.lang.Override()
-    public boolean onContextItemSelected(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public boolean onContextItemSelected(@org.jetbrains.annotations.NotNull
     android.view.MenuItem item) {
         return false;
     }

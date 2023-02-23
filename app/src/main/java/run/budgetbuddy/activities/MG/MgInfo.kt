@@ -3,7 +3,9 @@ package run.budgetbuddy.activities.MG
 import CRUD.GastoCRUD
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.graphics.Color
 import android.graphics.Paint
+import android.graphics.drawable.GradientDrawable
 import android.os.Build
 import android.os.Bundle
 import android.view.ContextMenu
@@ -14,9 +16,7 @@ import android.widget.ListView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
-import models.Categoria
 import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgInfoBinding
@@ -49,8 +49,6 @@ class MgInfo : AppCompatActivity() {
         binding.textView10.isVisible = false
         binding.tvIngresos.isVisible = false
 
-        if (lista_gastos.isNotEmpty())
-            inicializarAdapter(lista_gastos)
 
 
         binding.btnAtras.setOnClickListener {
@@ -81,6 +79,9 @@ class MgInfo : AppCompatActivity() {
             seleccionado = 5;
             check()
         }
+        val back = binding.butAll.background as GradientDrawable
+//        val gBack = back.getStateDrawable(1) as GradientDrawable
+        back.setColor(Color.parseColor("#FF9D0A"))
         binding.butAll.setOnClickListener {
             seleccionado = 0
             check()
@@ -128,7 +129,13 @@ class MgInfo : AppCompatActivity() {
                 for (l in lista_gastos) {
                     total += l.importe;
                 }
-                binding.tvGastos.text = "-" + total.toString() + " €";
+                if (total != 0.0) {
+                    binding.tvGastos.text = "-" + total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvGastos.text = total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
 
             }
 
@@ -164,7 +171,13 @@ class MgInfo : AppCompatActivity() {
                 for (l in lista_gastos) {
                     total += l.importe;
                 }
-                binding.tvGastos.text = "-" + total.toString() + " €";
+                if (total != 0.0) {
+                    binding.tvGastos.text = "-" + total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvGastos.text = total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
 
             }
 
@@ -223,7 +236,13 @@ class MgInfo : AppCompatActivity() {
                 for (l in lista_gastos) {
                     total += l.importe;
                 }
-                binding.tvGastos.text = "-" + total.toString() + " €";
+                if (total != 0.0) {
+                    binding.tvGastos.text = "-" + total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvGastos.text = total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
 
             }
 
@@ -260,7 +279,13 @@ class MgInfo : AppCompatActivity() {
                 for (l in lista_gastos) {
                     total += l.importe;
                 }
-                binding.tvGastos.text = "-" + total.toString() + " €";
+                if (total != 0.0) {
+                    binding.tvGastos.text = "-" + total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvGastos.text = total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
             }
 
             4 -> {
@@ -294,7 +319,13 @@ class MgInfo : AppCompatActivity() {
                 for (l in lista_gastos) {
                     total += l.importe;
                 }
-                binding.tvGastos.text = "-" + total.toString() + " €"
+                if (total != 0.0) {
+                    binding.tvGastos.text = "-" + total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvGastos.text = total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
             }
 
             5 -> {
@@ -322,7 +353,13 @@ class MgInfo : AppCompatActivity() {
                 for (l in lista_gastos) {
                     total += l.importe;
                 }
-                binding.tvGastos.text = "-" + total.toString() + " €";
+                if (total != 0.0) {
+                    binding.tvGastos.text = "-" + total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvGastos.text = total.toString() + " €"
+                    binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
 
             }
 
@@ -448,8 +485,13 @@ class MgInfo : AppCompatActivity() {
                             for (l in lista_gastos) {
                                 total += l.importe;
                             }
-                            binding.tvResultadoFecha.text =
-                                ("${start.toString()} - ${end.toString()}")
+                            if (total != 0.0) {
+                                binding.tvGastos.text = "-" + total.toString() + " €"
+                                binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
+                            } else {
+                                binding.tvGastos.text = total.toString() + " €"
+                                binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
+                            }
 
 
                         }
@@ -508,17 +550,7 @@ class MgInfo : AppCompatActivity() {
 
 
                 gc.deleteGasto((lista_gastos[info.position]).id)
-                lista_gastos.clear()
-                lista_gastos.addAll(gc.getAllGastos())
-                adapterList.notifyDataSetChanged()
-
-                //reiniciar vistaGastos
-                var total: Double = 0.0;
-                for (l in lista_gastos) {
-                    total += l.importe;
-                }
-                binding.tvGastos.text = "-" + total.toString() + " €"
-
+                check()
 
                 Toast.makeText(
                     this, "Has borrado ${gastoTemp.descripcion}",

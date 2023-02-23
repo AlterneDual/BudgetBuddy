@@ -88,5 +88,7 @@
     <string name="open">Open Navigation Drawer</string>
     <string name="close">Close Navigation Drawer</string>
     <string name="Divisas">Divisas</string>
+    <string name="desactivado">Desactivado</string>
+    <string name="activado">Activado</string>
 
 </resources>

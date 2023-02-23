@@ -32,6 +32,7 @@ import java.util.Calendar
 import java.util.Locale
 import android.graphics.Typeface
 import android.view.*
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.res.ResourcesCompat
@@ -55,12 +56,12 @@ class MgInicio : AppCompatActivity() {
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
 
     //----------------------------------Atributos y metodos Menu lateral----------------------------------
-    lateinit var drawerLayout : DrawerLayout
+    lateinit var drawerLayout: DrawerLayout
     lateinit var navigationView: NavigationView
     lateinit var drawerToggle: ActionBarDrawerToggle
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(drawerToggle.onOptionsItemSelected(item)){
+        if (drawerToggle.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)
@@ -68,11 +69,10 @@ class MgInicio : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
 
             drawerLayout.closeDrawer(GravityCompat.START)
-        }
-        else{
+        } else {
             super.onBackPressed()
         }
     }
@@ -123,21 +123,25 @@ class MgInicio : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+
                 nav_cat1.itemId -> {
                     val intent = Intent(this, Categorias::class.java)
                     startActivity(intent)
                     true
                 }
+
                 nav_div1.itemId -> {
                     val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
                     true
                 }
+
                 nav_ajustes1.itemId -> {
                     val intent = Intent(this, Ajustes::class.java)
                     startActivity(intent)
                     true
                 }
+
                 else -> false
 
             }
@@ -145,7 +149,6 @@ class MgInicio : AppCompatActivity() {
 
 
         //-------------------------------------------Menu lateral-------------------------------------------
-
 
 
         check()
@@ -217,6 +220,7 @@ class MgInicio : AppCompatActivity() {
         for (g in gastos) {
             total += (g.importe).toFloat()
         }
+        pieChart.setCenterTextColor(Color.parseColor("#FFFFFF"))
 
         pieChart.centerText = "$total €"
         pieChart.setCenterTextSize(20f)

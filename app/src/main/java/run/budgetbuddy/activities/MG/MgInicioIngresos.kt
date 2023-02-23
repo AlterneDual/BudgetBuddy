@@ -38,6 +38,7 @@ import run.budgetbuddy.activities.divisa.Divisas
 import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.adapter.myListAdapter_gasto
 import run.budgetbuddy.adapter.myListAdapter_ingreso
+import run.budgetbuddy.databinding.MgInicioGastosBinding
 import run.budgetbuddy.databinding.MgInicioIngresosBinding
 import run.budgetbuddy.model.Ingreso
 import java.sql.Date
@@ -55,14 +56,15 @@ class MgInicioIngresos : AppCompatActivity() {
     var ic = IngresoCRUD()
     private var seleccionado: Int = 0;
     private lateinit var gestos: GestureDetector
-//    private var lista_colores: ArrayList<Int> = ArrayList()
+
+    //    private var lista_colores: ArrayList<Int> = ArrayList()
     //----------------------------------Atributos y metodos Menu lateral----------------------------------
-    lateinit var drawerLayout : DrawerLayout
+    lateinit var drawerLayout: DrawerLayout
     lateinit var navigationView: NavigationView
     lateinit var drawerToggle: ActionBarDrawerToggle
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(drawerToggle.onOptionsItemSelected(item)){
+        if (drawerToggle.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)
@@ -70,11 +72,10 @@ class MgInicioIngresos : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
 
             drawerLayout.closeDrawer(GravityCompat.START)
-        }
-        else{
+        } else {
             super.onBackPressed()
         }
     }
@@ -197,21 +198,25 @@ class MgInicioIngresos : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+
                 nav_cat1.itemId -> {
                     val intent = Intent(this, Categorias::class.java)
                     startActivity(intent)
                     true
                 }
+
                 nav_div1.itemId -> {
                     val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
                     true
                 }
+
                 nav_ajustes1.itemId -> {
                     val intent = Intent(this, Ajustes::class.java)
                     startActivity(intent)
                     true
                 }
+
                 else -> false
 
             }
@@ -221,6 +226,13 @@ class MgInicioIngresos : AppCompatActivity() {
         //-------------------------------------------Menu lateral-------------------------------------------
         check()
         gestos = GestureDetector(this, EscuchaGestos())
+
+        var btnGasto = binding.tvGastos
+        btnGasto.setOnClickListener {
+            val intent = Intent(this, MgInicio::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+        }
 
         var btnIngresos = binding.tvIngresos
         btnIngresos.setOnClickListener {
@@ -285,6 +297,7 @@ class MgInicioIngresos : AppCompatActivity() {
         }
 
         pieChart.centerText = "$total €"
+        pieChart.setCenterTextColor(Color.parseColor("#FFFFFF"))
         pieChart.setCenterTextSize(20f)
         val tf: Typeface? = ResourcesCompat.getFont(this, R.font.oswald)
         pieChart.setCenterTextTypeface(tf)

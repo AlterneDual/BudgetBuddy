@@ -24,6 +24,7 @@ import run.budgetbuddy.activities.divisa.Divisas
 import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.adapter.myListAdapter
 import run.budgetbuddy.databinding.ActivityAjustesBinding
+import run.budgetbuddy.databinding.DialogInfoInicioBinding
 import java.util.*
 
 class Ajustes : AppCompatActivity() {
@@ -33,14 +34,16 @@ class Ajustes : AppCompatActivity() {
     private lateinit var listaOpciones: MutableList<ItemGenerico>
     private var posActual: Int = 0
     lateinit var binding: ActivityAjustesBinding
+    lateinit var binding_info_inicio: DialogInfoInicioBinding
+    private var trabajar_ingresos = 1
 
     //----------------------------------Atributos y metodos Menu lateral----------------------------------
-    lateinit var drawerLayout : DrawerLayout
+    lateinit var drawerLayout: DrawerLayout
     lateinit var navigationView: NavigationView
     lateinit var drawerToggle: ActionBarDrawerToggle
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(drawerToggle.onOptionsItemSelected(item)){
+        if (drawerToggle.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)
@@ -48,11 +51,10 @@ class Ajustes : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
 
             drawerLayout.closeDrawer(GravityCompat.START)
-        }
-        else{
+        } else {
             super.onBackPressed()
         }
     }
@@ -100,21 +102,25 @@ class Ajustes : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+
                 nav_cat1.itemId -> {
                     val intent = Intent(this, Categorias::class.java)
                     startActivity(intent)
                     true
                 }
+
                 nav_div1.itemId -> {
                     val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
                     true
                 }
+
                 nav_ajustes1.itemId -> {
                     val intent = Intent(this, Ajustes::class.java)
                     startActivity(intent)
                     true
                 }
+
                 else -> false
 
             }
@@ -124,14 +130,9 @@ class Ajustes : AppCompatActivity() {
         //-------------------------------------------Menu lateral-------------------------------------------
 
 
-
-        listaOpciones = crearAjustes()
-
+        listaOpciones = crearAjustes(trabajar_ingresos)
         inicializarAdapter()
-
         abrirOpcion()
-
-
     }
 
     private fun inicializarAdapter() {
@@ -142,16 +143,28 @@ class Ajustes : AppCompatActivity() {
         registerForContextMenu(list_view)
     }
 
-    private fun crearAjustes(): MutableList<ItemGenerico> {
+    private fun crearAjustes(value: Int): MutableList<ItemGenerico> {
+        var listaAjustes = mutableListOf<ItemGenerico>()
+        if (value == 0) {
+            listaAjustes = mutableListOf<ItemGenerico>(
 
-        val listaAjustes = mutableListOf<ItemGenerico>(
+                ItemGenerico("Idioma", "Español", R.drawable.idioma),
+//            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
+//                ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
+                ItemGenerico("Ver el saldo de mi cuenta", "Activado", R.drawable.group),
+                ItemGenerico("Eliminar datos", "Borrar todos los datos", R.drawable.eliminar)
+            )
+        } else {
+            listaAjustes = mutableListOf<ItemGenerico>(
 
-            ItemGenerico("Idioma", "Español", R.drawable.idioma),
-            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
-            ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
-            ItemGenerico("Pantalla inicial MyGestor", "Semanal", R.drawable.group),
-            ItemGenerico("Eliminar datos", "Borrar todos los datos", R.drawable.eliminar)
-        )
+                ItemGenerico("Idioma", "Español", R.drawable.idioma),
+//            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
+//                ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
+                ItemGenerico("Ver el saldo de mi cuenta", "Desactivado", R.drawable.group),
+                ItemGenerico("Eliminar datos", "Borrar todos los datos", R.drawable.eliminar)
+            )
+        }
+
         return listaAjustes
     }
 
@@ -173,16 +186,24 @@ class Ajustes : AppCompatActivity() {
                     val btnIngles = dialogLayout.findViewById<RadioButton>(R.id.rbEnglish)
                     val btnAceptar = dialogLayout.findViewById<Button>(R.id.btnAceptarr)
                     val btnCancelar = dialogLayout.findViewById<Button>(R.id.btnCancelar)
-                    btnAceptar.setOnClickListener{
-                        if(btnEspañol.isChecked){
-                            val toast = Toast.makeText(applicationContext, "Español seleccionado", Toast.LENGTH_SHORT)
+                    btnAceptar.setOnClickListener {
+                        if (btnEspañol.isChecked) {
+                            val toast = Toast.makeText(
+                                applicationContext,
+                                "Español seleccionado",
+                                Toast.LENGTH_SHORT
+                            )
                             toast.show()
                             setLocale(this, "es")
                             finish()
                             startActivity(intent)
 
-                        }else if(btnIngles.isChecked){
-                            val toast = Toast.makeText(applicationContext, "Ingles seleccionado", Toast.LENGTH_SHORT)
+                        } else if (btnIngles.isChecked) {
+                            val toast = Toast.makeText(
+                                applicationContext,
+                                "Ingles seleccionado",
+                                Toast.LENGTH_SHORT
+                            )
                             toast.show()
                             setLocale(this, "en")
                             finish()
@@ -190,56 +211,50 @@ class Ajustes : AppCompatActivity() {
                         }
                         dialog.dismiss()
                     }
-                    btnCancelar.setOnClickListener{
+                    btnCancelar.setOnClickListener {
                         dialog.dismiss()
                     }
                     dialog.show()
                 }
 
+//                3 -> {
+//                    val builder = AlertDialog.Builder(this)
+//                    val inflater = layoutInflater
+//                    builder.setView(inflater.inflate(R.layout.dialog_tema, null))
+//
+//                    builder.show()
+//
+//
+//                }
+
+//                4 -> {
+//                    val builder = AlertDialog.Builder(this)
+//                    val inflater = layoutInflater
+//                    builder.setView(inflater.inflate(R.layout.dialog_cambio_inicio, null))
+//
+//                    builder.show()
+//
+//
+//                }
+
                 1 -> {
                     val builder = AlertDialog.Builder(this)
                     val inflater = layoutInflater
-                    builder.setView(inflater.inflate(R.layout.dialog_periodo, null))
-
-                    builder.show()
-
-
-                }
-
-                3 -> {
-                    val builder = AlertDialog.Builder(this)
-                    val inflater = layoutInflater
-                    builder.setView(inflater.inflate(R.layout.dialog_tema, null))
-
-                    builder.show()
-
-
-                }
-
-                4 -> {
-                    val builder = AlertDialog.Builder(this)
-                    val inflater = layoutInflater
-                    builder.setView(inflater.inflate(R.layout.dialog_cambio_inicio, null))
-
-                    builder.show()
-
-
-                }
-
-                5 -> {
-                    val builder = AlertDialog.Builder(this)
-                    val inflater = layoutInflater
                     builder.setView(inflater.inflate(R.layout.dialog_info_inicio, null))
-
                     builder.show()
 
+//                    binding_info_inicio.btnActivar.setOnClickListener {
+//                        trabajar_ingresos = 0
+//                    }
+//                    binding_info_inicio.btnDesactivar.setOnClickListener {
+//                        trabajar_ingresos = 1
+//                    }
                 }
 
-                6 -> {
+                2 -> {
                     val builder = AlertDialog.Builder(this)
                     val inflater = layoutInflater
                     builder.setView(inflater.inflate(R.layout.dialog_borrar_datos, null))
-
                     builder.create()
                     builder.show()
 

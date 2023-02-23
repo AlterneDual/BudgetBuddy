@@ -123,6 +123,7 @@ id addGrupo
 id addGrupoEnlace
 id btnAceptar
 id btnAceptarr
+id btnActivar
 id btnAddCategoria
 id btnAddCategoria2
 id btnAddGroup3
@@ -151,6 +152,7 @@ id btnCategoria
 id btnCerrar
 id btnCheckA
 id btnCrearUsuario
+id btnDesactivar
 id btnEditar
 id btnEliminar
 id btnEliminar1
@@ -409,6 +411,7 @@ mipmap ic_launcher_round
 string Divisas
 string Home
 string aceptar
+string activado
 string ajustes
 string anual
 string aplicarCambios
@@ -428,6 +431,7 @@ string comentario_editable
 string crear_categoria
 string crear_usuario
 string cuentas
+string desactivado
 string deutsche
 string dia
 string diario

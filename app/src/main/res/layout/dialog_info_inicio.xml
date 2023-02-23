@@ -23,7 +23,7 @@
 
 
             <Button
-                android:id="@+id/btnCancelar"
+                android:id="@+id/btnActivar"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:layout_marginLeft="30dp"
@@ -32,11 +32,11 @@
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/default_button"
-                android:text="Gestor con Ingresos"
+                android:text="@string/activado"
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
             <Button
-                android:id="@+id/btnAceptar"
+                android:id="@+id/btnDesactivar"
                 android:layout_width="match_parent"
                 android:layout_height="160dp"
                 android:layout_marginLeft="30dp"
@@ -44,7 +44,7 @@
                 android:layout_marginBottom="30dp"
                 android:layout_weight="1"
                 android:background="@drawable/default_button"
-                android:text="@string/gestor_con_saldo" />
+                android:text="@string/desactivado" />
         </LinearLayout>
     </FrameLayout>
 

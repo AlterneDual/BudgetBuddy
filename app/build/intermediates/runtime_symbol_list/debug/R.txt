@@ -3014,6 +3014,7 @@ int id bounceEnd 0x7f09006c
 int id bounceStart 0x7f09006d
 int id btnAceptar 0x7f09006e
 int id btnAceptarr 0x7f09006f
+int id btnActivar 0x7f0902de
 int id btnAddCategoria 0x7f090070
 int id btnAddCategoria2 0x7f090071
 int id btnAddGroup3 0x7f090072
@@ -3042,6 +3043,7 @@ int id btnCategoria 0x7f090088
 int id btnCerrar 0x7f090089
 int id btnCheckA 0x7f09008a
 int id btnCrearUsuario 0x7f09008b
+int id btnDesactivar 0x7f0902df
 int id btnEditar 0x7f09008c
 int id btnEliminar 0x7f09008d
 int id btnEliminar1 0x7f09008e
@@ -3905,6 +3907,7 @@ int string abc_shareactionprovider_share_with 0x7f11001a
 int string abc_shareactionprovider_share_with_application 0x7f11001b
 int string abc_toolbar_collapse_description 0x7f11001c
 int string aceptar 0x7f11001d
+int string activado 0x7f1100f1
 int string ajustes 0x7f11001e
 int string androidx_startup 0x7f11001f
 int string anual 0x7f110020
@@ -3936,6 +3939,7 @@ int string comentario_editable 0x7f110039
 int string crear_categoria 0x7f11003a
 int string crear_usuario 0x7f11003b
 int string cuentas 0x7f11003c
+int string desactivado 0x7f1100f2
 int string deutsche 0x7f11003d
 int string dia 0x7f11003e
 int string diario 0x7f11003f

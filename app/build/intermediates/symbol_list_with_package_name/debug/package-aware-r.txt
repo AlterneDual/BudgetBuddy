@@ -3015,6 +3015,7 @@ id bounceEnd
 id bounceStart
 id btnAceptar
 id btnAceptarr
+id btnActivar
 id btnAddCategoria
 id btnAddCategoria2
 id btnAddGroup3
@@ -3043,6 +3044,7 @@ id btnCategoria
 id btnCerrar
 id btnCheckA
 id btnCrearUsuario
+id btnDesactivar
 id btnEditar
 id btnEliminar
 id btnEliminar1
@@ -3906,6 +3908,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string aceptar
+string activado
 string ajustes
 string androidx_startup
 string anual
@@ -3937,6 +3940,7 @@ string comentario_editable
 string crear_categoria
 string crear_usuario
 string cuentas
+string desactivado
 string deutsche
 string dia
 string diario

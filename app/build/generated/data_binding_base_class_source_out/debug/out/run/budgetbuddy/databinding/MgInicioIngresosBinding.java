@@ -58,6 +58,9 @@ public final class MgInicioIngresosBinding implements ViewBinding {
   public final Button tvDia;
 
   @NonNull
+  public final TextView tvGastos;
+
+  @NonNull
   public final TextView tvIngresos;
 
   @NonNull
@@ -76,9 +79,9 @@ public final class MgInicioIngresosBinding implements ViewBinding {
       @NonNull ImageView butInfo, @NonNull DrawerLayout drawerLayout,
       @NonNull LinearLayout linearLayout5, @NonNull ListView lvInicioIngreso,
       @NonNull NavigationView navView, @NonNull PieChart pieChart, @NonNull Toolbar toolbarA,
-      @NonNull Button tvAnho, @NonNull Button tvDia, @NonNull TextView tvIngresos,
-      @NonNull Button tvMes, @NonNull Button tvPeriodo, @NonNull TextView tvResultadoFecha,
-      @NonNull Button tvSemana) {
+      @NonNull Button tvAnho, @NonNull Button tvDia, @NonNull TextView tvGastos,
+      @NonNull TextView tvIngresos, @NonNull Button tvMes, @NonNull Button tvPeriodo,
+      @NonNull TextView tvResultadoFecha, @NonNull Button tvSemana) {
     this.rootView = rootView;
     this.btnAddGroup3 = btnAddGroup3;
     this.butInfo = butInfo;
@@ -90,6 +93,7 @@ public final class MgInicioIngresosBinding implements ViewBinding {
     this.toolbarA = toolbarA;
     this.tvAnho = tvAnho;
     this.tvDia = tvDia;
+    this.tvGastos = tvGastos;
     this.tvIngresos = tvIngresos;
     this.tvMes = tvMes;
     this.tvPeriodo = tvPeriodo;
@@ -180,6 +184,12 @@ public final class MgInicioIngresosBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvGastos;
+      TextView tvGastos = ViewBindings.findChildViewById(rootView, id);
+      if (tvGastos == null) {
+        break missingId;
+      }
+
       id = R.id.tvIngresos;
       TextView tvIngresos = ViewBindings.findChildViewById(rootView, id);
       if (tvIngresos == null) {
@@ -212,7 +222,7 @@ public final class MgInicioIngresosBinding implements ViewBinding {
 
       return new MgInicioIngresosBinding((DrawerLayout) rootView, btnAddGroup3, butInfo,
           drawerLayout, linearLayout5, lvInicioIngreso, navView, pieChart, toolbarA, tvAnho, tvDia,
-          tvIngresos, tvMes, tvPeriodo, tvResultadoFecha, tvSemana);
+          tvGastos, tvIngresos, tvMes, tvPeriodo, tvResultadoFecha, tvSemana);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

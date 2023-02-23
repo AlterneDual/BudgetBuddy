@@ -11,9 +11,11 @@
 
     <LinearLayout
         android:id="@+id/imgLayout"
-        android:layout_width="411dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:padding="3dp">
 
         <ImageView
@@ -55,9 +57,6 @@
 
 
     </LinearLayout>
-
-
-
 
 
 </LinearLayout>
