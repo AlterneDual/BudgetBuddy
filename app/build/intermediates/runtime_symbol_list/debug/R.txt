@@ -3161,7 +3161,6 @@ int id enterAlwaysCollapsed 0x7f090102
 int id etCantidad 0x7f090103
 int id etCantidad2 0x7f090104
 int id etCantidadPagada 0x7f090106
-int id etComentario 0x7f090107
 int id etComentario1 0x7f090108
 int id etDivisaA 0x7f090109
 int id etDivisaA2 0x7f09010a
@@ -3175,6 +3174,7 @@ int id etGastosA2 0x7f090111
 int id etNombre 0x7f090112
 int id etNombreCategoria 0x7f090113
 int id etNombreGasto 0x7f090114
+int id etNombreIngreso 0x7f0902e0
 int id etPagadorA 0x7f090115
 int id etPagadorInfo 0x7f090116
 int id etPassCheck 0x7f090117
@@ -3507,6 +3507,7 @@ int id tag_window_insets_animation_callback 0x7f09025d
 int id tbSemanal 0x7f09025e
 int id text 0x7f09025f
 int id text2 0x7f090260
+int id textCalculo 0x7f0902e2
 int id textDescripcion 0x7f090261
 int id textEnd 0x7f090262
 int id textSpacerNoButtons 0x7f090263
@@ -3515,7 +3516,6 @@ int id textStart 0x7f090265
 int id textTop 0x7f090266
 int id textTotal 0x7f090267
 int id textView 0x7f090268
-int id textView10 0x7f090269
 int id textView2 0x7f09026a
 int id textView3 0x7f09026b
 int id textView4 0x7f09026c
@@ -3523,6 +3523,7 @@ int id textView5 0x7f09026d
 int id textView6 0x7f09026e
 int id textView7 0x7f09026f
 int id textView8 0x7f090270
+int id textView9 0x7f0902e3
 int id textViewA 0x7f090271
 int id textViewA2 0x7f090272
 int id textViewB2 0x7f090273
@@ -3573,9 +3574,9 @@ int id tvCantidadGasto 0x7f09029f
 int id tvContrasenaOlvidada 0x7f0902a0
 int id tvDebeA 0x7f0902a1
 int id tvDia 0x7f0902a2
+int id tvDisponible 0x7f0902e4
 int id tvDivisa 0x7f0902a3
 int id tvDivisa1 0x7f0902a4
-int id tvDivisa2 0x7f0902a5
 int id tvEmail 0x7f0902a6
 int id tvFechaA 0x7f0902a7
 int id tvFechaA2 0x7f0902a8
@@ -3586,6 +3587,7 @@ int id tvGastoGrupalA 0x7f0902ac
 int id tvGastos 0x7f0902ad
 int id tvGroupInfo 0x7f0902ae
 int id tvGroupName 0x7f0902af
+int id tvIngresoView 0x7f0902e1
 int id tvIngresos 0x7f0902b0
 int id tvIngresos2 0x7f0902b1
 int id tvListaGasto 0x7f0902b2
@@ -3819,6 +3821,7 @@ int layout mg_info 0x7f0c0069
 int layout mg_info_gasto_ingreso_row 0x7f0c006a
 int layout mg_info_gasto_ingreso_row_ingreso 0x7f0c006b
 int layout mg_inicio_gastos 0x7f0c006c
+int layout mg_inicio_ingreso_row 0x7f0c009b
 int layout mg_inicio_ingresos 0x7f0c006d
 int layout mg_row_lista_gasto 0x7f0c006e
 int layout mtrl_alert_dialog 0x7f0c006f

@@ -1,20 +1,15 @@
 package run.budgetbuddy.adapter
 
-import android.annotation.SuppressLint
 import android.content.Context
-import android.graphics.Color
 import android.graphics.drawable.GradientDrawable
-import android.graphics.drawable.StateListDrawable
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.Button
-import android.widget.FrameLayout
 import android.widget.TextView
 import androidx.annotation.RequiresApi
-import androidx.core.content.ContextCompat
 import run.budgetbuddy.R
 import run.budgetbuddy.model.Ingreso
 import java.text.SimpleDateFormat
@@ -42,7 +37,7 @@ class myListAdapter_ingreso(context: Context, ingresos: List<Ingreso>, colores: 
         val ingreso = mIng[position]
         val color = mColores[position]
         val view: View = convertView ?: LayoutInflater.from(mContext)
-            .inflate(R.layout.mg_info_gasto_ingreso_row_ingreso, parent, false)
+            .inflate(R.layout.mg_inicio_ingreso_row, parent, false)
 
         val ingNombre = view.findViewById<TextView>(R.id.tvNombre1)
         val ingFecha = view.findViewById<TextView>(R.id.textDescripcion)
@@ -55,7 +50,7 @@ class myListAdapter_ingreso(context: Context, ingresos: List<Ingreso>, colores: 
 
         ingNombre.text = ingreso.descripcion
         ingFecha.text = date
-        cantIng.text = ingreso.importe.toString()
+        cantIng.text = ingreso.importe.toString() + " €"
         val back = color_view.background as GradientDrawable
 //        val gBack = back.getStateDrawable(1) as GradientDrawable
         back.setColor(color)

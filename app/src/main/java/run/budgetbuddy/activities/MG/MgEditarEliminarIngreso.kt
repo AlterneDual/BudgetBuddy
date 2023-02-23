@@ -69,7 +69,6 @@ class MgEditarEliminarIngreso : AppCompatActivity() {
 
         }
 
-
         valoresAyerHoyPredeterminados()
 
         var tvFechaSeleccionada = binding.tvFechaSeleccionada

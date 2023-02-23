@@ -40,10 +40,10 @@ public final class MgInfoBinding implements ViewBinding {
   public final ListView listaGastos;
 
   @NonNull
-  public final TextView textView;
+  public final TextView textCalculo;
 
   @NonNull
-  public final TextView textView10;
+  public final TextView textView;
 
   @NonNull
   public final TextView textView3;
@@ -55,6 +55,9 @@ public final class MgInfoBinding implements ViewBinding {
   public final TextView textView8;
 
   @NonNull
+  public final TextView textView9;
+
+  @NonNull
   public final Toolbar toolbarA;
 
   @NonNull
@@ -64,7 +67,13 @@ public final class MgInfoBinding implements ViewBinding {
   public final Button tvDia;
 
   @NonNull
+  public final TextView tvDisponible;
+
+  @NonNull
   public final TextView tvGastos;
+
+  @NonNull
+  public final TextView tvIngresoView;
 
   @NonNull
   public final TextView tvIngresos;
@@ -84,9 +93,10 @@ public final class MgInfoBinding implements ViewBinding {
   private MgInfoBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnAtras,
       @NonNull Button butAll, @NonNull LinearLayout linearLayout5,
       @NonNull LinearLayout linearLayout51, @NonNull ListView listaGastos,
-      @NonNull TextView textView, @NonNull TextView textView10, @NonNull TextView textView3,
-      @NonNull TextView textView5, @NonNull TextView textView8, @NonNull Toolbar toolbarA,
-      @NonNull Button tvAnho, @NonNull Button tvDia, @NonNull TextView tvGastos,
+      @NonNull TextView textCalculo, @NonNull TextView textView, @NonNull TextView textView3,
+      @NonNull TextView textView5, @NonNull TextView textView8, @NonNull TextView textView9,
+      @NonNull Toolbar toolbarA, @NonNull Button tvAnho, @NonNull Button tvDia,
+      @NonNull TextView tvDisponible, @NonNull TextView tvGastos, @NonNull TextView tvIngresoView,
       @NonNull TextView tvIngresos, @NonNull Button tvMes, @NonNull Button tvPeriodo,
       @NonNull TextView tvResultadoFecha, @NonNull Button tvSemana) {
     this.rootView = rootView;
@@ -95,15 +105,18 @@ public final class MgInfoBinding implements ViewBinding {
     this.linearLayout5 = linearLayout5;
     this.linearLayout51 = linearLayout51;
     this.listaGastos = listaGastos;
+    this.textCalculo = textCalculo;
     this.textView = textView;
-    this.textView10 = textView10;
     this.textView3 = textView3;
     this.textView5 = textView5;
     this.textView8 = textView8;
+    this.textView9 = textView9;
     this.toolbarA = toolbarA;
     this.tvAnho = tvAnho;
     this.tvDia = tvDia;
+    this.tvDisponible = tvDisponible;
     this.tvGastos = tvGastos;
+    this.tvIngresoView = tvIngresoView;
     this.tvIngresos = tvIngresos;
     this.tvMes = tvMes;
     this.tvPeriodo = tvPeriodo;
@@ -168,15 +181,15 @@ public final class MgInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.textView;
-      TextView textView = ViewBindings.findChildViewById(rootView, id);
-      if (textView == null) {
+      id = R.id.textCalculo;
+      TextView textCalculo = ViewBindings.findChildViewById(rootView, id);
+      if (textCalculo == null) {
         break missingId;
       }
 
-      id = R.id.textView10;
-      TextView textView10 = ViewBindings.findChildViewById(rootView, id);
-      if (textView10 == null) {
+      id = R.id.textView;
+      TextView textView = ViewBindings.findChildViewById(rootView, id);
+      if (textView == null) {
         break missingId;
       }
 
@@ -198,6 +211,12 @@ public final class MgInfoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView9;
+      TextView textView9 = ViewBindings.findChildViewById(rootView, id);
+      if (textView9 == null) {
+        break missingId;
+      }
+
       id = R.id.toolbarA;
       Toolbar toolbarA = ViewBindings.findChildViewById(rootView, id);
       if (toolbarA == null) {
@@ -216,9 +235,21 @@ public final class MgInfoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.tvDisponible;
+      TextView tvDisponible = ViewBindings.findChildViewById(rootView, id);
+      if (tvDisponible == null) {
+        break missingId;
+      }
+
       id = R.id.tvGastos;
       TextView tvGastos = ViewBindings.findChildViewById(rootView, id);
       if (tvGastos == null) {
+        break missingId;
+      }
+
+      id = R.id.tvIngresoView;
+      TextView tvIngresoView = ViewBindings.findChildViewById(rootView, id);
+      if (tvIngresoView == null) {
         break missingId;
       }
 
@@ -253,9 +284,9 @@ public final class MgInfoBinding implements ViewBinding {
       }
 
       return new MgInfoBinding((ConstraintLayout) rootView, btnAtras, butAll, linearLayout5,
-          linearLayout51, listaGastos, textView, textView10, textView3, textView5, textView8,
-          toolbarA, tvAnho, tvDia, tvGastos, tvIngresos, tvMes, tvPeriodo, tvResultadoFecha,
-          tvSemana);
+          linearLayout51, listaGastos, textCalculo, textView, textView3, textView5, textView8,
+          textView9, toolbarA, tvAnho, tvDia, tvDisponible, tvGastos, tvIngresoView, tvIngresos,
+          tvMes, tvPeriodo, tvResultadoFecha, tvSemana);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

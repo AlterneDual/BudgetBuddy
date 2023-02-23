@@ -191,7 +191,6 @@ id eliminar
 id etCantidad
 id etCantidad2
 id etCantidadPagada
-id etComentario
 id etComentario1
 id etDivisaA
 id etDivisaA2
@@ -205,6 +204,7 @@ id etGastosA2
 id etNombre
 id etNombreCategoria
 id etNombreGasto
+id etNombreIngreso
 id etPagadorA
 id etPagadorInfo
 id etPassCheck
@@ -275,10 +275,10 @@ id recyclerViewA4
 id relativeLayout
 id second_section
 id tbSemanal
+id textCalculo
 id textDescripcion
 id textTotal
 id textView
-id textView10
 id textView2
 id textView3
 id textView4
@@ -286,6 +286,7 @@ id textView5
 id textView6
 id textView7
 id textView8
+id textView9
 id textViewA
 id textViewA2
 id textViewB2
@@ -311,9 +312,9 @@ id tvCantidadGasto
 id tvContrasenaOlvidada
 id tvDebeA
 id tvDia
+id tvDisponible
 id tvDivisa
 id tvDivisa1
-id tvDivisa2
 id tvEmail
 id tvFechaA
 id tvFechaA2
@@ -324,6 +325,7 @@ id tvGastoGrupalA
 id tvGastos
 id tvGroupInfo
 id tvGroupName
+id tvIngresoView
 id tvIngresos
 id tvIngresos2
 id tvListaGasto
@@ -393,6 +395,7 @@ layout mg_info
 layout mg_info_gasto_ingreso_row
 layout mg_info_gasto_ingreso_row_ingreso
 layout mg_inicio_gastos
+layout mg_inicio_ingreso_row
 layout mg_inicio_ingresos
 layout mg_row_lista_gasto
 layout n_nav_header_main

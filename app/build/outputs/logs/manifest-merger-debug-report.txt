@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
 MERGED from [io.realm:realm-android-library-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\e484716dac40660035fe93fb5dd7d9b8\transformed\realm-android-library-object-server-10.11.1\AndroidManifest.xml:2:1-12:12
 MERGED from [io.realm:realm-android-kotlin-extensions-object-server:10.11.1] C:\Users\Aragon\.gradle\caches\transforms-3\b1b71b6e9556b4ea48be7bb341272e6a\transformed\realm-android-kotlin-extensions-object-server-10.11.1\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.databinding:viewbinding:7.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\349fed3c6b8905fb4cbe9aa4836949e1\transformed\viewbinding-7.3.0\AndroidManifest.xml:2:1-9:12
@@ -50,22 +50,22 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\Aragon\.gradle\c
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\b2f8b08a5a46a94bd13ad818e660f057\transformed\localbroadcastmanager-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] C:\Users\Aragon\.gradle\caches\transforms-3\e613a0fa896d155a11cea2ee287d94f1\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.3.0] C:\Users\Aragon\.gradle\caches\transforms-3\e5821dd2dbb6681dbe340f1ba9b2d474\transformed\annotation-experimental-1.3.0\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
-INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
+INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
 	package
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-195:12
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:1-202:12
 		INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:2:11-69
@@ -74,7 +74,7 @@ ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\Android
 	android:name
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:5:22-77
 application
-ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:7:5-193:19
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:7:5-200:19
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Aragon\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.8.0] C:\Users\Aragon\.gradle\caches\transforms-3\f0209ecd0c904b43df0928ab3def9ccf\transformed\material-1.8.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] C:\Users\Aragon\.gradle\caches\transforms-3\8f78d45a038b22fd985aa5ba6f73f275\transformed\constraintlayout-2.1.4\AndroidManifest.xml:9:5-20
@@ -159,120 +159,126 @@ ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\Android
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:55:13-37
 	android:name
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:54:13-64
-activity#run.budgetbuddy.activities.menu.MenuLateral3G
+activity#run.budgetbuddy.activities.MG.MgEditarEliminarIngreso
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:60:9-66:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:62:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:61:13-58
-activity#run.budgetbuddy.activities.MG.MgInfo
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:61:13-66
+activity#run.budgetbuddy.activities.menu.MenuLateral3G
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:67:9-73:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:69:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:68:13-49
-activity#run.budgetbuddy.activities.categoria.Categorias
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:68:13-58
+activity#run.budgetbuddy.activities.MG.MgInfo
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:74:9-80:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:76:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:75:13-60
-activity#run.budgetbuddy.activities.categoria.CrearCategoria
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:75:13-49
+activity#run.budgetbuddy.activities.categoria.Categorias
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:81:9-87:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:83:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:82:13-64
-activity#run.budgetbuddy.activities.app.Register
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:82:13-60
+activity#run.budgetbuddy.activities.categoria.CrearCategoria
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:88:9-94:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:90:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:89:13-52
-activity#run.budgetbuddy.activities.app.Login
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:89:13-64
+activity#run.budgetbuddy.activities.app.Register
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:95:9-101:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:97:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:96:13-49
-activity#run.budgetbuddy.activities.app.CargaInicio
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:96:13-52
+activity#run.budgetbuddy.activities.app.Login
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:102:9-108:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:104:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:103:13-55
-activity#run.budgetbuddy.activities.GG.CrearGrupo3G
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:103:13-49
+activity#run.budgetbuddy.activities.app.CargaInicio
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:109:9-115:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:111:13-37
 	android:name
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:110:13-55
-activity#run.budgetbuddy.activities.GG.EditarGasto3G
+activity#run.budgetbuddy.activities.GG.CrearGrupo3G
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:116:9-122:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:118:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:117:13-56
-activity#run.budgetbuddy.activities.GG.Gastos3G
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:117:13-55
+activity#run.budgetbuddy.activities.GG.EditarGasto3G
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:123:9-129:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:125:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:124:13-51
-activity#run.budgetbuddy.activities.GG.NuevoGasto3G
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:124:13-56
+activity#run.budgetbuddy.activities.GG.Gastos3G
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:130:9-136:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:132:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:131:13-55
-activity#run.budgetbuddy.activities.GG.Principal3G
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:131:13-51
+activity#run.budgetbuddy.activities.GG.NuevoGasto3G
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:137:9-143:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:139:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:138:13-54
-activity#run.budgetbuddy.activities.GG.Saldos3G
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:138:13-55
+activity#run.budgetbuddy.activities.GG.Principal3G
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:144:9-150:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:146:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:145:13-51
-activity#run.budgetbuddy.activities.GG.UnirGrupo3G
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:145:13-54
+activity#run.budgetbuddy.activities.GG.Saldos3G
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:151:9-157:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:153:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:152:13-54
-activity#run.budgetbuddy.activities.GG.reembolso.AllReembolsos
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:152:13-51
+activity#run.budgetbuddy.activities.GG.UnirGrupo3G
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:158:9-164:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:160:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:159:13-66
-activity#run.budgetbuddy.activities.GG.reembolso.Reembolso3G
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:159:13-54
+activity#run.budgetbuddy.activities.GG.reembolso.AllReembolsos
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:165:9-171:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:167:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:166:13-64
-activity#run.budgetbuddy.activities.menu.MenuLateralMG
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:166:13-66
+activity#run.budgetbuddy.activities.GG.reembolso.Reembolso3G
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:172:9-178:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:174:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:173:13-58
-activity#run.budgetbuddy.activities.ajustes.Ajustes
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:173:13-64
+activity#run.budgetbuddy.activities.menu.MenuLateralMG
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:179:9-185:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:181:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:180:13-55
-activity#run.budgetbuddy.activities.divisa.Divisas
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:180:13-58
+activity#run.budgetbuddy.activities.ajustes.Ajustes
 ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:186:9-192:20
 	android:exported
 		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:188:13-37
 	android:name
-		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:187:13-54
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:187:13-55
+activity#run.budgetbuddy.activities.divisa.Divisas
+ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:193:9-199:20
+	android:exported
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:195:13-37
+	android:name
+		ADDED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml:194:13-54
 uses-sdk
 INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Aragon\Desktop\Alterne Dual\BudgetBuddy\app\src\main\AndroidManifest.xml

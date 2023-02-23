@@ -1,8 +1,10 @@
 package run.budgetbuddy.activities.MG
 
 import CRUD.GastoCRUD
+import CRUD.IngresoCRUD
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.drawable.ColorDrawable
@@ -28,6 +30,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 import run.budgetbuddy.adapter.*
+import run.budgetbuddy.model.Ingreso
 import java.time.LocalDate
 import java.time.ZoneId
 
@@ -35,9 +38,13 @@ class MgInfo : AppCompatActivity() {
     private lateinit var binding: MgInfoBinding
     private var seleccionado: Int = 1;
     var gc: GastoCRUD = GastoCRUD()
+    var ic: IngresoCRUD = IngresoCRUD()
     private lateinit var list_view: ListView
     private lateinit var adapterList: myListAdapterInfoGasto
     private lateinit var lista_gastos: MutableList<Gasto>
+    private lateinit var lista_ingresos: MutableList<Ingreso>
+    var elemetos = mutableListOf<Any>()
+
     var posActualGasto: Int = 0
 
     private var MYGESTORVIEWINGRESOS_SETTING = "MyGestorView"
@@ -48,12 +55,6 @@ class MgInfo : AppCompatActivity() {
         binding = MgInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
         check()
-
-        binding.textView10.isVisible = false
-        binding.tvIngresos.isVisible = false
-
-
-
 
         binding.btnAtras.setOnClickListener {
             val intent = Intent(this, MgInicio::class.java)
@@ -89,8 +90,6 @@ class MgInfo : AppCompatActivity() {
             seleccionado = 0
             check()
         }
-
-
     }
 
     @RequiresApi(Build.VERSION_CODES.M)
@@ -100,7 +99,6 @@ class MgInfo : AppCompatActivity() {
         var green = resources.getColor(R.color.vidrian_green)
         var white = resources.getColor(R.color.white)
         var calendar = Calendar.getInstance()
-
 
         when (seleccionado) {
             0 -> {
@@ -123,15 +121,44 @@ class MgInfo : AppCompatActivity() {
                 binding.tvPeriodo.setTextColor(white)
                 binding.tvPeriodo.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
-                binding.tvResultadoFecha.text = ("Todos")
+                binding.tvResultadoFecha.text = ("All")
 
                 // Mostrar en la lista
                 lista_gastos = gc.getAllGastos()
-                inicializarAdapter(lista_gastos)
-                var total: Double = 0.0;
+                lista_ingresos = ic.getAllingresos()
+                inicializarAdapter(lista_gastos, lista_ingresos)
+
+                var total: Double = 0.0
                 for (l in lista_gastos) {
-                    total += l.importe;
+                    total += l.importe
                 }
+                var total2: Double = 0.0
+                for (t in lista_ingresos) {
+                    total2 += t.importe
+                }
+
+                var disponible = total2 - total
+
+                if (disponible > 0.0) {
+                    binding.tvDisponible.text = "+" + disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#2ACD1B"))
+                } else if (disponible < 0.0) {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
+
+                if (total2 != 0.0) {
+                    binding.tvIngresos.text = "+" + total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#2ACD1B"))
+                } else {
+                    binding.tvIngresos.text = total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
                 if (total != 0.0) {
                     binding.tvGastos.text = "-" + total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
@@ -139,7 +166,6 @@ class MgInfo : AppCompatActivity() {
                     binding.tvGastos.text = total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
                 }
-
             }
 
             1 -> {
@@ -169,11 +195,41 @@ class MgInfo : AppCompatActivity() {
 
                 // Mostrar en la lista
                 lista_gastos = verInfoDia(Date.valueOf(LocalDate.now().toString()));
-                inicializarAdapter(lista_gastos)
-                var total: Double = 0.0;
+                lista_ingresos = verInfoDiaIngreso(Date.valueOf(LocalDate.now().toString()))
+                inicializarAdapter(lista_gastos, lista_ingresos)
+
+
+                var total: Double = 0.0
                 for (l in lista_gastos) {
-                    total += l.importe;
+                    total += l.importe
                 }
+                var total2: Double = 0.0
+                for (t in lista_ingresos) {
+                    total2 += t.importe
+                }
+
+                var disponible = total2 - total
+
+                if (disponible > 0.0) {
+                    binding.tvDisponible.text = "+" + disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#2ACD1B"))
+                } else if (disponible < 0.0) {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
+
+                if (total2 != 0.0) {
+                    binding.tvIngresos.text = "+" + total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#2ACD1B"))
+                } else {
+                    binding.tvIngresos.text = total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
                 if (total != 0.0) {
                     binding.tvGastos.text = "-" + total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
@@ -181,7 +237,6 @@ class MgInfo : AppCompatActivity() {
                     binding.tvGastos.text = total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
                 }
-
             }
 
             2 -> {
@@ -230,15 +285,44 @@ class MgInfo : AppCompatActivity() {
                 val endOfWeek = cal.time
 
                 lista_gastos = verInfoSemana(
-                    startOfWeek,
-                    endOfWeek
+                    startOfWeek, endOfWeek
                 )
+                lista_ingresos = verInfoSemanaIngreso(startOfWeek, endOfWeek)
 
-                inicializarAdapter(lista_gastos)
-                var total: Double = 0.0;
+                inicializarAdapter(lista_gastos, lista_ingresos)
+
+
+                var total: Double = 0.0
                 for (l in lista_gastos) {
-                    total += l.importe;
+                    total += l.importe
                 }
+                var total2: Double = 0.0
+                for (t in lista_ingresos) {
+                    total2 += t.importe
+                }
+
+                var disponible = total2 - total
+
+                if (disponible > 0.0) {
+                    binding.tvDisponible.text = "+" + disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#2ACD1B"))
+                } else if (disponible < 0.0) {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
+
+                if (total2 != 0.0) {
+                    binding.tvIngresos.text = "+" + total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#2ACD1B"))
+                } else {
+                    binding.tvIngresos.text = total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
                 if (total != 0.0) {
                     binding.tvGastos.text = "-" + total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
@@ -277,11 +361,41 @@ class MgInfo : AppCompatActivity() {
 
                 // Mostrar en la lista
                 lista_gastos = verInfoMes(Date.valueOf(LocalDate.now().toString()));
-                inicializarAdapter(lista_gastos)
-                var total: Double = 0.0;
+                lista_ingresos = verInfoMesIngreso(Date.valueOf(LocalDate.now().toString()))
+                inicializarAdapter(lista_gastos, lista_ingresos)
+
+
+                var total: Double = 0.0
                 for (l in lista_gastos) {
-                    total += l.importe;
+                    total += l.importe
                 }
+                var total2: Double = 0.0
+                for (t in lista_ingresos) {
+                    total2 += t.importe
+                }
+
+                var disponible = total2 - total
+
+                if (disponible > 0.0) {
+                    binding.tvDisponible.text = "+" + disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#2ACD1B"))
+                } else if (disponible < 0.0) {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
+
+                if (total2 != 0.0) {
+                    binding.tvIngresos.text = "+" + total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#2ACD1B"))
+                } else {
+                    binding.tvIngresos.text = total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
                 if (total != 0.0) {
                     binding.tvGastos.text = "-" + total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
@@ -317,11 +431,41 @@ class MgInfo : AppCompatActivity() {
 
                 // Mostrar en la lista
                 lista_gastos = verInfoAno(Date.valueOf(LocalDate.now().toString()));
-                inicializarAdapter(lista_gastos)
-                var total: Double = 0.0;
+                lista_ingresos = verInfoAnoIngreso(Date.valueOf(LocalDate.now().toString()))
+                inicializarAdapter(lista_gastos, lista_ingresos)
+
+
+                var total: Double = 0.0
                 for (l in lista_gastos) {
-                    total += l.importe;
+                    total += l.importe
                 }
+                var total2: Double = 0.0
+                for (t in lista_ingresos) {
+                    total2 += t.importe
+                }
+
+                var disponible = total2 - total
+
+                if (disponible > 0.0) {
+                    binding.tvDisponible.text = "+" + disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#2ACD1B"))
+                } else if (disponible < 0.0) {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
+
+                if (total2 != 0.0) {
+                    binding.tvIngresos.text = "+" + total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#2ACD1B"))
+                } else {
+                    binding.tvIngresos.text = total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
                 if (total != 0.0) {
                     binding.tvGastos.text = "-" + total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
@@ -352,10 +496,39 @@ class MgInfo : AppCompatActivity() {
                 binding.tvAnho.setTextColor(white)
                 binding.tvAnho.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
+
+
                 var total: Double = 0.0
                 for (l in lista_gastos) {
-                    total += l.importe;
+                    total += l.importe
                 }
+                var total2: Double = 0.0
+                for (t in lista_ingresos) {
+                    total2 += t.importe
+                }
+
+                var disponible = total2 - total
+
+                if (disponible > 0.0) {
+                    binding.tvDisponible.text = "+" + disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#2ACD1B"))
+                } else if (disponible < 0.0) {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#EF5757"))
+                } else {
+                    binding.tvDisponible.text = disponible.toString() + " €"
+                    binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
+
+                if (total2 != 0.0) {
+                    binding.tvIngresos.text = "+" + total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#2ACD1B"))
+                } else {
+                    binding.tvIngresos.text = total2.toString() + " €"
+                    binding.tvIngresos.setTextColor(Color.parseColor("#FFFFFF"))
+                }
+
                 if (total != 0.0) {
                     binding.tvGastos.text = "-" + total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
@@ -363,7 +536,6 @@ class MgInfo : AppCompatActivity() {
                     binding.tvGastos.text = total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
                 }
-
             }
 
             else -> println("Default")
@@ -389,8 +561,7 @@ class MgInfo : AppCompatActivity() {
     }
 
     fun verInfoSemana(
-        fecha_inicio: java.util.Date,
-        fecha_final: java.util.Date
+        fecha_inicio: java.util.Date, fecha_final: java.util.Date
     ): MutableList<Gasto> {
         return gc.getAllByDates(fecha_inicio, fecha_final)
 
@@ -429,12 +600,72 @@ class MgInfo : AppCompatActivity() {
     }
 
     fun verInfoPeriodo(
-        fecha_inicio: java.util.Date,
-        fecha_final: java.util.Date
+        fecha_inicio: java.util.Date, fecha_final: java.util.Date
     ): MutableList<Gasto> {
         return gc.getAllByDates(fecha_inicio, fecha_final)
-
     }
+
+    fun verInfoDiaIngreso(fecha_hoy: Date): MutableList<Ingreso> {
+        var lista_gastos = ic.getAllingresos()
+        var nueva_lista: MutableList<Ingreso> = mutableListOf()
+
+        val format = SimpleDateFormat("dd/MM/yyyy")
+        var date = format.format(fecha_hoy);
+
+        for (g in lista_gastos) {
+            val format = SimpleDateFormat("dd/MM/yyyy")
+            var guardada = format.format(g.fecha);
+            if (guardada.equals(date)) {
+                nueva_lista.add(g)
+            }
+        }
+        return nueva_lista
+    }
+
+    fun verInfoSemanaIngreso(
+        fecha_inicio: java.util.Date, fecha_final: java.util.Date
+    ): MutableList<Ingreso> {
+        return ic.getAllByDates(fecha_inicio, fecha_final)
+    }
+
+    fun verInfoMesIngreso(fecha_inicio: Date): MutableList<Ingreso> {
+        var lista_gastos = ic.getAllingresos()
+        var nueva_lista: MutableList<Ingreso> = mutableListOf()
+
+        val format = SimpleDateFormat("MM/yyyy")
+        var date = format.format(fecha_inicio);
+        for (g in lista_gastos) {
+            val format = SimpleDateFormat("MM/yyyy")
+            var guardada = format.format(g.fecha);
+            if (guardada.equals(date)) {
+                nueva_lista.add(g)
+            }
+        }
+        return nueva_lista
+    }
+
+    fun verInfoAnoIngreso(ano: Date): MutableList<Ingreso> {
+        var lista_gastos = ic.getAllingresos()
+        var nueva_lista: MutableList<Ingreso> = mutableListOf()
+
+        val format = SimpleDateFormat("yyyy")
+        var date = format.format(ano);
+        for (g in lista_gastos) {
+            val format = SimpleDateFormat("yyyy")
+            var guardada = format.format(g.fecha);
+            if (guardada.equals(date)) {
+                nueva_lista.add(g)
+            }
+        }
+        return nueva_lista
+    }
+
+    fun verInfoPeriodoIngreso(
+        fecha_inicio: java.util.Date, fecha_final: java.util.Date
+    ): MutableList<Ingreso> {
+        return ic.getAllByDates(fecha_inicio, fecha_final)
+    }
+
 
     private fun showDatePicker() {
         var startDate: Calendar? = null
@@ -480,14 +711,47 @@ class MgInfo : AppCompatActivity() {
                             }
 
                             lista_gastos = verInfoPeriodo(
-                                startDate!!.time,
-                                endDate!!.time
+                                startDate!!.time, endDate!!.time
                             )
-                            inicializarAdapter(lista_gastos)
-                            var total: Double = 0.0;
+                            lista_ingresos = verInfoPeriodoIngreso(
+                                startDate!!.time, endDate!!.time
+                            )
+
+                            inicializarAdapter(lista_gastos, lista_ingresos)
+                            binding.tvResultadoFecha.text =
+                                ("${start.toString()} - ${end.toString()}")
+
+                            var total: Double = 0.0
                             for (l in lista_gastos) {
-                                total += l.importe;
+                                total += l.importe
                             }
+                            var total2: Double = 0.0
+                            for (t in lista_ingresos) {
+                                total2 += t.importe
+                            }
+
+                            var disponible = total2 - total
+
+                            if (disponible > 0.0) {
+                                binding.tvDisponible.text = "+" + disponible.toString() + " €"
+                                binding.tvDisponible.setTextColor(Color.parseColor("#2ACD1B"))
+                            } else if (disponible < 0.0) {
+                                binding.tvDisponible.text = disponible.toString() + " €"
+                                binding.tvDisponible.setTextColor(Color.parseColor("#EF5757"))
+                            } else {
+                                binding.tvDisponible.text = disponible.toString() + " €"
+                                binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
+                            }
+
+
+                            if (total2 != 0.0) {
+                                binding.tvIngresos.text = "+" + total2.toString() + " €"
+                                binding.tvIngresos.setTextColor(Color.parseColor("#2ACD1B"))
+                            } else {
+                                binding.tvIngresos.text = total2.toString() + " €"
+                                binding.tvIngresos.setTextColor(Color.parseColor("#FFFFFF"))
+                            }
+
                             if (total != 0.0) {
                                 binding.tvGastos.text = "-" + total.toString() + " €"
                                 binding.tvGastos.setTextColor(Color.parseColor("#EF5757"))
@@ -514,24 +778,32 @@ class MgInfo : AppCompatActivity() {
 
     }
 
-    private fun inicializarAdapter(lista_gastos: MutableList<Gasto>) {
+    private fun inicializarAdapter(
+        lista_gastos: MutableList<Gasto>, lista_ingresos: MutableList<Ingreso>
+    ) {
 
         list_view = findViewById<ListView>(R.id.lista_gastos)
-        adapterList =
-            myListAdapterInfoGasto(this, R.layout.mg_info_gasto_ingreso_row, lista_gastos, false)
+        elemetos.clear()
+        elemetos.addAll(lista_gastos)
+        elemetos.addAll(lista_ingresos)
+        adapterList = myListAdapterInfoGasto(this, elemetos)
         list_view.adapter = adapterList
         registerForContextMenu(list_view)
     }
 
     override fun onCreateContextMenu(
-        menu: ContextMenu,
-        v: View?,
-        menuInfo: ContextMenu.ContextMenuInfo
+        menu: ContextMenu, v: View?, menuInfo: ContextMenu.ContextMenuInfo
     ) {
         super.onCreateContextMenu(menu, v, menuInfo)
         val inflater = menuInflater
         val info = menuInfo as AdapterView.AdapterContextMenuInfo
-        menu.setHeaderTitle(lista_gastos[info.position].descripcion)
+        var selected = elemetos[info.position]
+        if (selected is Gasto) {
+            menu.setHeaderTitle(selected.descripcion)
+        }
+        if (selected is Ingreso) {
+            menu.setHeaderTitle(selected.descripcion)
+        }
         inflater.inflate(R.menu.context_menu2, menu)
         posActualGasto = info.position
     }
@@ -544,23 +816,45 @@ class MgInfo : AppCompatActivity() {
 
         return when (item.itemId) {
             R.id.btnBorrar -> {
-                var gastoInfo = ""
-                gastoInfo = lista_gastos[info.position].descripcion.toString()
-                gc.deleteGasto((lista_gastos[info.position]).id)
-                check()
-                Toast.makeText(
-                    this, "Has borrado ${gastoInfo}",
-                    Toast.LENGTH_SHORT
-                ).show()
+                var selected = elemetos[info.position]
+                if (selected is Gasto) {
+                    var gastoInfo = ""
+                    gastoInfo = selected.descripcion.toString()
+                    gc.deleteGasto(selected.id)
+                    check()
+                    Toast.makeText(
+                        this, "Has borrado el gasto: ${gastoInfo}", Toast.LENGTH_SHORT
+                    ).show()
+                }
+                if (selected is Ingreso) {
+                    var ingresoInfo = ""
+                    ingresoInfo = selected.descripcion.toString()
+                    ic.deleteingreso(selected.id)
+                    check()
+                    Toast.makeText(
+                        this, "Has borrado el ingreso: ${ingresoInfo}", Toast.LENGTH_SHORT
+                    ).show()
+                }
                 true
             }
 
             R.id.btnEditar -> {
-                val id = lista_gastos[posActualGasto].id
+                var selected = elemetos[info.position]
+                if (selected is Gasto) {
+                    val id = selected.id
 
-                val intent = Intent(this, MgEditarEliminarGasto::class.java)
-                intent.putExtra("id", id)
-                startActivity(intent)
+                    val intent = Intent(this, MgEditarEliminarGasto::class.java)
+                    intent.putExtra("id", id)
+                    startActivity(intent)
+                }
+                if (selected is Ingreso) {
+                    val id = selected.id
+
+                    val intent = Intent(this, MgEditarEliminarIngreso::class.java)
+                    intent.putExtra("id", id)
+                    startActivity(intent)
+                }
+
                 true
             }
 

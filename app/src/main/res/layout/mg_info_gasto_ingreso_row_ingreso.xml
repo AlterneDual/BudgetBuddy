@@ -33,8 +33,6 @@
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/color"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.485" />
 
@@ -76,19 +74,6 @@
                     android:textSize="16sp"
                     android:textStyle="italic" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/color"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="8dp"
-                android:background="@drawable/rounded"
-                android:clickable="false"
-                android:text=""
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/linearLayout7"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.48" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -58,6 +58,13 @@
                 android:value="" />
         </activity>
         <activity
+            android:name=".activities.MG.MgEditarEliminarIngreso"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".activities.menu.MenuLateral3G"
             android:exported="false">
             <meta-data

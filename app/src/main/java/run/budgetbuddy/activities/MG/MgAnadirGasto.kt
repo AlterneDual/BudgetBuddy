@@ -112,11 +112,9 @@ class MgAnadirGasto : AppCompatActivity() {
                     gasto.fecha = fechaGasto
                     gasto.descripcion = descripttion.text.toString()
                     gastoCrud.addGasto(gasto)
-                    Toast.makeText(
-                        this, "Añadido gasto con fecha: ${gasto.fecha}", Toast.LENGTH_SHORT
-                    ).show()
                     val intent = Intent(this, MgInicio::class.java)
                     startActivity(intent)
+                    finish()
                 } else {
                     Toast.makeText(
                         this,

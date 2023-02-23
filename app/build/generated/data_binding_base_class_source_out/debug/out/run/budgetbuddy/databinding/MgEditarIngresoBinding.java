@@ -25,34 +25,31 @@ public final class MgEditarIngresoBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final Button btnAnadir1;
-
-  @NonNull
-  public final ImageView btnAnadirFoto;
+  public final ImageView btnAtras;
 
   @NonNull
   public final ImageView btnCalendario;
 
   @NonNull
+  public final Button btnEditar;
+
+  @NonNull
   public final Button btnEliminar;
 
   @NonNull
-  public final Button btnFecha1;
+  public final Button btnFecha6;
 
   @NonNull
-  public final Button btnFecha2;
+  public final Button btnFecha7;
 
   @NonNull
-  public final Button btnFecha3;
+  public final Button btnFecha8;
 
   @NonNull
-  public final EditText etCantidad;
+  public final EditText etCantidad2;
 
   @NonNull
-  public final EditText etComentario;
-
-  @NonNull
-  public final EditText etNombreGasto;
+  public final EditText etNombreIngreso;
 
   @NonNull
   public final LinearLayout linearLayout2;
@@ -70,32 +67,31 @@ public final class MgEditarIngresoBinding implements ViewBinding {
   public final TextView tvDivisa1;
 
   @NonNull
-  public final TextView tvDivisa2;
+  public final TextView tvFechaSeleccionada;
 
-  private MgEditarIngresoBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAnadir1,
-      @NonNull ImageView btnAnadirFoto, @NonNull ImageView btnCalendario,
-      @NonNull Button btnEliminar, @NonNull Button btnFecha1, @NonNull Button btnFecha2,
-      @NonNull Button btnFecha3, @NonNull EditText etCantidad, @NonNull EditText etComentario,
-      @NonNull EditText etNombreGasto, @NonNull LinearLayout linearLayout2,
-      @NonNull LinearLayout linearLayout3, @NonNull LinearLayout linearLayout4,
-      @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa1, @NonNull TextView tvDivisa2) {
+  private MgEditarIngresoBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnAtras,
+      @NonNull ImageView btnCalendario, @NonNull Button btnEditar, @NonNull Button btnEliminar,
+      @NonNull Button btnFecha6, @NonNull Button btnFecha7, @NonNull Button btnFecha8,
+      @NonNull EditText etCantidad2, @NonNull EditText etNombreIngreso,
+      @NonNull LinearLayout linearLayout2, @NonNull LinearLayout linearLayout3,
+      @NonNull LinearLayout linearLayout4, @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa1,
+      @NonNull TextView tvFechaSeleccionada) {
     this.rootView = rootView;
-    this.btnAnadir1 = btnAnadir1;
-    this.btnAnadirFoto = btnAnadirFoto;
+    this.btnAtras = btnAtras;
     this.btnCalendario = btnCalendario;
+    this.btnEditar = btnEditar;
     this.btnEliminar = btnEliminar;
-    this.btnFecha1 = btnFecha1;
-    this.btnFecha2 = btnFecha2;
-    this.btnFecha3 = btnFecha3;
-    this.etCantidad = etCantidad;
-    this.etComentario = etComentario;
-    this.etNombreGasto = etNombreGasto;
+    this.btnFecha6 = btnFecha6;
+    this.btnFecha7 = btnFecha7;
+    this.btnFecha8 = btnFecha8;
+    this.etCantidad2 = etCantidad2;
+    this.etNombreIngreso = etNombreIngreso;
     this.linearLayout2 = linearLayout2;
     this.linearLayout3 = linearLayout3;
     this.linearLayout4 = linearLayout4;
     this.toolbarA = toolbarA;
     this.tvDivisa1 = tvDivisa1;
-    this.tvDivisa2 = tvDivisa2;
+    this.tvFechaSeleccionada = tvFechaSeleccionada;
   }
 
   @Override
@@ -125,15 +121,9 @@ public final class MgEditarIngresoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnAnadir1;
-      Button btnAnadir1 = ViewBindings.findChildViewById(rootView, id);
-      if (btnAnadir1 == null) {
-        break missingId;
-      }
-
-      id = R.id.btnAnadirFoto;
-      ImageView btnAnadirFoto = ViewBindings.findChildViewById(rootView, id);
-      if (btnAnadirFoto == null) {
+      id = R.id.btnAtras;
+      ImageView btnAtras = ViewBindings.findChildViewById(rootView, id);
+      if (btnAtras == null) {
         break missingId;
       }
 
@@ -143,45 +133,45 @@ public final class MgEditarIngresoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.btnEditar;
+      Button btnEditar = ViewBindings.findChildViewById(rootView, id);
+      if (btnEditar == null) {
+        break missingId;
+      }
+
       id = R.id.btnEliminar;
       Button btnEliminar = ViewBindings.findChildViewById(rootView, id);
       if (btnEliminar == null) {
         break missingId;
       }
 
-      id = R.id.btnFecha1;
-      Button btnFecha1 = ViewBindings.findChildViewById(rootView, id);
-      if (btnFecha1 == null) {
+      id = R.id.btnFecha6;
+      Button btnFecha6 = ViewBindings.findChildViewById(rootView, id);
+      if (btnFecha6 == null) {
         break missingId;
       }
 
-      id = R.id.btnFecha2;
-      Button btnFecha2 = ViewBindings.findChildViewById(rootView, id);
-      if (btnFecha2 == null) {
+      id = R.id.btnFecha7;
+      Button btnFecha7 = ViewBindings.findChildViewById(rootView, id);
+      if (btnFecha7 == null) {
         break missingId;
       }
 
-      id = R.id.btnFecha3;
-      Button btnFecha3 = ViewBindings.findChildViewById(rootView, id);
-      if (btnFecha3 == null) {
+      id = R.id.btnFecha8;
+      Button btnFecha8 = ViewBindings.findChildViewById(rootView, id);
+      if (btnFecha8 == null) {
         break missingId;
       }
 
-      id = R.id.etCantidad;
-      EditText etCantidad = ViewBindings.findChildViewById(rootView, id);
-      if (etCantidad == null) {
+      id = R.id.etCantidad2;
+      EditText etCantidad2 = ViewBindings.findChildViewById(rootView, id);
+      if (etCantidad2 == null) {
         break missingId;
       }
 
-      id = R.id.etComentario;
-      EditText etComentario = ViewBindings.findChildViewById(rootView, id);
-      if (etComentario == null) {
-        break missingId;
-      }
-
-      id = R.id.etNombreGasto;
-      EditText etNombreGasto = ViewBindings.findChildViewById(rootView, id);
-      if (etNombreGasto == null) {
+      id = R.id.etNombreIngreso;
+      EditText etNombreIngreso = ViewBindings.findChildViewById(rootView, id);
+      if (etNombreIngreso == null) {
         break missingId;
       }
 
@@ -215,16 +205,15 @@ public final class MgEditarIngresoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.tvDivisa2;
-      TextView tvDivisa2 = ViewBindings.findChildViewById(rootView, id);
-      if (tvDivisa2 == null) {
+      id = R.id.tvFechaSeleccionada;
+      TextView tvFechaSeleccionada = ViewBindings.findChildViewById(rootView, id);
+      if (tvFechaSeleccionada == null) {
         break missingId;
       }
 
-      return new MgEditarIngresoBinding((ConstraintLayout) rootView, btnAnadir1, btnAnadirFoto,
-          btnCalendario, btnEliminar, btnFecha1, btnFecha2, btnFecha3, etCantidad, etComentario,
-          etNombreGasto, linearLayout2, linearLayout3, linearLayout4, toolbarA, tvDivisa1,
-          tvDivisa2);
+      return new MgEditarIngresoBinding((ConstraintLayout) rootView, btnAtras, btnCalendario,
+          btnEditar, btnEliminar, btnFecha6, btnFecha7, btnFecha8, etCantidad2, etNombreIngreso,
+          linearLayout2, linearLayout3, linearLayout4, toolbarA, tvDivisa1, tvFechaSeleccionada);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
