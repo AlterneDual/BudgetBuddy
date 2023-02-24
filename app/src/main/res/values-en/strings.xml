@@ -80,6 +80,7 @@
     <string name="nombre_usuario">Username</string>
     <string name="user">USER</string>
     <string name="ejemplo_mail_com">ejemplo@mail.com</string>
-
+    <string name="cerrar_sesion">Log out</string>
+    <string name="Home">Home</string>
 
 </resources>

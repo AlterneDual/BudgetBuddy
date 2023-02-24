@@ -701,12 +701,12 @@ class MgInicio : AppCompatActivity() {
 
         val listaCategorias = mutableListOf<Categoria>(
 
-            Categoria("Avion", R.drawable.circulo_naranja, R.drawable.cat_avion, "#FF9D0A"),
+            Categoria("Viajes", R.drawable.circulo_naranja, R.drawable.cat_avion, "#FF9D0A"),
             Categoria("Cine", R.drawable.circulo_verde, R.drawable.cat_cine, "#2ACD1B"),
             Categoria("Bolos", R.drawable.circulo_rojo, R.drawable.cat_bolos, "#EF5757"),
             Categoria("Coctel", R.drawable.circulo_amarillo, R.drawable.cat_coctel, "#F4D35E"),
-            Categoria("Compras", R.drawable.circulo_turquesa, R.drawable.cat_compras, "#00ffff"),
-            Categoria("Hotele", R.drawable.circulo_celeste, R.drawable.cat_hotel, "##97b5fe"),
+            Categoria("Compras", R.drawable.circulo_turquesa, R.drawable.cat_compras, "#54CA75"),
+            Categoria("Hoteles", R.drawable.circulo_celeste, R.drawable.cat_hotel, "##97b5fe"),
             Categoria("Limpieza", R.drawable.circulo_azul, R.drawable.cat_limpieza, "#010efe"),
             Categoria("Regalos", R.drawable.circulo_rosa, R.drawable.cat_regalo, "#f610fe"),
             Categoria(
