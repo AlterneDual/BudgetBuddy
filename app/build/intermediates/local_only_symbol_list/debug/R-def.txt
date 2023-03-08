@@ -74,6 +74,7 @@ drawable giff_inicio
 drawable group
 drawable group3
 drawable home
+drawable ic_budget_background
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable idioma
@@ -403,6 +404,9 @@ layout register
 menu context_menu
 menu context_menu2
 menu nav_view_menu
+mipmap ic_budget
+mipmap ic_budget_foreground
+mipmap ic_budget_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 string Divisas

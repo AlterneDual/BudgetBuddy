@@ -7,13 +7,13 @@ public final class MgEditarEliminarGasto extends androidx.appcompat.app.AppCompa
     private run.budgetbuddy.databinding.MgEditarGastosBinding binding;
     private CRUD.GastoCRUD gastoCRUD;
     private java.util.List<models.Categoria> listaCategorias;
-    @org.jetbrains.annotations.Nullable
+    @org.jetbrains.annotations.Nullable()
     private models.Categoria categoriaAtributo;
     private android.widget.GridView grid_view;
     private adapter.myListAdapter_categorias adapterList;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private CRUD.CategoriaCRUD categoriaCRUD;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private java.lang.String nombreMes;
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.N)
     private android.icu.util.Calendar selectedDate;
@@ -39,30 +39,30 @@ public final class MgEditarEliminarGasto extends androidx.appcompat.app.AppCompa
         super();
     }
     
-    @org.jetbrains.annotations.Nullable
+    @org.jetbrains.annotations.Nullable()
     public final models.Categoria getCategoriaAtributo() {
         return null;
     }
     
-    public final void setCategoriaAtributo(@org.jetbrains.annotations.Nullable
+    public final void setCategoriaAtributo(@org.jetbrains.annotations.Nullable()
     models.Categoria p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final CRUD.CategoriaCRUD getCategoriaCRUD() {
         return null;
     }
     
-    public final void setCategoriaCRUD(@org.jetbrains.annotations.NotNull
+    public final void setCategoriaCRUD(@org.jetbrains.annotations.NotNull()
     CRUD.CategoriaCRUD p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final java.lang.String getNombreMes() {
         return null;
     }
     
-    public final void setNombreMes(@org.jetbrains.annotations.NotNull
+    public final void setNombreMes(@org.jetbrains.annotations.NotNull()
     java.lang.String p0) {
     }
     
@@ -74,8 +74,8 @@ public final class MgEditarEliminarGasto extends androidx.appcompat.app.AppCompa
     }
     
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.N)
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
@@ -91,7 +91,7 @@ public final class MgEditarEliminarGasto extends androidx.appcompat.app.AppCompa
     private final void actualizarYesterdayTomorrow() {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final java.util.ArrayList<java.lang.String> nombreMeses(int mes) {
         return null;
     }
