@@ -139,25 +139,49 @@ class Ajustes : AppCompatActivity() {
     private fun crearAjustes(value: Int): MutableList<ItemGenerico> {
         var listaAjustes = mutableListOf<ItemGenerico>()
         var idioma = ""
-        if (languageEnable.spanishEnable) idioma = "Español"
-        else idioma = "English"
+        var idioma0 = ""
+        var verSaldo = ""
+        var visibSaldo = ""
+        var eliminar0 = ""
+        var eliminar = ""
+
+        if (languageEnable.spanishEnable) {
+            idioma0 = "Idioma"
+            idioma = "Español"
+            verSaldo = "Mostrar saldo"
+            visibSaldo = "Activado"
+            eliminar0 = "Eliminar datos"
+            eliminar = "Borrar todos los datos"
+
+        }
+        else {
+            idioma0 = "Language"
+            idioma = "English"
+            verSaldo = "Show Balance"
+            visibSaldo = "Enabled"
+            eliminar0 = "Delete Data"
+            eliminar = "Clean all data"
+        }
+
+
         if (value == 0) {
+            if(languageEnable.spanishEnable) visibSaldo = "Activado"
+            else visibSaldo = "Enabled"
             listaAjustes = mutableListOf<ItemGenerico>(
 
-                ItemGenerico("Idioma", idioma, R.drawable.idioma),
-//            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
-//                ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
-                ItemGenerico("Ver el saldo de mi cuenta", "Activado", R.drawable.group),
-                ItemGenerico("Eliminar datos", "Borrar todos los datos", R.drawable.eliminar)
+                ItemGenerico(idioma0, idioma, R.drawable.idioma),
+                ItemGenerico(verSaldo, visibSaldo, R.drawable.group),
+                ItemGenerico(eliminar0 , eliminar, R.drawable.eliminar)
             )
         } else {
+            if(languageEnable.spanishEnable) visibSaldo = "Desactivado"
+            else visibSaldo = "Disabled"
             listaAjustes = mutableListOf<ItemGenerico>(
 
-                ItemGenerico("Idioma", idioma, R.drawable.idioma),
-//            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
-//                ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
-                ItemGenerico("Ver el saldo de mi cuenta", "Desactivado", R.drawable.group),
-                ItemGenerico("Eliminar datos", "Borrar todos los datos", R.drawable.eliminar)
+
+                ItemGenerico(idioma0, idioma, R.drawable.idioma),
+                ItemGenerico(verSaldo, visibSaldo, R.drawable.group),
+                ItemGenerico(eliminar0 , eliminar, R.drawable.eliminar)
             )
         }
 
@@ -184,10 +208,10 @@ class Ajustes : AppCompatActivity() {
                     val btnCancelar = dialogLayout.findViewById<Button>(R.id.btnCancelar)
                     var enableEspañol = null
 
-                    if (languageEnable.spanishEnable){
+                    if (languageEnable.spanishEnable) {
                         btnEspañol.isChecked = true
                         btnIngles.isChecked = false
-                    } else{
+                    } else {
                         btnEspañol.isChecked = false
                         btnIngles.isChecked = true
                     }
@@ -227,25 +251,6 @@ class Ajustes : AppCompatActivity() {
                     dialog.show()
                 }
 
-//                3 -> {
-//                    val builder = AlertDialog.Builder(this)
-//                    val inflater = layoutInflater
-//                    builder.setView(inflater.inflate(R.layout.dialog_tema, null))
-//
-//                    builder.show()
-//
-//
-//                }
-
-//                4 -> {
-//                    val builder = AlertDialog.Builder(this)
-//                    val inflater = layoutInflater
-//                    builder.setView(inflater.inflate(R.layout.dialog_cambio_inicio, null))
-//
-//                    builder.show()
-//
-//
-//                }
 
                 1 -> {
                     val builder = AlertDialog.Builder(this)
@@ -253,12 +258,6 @@ class Ajustes : AppCompatActivity() {
                     builder.setView(inflater.inflate(R.layout.dialog_info_inicio, null))
                     builder.show()
 
-//                    binding_info_inicio.btnActivar.setOnClickListener {
-//                        trabajar_ingresos = 0
-//                    }
-//                    binding_info_inicio.btnDesactivar.setOnClickListener {
-//                        trabajar_ingresos = 1
-//                    }
                 }
 
                 2 -> {
@@ -282,5 +281,6 @@ class Ajustes : AppCompatActivity() {
         val configuration = resources.configuration
         configuration.setLocale(locale)
         resources.updateConfiguration(configuration, resources.displayMetrics)
+
     }
 }
