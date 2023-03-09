@@ -20,11 +20,10 @@ import models.ItemGenerico
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.MG.MgInicio
 import run.budgetbuddy.activities.categoria.Categorias
-import run.budgetbuddy.activities.divisa.Divisas
-import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.adapter.myListAdapter
 import run.budgetbuddy.databinding.ActivityAjustesBinding
 import run.budgetbuddy.databinding.DialogInfoInicioBinding
+import run.budgetbuddy.model.languageEnable
 import java.util.*
 
 class Ajustes : AppCompatActivity() {
@@ -65,6 +64,7 @@ class Ajustes : AppCompatActivity() {
         binding = ActivityAjustesBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
         //-------------------------------------------Menu lateral-------------------------------------------
         //Inicializar drawerLayout
         drawerLayout = findViewById(R.id.drawer_layout)
@@ -92,7 +92,6 @@ class Ajustes : AppCompatActivity() {
         val menu = navigationView.menu
         val nav_home1 = menu.findItem(R.id.nav_home)
         val nav_cat1 = menu.findItem(R.id.nav_edit_cat)
-        val nav_div1 = menu.findItem(R.id.nav_divisa)
         val nav_ajustes1 = menu.findItem(R.id.nav_ajustes)
 
         navigationView.setNavigationItemSelectedListener { menuItem ->
@@ -105,12 +104,6 @@ class Ajustes : AppCompatActivity() {
 
                 nav_cat1.itemId -> {
                     val intent = Intent(this, Categorias::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-                nav_div1.itemId -> {
-                    val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
                     true
                 }
@@ -145,10 +138,13 @@ class Ajustes : AppCompatActivity() {
 
     private fun crearAjustes(value: Int): MutableList<ItemGenerico> {
         var listaAjustes = mutableListOf<ItemGenerico>()
+        var idioma = ""
+        if (languageEnable.spanishEnable) idioma = "Español"
+        else idioma = "English"
         if (value == 0) {
             listaAjustes = mutableListOf<ItemGenerico>(
 
-                ItemGenerico("Idioma", "Español", R.drawable.idioma),
+                ItemGenerico("Idioma", idioma, R.drawable.idioma),
 //            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
 //                ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
                 ItemGenerico("Ver el saldo de mi cuenta", "Activado", R.drawable.group),
@@ -157,7 +153,7 @@ class Ajustes : AppCompatActivity() {
         } else {
             listaAjustes = mutableListOf<ItemGenerico>(
 
-                ItemGenerico("Idioma", "Español", R.drawable.idioma),
+                ItemGenerico("Idioma", idioma, R.drawable.idioma),
 //            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
 //                ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
                 ItemGenerico("Ver el saldo de mi cuenta", "Desactivado", R.drawable.group),
@@ -186,6 +182,16 @@ class Ajustes : AppCompatActivity() {
                     val btnIngles = dialogLayout.findViewById<RadioButton>(R.id.rbEnglish)
                     val btnAceptar = dialogLayout.findViewById<Button>(R.id.btnAceptarr)
                     val btnCancelar = dialogLayout.findViewById<Button>(R.id.btnCancelar)
+                    var enableEspañol = null
+
+                    if (languageEnable.spanishEnable){
+                        btnEspañol.isChecked = true
+                        btnIngles.isChecked = false
+                    } else{
+                        btnEspañol.isChecked = false
+                        btnIngles.isChecked = true
+                    }
+
                     btnAceptar.setOnClickListener {
                         if (btnEspañol.isChecked) {
                             val toast = Toast.makeText(
@@ -194,6 +200,7 @@ class Ajustes : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             )
                             toast.show()
+                            languageEnable.spanishEnable = true
                             setLocale(this, "es")
                             finish()
                             startActivity(intent)
@@ -205,6 +212,9 @@ class Ajustes : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             )
                             toast.show()
+                            languageEnable.spanishEnable = false
+                            btnIngles.isChecked = true
+                            btnEspañol.isChecked = false
                             setLocale(this, "en")
                             finish()
                             startActivity(intent)

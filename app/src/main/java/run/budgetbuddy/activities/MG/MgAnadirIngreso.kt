@@ -16,7 +16,6 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import run.budgetbuddy.R
 import models.Divisa
-import run.budgetbuddy.databinding.MgAnadirGastoBinding
 import run.budgetbuddy.databinding.MgAnadirIngresoBinding
 import run.budgetbuddy.model.Ingreso
 

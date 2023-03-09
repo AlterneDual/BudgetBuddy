@@ -22,7 +22,6 @@ import com.github.mikephil.charting.utils.MPPointF
 import models.Categoria
 import models.Gasto
 import run.budgetbuddy.R
-import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.adapter.myListAdapter_gasto
 import run.budgetbuddy.databinding.MgInicioGastosBinding
 import java.sql.Date
@@ -42,7 +41,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.navigation.NavigationView
 import run.budgetbuddy.activities.ajustes.Ajustes
 import run.budgetbuddy.activities.categoria.Categorias
-import run.budgetbuddy.activities.divisa.Divisas
 import java.time.ZoneId
 
 class MgInicio : AppCompatActivity() {
@@ -114,7 +112,6 @@ class MgInicio : AppCompatActivity() {
         val menu = navigationView.menu
         val nav_home1 = menu.findItem(R.id.nav_home)
         val nav_cat1 = menu.findItem(R.id.nav_edit_cat)
-        val nav_div1 = menu.findItem(R.id.nav_divisa)
         val nav_ajustes1 = menu.findItem(R.id.nav_ajustes)
 
         navigationView.setNavigationItemSelectedListener { menuItem ->
@@ -127,12 +124,6 @@ class MgInicio : AppCompatActivity() {
 
                 nav_cat1.itemId -> {
                     val intent = Intent(this, Categorias::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-                nav_div1.itemId -> {
-                    val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
                     true
                 }

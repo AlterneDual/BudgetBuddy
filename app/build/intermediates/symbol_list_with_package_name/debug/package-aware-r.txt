@@ -2801,6 +2801,7 @@ drawable idioma
 drawable individual
 drawable interrogacion
 drawable libra
+drawable logo_budget
 drawable long_button_empty
 drawable long_button_empty2
 drawable long_button_empty3
@@ -3040,7 +3041,6 @@ id btnBorrar
 id btnCalendario
 id btnCancelar
 id btnCategoria
-id btnCerrar
 id btnCheckA
 id btnCrearUsuario
 id btnDesactivar
@@ -3200,8 +3200,6 @@ id floating
 id forever
 id fragment_container_view_tag
 id frameLayout
-id frameLayout2
-id frameLayout3
 id frameLayout4
 id frost
 id fullscreen_header
@@ -3278,7 +3276,6 @@ id linearLayout6
 id linearLayout7
 id linearLayout_5
 id listMode
-id listView_menu
 id list_item
 id list_view
 id lista_categorias
@@ -3347,7 +3344,6 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id nav_ajustes
 id nav_cerrar_sesion
-id nav_divisa
 id nav_edit_cat
 id nav_home
 id nav_view
@@ -3404,7 +3400,6 @@ id rbDiario
 id rbEnglish
 id rbEspañol
 id rbMensual
-id rbPortugues
 id recordarPassword
 id rectangles
 id recyclerViewA4
@@ -3522,7 +3517,6 @@ id textView2
 id textView3
 id textView4
 id textView5
-id textView6
 id textView7
 id textView8
 id textView9
@@ -3609,7 +3603,6 @@ id tvTitulo
 id tvTituloGasto
 id tvTotalA
 id tvUser
-id txtEditarPerfil
 id txtTitulo
 id unchecked
 id uniform
@@ -3745,10 +3738,7 @@ layout abc_tooltip
 layout activity_ajustes
 layout activity_check_profile
 layout activity_crear_categorias
-layout activity_divisas
 layout activity_edit_profile
-layout activity_menu_lateral_1
-layout activity_menu_lateral_2
 layout anadir_categoria
 layout app_bar_main
 layout categorias

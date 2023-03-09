@@ -1,23 +1,16 @@
 package run.budgetbuddy.activities.MG
 
-import CRUD.CategoriaCRUD
-import CRUD.GastoCRUD
 import CRUD.IngresoCRUD
-import adapter.myListAdapter_categorias
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
-import android.widget.GridView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import models.Categoria
-import models.Gasto
 import run.budgetbuddy.R
-import run.budgetbuddy.databinding.MgEditarGastosBinding
 import run.budgetbuddy.databinding.MgEditarIngresoBinding
 import run.budgetbuddy.model.Ingreso
 

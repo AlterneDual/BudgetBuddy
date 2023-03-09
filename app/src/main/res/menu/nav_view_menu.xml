@@ -15,10 +15,6 @@
                 android:icon="@drawable/editar"
                 android:title="@string/editar_categorias" />
             <item
-                android:id="@+id/nav_divisa"
-                android:icon="@drawable/divisa"
-                android:title="@string/divisa" />
-            <item
                 android:id="@+id/nav_ajustes"
                 android:icon="@drawable/ajustes"
                 android:title="@string/ajustes" />

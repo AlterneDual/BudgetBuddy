@@ -1,6 +1,5 @@
 package run.budgetbuddy.activities.MG
 
-import CRUD.CategoriaCRUD
 import CRUD.IngresoCRUD
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -27,19 +26,12 @@ import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
-import com.github.mikephil.charting.utils.ColorTemplate
 import com.github.mikephil.charting.utils.MPPointF
 import com.google.android.material.navigation.NavigationView
-import models.Categoria
-import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.ajustes.Ajustes
 import run.budgetbuddy.activities.categoria.Categorias
-import run.budgetbuddy.activities.divisa.Divisas
-import run.budgetbuddy.activities.menu.MenuLateralMG
-import run.budgetbuddy.adapter.myListAdapter_gasto
 import run.budgetbuddy.adapter.myListAdapter_ingreso
-import run.budgetbuddy.databinding.MgInicioGastosBinding
 import run.budgetbuddy.databinding.MgInicioIngresosBinding
 import run.budgetbuddy.model.Ingreso
 import java.sql.Date
@@ -189,7 +181,6 @@ class MgInicioIngresos : AppCompatActivity() {
         val menu = navigationView.menu
         val nav_home1 = menu.findItem(R.id.nav_home)
         val nav_cat1 = menu.findItem(R.id.nav_edit_cat)
-        val nav_div1 = menu.findItem(R.id.nav_divisa)
         val nav_ajustes1 = menu.findItem(R.id.nav_ajustes)
 
         navigationView.setNavigationItemSelectedListener { menuItem ->
@@ -202,12 +193,6 @@ class MgInicioIngresos : AppCompatActivity() {
 
                 nav_cat1.itemId -> {
                     val intent = Intent(this, Categorias::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-                nav_div1.itemId -> {
-                    val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
                     true
                 }

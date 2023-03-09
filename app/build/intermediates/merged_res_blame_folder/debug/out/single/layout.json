@@ -28,10 +28,6 @@
         "source": "run.budgetbuddy.app-main-31:/layout/app_bar_main.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_menu_lateral_1.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/activity_menu_lateral_1.xml"
-    },
-    {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/dialog_borrar_datos.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/dialog_borrar_datos.xml"
     },
@@ -132,10 +128,6 @@
         "source": "run.budgetbuddy.app-main-31:/layout/mg_inicio_gastos.xml"
     },
     {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_divisas.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/activity_divisas.xml"
-    },
-    {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/custom_list.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/custom_list.xml"
     },
@@ -182,10 +174,6 @@
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_check_profile.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/activity_check_profile.xml"
-    },
-    {
-        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_menu_lateral_2.xml",
-        "source": "run.budgetbuddy.app-main-31:/layout/activity_menu_lateral_2.xml"
     },
     {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_reembolso.xml",
