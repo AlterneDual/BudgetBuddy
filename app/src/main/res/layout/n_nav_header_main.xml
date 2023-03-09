@@ -14,18 +14,20 @@
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="320dp"
-            android:layout_height="165dp"
-            app:srcCompat="@drawable/rectangulo" />
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/rectangulo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
 
         <ImageView
             android:id="@+id/imageView3"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:layout_gravity="center|left"
+            android:layout_gravity="center_vertical|start"
             android:layout_marginLeft="15dp"
-
-
-            app:srcCompat="@drawable/logo_budget" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:srcCompat="@drawable/budget_logo"/>
 
         <TextView
             android:id="@+id/textView7"

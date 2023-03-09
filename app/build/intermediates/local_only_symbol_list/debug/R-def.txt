@@ -25,6 +25,8 @@ drawable background_info
 drawable background_inicio
 drawable boton2
 drawable btn_add
+drawable budget_logo
+drawable budget_logo_splash
 drawable calculadora
 drawable calendar
 drawable calendario
@@ -81,7 +83,6 @@ drawable idioma
 drawable individual
 drawable interrogacion
 drawable libra
-drawable logo_budget
 drawable long_button_empty
 drawable long_button_empty2
 drawable long_button_empty3
@@ -219,6 +220,7 @@ id gvCategorias
 id icCategoriaA
 id icCategoriaA2
 id icPerfil
+id imageView
 id imageView11
 id imageView12
 id imageView2
@@ -347,6 +349,7 @@ layout activity_ajustes
 layout activity_check_profile
 layout activity_crear_categorias
 layout activity_edit_profile
+layout activity_splash
 layout anadir_categoria
 layout app_bar_main
 layout categorias

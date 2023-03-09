@@ -2728,6 +2728,8 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable budget_logo
+drawable budget_logo_splash
 drawable calculadora
 drawable calendar
 drawable calendario
@@ -2801,7 +2803,6 @@ drawable idioma
 drawable individual
 drawable interrogacion
 drawable libra
-drawable logo_budget
 drawable long_button_empty
 drawable long_button_empty2
 drawable long_button_empty3
@@ -3230,6 +3231,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id imageView11
 id imageView12
 id imageView2
@@ -3739,6 +3741,7 @@ layout activity_ajustes
 layout activity_check_profile
 layout activity_crear_categorias
 layout activity_edit_profile
+layout activity_splash
 layout anadir_categoria
 layout app_bar_main
 layout categorias

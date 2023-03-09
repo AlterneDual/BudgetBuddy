@@ -32,15 +32,18 @@
         android:testOnly="true"
         android:theme="@style/Theme.BudgetBuddy" >
         <activity
-            android:name="run.budgetbuddy.activities.MG.MgInicio"
-            android:exported="true"
-            android:theme="@style/Theme.BudgetBuddy" >
+            android:name="run.budgetbuddy.activities.splash.SplashActivity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
+        </activity>
+        <activity
+            android:name="run.budgetbuddy.activities.MG.MgInicio"
+            android:exported="true"
+            android:theme="@style/Theme.BudgetBuddy" >
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />

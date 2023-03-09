@@ -56,6 +56,10 @@
         "source": "run.budgetbuddy.app-main-31:/layout/main_view_3g.xml"
     },
     {
+        "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/activity_splash.xml",
+        "source": "run.budgetbuddy.app-main-31:/layout/activity_splash.xml"
+    },
+    {
         "merged": "run.budgetbuddy.app-mergeDebugResources-28:/layout/gp_reembolso_list.xml",
         "source": "run.budgetbuddy.app-main-31:/layout/gp_reembolso_list.xml"
     },
