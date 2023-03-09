@@ -3217,7 +3217,6 @@ id groupList
 id group_divider
 id grouping
 id groups
-id gvCategorias
 id header_title
 id hideable
 id home
@@ -3414,6 +3413,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rvCategorias
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth

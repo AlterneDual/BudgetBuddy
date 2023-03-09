@@ -218,7 +218,6 @@ id frameLayout4
 id gif
 id grid_view
 id groupList
-id gvCategorias
 id icCategoriaA
 id icCategoriaA2
 id icPerfil
@@ -272,6 +271,7 @@ id rbMensual
 id recordarPassword
 id recyclerViewA4
 id relativeLayout
+id rvCategorias
 id second_section
 id splash_logo_budget
 id tbSemanal

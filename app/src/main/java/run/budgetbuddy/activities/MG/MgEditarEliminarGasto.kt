@@ -2,20 +2,24 @@ package run.budgetbuddy.activities.MG
 
 import CRUD.CategoriaCRUD
 import CRUD.GastoCRUD
-import adapter.myListAdapter_categorias
+import adapter.MyRecycler_Adapter
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
-import android.widget.GridView
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import models.Categoria
 import models.Gasto
 import run.budgetbuddy.R
+import run.budgetbuddy.adapter.OnItemClickListener
 import run.budgetbuddy.databinding.MgEditarGastosBinding
 
 class MgEditarEliminarGasto : AppCompatActivity() {
@@ -23,8 +27,9 @@ class MgEditarEliminarGasto : AppCompatActivity() {
     private var gastoCRUD: GastoCRUD = GastoCRUD()
     private lateinit var listaCategorias: MutableList<Categoria>
     var categoriaAtributo: Categoria? = null
-    private lateinit var grid_view: GridView
-    private lateinit var adapterList: myListAdapter_categorias
+    private lateinit var recycler_view: RecyclerView
+    private lateinit var mAdapter: RecyclerView.Adapter<MyRecycler_Adapter.ViewHolder>
+    private lateinit var mLayoutManager: RecyclerView.LayoutManager
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
     var nombreMes: String = String()
 
@@ -71,12 +76,11 @@ class MgEditarEliminarGasto : AppCompatActivity() {
             binding.etCantidad.setText(gasto.importe.toString())
             categoriaAtributo = gasto.categoria
             inicializarAdapter()
-            configurarSeleccion()
             var cont = 0
             for (cat in listaCategorias) {
                 if (cat.id == categoriaAtributo?.id) {
-                    adapterList.selectedItem = cont
-                    adapterList.notifyDataSetChanged()
+                    MyRecycler_Adapter.selectedItem = cont
+                    mAdapter.notifyDataSetChanged()
                 }
                 cont++
             }
@@ -293,25 +297,20 @@ class MgEditarEliminarGasto : AppCompatActivity() {
 
     private fun inicializarAdapter() {
 
-        grid_view = binding.gvCategorias
-        adapterList =
-            myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
-        grid_view.adapter = adapterList
-        registerForContextMenu(grid_view)
+        recycler_view = findViewById(R.id.rvCategorias)
+        mLayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        mAdapter = MyRecycler_Adapter(listaCategorias, object : OnItemClickListener {
+            override fun OnItemClick(vista: View, position: Int) {
+                categoriaAtributo = listaCategorias[position]
+                MyRecycler_Adapter.selectedItem = position
+                mAdapter.notifyDataSetChanged()
+            }
+        })
+        recycler_view.adapter = mAdapter
+        recycler_view.setHasFixedSize(true)
+        recycler_view.itemAnimator = DefaultItemAnimator()
+        recycler_view.layoutManager = mLayoutManager
 
     }
 
-    fun configurarSeleccion() {
-
-        binding.gvCategorias.setOnItemClickListener() { adapterView, view, position, id ->
-
-            adapterList.selectedItem = position
-
-            adapterList.notifyDataSetChanged()
-
-            categoriaAtributo = listaCategorias[position]
-        }
-
-        registerForContextMenu(binding.gvCategorias)
-    }
 }
