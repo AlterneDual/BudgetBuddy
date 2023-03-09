@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+anim animation_splash
 color black
 color brown
 color crayola
@@ -27,6 +28,7 @@ drawable boton2
 drawable btn_add
 drawable budget_logo
 drawable budget_logo_splash
+drawable budget_logo_splash2
 drawable calculadora
 drawable calendar
 drawable calendario
@@ -220,7 +222,6 @@ id gvCategorias
 id icCategoriaA
 id icCategoriaA2
 id icPerfil
-id imageView
 id imageView11
 id imageView12
 id imageView2
@@ -272,6 +273,7 @@ id recordarPassword
 id recyclerViewA4
 id relativeLayout
 id second_section
+id splash_logo_budget
 id tbSemanal
 id textCalculo
 id textDescripcion

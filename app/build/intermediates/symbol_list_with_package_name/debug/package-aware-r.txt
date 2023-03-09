@@ -11,6 +11,7 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim animation_splash
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -2730,6 +2731,7 @@ drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable budget_logo
 drawable budget_logo_splash
+drawable budget_logo_splash2
 drawable calculadora
 drawable calendar
 drawable calendario
@@ -3231,7 +3233,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
 id imageView11
 id imageView12
 id imageView2
@@ -3468,6 +3469,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id splash_logo_budget
 id spline
 id split_action_bar
 id spread
