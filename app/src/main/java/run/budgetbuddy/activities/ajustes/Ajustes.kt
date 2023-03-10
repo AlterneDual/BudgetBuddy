@@ -25,11 +25,10 @@ import models.ItemGenerico
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.MG.MgInicio
 import run.budgetbuddy.activities.categoria.Categorias
-import run.budgetbuddy.activities.divisa.Divisas
-import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.adapter.myListAdapter
 import run.budgetbuddy.databinding.ActivityAjustesBinding
 import run.budgetbuddy.databinding.DialogInfoInicioBinding
+import run.budgetbuddy.model.languageEnable
 import java.util.*
 
 class Ajustes : AppCompatActivity() {
@@ -105,7 +104,6 @@ class Ajustes : AppCompatActivity() {
         val menu = navigationView.menu
         val nav_home1 = menu.findItem(R.id.nav_home)
         val nav_cat1 = menu.findItem(R.id.nav_edit_cat)
-        val nav_div1 = menu.findItem(R.id.nav_divisa)
         val nav_ajustes1 = menu.findItem(R.id.nav_ajustes)
 
         navigationView.setNavigationItemSelectedListener { menuItem ->
@@ -118,12 +116,6 @@ class Ajustes : AppCompatActivity() {
 
                 nav_cat1.itemId -> {
                     val intent = Intent(this, Categorias::class.java)
-                    startActivity(intent)
-                    true
-                }
-
-                nav_div1.itemId -> {
-                    val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
                     true
                 }
@@ -157,23 +149,50 @@ class Ajustes : AppCompatActivity() {
 
     private fun crearAjustes(value: Int): MutableList<ItemGenerico> {
         var listaAjustes = mutableListOf<ItemGenerico>()
+        var idioma = ""
+        var idioma0 = ""
+        var verSaldo = ""
+        var visibSaldo = ""
+        var eliminar0 = ""
+        var eliminar = ""
+
+        if (languageEnable.spanishEnable) {
+            idioma0 = "Idioma"
+            idioma = "Español"
+            verSaldo = "Mostrar saldo"
+            visibSaldo = "Activado"
+            eliminar0 = "Eliminar datos"
+            eliminar = "Borrar todos los datos"
+
+        }
+        else {
+            idioma0 = "Language"
+            idioma = "English"
+            verSaldo = "Show Balance"
+            visibSaldo = "Enabled"
+            eliminar0 = "Delete Data"
+            eliminar = "Clean all data"
+        }
+
+
         if (value == 0) {
+            if(languageEnable.spanishEnable) visibSaldo = "Activado"
+            else visibSaldo = "Enabled"
             listaAjustes = mutableListOf<ItemGenerico>(
 
-                ItemGenerico("Idioma", "Español", R.drawable.idioma),
-//            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
-//                ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
-                ItemGenerico("Ver el saldo de mi cuenta", "Activado", R.drawable.group),
-                ItemGenerico("Eliminar datos", "Borrar todos los datos", R.drawable.eliminar)
+                ItemGenerico(idioma0, idioma, R.drawable.idioma),
+                ItemGenerico(verSaldo, visibSaldo, R.drawable.group),
+                ItemGenerico(eliminar0 , eliminar, R.drawable.eliminar)
             )
         } else {
+            if(languageEnable.spanishEnable) visibSaldo = "Desactivado"
+            else visibSaldo = "Disabled"
             listaAjustes = mutableListOf<ItemGenerico>(
 
-                ItemGenerico("Idioma", "Español", R.drawable.idioma),
-//            ItemGenerico("Tema por defecto", "Predeterminado", R.drawable.tema),
-//                ItemGenerico("Pantalla inicio", "Mis Gastos ", R.drawable.individual),
-                ItemGenerico("Ver el saldo de mi cuenta", "Desactivado", R.drawable.group),
-                ItemGenerico("Eliminar datos", "Borrar todos los datos", R.drawable.eliminar)
+
+                ItemGenerico(idioma0, idioma, R.drawable.idioma),
+                ItemGenerico(verSaldo, visibSaldo, R.drawable.group),
+                ItemGenerico(eliminar0 , eliminar, R.drawable.eliminar)
             )
         }
 
@@ -198,6 +217,16 @@ class Ajustes : AppCompatActivity() {
                     val btnIngles = dialogLayout.findViewById<RadioButton>(R.id.rbEnglish)
                     val btnAceptar = dialogLayout.findViewById<Button>(R.id.btnAceptarr)
                     val btnCancelar = dialogLayout.findViewById<Button>(R.id.btnCancelar)
+                    var enableEspañol = null
+
+                    if (languageEnable.spanishEnable) {
+                        btnEspañol.isChecked = true
+                        btnIngles.isChecked = false
+                    } else {
+                        btnEspañol.isChecked = false
+                        btnIngles.isChecked = true
+                    }
+
                     btnAceptar.setOnClickListener {
                         if (btnEspañol.isChecked) {
                             val toast = Toast.makeText(
@@ -206,6 +235,7 @@ class Ajustes : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             )
                             toast.show()
+                            languageEnable.spanishEnable = true
                             setLocale(this, "es")
                             finish()
                             startActivity(intent)
@@ -217,6 +247,9 @@ class Ajustes : AppCompatActivity() {
                                 Toast.LENGTH_SHORT
                             )
                             toast.show()
+                            languageEnable.spanishEnable = false
+                            btnIngles.isChecked = true
+                            btnEspañol.isChecked = false
                             setLocale(this, "en")
                             finish()
                             startActivity(intent)

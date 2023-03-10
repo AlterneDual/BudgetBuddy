@@ -178,8 +178,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <GridView
-        android:id="@+id/gvCategorias"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCategorias"
         android:layout_width="match_parent"
         android:layout_height="120dp"
         android:layout_marginStart="5dp"
@@ -189,7 +189,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        android:orientation="horizontal"/>
+
+<!--    <GridView-->
+<!--        android:id="@+id/gvCategorias"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:layout_marginStart="5dp"-->
+<!--        android:layout_marginTop="100dp"-->
+<!--        android:layout_marginEnd="5dp"-->
+<!--        android:numColumns="4"-->
+<!--        android:rowCount="1"-->
+<!--        android:horizontalSpacing="5dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"-->
+<!--        android:scrollbars="horizontal" />-->
 
     <TextView
         android:id="@+id/tvFechaSeleccionada"
@@ -204,7 +221,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gvCategorias" />
+        app:layout_constraintTop_toBottomOf="@+id/rvCategorias" />
 
     <EditText
         android:id="@+id/descriptionText"
@@ -216,7 +233,7 @@
         android:inputType="text"
         android:textColor="#FFF"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/gvCategorias"
+        app:layout_constraintBottom_toTopOf="@+id/rvCategorias"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarA"

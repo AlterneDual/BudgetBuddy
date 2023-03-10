@@ -5,7 +5,6 @@ import adapter.myListAdapter_colores
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.os.SystemClock
 import android.view.View
 import android.widget.EditText
 import android.widget.GridView
@@ -13,9 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import models.Categoria
 import run.budgetbuddy.R
-import run.budgetbuddy.databinding.ActivityCrearCategoriasBinding
 import run.budgetbuddy.databinding.CrearCategoriaBinding
-import kotlin.properties.Delegates
 
 class CrearCategoria : AppCompatActivity() {
     private lateinit var binding: CrearCategoriaBinding

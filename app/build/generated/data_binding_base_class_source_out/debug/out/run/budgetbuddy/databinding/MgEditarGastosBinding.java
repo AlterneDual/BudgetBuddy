@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -14,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import java.lang.NullPointerException;
@@ -53,9 +53,6 @@ public final class MgEditarGastosBinding implements ViewBinding {
   public final EditText etNombreGasto;
 
   @NonNull
-  public final GridView gvCategorias;
-
-  @NonNull
   public final LinearLayout linearLayout2;
 
   @NonNull
@@ -63,6 +60,9 @@ public final class MgEditarGastosBinding implements ViewBinding {
 
   @NonNull
   public final LinearLayout linearLayout4;
+
+  @NonNull
+  public final RecyclerView rvCategorias;
 
   @NonNull
   public final Toolbar toolbarA;
@@ -76,10 +76,10 @@ public final class MgEditarGastosBinding implements ViewBinding {
   private MgEditarGastosBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnAtras2,
       @NonNull ImageView btnCalendario, @NonNull Button btnEditar, @NonNull Button btnEliminar1,
       @NonNull Button btnFecha1, @NonNull Button btnFecha2, @NonNull Button btnFecha3,
-      @NonNull EditText etCantidad, @NonNull EditText etNombreGasto, @NonNull GridView gvCategorias,
+      @NonNull EditText etCantidad, @NonNull EditText etNombreGasto,
       @NonNull LinearLayout linearLayout2, @NonNull LinearLayout linearLayout3,
-      @NonNull LinearLayout linearLayout4, @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa1,
-      @NonNull TextView tvFechaActual) {
+      @NonNull LinearLayout linearLayout4, @NonNull RecyclerView rvCategorias,
+      @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa1, @NonNull TextView tvFechaActual) {
     this.rootView = rootView;
     this.btnAtras2 = btnAtras2;
     this.btnCalendario = btnCalendario;
@@ -90,10 +90,10 @@ public final class MgEditarGastosBinding implements ViewBinding {
     this.btnFecha3 = btnFecha3;
     this.etCantidad = etCantidad;
     this.etNombreGasto = etNombreGasto;
-    this.gvCategorias = gvCategorias;
     this.linearLayout2 = linearLayout2;
     this.linearLayout3 = linearLayout3;
     this.linearLayout4 = linearLayout4;
+    this.rvCategorias = rvCategorias;
     this.toolbarA = toolbarA;
     this.tvDivisa1 = tvDivisa1;
     this.tvFechaActual = tvFechaActual;
@@ -180,12 +180,6 @@ public final class MgEditarGastosBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.gvCategorias;
-      GridView gvCategorias = ViewBindings.findChildViewById(rootView, id);
-      if (gvCategorias == null) {
-        break missingId;
-      }
-
       id = R.id.linearLayout2;
       LinearLayout linearLayout2 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout2 == null) {
@@ -201,6 +195,12 @@ public final class MgEditarGastosBinding implements ViewBinding {
       id = R.id.linearLayout4;
       LinearLayout linearLayout4 = ViewBindings.findChildViewById(rootView, id);
       if (linearLayout4 == null) {
+        break missingId;
+      }
+
+      id = R.id.rvCategorias;
+      RecyclerView rvCategorias = ViewBindings.findChildViewById(rootView, id);
+      if (rvCategorias == null) {
         break missingId;
       }
 
@@ -224,7 +224,7 @@ public final class MgEditarGastosBinding implements ViewBinding {
 
       return new MgEditarGastosBinding((ConstraintLayout) rootView, btnAtras2, btnCalendario,
           btnEditar, btnEliminar1, btnFecha1, btnFecha2, btnFecha3, etCantidad, etNombreGasto,
-          gvCategorias, linearLayout2, linearLayout3, linearLayout4, toolbarA, tvDivisa1,
+          linearLayout2, linearLayout3, linearLayout4, rvCategorias, toolbarA, tvDivisa1,
           tvFechaActual);
     }
     String missingId = rootView.getResources().getResourceName(id);

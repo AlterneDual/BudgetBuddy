@@ -3,6 +3,7 @@ package run.budgetbuddy.activities.MG
 import CRUD.CategoriaCRUD
 import CRUD.DivisaCRUD
 import CRUD.GastoCRUD
+import adapter.MyRecycler_Adapter
 import adapter.myListAdapter_categorias
 import android.app.DatePickerDialog
 import android.content.Intent
@@ -12,15 +13,20 @@ import android.os.Build
 import android.os.Bundle
 import android.view.GestureDetector
 import android.view.MotionEvent
+import android.view.View
 import android.widget.GridView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DefaultItemAnimator
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import models.Categoria
 import models.Divisa
 import models.Gasto
 import run.budgetbuddy.R
+import run.budgetbuddy.adapter.OnItemClickListener
 import run.budgetbuddy.databinding.MgAnadirGastoBinding
 import kotlin.properties.Delegates
 
@@ -32,8 +38,9 @@ class MgAnadirGasto : AppCompatActivity() {
     var divisaCrud: DivisaCRUD = DivisaCRUD()
     var gastoCrud: GastoCRUD = GastoCRUD()
     var categoriaAtributo: Categoria? = null
-    private lateinit var adapterList: myListAdapter_categorias
-    private lateinit var grid_view: GridView
+    private lateinit var recycler_view: RecyclerView
+    private lateinit var mAdapter: RecyclerView.Adapter<MyRecycler_Adapter.ViewHolder>
+    private lateinit var mLayoutManager: RecyclerView.LayoutManager
     private lateinit var listaCategorias: MutableList<Categoria>
     var nombreMes: String = String()
     private lateinit var gestos: GestureDetector
@@ -81,7 +88,7 @@ class MgAnadirGasto : AppCompatActivity() {
 
         listaCategorias = categoriaCRUD.getAllCategoria()
         inicializarAdapter()
-        configurarSeleccion()
+        resetSelectedItem()
         gestos = GestureDetector(this, EscuchaGestos())
 
         valoresAyerHoyPredeterminados()
@@ -201,13 +208,28 @@ class MgAnadirGasto : AppCompatActivity() {
 
     }
 
+    private fun resetSelectedItem() {
+        MyRecycler_Adapter.selectedItem = -1
+        mAdapter.notifyDataSetChanged()
+    }
+
     private fun inicializarAdapter() {
 
-        grid_view = binding.gvCategorias
-        adapterList =
-            myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
-        grid_view.adapter = adapterList
-        registerForContextMenu(grid_view)
+        recycler_view = findViewById(R.id.rvCategorias)
+        mLayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
+        mAdapter = MyRecycler_Adapter(listaCategorias, object : OnItemClickListener {
+            override fun OnItemClick(vista: View, position: Int) {
+                categoriaAtributo = listaCategorias[position]
+
+                MyRecycler_Adapter.selectedItem = position
+                mAdapter.notifyDataSetChanged()
+            }
+        })
+
+        recycler_view.adapter = mAdapter
+        recycler_view.setHasFixedSize(true)
+        recycler_view.itemAnimator = DefaultItemAnimator()
+        recycler_view.layoutManager = mLayoutManager
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -293,20 +315,6 @@ class MgAnadirGasto : AppCompatActivity() {
 
     }
 
-
-    fun configurarSeleccion() {
-
-        binding.gvCategorias.setOnItemClickListener() { adapterView, view, position, id ->
-
-            adapterList.selectedItem = position
-
-            adapterList.notifyDataSetChanged()
-
-            categoriaAtributo = listaCategorias[position]
-        }
-
-        registerForContextMenu(binding.gvCategorias)
-    }
 
     fun nombreMeses(mes: Int): ArrayList<String> {
 

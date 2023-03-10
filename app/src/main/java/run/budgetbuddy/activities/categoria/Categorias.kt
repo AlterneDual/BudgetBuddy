@@ -21,8 +21,6 @@ import models.Categoria
 import run.budgetbuddy.R
 import run.budgetbuddy.activities.MG.MgInicio
 import run.budgetbuddy.activities.ajustes.Ajustes
-import run.budgetbuddy.activities.divisa.Divisas
-import run.budgetbuddy.activities.menu.MenuLateralMG
 import run.budgetbuddy.databinding.CategoriasBinding
 
 class Categorias : AppCompatActivity() {
@@ -89,7 +87,6 @@ class Categorias : AppCompatActivity() {
         val menu = navigationView.menu
         val nav_home1 = menu.findItem(R.id.nav_home)
         val nav_cat1 = menu.findItem(R.id.nav_edit_cat)
-        val nav_div1 = menu.findItem(R.id.nav_divisa)
         val nav_ajustes1 = menu.findItem(R.id.nav_ajustes)
 
         navigationView.setNavigationItemSelectedListener { menuItem ->
@@ -101,11 +98,6 @@ class Categorias : AppCompatActivity() {
                 }
                 nav_cat1.itemId -> {
                     val intent = Intent(this, Categorias::class.java)
-                    startActivity(intent)
-                    true
-                }
-                nav_div1.itemId -> {
-                    val intent = Intent(this, Divisas::class.java)
                     startActivity(intent)
                     true
                 }

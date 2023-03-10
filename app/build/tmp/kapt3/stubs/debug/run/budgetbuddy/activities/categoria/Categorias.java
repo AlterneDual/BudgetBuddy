@@ -8,7 +8,7 @@ public final class Categorias extends androidx.appcompat.app.AppCompatActivity {
     private adapter.myListAdapter_categorias adapterList;
     private android.widget.GridView grid_view;
     private java.util.List<models.Categoria> listaCategorias;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private CRUD.CategoriaCRUD categoriaCRUD;
     private int posicion = 0;
     public androidx.drawerlayout.widget.DrawerLayout drawerLayout;
@@ -19,54 +19,54 @@ public final class Categorias extends androidx.appcompat.app.AppCompatActivity {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final CRUD.CategoriaCRUD getCategoriaCRUD() {
         return null;
     }
     
-    public final void setCategoriaCRUD(@org.jetbrains.annotations.NotNull
+    public final void setCategoriaCRUD(@org.jetbrains.annotations.NotNull()
     CRUD.CategoriaCRUD p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final androidx.drawerlayout.widget.DrawerLayout getDrawerLayout() {
         return null;
     }
     
-    public final void setDrawerLayout(@org.jetbrains.annotations.NotNull
+    public final void setDrawerLayout(@org.jetbrains.annotations.NotNull()
     androidx.drawerlayout.widget.DrawerLayout p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final com.google.android.material.navigation.NavigationView getNavigationView() {
         return null;
     }
     
-    public final void setNavigationView(@org.jetbrains.annotations.NotNull
+    public final void setNavigationView(@org.jetbrains.annotations.NotNull()
     com.google.android.material.navigation.NavigationView p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final androidx.appcompat.app.ActionBarDrawerToggle getDrawerToggle() {
         return null;
     }
     
-    public final void setDrawerToggle(@org.jetbrains.annotations.NotNull
+    public final void setDrawerToggle(@org.jetbrains.annotations.NotNull()
     androidx.appcompat.app.ActionBarDrawerToggle p0) {
     }
     
-    @java.lang.Override
-    public boolean onOptionsItemSelected(@org.jetbrains.annotations.NotNull
+    @java.lang.Override()
+    public boolean onOptionsItemSelected(@org.jetbrains.annotations.NotNull()
     android.view.MenuItem item) {
         return false;
     }
     
-    @java.lang.Override
+    @java.lang.Override()
     public void onBackPressed() {
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
@@ -83,15 +83,15 @@ public final class Categorias extends androidx.appcompat.app.AppCompatActivity {
     private final void rellenar_bd_categorias() {
     }
     
-    @java.lang.Override
-    public void onCreateContextMenu(@org.jetbrains.annotations.Nullable
-    android.view.ContextMenu menu, @org.jetbrains.annotations.Nullable
-    android.view.View v, @org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    public void onCreateContextMenu(@org.jetbrains.annotations.Nullable()
+    android.view.ContextMenu menu, @org.jetbrains.annotations.Nullable()
+    android.view.View v, @org.jetbrains.annotations.Nullable()
     android.view.ContextMenu.ContextMenuInfo menuInfo) {
     }
     
-    @java.lang.Override
-    public boolean onContextItemSelected(@org.jetbrains.annotations.NotNull
+    @java.lang.Override()
+    public boolean onContextItemSelected(@org.jetbrains.annotations.NotNull()
     android.view.MenuItem item) {
         return false;
     }

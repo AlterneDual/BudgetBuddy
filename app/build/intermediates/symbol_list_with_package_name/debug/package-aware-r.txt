@@ -11,6 +11,7 @@ anim abc_slide_out_bottom
 anim abc_slide_out_top
 anim abc_tooltip_enter
 anim abc_tooltip_exit
+anim animation_splash
 anim btn_checkbox_to_checked_box_inner_merged_animation
 anim btn_checkbox_to_checked_box_outer_merged_animation
 anim btn_checkbox_to_checked_icon_null_animation
@@ -2728,6 +2729,9 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable budget_logo
+drawable budget_logo_splash
+drawable budget_logo_splash2
 drawable calculadora
 drawable calendar
 drawable calendario
@@ -2783,6 +2787,7 @@ drawable group
 drawable group3
 drawable home
 drawable ic_arrow_back_black_24
+drawable ic_budget_background
 drawable ic_clear_black_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -3039,7 +3044,6 @@ id btnBorrar
 id btnCalendario
 id btnCancelar
 id btnCategoria
-id btnCerrar
 id btnCheckA
 id btnCrearUsuario
 id btnDesactivar
@@ -3199,8 +3203,6 @@ id floating
 id forever
 id fragment_container_view_tag
 id frameLayout
-id frameLayout2
-id frameLayout3
 id frameLayout4
 id frost
 id fullscreen_header
@@ -3215,7 +3217,6 @@ id groupList
 id group_divider
 id grouping
 id groups
-id gvCategorias
 id header_title
 id hideable
 id home
@@ -3277,7 +3278,6 @@ id linearLayout6
 id linearLayout7
 id linearLayout_5
 id listMode
-id listView_menu
 id list_item
 id list_view
 id lista_categorias
@@ -3346,7 +3346,6 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id nav_ajustes
 id nav_cerrar_sesion
-id nav_divisa
 id nav_edit_cat
 id nav_home
 id nav_view
@@ -3403,7 +3402,6 @@ id rbDiario
 id rbEnglish
 id rbEspañol
 id rbMensual
-id rbPortugues
 id recordarPassword
 id rectangles
 id recyclerViewA4
@@ -3415,6 +3413,7 @@ id right_icon
 id right_side
 id rounded
 id row_index_key
+id rvCategorias
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3470,6 +3469,7 @@ id snapMargins
 id south
 id spacer
 id special_effects_controller_view_tag
+id splash_logo_budget
 id spline
 id split_action_bar
 id spread
@@ -3521,7 +3521,6 @@ id textView2
 id textView3
 id textView4
 id textView5
-id textView6
 id textView7
 id textView8
 id textView9
@@ -3608,7 +3607,6 @@ id tvTitulo
 id tvTituloGasto
 id tvTotalA
 id tvUser
-id txtEditarPerfil
 id txtTitulo
 id unchecked
 id uniform
@@ -3744,10 +3742,8 @@ layout abc_tooltip
 layout activity_ajustes
 layout activity_check_profile
 layout activity_crear_categorias
-layout activity_divisas
 layout activity_edit_profile
-layout activity_menu_lateral_1
-layout activity_menu_lateral_2
+layout activity_splash
 layout anadir_categoria
 layout app_bar_main
 layout categorias
@@ -3872,6 +3868,9 @@ layout support_simple_spinner_dropdown_item
 menu context_menu
 menu context_menu2
 menu nav_view_menu
+mipmap ic_budget
+mipmap ic_budget_foreground
+mipmap ic_budget_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description

@@ -6,7 +6,7 @@ import java.lang.System;
 public final class MgEditarEliminarIngreso extends androidx.appcompat.app.AppCompatActivity {
     private run.budgetbuddy.databinding.MgEditarIngresoBinding binding;
     private CRUD.IngresoCRUD ingresoCRUD;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private java.lang.String nombreMes;
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.N)
     private android.icu.util.Calendar selectedDate;
@@ -32,12 +32,12 @@ public final class MgEditarEliminarIngreso extends androidx.appcompat.app.AppCom
         super();
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final java.lang.String getNombreMes() {
         return null;
     }
     
-    public final void setNombreMes(@org.jetbrains.annotations.NotNull
+    public final void setNombreMes(@org.jetbrains.annotations.NotNull()
     java.lang.String p0) {
     }
     
@@ -49,8 +49,8 @@ public final class MgEditarEliminarIngreso extends androidx.appcompat.app.AppCom
     }
     
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.N)
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
@@ -66,7 +66,7 @@ public final class MgEditarEliminarIngreso extends androidx.appcompat.app.AppCom
     private final void actualizarYesterdayTomorrow() {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final java.util.ArrayList<java.lang.String> nombreMeses(int mes) {
         return null;
     }

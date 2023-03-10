@@ -7,73 +7,73 @@ public final class MgInicioIngresos extends androidx.appcompat.app.AppCompatActi
     private run.budgetbuddy.databinding.MgInicioIngresosBinding binding;
     private run.budgetbuddy.adapter.myListAdapter_ingreso adapter;
     private java.util.List<run.budgetbuddy.model.Ingreso> listaIngresosBD;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private CRUD.IngresoCRUD ic;
     private int seleccionado = 0;
     private android.view.GestureDetector gestos;
     public androidx.drawerlayout.widget.DrawerLayout drawerLayout;
     public com.google.android.material.navigation.NavigationView navigationView;
     public androidx.appcompat.app.ActionBarDrawerToggle drawerToggle;
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     private final java.util.List<java.lang.Integer> color_list = null;
     
     public MgInicioIngresos() {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final CRUD.IngresoCRUD getIc() {
         return null;
     }
     
-    public final void setIc(@org.jetbrains.annotations.NotNull
+    public final void setIc(@org.jetbrains.annotations.NotNull()
     CRUD.IngresoCRUD p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final androidx.drawerlayout.widget.DrawerLayout getDrawerLayout() {
         return null;
     }
     
-    public final void setDrawerLayout(@org.jetbrains.annotations.NotNull
+    public final void setDrawerLayout(@org.jetbrains.annotations.NotNull()
     androidx.drawerlayout.widget.DrawerLayout p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final com.google.android.material.navigation.NavigationView getNavigationView() {
         return null;
     }
     
-    public final void setNavigationView(@org.jetbrains.annotations.NotNull
+    public final void setNavigationView(@org.jetbrains.annotations.NotNull()
     com.google.android.material.navigation.NavigationView p0) {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final androidx.appcompat.app.ActionBarDrawerToggle getDrawerToggle() {
         return null;
     }
     
-    public final void setDrawerToggle(@org.jetbrains.annotations.NotNull
+    public final void setDrawerToggle(@org.jetbrains.annotations.NotNull()
     androidx.appcompat.app.ActionBarDrawerToggle p0) {
     }
     
-    @java.lang.Override
-    public boolean onOptionsItemSelected(@org.jetbrains.annotations.NotNull
+    @java.lang.Override()
+    public boolean onOptionsItemSelected(@org.jetbrains.annotations.NotNull()
     android.view.MenuItem item) {
         return false;
     }
     
-    @java.lang.Override
+    @java.lang.Override()
     public void onBackPressed() {
     }
     
-    @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
     public final java.util.List<java.lang.Integer> getColor_list() {
         return null;
     }
     
-    @java.lang.Override
-    protected void onCreate(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    protected void onCreate(@org.jetbrains.annotations.Nullable()
     android.os.Bundle savedInstanceState) {
     }
     
@@ -84,34 +84,34 @@ public final class MgInicioIngresos extends androidx.appcompat.app.AppCompatActi
     private final void IniciarAdapter() {
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoDia(@org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoDia(@org.jetbrains.annotations.NotNull()
     java.sql.Date fecha_hoy) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoSemana(@org.jetbrains.annotations.NotNull
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoSemana(@org.jetbrains.annotations.NotNull()
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
     java.util.Date fecha_final) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoMes(@org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoMes(@org.jetbrains.annotations.NotNull()
     java.sql.Date fecha_inicio) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoAno(@org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoAno(@org.jetbrains.annotations.NotNull()
     java.sql.Date ano) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoPeriodo(@org.jetbrains.annotations.NotNull
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
+    @org.jetbrains.annotations.NotNull()
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoPeriodo(@org.jetbrains.annotations.NotNull()
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
     java.util.Date fecha_final) {
         return null;
     }
@@ -123,12 +123,12 @@ public final class MgInicioIngresos extends androidx.appcompat.app.AppCompatActi
     private final void showDatePicker() {
     }
     
-    public final void inicializarIngresos(@org.jetbrains.annotations.NotNull
+    public final void inicializarIngresos(@org.jetbrains.annotations.NotNull()
     java.util.List<run.budgetbuddy.model.Ingreso> gastos) {
     }
     
-    @java.lang.Override
-    public boolean onTouchEvent(@org.jetbrains.annotations.Nullable
+    @java.lang.Override()
+    public boolean onTouchEvent(@org.jetbrains.annotations.Nullable()
     android.view.MotionEvent event) {
         return false;
     }
@@ -140,9 +140,9 @@ public final class MgInicioIngresos extends androidx.appcompat.app.AppCompatActi
             super();
         }
         
-        @java.lang.Override
-        public boolean onFling(@org.jetbrains.annotations.NotNull
-        android.view.MotionEvent e1, @org.jetbrains.annotations.NotNull
+        @java.lang.Override()
+        public boolean onFling(@org.jetbrains.annotations.NotNull()
+        android.view.MotionEvent e1, @org.jetbrains.annotations.NotNull()
         android.view.MotionEvent e2, float velocityX, float velocityY) {
             return false;
         }

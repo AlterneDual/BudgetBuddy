@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+anim animation_splash
 color black
 color brown
 color crayola
@@ -25,6 +26,9 @@ drawable background_info
 drawable background_inicio
 drawable boton2
 drawable btn_add
+drawable budget_logo
+drawable budget_logo_splash
+drawable budget_logo_splash2
 drawable calculadora
 drawable calendar
 drawable calendario
@@ -74,6 +78,7 @@ drawable giff_inicio
 drawable group
 drawable group3
 drawable home
+drawable ic_budget_background
 drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable idioma
@@ -147,7 +152,6 @@ id btnBorrar
 id btnCalendario
 id btnCancelar
 id btnCategoria
-id btnCerrar
 id btnCheckA
 id btnCrearUsuario
 id btnDesactivar
@@ -210,13 +214,10 @@ id etPagadorInfo
 id etPassCheck
 id etPsw
 id frameLayout
-id frameLayout2
-id frameLayout3
 id frameLayout4
 id gif
 id grid_view
 id groupList
-id gvCategorias
 id icCategoriaA
 id icCategoriaA2
 id icPerfil
@@ -247,7 +248,6 @@ id linearLayout5
 id linearLayout6
 id linearLayout7
 id linearLayout_5
-id listView_menu
 id list_view
 id lista_categorias
 id lista_gastos
@@ -255,7 +255,6 @@ id lvInicioGastos
 id lvInicioIngreso
 id nav_ajustes
 id nav_cerrar_sesion
-id nav_divisa
 id nav_edit_cat
 id nav_home
 id nav_view
@@ -269,11 +268,12 @@ id rbDiario
 id rbEnglish
 id rbEspañol
 id rbMensual
-id rbPortugues
 id recordarPassword
 id recyclerViewA4
 id relativeLayout
+id rvCategorias
 id second_section
+id splash_logo_budget
 id tbSemanal
 id textCalculo
 id textDescripcion
@@ -283,7 +283,6 @@ id textView2
 id textView3
 id textView4
 id textView5
-id textView6
 id textView7
 id textView8
 id textView9
@@ -345,17 +344,14 @@ id tvTitulo
 id tvTituloGasto
 id tvTotalA
 id tvUser
-id txtEditarPerfil
 id txtTitulo
 id userImage
 id verParticipante
 layout activity_ajustes
 layout activity_check_profile
 layout activity_crear_categorias
-layout activity_divisas
 layout activity_edit_profile
-layout activity_menu_lateral_1
-layout activity_menu_lateral_2
+layout activity_splash
 layout anadir_categoria
 layout app_bar_main
 layout categorias
@@ -403,6 +399,9 @@ layout register
 menu context_menu
 menu context_menu2
 menu nav_view_menu
+mipmap ic_budget
+mipmap ic_budget_foreground
+mipmap ic_budget_round
 mipmap ic_launcher
 mipmap ic_launcher_round
 string Divisas
