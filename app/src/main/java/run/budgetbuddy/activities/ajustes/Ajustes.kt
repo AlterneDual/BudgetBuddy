@@ -1,9 +1,14 @@
 package run.budgetbuddy.activities.ajustes
 
+import CRUD.CategoriaCRUD
+import CRUD.GastoCRUD
+import CRUD.IngresoCRUD
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
@@ -37,6 +42,11 @@ class Ajustes : AppCompatActivity() {
     lateinit var binding_info_inicio: DialogInfoInicioBinding
     private var trabajar_ingresos = 1
 
+    //SharedPreferences
+    private lateinit var sharedPreferences: SharedPreferences
+    private val TRABAJAR_INGRESOS = "trabajarIngresos"
+    private val KEY = "prefs"
+
     //----------------------------------Atributos y metodos Menu lateral----------------------------------
     lateinit var drawerLayout: DrawerLayout
     lateinit var navigationView: NavigationView
@@ -64,6 +74,9 @@ class Ajustes : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAjustesBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        sharedPreferences = getSharedPreferences(KEY, MODE_PRIVATE)
+        trabajar_ingresos = sharedPreferences.getInt(TRABAJAR_INGRESOS, MODE_PRIVATE)
 
         //-------------------------------------------Menu lateral-------------------------------------------
         //Inicializar drawerLayout
@@ -125,7 +138,6 @@ class Ajustes : AppCompatActivity() {
 
             }
         }
-
 
         //-------------------------------------------Menu lateral-------------------------------------------
 
@@ -217,49 +229,64 @@ class Ajustes : AppCompatActivity() {
                     dialog.show()
                 }
 
-//                3 -> {
-//                    val builder = AlertDialog.Builder(this)
-//                    val inflater = layoutInflater
-//                    builder.setView(inflater.inflate(R.layout.dialog_tema, null))
-//
-//                    builder.show()
-//
-//
-//                }
-
-//                4 -> {
-//                    val builder = AlertDialog.Builder(this)
-//                    val inflater = layoutInflater
-//                    builder.setView(inflater.inflate(R.layout.dialog_cambio_inicio, null))
-//
-//                    builder.show()
-//
-//
-//                }
 
                 1 -> {
-                    val builder = AlertDialog.Builder(this)
-                    val inflater = layoutInflater
-                    builder.setView(inflater.inflate(R.layout.dialog_info_inicio, null))
-                    builder.show()
+                    val dialog = Dialog(this)
+                    dialog.setContentView(R.layout.dialog_info_inicio)
 
-//                    binding_info_inicio.btnActivar.setOnClickListener {
-//                        trabajar_ingresos = 0
-//                    }
-//                    binding_info_inicio.btnDesactivar.setOnClickListener {
-//                        trabajar_ingresos = 1
-//                    }
+                    var activado = dialog.findViewById<Button>(R.id.btnActivar)
+                    var desactivado = dialog.findViewById<Button>(R.id.btnDesactivar)
+
+                    activado.setOnClickListener {
+                        val editor: SharedPreferences.Editor = sharedPreferences.edit()
+                        editor.putInt(TRABAJAR_INGRESOS, 0)
+                        editor.apply()
+                        dialog.dismiss()
+                        var i = Intent(this, Ajustes::class.java)
+                        i.addFlags(Intent.FLAG_FROM_BACKGROUND)
+                        startActivity(i)
+                        overridePendingTransition(0, 0)
+                        finish()
+
+                    }
+                    desactivado.setOnClickListener {
+                        val editor: SharedPreferences.Editor = sharedPreferences.edit()
+                        editor.putInt(TRABAJAR_INGRESOS, 1)
+                        editor.apply()
+                        dialog.dismiss()
+                        var i = Intent(this, Ajustes::class.java)
+                        i.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+                        startActivity(i)
+                        overridePendingTransition(0, 0)
+                        finish()
+                    }
+                    dialog.show()
                 }
 
                 2 -> {
-                    val builder = AlertDialog.Builder(this)
-                    val inflater = layoutInflater
-                    builder.setView(inflater.inflate(R.layout.dialog_borrar_datos, null))
-                    builder.create()
-                    builder.show()
 
+                    val dialog = Dialog(this)
+                    dialog.setContentView(R.layout.dialog_borrar_datos)
+                    var borrar = dialog.findViewById<Button>(R.id.btnBorrar)
+                    var cancelar = dialog.findViewById<Button>(R.id.btnCancelar)
+
+                    borrar.setOnClickListener {
+                        var ic = IngresoCRUD()
+                        var gc = GastoCRUD()
+                        var cc = CategoriaCRUD()
+                        ic.cleanAll()
+                        gc.cleanAll()
+                        cc.cleanAll()
+                        dialog.dismiss()
+                        var i = Intent(this, MgInicio::class.java)
+                        startActivity(i)
+                        finish()
+                    }
+                    cancelar.setOnClickListener {
+                        dialog.dismiss()
+                    }
+                    dialog.show()
                 }
-
             }
         }
         registerForContextMenu(list_view)

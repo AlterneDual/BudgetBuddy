@@ -4,6 +4,7 @@ import CRUD.GastoCRUD
 import CRUD.IngresoCRUD
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.content.SharedPreferences
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.graphics.Paint
@@ -14,6 +15,8 @@ import android.os.Bundle
 import android.view.ContextMenu
 import android.view.MenuItem
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.widget.AdapterView
 import android.widget.ListView
 import android.widget.Toast
@@ -33,6 +36,7 @@ import run.budgetbuddy.adapter.*
 import run.budgetbuddy.model.Ingreso
 import java.time.LocalDate
 import java.time.ZoneId
+import kotlin.properties.Delegates
 
 class MgInfo : AppCompatActivity() {
     private lateinit var binding: MgInfoBinding
@@ -44,6 +48,10 @@ class MgInfo : AppCompatActivity() {
     private lateinit var lista_gastos: MutableList<Gasto>
     private lateinit var lista_ingresos: MutableList<Ingreso>
     var elemetos = mutableListOf<Any>()
+    lateinit var sharedPreferences: SharedPreferences
+    private val TRABAJAR_INGRESOS = "trabajarIngresos"
+    private val KEY = "prefs"
+    var trabajar_ingresos by Delegates.notNull<Int>()
 
     var posActualGasto: Int = 0
 
@@ -54,6 +62,22 @@ class MgInfo : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = MgInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharedPreferences = getSharedPreferences(KEY, MODE_PRIVATE)
+        trabajar_ingresos = sharedPreferences.getInt(TRABAJAR_INGRESOS, MODE_PRIVATE)
+        if (trabajar_ingresos == 0) {
+            binding.tvDisponible.visibility = VISIBLE
+            binding.textCalculo.visibility = VISIBLE
+            binding.tvIngresoView.visibility = VISIBLE
+            binding.tvIngresos.visibility = VISIBLE
+        } else if (trabajar_ingresos == 1) {
+            binding.tvDisponible.visibility = GONE
+            binding.textCalculo.visibility = GONE
+            binding.tvIngresoView.visibility = GONE
+            binding.tvIngresos.visibility = GONE
+
+        }
+
+
         check()
 
         binding.btnAtras.setOnClickListener {
@@ -125,7 +149,12 @@ class MgInfo : AppCompatActivity() {
 
                 // Mostrar en la lista
                 lista_gastos = gc.getAllGastos()
-                lista_ingresos = ic.getAllingresos()
+                if (trabajar_ingresos == 0) {
+                    lista_ingresos = ic.getAllingresos()
+                } else if (trabajar_ingresos == 1) {
+                    lista_ingresos = ArrayList<Ingreso>()
+
+                }
                 inicializarAdapter(lista_gastos, lista_ingresos)
 
                 var total: Double = 0.0
@@ -195,7 +224,13 @@ class MgInfo : AppCompatActivity() {
 
                 // Mostrar en la lista
                 lista_gastos = verInfoDia(Date.valueOf(LocalDate.now().toString()));
-                lista_ingresos = verInfoDiaIngreso(Date.valueOf(LocalDate.now().toString()))
+                if (trabajar_ingresos == 0) {
+                    lista_ingresos = verInfoDiaIngreso(Date.valueOf(LocalDate.now().toString()))
+                } else if (trabajar_ingresos == 1) {
+                    lista_ingresos = ArrayList<Ingreso>()
+
+                }
+
                 inicializarAdapter(lista_gastos, lista_ingresos)
 
 
@@ -287,7 +322,13 @@ class MgInfo : AppCompatActivity() {
                 lista_gastos = verInfoSemana(
                     startOfWeek, endOfWeek
                 )
-                lista_ingresos = verInfoSemanaIngreso(startOfWeek, endOfWeek)
+                if (trabajar_ingresos == 0) {
+                    lista_ingresos = verInfoSemanaIngreso(startOfWeek, endOfWeek)
+                } else if (trabajar_ingresos == 1) {
+                    lista_ingresos = ArrayList<Ingreso>()
+
+                }
+
 
                 inicializarAdapter(lista_gastos, lista_ingresos)
 
@@ -361,7 +402,13 @@ class MgInfo : AppCompatActivity() {
 
                 // Mostrar en la lista
                 lista_gastos = verInfoMes(Date.valueOf(LocalDate.now().toString()));
-                lista_ingresos = verInfoMesIngreso(Date.valueOf(LocalDate.now().toString()))
+                if (trabajar_ingresos == 0) {
+                    lista_ingresos = verInfoMesIngreso(Date.valueOf(LocalDate.now().toString()))
+                } else if (trabajar_ingresos == 1) {
+                    lista_ingresos = ArrayList<Ingreso>()
+
+                }
+
                 inicializarAdapter(lista_gastos, lista_ingresos)
 
 
@@ -431,7 +478,13 @@ class MgInfo : AppCompatActivity() {
 
                 // Mostrar en la lista
                 lista_gastos = verInfoAno(Date.valueOf(LocalDate.now().toString()));
-                lista_ingresos = verInfoAnoIngreso(Date.valueOf(LocalDate.now().toString()))
+                if (trabajar_ingresos == 0) {
+                    lista_ingresos = verInfoAnoIngreso(Date.valueOf(LocalDate.now().toString()))
+
+                } else if (trabajar_ingresos == 1) {
+                    lista_ingresos = ArrayList<Ingreso>()
+
+                }
                 inicializarAdapter(lista_gastos, lista_ingresos)
 
 
@@ -713,9 +766,17 @@ class MgInfo : AppCompatActivity() {
                             lista_gastos = verInfoPeriodo(
                                 startDate!!.time, endDate!!.time
                             )
-                            lista_ingresos = verInfoPeriodoIngreso(
-                                startDate!!.time, endDate!!.time
-                            )
+
+
+                            if (trabajar_ingresos == 0) {
+                                lista_ingresos = verInfoPeriodoIngreso(
+                                    startDate!!.time, endDate!!.time
+                                )
+
+                            } else if (trabajar_ingresos == 1) {
+                                lista_ingresos = ArrayList<Ingreso>()
+
+                            }
 
                             inicializarAdapter(lista_gastos, lista_ingresos)
                             binding.tvResultadoFecha.text =
@@ -850,11 +911,14 @@ class MgInfo : AppCompatActivity() {
                 if (selected is Ingreso) {
                     val id = selected.id
 
-                    val intent = Intent(this, MgEditarEliminarIngreso::class.java)
+                    val intent = Intent(
+                        this,
+
+                        MgInicioIngresos::class.java
+                    )
                     intent.putExtra("id", id)
                     startActivity(intent)
                 }
-
                 true
             }
 

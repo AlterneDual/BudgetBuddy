@@ -4,6 +4,7 @@ import CRUD.CategoriaCRUD
 import CRUD.GastoCRUD
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.Paint
 import android.os.Build
@@ -44,6 +45,7 @@ import run.budgetbuddy.activities.ajustes.Ajustes
 import run.budgetbuddy.activities.categoria.Categorias
 import run.budgetbuddy.activities.divisa.Divisas
 import java.time.ZoneId
+import kotlin.properties.Delegates
 
 class MgInicio : AppCompatActivity() {
 
@@ -55,6 +57,12 @@ class MgInicio : AppCompatActivity() {
     private lateinit var gestos: GestureDetector
     private lateinit var listaCategorias: MutableList<Categoria>
     var categoriaCRUD: CategoriaCRUD = CategoriaCRUD()
+
+    lateinit var sharedPreferences: SharedPreferences
+    private val TRABAJAR_INGRESOS = "trabajarIngresos"
+    private val KEY = "prefs"
+    var trabajar_ingresos by Delegates.notNull<Int>()
+
 
     //----------------------------------Atributos y metodos Menu lateral----------------------------------
     lateinit var drawerLayout: DrawerLayout
@@ -85,6 +93,9 @@ class MgInicio : AppCompatActivity() {
 
         binding = MgInicioGastosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        sharedPreferences = getSharedPreferences(KEY, MODE_PRIVATE)
+        trabajar_ingresos = sharedPreferences.getInt(TRABAJAR_INGRESOS, MODE_PRIVATE)
 
 
         //-------------------------------------------Menu lateral-------------------------------------------
@@ -159,9 +170,18 @@ class MgInicio : AppCompatActivity() {
 
         var btnIngresos = binding.tvIngresos
         btnIngresos.setOnClickListener {
-            val intent = Intent(this, MgInicioIngresos::class.java)
-            startActivity(intent)
-            overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+            if (trabajar_ingresos == 0) {
+                val intent = Intent(this, MgInicioIngresos::class.java)
+                startActivity(intent)
+                overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+            } else if (trabajar_ingresos == 1) {
+                Toast.makeText(
+                    this,
+                    "Opcion de trabajar con Ingresos no se encuentra seleccionada. Por favor acceda a Ajustes -> Ver el saldo de mi cuenta -> Activado",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+
         }
         var btnAnadirGasto = binding.btnAddGroup3
         btnAnadirGasto.setOnClickListener {
@@ -613,11 +633,19 @@ class MgInicio : AppCompatActivity() {
             velocityX: Float,
             velocityY: Float
         ): Boolean {
-            if (e2.x < e1.x) {
-                val intent = Intent(this@MgInicio, MgInicioIngresos::class.java)
-                startActivity(intent)
-                overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
-                finish()
+            if (trabajar_ingresos == 0) {
+                if (e2.x < e1.x) {
+                    val intent = Intent(this@MgInicio, MgInicioIngresos::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+                    finish()
+                }
+            } else if (trabajar_ingresos == 1) {
+                Toast.makeText(
+                    applicationContext,
+                    "Opcion de trabajar con Ingresos no se encuentra seleccionada. Por favor acceda a Ajustes -> Ver el saldo de mi cuenta -> Activado",
+                    Toast.LENGTH_LONG
+                ).show()
             }
             return true
         }

@@ -6,6 +6,7 @@ import CRUD.GastoCRUD
 import adapter.myListAdapter_categorias
 import android.app.DatePickerDialog
 import android.content.Intent
+import android.content.SharedPreferences
 import android.icu.util.Calendar
 import android.os.Build
 import android.os.Bundle
@@ -21,6 +22,7 @@ import models.Divisa
 import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.databinding.MgAnadirGastoBinding
+import kotlin.properties.Delegates
 
 class MgAnadirGasto : AppCompatActivity() {
 
@@ -39,10 +41,13 @@ class MgAnadirGasto : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.N)
     private var selectedDate: Calendar = Calendar.getInstance()
+
     @RequiresApi(Build.VERSION_CODES.N)
     private var today: Calendar = Calendar.getInstance()
+
     @RequiresApi(Build.VERSION_CODES.N)
     private var yesterday: Calendar = Calendar.getInstance()
+
     @RequiresApi(Build.VERSION_CODES.N)
     private var tomorrow: Calendar = Calendar.getInstance()
 
@@ -58,6 +63,11 @@ class MgAnadirGasto : AppCompatActivity() {
     private var tomorrowMonth: Int = 0
     private var tomorrowYear: Int = 0
 
+    lateinit var sharedPreferences: SharedPreferences
+    private val TRABAJAR_INGRESOS = "trabajarIngresos"
+    private val KEY = "prefs"
+    var trabajar_ingresos by Delegates.notNull<Int>()
+
     @RequiresApi(Build.VERSION_CODES.N)
     var fechaGasto = selectedDate.time
 
@@ -66,6 +76,8 @@ class MgAnadirGasto : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = MgAnadirGastoBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        sharedPreferences = getSharedPreferences(KEY, MODE_PRIVATE)
+        trabajar_ingresos = sharedPreferences.getInt(TRABAJAR_INGRESOS, 1)
 
         listaCategorias = categoriaCRUD.getAllCategoria()
         inicializarAdapter()
@@ -90,11 +102,24 @@ class MgAnadirGasto : AppCompatActivity() {
         btnFecha2.setText("$todayDay/$nombreMes")
         btnFecha3.setText("$tomorrowDay/$nombreMes")
 
-        btnIngreso.setOnClickListener {
-            val intent = Intent(this, MgAnadirIngreso::class.java)
-            startActivity(intent)
-            overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+        if (trabajar_ingresos == 0) {
+            btnIngreso.setOnClickListener {
+                val intent = Intent(this, MgAnadirIngreso::class.java)
+                startActivity(intent)
+                overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+            }
+        } else if (trabajar_ingresos == 1) {
+            btnIngreso.setOnClickListener {
+                Toast.makeText(
+                    applicationContext,
+                    "Opcion de trabajar con Ingresos no se encuentra seleccionada. Por favor acceda a Ajustes -> Ver el saldo de mi cuenta -> Activado",
+                    Toast.LENGTH_LONG
+                ).show()
+            }
+
         }
+
+
 
         binding.btnAnadir.setOnClickListener {
 
@@ -130,9 +155,6 @@ class MgAnadirGasto : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-
-
-
 
 
         }
@@ -343,10 +365,18 @@ class MgAnadirGasto : AppCompatActivity() {
             velocityX: Float,
             velocityY: Float
         ): Boolean {
-            if (e2.x < e1.x) {
-                val intent = Intent(this@MgAnadirGasto, MgAnadirIngreso::class.java)
-                startActivity(intent)
-                overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+            if (trabajar_ingresos == 0) {
+                if (e2.x < e1.x) {
+                    val intent = Intent(this@MgAnadirGasto, MgAnadirIngreso::class.java)
+                    startActivity(intent)
+                    overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
+                }
+            } else if (trabajar_ingresos == 1) {
+                Toast.makeText(
+                    applicationContext,
+                    "Opcion de trabajar con Ingresos no se encuentra seleccionada. Por favor acceda a Ajustes -> Ver el saldo de mi cuenta -> Activado",
+                    Toast.LENGTH_LONG
+                ).show()
             }
             return true
         }
