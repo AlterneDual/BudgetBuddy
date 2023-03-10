@@ -310,7 +310,5 @@ class MgEditarEliminarGasto : AppCompatActivity() {
         recycler_view.setHasFixedSize(true)
         recycler_view.itemAnimator = DefaultItemAnimator()
         recycler_view.layoutManager = mLayoutManager
-
     }
-
 }

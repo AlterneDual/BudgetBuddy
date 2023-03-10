@@ -71,8 +71,6 @@ class MgInfo : AppCompatActivity() {
             binding.tvIngresos.visibility = GONE
 
         }
-
-
         check()
 
         binding.btnAtras.setOnClickListener {
@@ -228,7 +226,6 @@ class MgInfo : AppCompatActivity() {
 
                 inicializarAdapter(lista_gastos, lista_ingresos)
 
-
                 var total: Double = 0.0
                 for (l in lista_gastos) {
                     total += l.importe
@@ -250,7 +247,6 @@ class MgInfo : AppCompatActivity() {
                     binding.tvDisponible.text = disponible.toString() + " €"
                     binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
                 }
-
 
                 if (total2 != 0.0) {
                     binding.tvIngresos.text = "+" + total2.toString() + " €"
@@ -321,12 +317,9 @@ class MgInfo : AppCompatActivity() {
                     lista_ingresos = verInfoSemanaIngreso(startOfWeek, endOfWeek)
                 } else if (trabajar_ingresos == 1) {
                     lista_ingresos = ArrayList<Ingreso>()
-
                 }
 
-
                 inicializarAdapter(lista_gastos, lista_ingresos)
-
 
                 var total: Double = 0.0
                 for (l in lista_gastos) {
@@ -350,7 +343,6 @@ class MgInfo : AppCompatActivity() {
                     binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
                 }
 
-
                 if (total2 != 0.0) {
                     binding.tvIngresos.text = "+" + total2.toString() + " €"
                     binding.tvIngresos.setTextColor(Color.parseColor("#2ACD1B"))
@@ -366,7 +358,6 @@ class MgInfo : AppCompatActivity() {
                     binding.tvGastos.text = total.toString() + " €"
                     binding.tvGastos.setTextColor(Color.parseColor("#FFFFFF"))
                 }
-
             }
 
             3 -> {
@@ -406,7 +397,6 @@ class MgInfo : AppCompatActivity() {
 
                 inicializarAdapter(lista_gastos, lista_ingresos)
 
-
                 var total: Double = 0.0
                 for (l in lista_gastos) {
                     total += l.importe
@@ -428,7 +418,6 @@ class MgInfo : AppCompatActivity() {
                     binding.tvDisponible.text = disponible.toString() + " €"
                     binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
                 }
-
 
                 if (total2 != 0.0) {
                     binding.tvIngresos.text = "+" + total2.toString() + " €"
@@ -482,7 +471,6 @@ class MgInfo : AppCompatActivity() {
                 }
                 inicializarAdapter(lista_gastos, lista_ingresos)
 
-
                 var total: Double = 0.0
                 for (l in lista_gastos) {
                     total += l.importe
@@ -504,7 +492,6 @@ class MgInfo : AppCompatActivity() {
                     binding.tvDisponible.text = disponible.toString() + " €"
                     binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
                 }
-
 
                 if (total2 != 0.0) {
                     binding.tvIngresos.text = "+" + total2.toString() + " €"
@@ -545,7 +532,6 @@ class MgInfo : AppCompatActivity() {
                 binding.tvAnho.paintFlags =
                     binding.tvPeriodo.paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
 
-
                 var total: Double = 0.0
                 for (l in lista_gastos) {
                     total += l.importe
@@ -567,7 +553,6 @@ class MgInfo : AppCompatActivity() {
                     binding.tvDisponible.text = disponible.toString() + " €"
                     binding.tvDisponible.setTextColor(Color.parseColor("#FFFFFF"))
                 }
-
 
                 if (total2 != 0.0) {
                     binding.tvIngresos.text = "+" + total2.toString() + " €"

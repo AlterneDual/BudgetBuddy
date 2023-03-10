@@ -123,10 +123,7 @@ class MgAnadirGasto : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-
         }
-
-
 
         binding.btnAnadir.setOnClickListener {
 
@@ -162,8 +159,6 @@ class MgAnadirGasto : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-
-
         }
 
         binding.btnAtras3.setOnClickListener {
@@ -183,7 +178,6 @@ class MgAnadirGasto : AppCompatActivity() {
             updateFecha(yesterday)
             nombreMes = nombreMeses(yesterdayMonth.plus(1))[0]
             tvFechaSeleccionada.setText("$yesterdayDay de $nombreMes de $yesterdayYear")
-
         }
 
         binding.btnFecha2.setOnClickListener {
@@ -193,7 +187,6 @@ class MgAnadirGasto : AppCompatActivity() {
             updateFecha(today)
             nombreMes = nombreMeses(todayMonth.plus(1))[0]
             tvFechaSeleccionada.setText("$todayDay de $nombreMes de $todayYear")
-
         }
 
         binding.btnFecha3.setOnClickListener {
@@ -203,9 +196,7 @@ class MgAnadirGasto : AppCompatActivity() {
             updateFecha(tomorrow)
             nombreMes = nombreMeses(yesterdayMonth.plus(1))[0]
             tvFechaSeleccionada.setText("$tomorrowDay de $nombreMes de $tomorrowYear")
-
         }
-
     }
 
     private fun resetSelectedItem() {

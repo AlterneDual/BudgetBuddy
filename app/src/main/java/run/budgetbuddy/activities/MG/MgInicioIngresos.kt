@@ -47,10 +47,9 @@ class MgInicioIngresos : AppCompatActivity() {
     private lateinit var adapter: myListAdapter_ingreso
     private var listaIngresosBD = mutableListOf<Ingreso>()
     var ic = IngresoCRUD()
-    private var seleccionado: Int = 0;
+    private var seleccionado: Int = 0
     private lateinit var gestos: GestureDetector
 
-    //    private var lista_colores: ArrayList<Int> = ArrayList()
     //----------------------------------Atributos y metodos Menu lateral----------------------------------
     lateinit var drawerLayout: DrawerLayout
     lateinit var navigationView: NavigationView
@@ -66,7 +65,6 @@ class MgInicioIngresos : AppCompatActivity() {
     override fun onBackPressed() {
 
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-
             drawerLayout.closeDrawer(GravityCompat.START)
         } else {
             super.onBackPressed()
@@ -204,10 +202,8 @@ class MgInicioIngresos : AppCompatActivity() {
                 }
 
                 else -> false
-
             }
         }
-
 
         //-------------------------------------------Menu lateral-------------------------------------------
         check()
@@ -227,24 +223,24 @@ class MgInicioIngresos : AppCompatActivity() {
         }
 
         binding.tvDia.setOnClickListener {
-            seleccionado = 1;
+            seleccionado = 1
             check()
         }
 
         binding.tvSemana.setOnClickListener {
-            seleccionado = 2;
+            seleccionado = 2
             check()
         }
         binding.tvMes.setOnClickListener {
-            seleccionado = 3;
+            seleccionado = 3
             check()
         }
         binding.tvAnho.setOnClickListener {
-            seleccionado = 4;
+            seleccionado = 4
             check()
         }
         binding.tvPeriodo.setOnClickListener {
-            seleccionado = 5;
+            seleccionado = 5
             check()
         }
 
@@ -252,7 +248,6 @@ class MgInicioIngresos : AppCompatActivity() {
             val intent = Intent(this, MgInfo::class.java)
             startActivity(intent)
         }
-
     }
 
     @RequiresApi(Build.VERSION_CODES.N)

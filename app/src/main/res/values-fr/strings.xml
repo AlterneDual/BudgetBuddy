@@ -25,8 +25,8 @@
 <string name="periodoDefecto">Période par défaut</string>
 <string name="sinRedondear">Sans arrondir</string>
 <string name="seleccioneTema">Sélectionnez le thème</string>
-<string name="pantallaInicial">Écran d'accueil</string>
-<string name="pantallaInicialMygestor">Écran d'accueil Mon Gestionnaire</string>
+<string name="pantallaInicial">Écran d\'accueil</string>
+<string name="pantallaInicialMygestor">Écran d\'accueil Mon Gestionnaire</string>
 <string name="eliminarDatos">Supprimer toutes les données</string>
 <string name="espanyol">Espagnol</string>
 <string name="semanal">Hebdomadaire</string>
@@ -48,7 +48,6 @@
 <string name="cerrar_sesion">Déconnexion</string>
 <string name="navigation_drawer_open">Le menu a été ouvert</string>
 <string name="navigation_drawer_close">Le menu a été fermé</string>
-
 <string name="nombre">Nom</string>
 <string name="español">Espagnol</string>
 <string name="english">Anglais</string>
@@ -73,7 +72,7 @@
 <string name="añadir">AJOUTER</string>
 <string name="añadir_gasto">Ajouter des dépenses</string>
 <string name="breve_descripcion">Brève description...</string>
-<string name="registrarme">S'INSCRIRE</string>
+<string name="registrarme">S\'INSCRIRE</string>
 <string name="recuerdame">Se souvenir de moi</string>
 <string name="iniciar_sesion">SE CONNECTER</string>
 <string name="gestor_con_ingresos">Gestionnaire de revenus</string>
@@ -81,7 +80,7 @@
 <string name="nombre_de_la_categoria">Nom de la catégorie</string>
 <string name="categorias">Catégories</string>
 <string name="añadir_categoria">Ajouter une catégorie</string>
-<string name="nombre_usuario">Nom d'utilisateur</string>
+<string name="nombre_usuario">Nom d\'utilisateur</string>
 <string name="user">UTILISATEUR</string>
 <string name="ejemplo_mail_com">exemple@mail.com</string>
 

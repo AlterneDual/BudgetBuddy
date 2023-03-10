@@ -6,15 +6,15 @@ import java.lang.System;
 public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
     private run.budgetbuddy.databinding.MgInfoBinding binding;
     private int seleccionado = 1;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private CRUD.GastoCRUD gc;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private CRUD.IngresoCRUD ic;
     private android.widget.ListView list_view;
     private run.budgetbuddy.adapter.myListAdapterInfoGasto adapterList;
     private java.util.List<models.Gasto> lista_gastos;
     private java.util.List<run.budgetbuddy.model.Ingreso> lista_ingresos;
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     private java.util.List<java.lang.Object> elemetos;
     public android.content.SharedPreferences sharedPreferences;
     private final java.lang.String TRABAJAR_INGRESOS = "trabajarIngresos";
@@ -28,30 +28,30 @@ public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
         super();
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final CRUD.GastoCRUD getGc() {
         return null;
     }
     
-    public final void setGc(@org.jetbrains.annotations.NotNull()
+    public final void setGc(@org.jetbrains.annotations.NotNull
     CRUD.GastoCRUD p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final CRUD.IngresoCRUD getIc() {
         return null;
     }
     
-    public final void setIc(@org.jetbrains.annotations.NotNull()
+    public final void setIc(@org.jetbrains.annotations.NotNull
     CRUD.IngresoCRUD p0) {
     }
     
-    @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
     public final java.util.List<java.lang.Object> getElemetos() {
         return null;
     }
     
-    public final void setElemetos(@org.jetbrains.annotations.NotNull()
+    public final void setElemetos(@org.jetbrains.annotations.NotNull
     java.util.List<java.lang.Object> p0) {
     }
     
@@ -79,8 +79,8 @@ public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
     }
     
     @androidx.annotation.RequiresApi(value = android.os.Build.VERSION_CODES.M)
-    @java.lang.Override()
-    protected void onCreate(@org.jetbrains.annotations.Nullable()
+    @java.lang.Override
+    protected void onCreate(@org.jetbrains.annotations.Nullable
     android.os.Bundle savedInstanceState) {
     }
     
@@ -88,66 +88,66 @@ public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
     public final void check() {
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoDia(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoDia(@org.jetbrains.annotations.NotNull
     java.sql.Date fecha_hoy) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoSemana(@org.jetbrains.annotations.NotNull()
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoSemana(@org.jetbrains.annotations.NotNull
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
     java.util.Date fecha_final) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoMes(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoMes(@org.jetbrains.annotations.NotNull
     java.sql.Date fecha_inicio) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoAno(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoAno(@org.jetbrains.annotations.NotNull
     java.sql.Date ano) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<models.Gasto> verInfoPeriodo(@org.jetbrains.annotations.NotNull()
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<models.Gasto> verInfoPeriodo(@org.jetbrains.annotations.NotNull
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
     java.util.Date fecha_final) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoDiaIngreso(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoDiaIngreso(@org.jetbrains.annotations.NotNull
     java.sql.Date fecha_hoy) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoSemanaIngreso(@org.jetbrains.annotations.NotNull()
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoSemanaIngreso(@org.jetbrains.annotations.NotNull
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
     java.util.Date fecha_final) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoMesIngreso(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoMesIngreso(@org.jetbrains.annotations.NotNull
     java.sql.Date fecha_inicio) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoAnoIngreso(@org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoAnoIngreso(@org.jetbrains.annotations.NotNull
     java.sql.Date ano) {
         return null;
     }
     
-    @org.jetbrains.annotations.NotNull()
-    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoPeriodoIngreso(@org.jetbrains.annotations.NotNull()
-    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull()
+    @org.jetbrains.annotations.NotNull
+    public final java.util.List<run.budgetbuddy.model.Ingreso> verInfoPeriodoIngreso(@org.jetbrains.annotations.NotNull
+    java.util.Date fecha_inicio, @org.jetbrains.annotations.NotNull
     java.util.Date fecha_final) {
         return null;
     }
@@ -158,15 +158,15 @@ public final class MgInfo extends androidx.appcompat.app.AppCompatActivity {
     private final void inicializarAdapter(java.util.List<models.Gasto> lista_gastos, java.util.List<run.budgetbuddy.model.Ingreso> lista_ingresos) {
     }
     
-    @java.lang.Override()
-    public void onCreateContextMenu(@org.jetbrains.annotations.NotNull()
-    android.view.ContextMenu menu, @org.jetbrains.annotations.Nullable()
-    android.view.View v, @org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public void onCreateContextMenu(@org.jetbrains.annotations.NotNull
+    android.view.ContextMenu menu, @org.jetbrains.annotations.Nullable
+    android.view.View v, @org.jetbrains.annotations.NotNull
     android.view.ContextMenu.ContextMenuInfo menuInfo) {
     }
     
-    @java.lang.Override()
-    public boolean onContextItemSelected(@org.jetbrains.annotations.NotNull()
+    @java.lang.Override
+    public boolean onContextItemSelected(@org.jetbrains.annotations.NotNull
     android.view.MenuItem item) {
         return false;
     }

@@ -84,13 +84,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="run.budgetbuddy.activities.menu.MenuLateral3G"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name="run.budgetbuddy.activities.MG.MgInfo"
             android:exported="false" >
             <meta-data
@@ -112,20 +105,6 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="run.budgetbuddy.activities.app.Register"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.app.Login"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name="run.budgetbuddy.activities.app.CargaInicio"
             android:exported="false" >
             <meta-data
@@ -133,84 +112,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name="run.budgetbuddy.activities.GG.CrearGrupo3G"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.GG.EditarGasto3G"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.GG.Gastos3G"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.GG.NuevoGasto3G"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.GG.Principal3G"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.GG.Saldos3G"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.GG.UnirGrupo3G"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.GG.reembolso.AllReembolsos"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.GG.reembolso.Reembolso3G"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.menu.MenuLateralMG"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
             android:name="run.budgetbuddy.activities.ajustes.Ajustes"
-            android:exported="false" >
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name="run.budgetbuddy.activities.divisa.Divisas"
             android:exported="false" >
             <meta-data
                 android:name="android.app.lib_name"
