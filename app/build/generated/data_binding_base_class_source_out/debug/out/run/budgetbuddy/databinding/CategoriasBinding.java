@@ -4,8 +4,8 @@ package run.budgetbuddy.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.GridView;
-import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
@@ -26,7 +26,7 @@ public final class CategoriasBinding implements ViewBinding {
   public final GridView GVCategoria;
 
   @NonNull
-  public final ImageButton btnAddCategoria2;
+  public final Button btnAddCategoria2;
 
   @NonNull
   public final DrawerLayout drawerLayout;
@@ -38,7 +38,7 @@ public final class CategoriasBinding implements ViewBinding {
   public final Toolbar toolbar3;
 
   private CategoriasBinding(@NonNull DrawerLayout rootView, @NonNull GridView GVCategoria,
-      @NonNull ImageButton btnAddCategoria2, @NonNull DrawerLayout drawerLayout,
+      @NonNull Button btnAddCategoria2, @NonNull DrawerLayout drawerLayout,
       @NonNull NavigationView navView, @NonNull Toolbar toolbar3) {
     this.rootView = rootView;
     this.GVCategoria = GVCategoria;
@@ -82,7 +82,7 @@ public final class CategoriasBinding implements ViewBinding {
       }
 
       id = R.id.btnAddCategoria2;
-      ImageButton btnAddCategoria2 = ViewBindings.findChildViewById(rootView, id);
+      Button btnAddCategoria2 = ViewBindings.findChildViewById(rootView, id);
       if (btnAddCategoria2 == null) {
         break missingId;
       }

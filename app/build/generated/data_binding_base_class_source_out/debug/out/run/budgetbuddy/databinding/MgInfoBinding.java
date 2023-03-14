@@ -5,7 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -25,7 +24,7 @@ public final class MgInfoBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ImageView btnAtras;
+  public final Button btnAtras;
 
   @NonNull
   public final Button butAll;
@@ -90,7 +89,7 @@ public final class MgInfoBinding implements ViewBinding {
   @NonNull
   public final Button tvSemana;
 
-  private MgInfoBinding(@NonNull ConstraintLayout rootView, @NonNull ImageView btnAtras,
+  private MgInfoBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAtras,
       @NonNull Button butAll, @NonNull LinearLayout linearLayout5,
       @NonNull LinearLayout linearLayout51, @NonNull ListView listaGastos,
       @NonNull TextView textCalculo, @NonNull TextView textView, @NonNull TextView textView3,
@@ -152,7 +151,7 @@ public final class MgInfoBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnAtras;
-      ImageView btnAtras = ViewBindings.findChildViewById(rootView, id);
+      Button btnAtras = ViewBindings.findChildViewById(rootView, id);
       if (btnAtras == null) {
         break missingId;
       }

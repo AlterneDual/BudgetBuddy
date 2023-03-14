@@ -18,6 +18,8 @@ import run.budgetbuddy.R
 import models.Divisa
 import run.budgetbuddy.databinding.MgAnadirIngresoBinding
 import run.budgetbuddy.model.Ingreso
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 class MgAnadirIngreso : AppCompatActivity() {
 
@@ -93,18 +95,28 @@ class MgAnadirIngreso : AppCompatActivity() {
             div.nombre = "Euro"
             div.simbolo = "€"
             var keyDiv = divisaCrud.addDivisa(div)
-
             var ingreso = Ingreso()
             if (etCantidad2.text != null && fechaIngreso != null && etComentario1.text != null) {
-                if (etCantidad2.text.toString() != "" && etComentario1.text.toString() != "") {
-                    ingreso.divisa = divisaCrud.getDivisa(keyDiv)
-                    ingreso.importe = etCantidad2.text.toString().toDouble()
-                    ingreso.fecha = fechaIngreso
-                    ingreso.descripcion = etComentario1.text.toString()
-                    ingresoCrud.addIngreso(ingreso)
-                    val intent = Intent(this, MgInicioIngresos::class.java)
-                    startActivity(intent)
-                    finish()
+                if (etCantidad2.text.toString() != "" && etComentario1.text.toString() != "" && etCantidad2.text.toString() != ".") {
+                    val value_input = etCantidad2.text.toString().toDouble()
+                    if (value_input > 0.0) {
+                        ingreso.divisa = divisaCrud.getDivisa(keyDiv)
+                        val conf_value = (Math.round(value_input * 100) / 100.0)
+                        ingreso.importe = conf_value
+                        ingreso.fecha = fechaIngreso
+                        ingreso.descripcion = etComentario1.text.toString()
+                        ingresoCrud.addIngreso(ingreso)
+                        val intent = Intent(this, MgInicioIngresos::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(
+                            this,
+                            "La cantidad debe ser superior a 0",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+
                 } else {
                     Toast.makeText(
                         this,
@@ -128,7 +140,7 @@ class MgAnadirIngreso : AppCompatActivity() {
             }
         }
 
-        binding.btnAtras4.setOnClickListener {
+        binding.btnAtras3.setOnClickListener {
             val intent = Intent(this, MgInicioIngresos::class.java)
             startActivity(intent)
             finish()

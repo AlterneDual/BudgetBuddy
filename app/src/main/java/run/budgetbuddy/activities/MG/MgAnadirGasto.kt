@@ -22,12 +22,15 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.github.mikephil.charting.data.DataSet.Rounding
 import models.Categoria
 import models.Divisa
 import models.Gasto
 import run.budgetbuddy.R
 import run.budgetbuddy.adapter.OnItemClickListener
 import run.budgetbuddy.databinding.MgAnadirGastoBinding
+import java.math.RoundingMode
+import java.text.DecimalFormat
 import kotlin.properties.Delegates
 
 class MgAnadirGasto : AppCompatActivity() {
@@ -134,16 +137,28 @@ class MgAnadirGasto : AppCompatActivity() {
 
             var gasto = Gasto()
             if (etCantidad.text != null && fechaGasto != null && categoriaAtributo != null && descripttion.text != null) {
-                if (etCantidad.text.toString() != "" && descripttion.text.toString() != "") {
-                    gasto.categoria = categoriaAtributo
-                    gasto.divisa = divisaCrud.getDivisa(keyDiv)
-                    gasto.importe = etCantidad.text.toString().toDouble()
-                    gasto.fecha = fechaGasto
-                    gasto.descripcion = descripttion.text.toString()
-                    gastoCrud.addGasto(gasto)
-                    val intent = Intent(this, MgInicio::class.java)
-                    startActivity(intent)
-                    finish()
+                if (etCantidad.text.toString() != "" && descripttion.text.toString() != "" && etCantidad.text.toString() != ".") {
+                    val value_input = etCantidad.text.toString().toDouble()
+                    if (value_input > 0.0) {
+                        gasto.categoria = categoriaAtributo
+                        gasto.divisa = divisaCrud.getDivisa(keyDiv)
+
+                        val conf_value = (Math.round(value_input * 100) / 100.0)
+                        gasto.importe = conf_value
+                        gasto.fecha = fechaGasto
+                        gasto.descripcion = descripttion.text.toString()
+                        gastoCrud.addGasto(gasto)
+                        val intent = Intent(this, MgInicio::class.java)
+                        startActivity(intent)
+                        finish()
+                    } else {
+                        Toast.makeText(
+                            this,
+                            "La cantidad debe ser superior a 0",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }
+
                 } else {
                     Toast.makeText(
                         this,

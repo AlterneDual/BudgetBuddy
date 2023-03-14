@@ -31,15 +31,20 @@
         app:layout_constraintStart_toStartOf="@+id/toolbarA"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+
+    <Button
         android:id="@+id/btnAtras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="58dp"
+        android:layout_height="46dp"
+        android:background="@drawable/default_button_simple"
+        android:clickable="true"
+        android:foreground="@drawable/back_row"
+        android:foregroundGravity="center"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_row" />
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
 
     <LinearLayout
         android:id="@+id/linearLayout_5"
@@ -199,10 +204,10 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="300dp"
-        android:layout_height="5dp"
-        android:layout_marginTop="12dp"
-        android:background="@color/white"
+        android:layout_width="350dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/custom_inputtext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
@@ -212,7 +217,6 @@
         android:id="@+id/textCalculo"
         android:layout_width="126dp"
         android:layout_height="36dp"
-        android:layout_marginTop="5dp"
         android:fontFamily="@font/oswald"
         android:text="DISPONIBLE"
         android:textColor="@color/white"
@@ -228,7 +232,6 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="5dp"
         android:fontFamily="@font/oswald"
         android:text="800 €"
         android:textColor="@color/white"
@@ -294,6 +297,7 @@
         android:background="@drawable/long_button_orange"
         android:fontFamily="@font/oswald"
         android:text="@string/ver_todos"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.78"
         app:layout_constraintStart_toEndOf="@+id/textView3"

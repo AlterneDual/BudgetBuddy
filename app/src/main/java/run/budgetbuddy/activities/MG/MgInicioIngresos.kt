@@ -185,6 +185,7 @@ class MgInicioIngresos : AppCompatActivity() {
             when (menuItem.itemId) {
                 nav_home1.itemId -> {
                     val intent = Intent(this, MgInicio::class.java)
+
                     startActivity(intent)
                     true
                 }
@@ -212,8 +213,9 @@ class MgInicioIngresos : AppCompatActivity() {
         var btnGasto = binding.tvGastos
         btnGasto.setOnClickListener {
             val intent = Intent(this, MgInicio::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+            overridePendingTransition(0, 0)
             startActivity(intent)
-            overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
         }
 
         var btnAnadirGasto = binding.btnAddGroup3
@@ -271,7 +273,8 @@ class MgInicioIngresos : AppCompatActivity() {
             total += (ing.importe).toFloat()
         }
 
-        pieChart.centerText = "$total €"
+        val conf_value = (Math.round(total * 100) / 100.0)
+        pieChart.centerText = "$conf_value €"
         pieChart.setCenterTextColor(Color.parseColor("#FFFFFF"))
         pieChart.setCenterTextSize(20f)
         val tf: Typeface? = ResourcesCompat.getFont(this, R.font.oswald)
@@ -495,7 +498,7 @@ class MgInicioIngresos : AppCompatActivity() {
                 cal.time = today
                 cal.set(Calendar.DAY_OF_WEEK, cal.firstDayOfWeek)
                 val startOfWeek = cal.time
-                cal.add(Calendar.DAY_OF_WEEK, 6)
+                cal.add(Calendar.DAY_OF_WEEK, 7)
                 val endOfWeek = cal.time
 
                 var ing = verInfoSemana(
@@ -698,6 +701,7 @@ class MgInicioIngresos : AppCompatActivity() {
         ): Boolean {
             if (e2.x > e1.x) {
                 val intent = Intent(this@MgInicioIngresos, MgInicio::class.java)
+
                 startActivity(intent)
                 overridePendingTransition(0, R.drawable.slide_out_right)
                 finish()

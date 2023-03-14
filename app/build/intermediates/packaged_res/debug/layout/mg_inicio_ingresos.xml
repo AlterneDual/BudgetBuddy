@@ -123,7 +123,7 @@
             android:fontFamily="@font/oswald"
             android:text="@string/gastos"
             android:textColor="#C6BEBE"
-            android:textSize="20sp"
+            android:textSize="28sp"
             app:layout_constraintStart_toStartOf="@+id/toolbarA"
             app:layout_constraintTop_toTopOf="@+id/toolbarA" />
 
@@ -187,17 +187,21 @@
         <!--        app:layout_constraintStart_toStartOf="parent"-->
         <!--        app:layout_constraintTop_toBottomOf="@+id/textView11" />-->
 
-        <ImageView
+
+        <Button
             android:id="@+id/butInfo"
-            android:layout_width="44dp"
-            android:layout_height="46dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
             android:clickable="true"
+            android:background="@drawable/default_button_simple"
+            android:padding="10dp"
+            android:foreground="@drawable/factura"
+            android:foregroundGravity="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/factura" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <ListView
             android:id="@+id/lvInicioIngreso"
@@ -212,18 +216,20 @@
             app:layout_constraintTop_toBottomOf="@+id/pieChart"
             app:layout_constraintVertical_bias="0.98" />
 
-        <ImageButton
+        <Button
             android:id="@+id/btnAddGroup3"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginEnd="8dp"
             android:layout_marginBottom="300dp"
-            android:background="@color/transparent"
+            android:background="@drawable/circle_button"
             android:clickable="true"
+            android:gravity="center_horizontal"
+            android:text="+"
+            android:textColor="@color/black"
+            android:textSize="50sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:srcCompat="@drawable/plus_button"
-            tools:ignore="SpeakableTextPresentCheck" />
+            app:layout_constraintEnd_toEndOf="parent" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

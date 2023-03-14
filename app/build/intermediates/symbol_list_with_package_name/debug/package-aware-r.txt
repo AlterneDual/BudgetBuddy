@@ -2751,6 +2751,7 @@ drawable cat_restaurante
 drawable cat_videojuego
 drawable categoria
 drawable cerrar
+drawable circle_button
 drawable circulo_amarillo
 drawable circulo_azul
 drawable circulo_celeste
@@ -2766,6 +2767,7 @@ drawable decimal
 drawable default_backgound
 drawable default_button
 drawable default_button_cancel
+drawable default_button_simple
 drawable default_categoria
 drawable design_fab_background
 drawable design_ic_visibility
@@ -2889,6 +2891,7 @@ drawable notify_panel_notification_icon_bg
 drawable pantalla_carga_background
 drawable pantallainicial
 drawable pantallamygroup
+drawable plus
 drawable plus_button
 drawable previous
 drawable rectangulo
@@ -3034,7 +3037,6 @@ id btnAtras
 id btnAtras1
 id btnAtras2
 id btnAtras3
-id btnAtras4
 id btnAtras6
 id btnAtrasA2
 id btnAtrasB
@@ -3345,7 +3347,6 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id nav_ajustes
-id nav_cerrar_sesion
 id nav_edit_cat
 id nav_home
 id nav_view
@@ -3448,7 +3449,6 @@ id search_view_status_bar_spacer
 id search_view_toolbar
 id search_view_toolbar_container
 id search_voice_btn
-id second_section
 id select_dialog_listview
 id selected
 id selection_type

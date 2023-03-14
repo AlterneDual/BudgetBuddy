@@ -29,7 +29,7 @@ public final class MgAnadirGastoBinding implements ViewBinding {
   public final Button btnAnadir;
 
   @NonNull
-  public final ImageView btnAtras3;
+  public final Button btnAtras3;
 
   @NonNull
   public final ImageView btnCalendario;
@@ -59,6 +59,9 @@ public final class MgAnadirGastoBinding implements ViewBinding {
   public final RecyclerView rvCategorias;
 
   @NonNull
+  public final TextView textView3;
+
+  @NonNull
   public final Toolbar toolbarA;
 
   @NonNull
@@ -71,12 +74,12 @@ public final class MgAnadirGastoBinding implements ViewBinding {
   public final TextView tvIngresos;
 
   private MgAnadirGastoBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAnadir,
-      @NonNull ImageView btnAtras3, @NonNull ImageView btnCalendario, @NonNull Button btnFecha1,
+      @NonNull Button btnAtras3, @NonNull ImageView btnCalendario, @NonNull Button btnFecha1,
       @NonNull Button btnFecha2, @NonNull Button btnFecha3, @NonNull EditText descriptionText,
       @NonNull EditText etCantidad, @NonNull LinearLayout linearLayout2,
       @NonNull LinearLayout linearLayout3, @NonNull RecyclerView rvCategorias,
-      @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa, @NonNull TextView tvFechaSeleccionada,
-      @NonNull TextView tvIngresos) {
+      @NonNull TextView textView3, @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa,
+      @NonNull TextView tvFechaSeleccionada, @NonNull TextView tvIngresos) {
     this.rootView = rootView;
     this.btnAnadir = btnAnadir;
     this.btnAtras3 = btnAtras3;
@@ -89,6 +92,7 @@ public final class MgAnadirGastoBinding implements ViewBinding {
     this.linearLayout2 = linearLayout2;
     this.linearLayout3 = linearLayout3;
     this.rvCategorias = rvCategorias;
+    this.textView3 = textView3;
     this.toolbarA = toolbarA;
     this.tvDivisa = tvDivisa;
     this.tvFechaSeleccionada = tvFechaSeleccionada;
@@ -129,7 +133,7 @@ public final class MgAnadirGastoBinding implements ViewBinding {
       }
 
       id = R.id.btnAtras3;
-      ImageView btnAtras3 = ViewBindings.findChildViewById(rootView, id);
+      Button btnAtras3 = ViewBindings.findChildViewById(rootView, id);
       if (btnAtras3 == null) {
         break missingId;
       }
@@ -188,6 +192,12 @@ public final class MgAnadirGastoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView3;
+      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
+      if (textView3 == null) {
+        break missingId;
+      }
+
       id = R.id.toolbarA;
       Toolbar toolbarA = ViewBindings.findChildViewById(rootView, id);
       if (toolbarA == null) {
@@ -214,8 +224,8 @@ public final class MgAnadirGastoBinding implements ViewBinding {
 
       return new MgAnadirGastoBinding((ConstraintLayout) rootView, btnAnadir, btnAtras3,
           btnCalendario, btnFecha1, btnFecha2, btnFecha3, descriptionText, etCantidad,
-          linearLayout2, linearLayout3, rvCategorias, toolbarA, tvDivisa, tvFechaSeleccionada,
-          tvIngresos);
+          linearLayout2, linearLayout3, rvCategorias, textView3, toolbarA, tvDivisa,
+          tvFechaSeleccionada, tvIngresos);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

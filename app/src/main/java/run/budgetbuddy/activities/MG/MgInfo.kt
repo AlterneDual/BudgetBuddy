@@ -2,6 +2,7 @@ package run.budgetbuddy.activities.MG
 
 import CRUD.GastoCRUD
 import CRUD.IngresoCRUD
+import android.annotation.SuppressLint
 import android.app.DatePickerDialog
 import android.content.Intent
 import android.content.SharedPreferences
@@ -35,7 +36,7 @@ import kotlin.properties.Delegates
 
 class MgInfo : AppCompatActivity() {
     private lateinit var binding: MgInfoBinding
-    private var seleccionado: Int = 1;
+    private var seleccionado: Int = 0;
     var gc: GastoCRUD = GastoCRUD()
     var ic: IngresoCRUD = IngresoCRUD()
     private lateinit var list_view: ListView
@@ -52,6 +53,7 @@ class MgInfo : AppCompatActivity() {
 
     private var MYGESTORVIEWINGRESOS_SETTING = "MyGestorView"
 
+    @SuppressLint("WrongConstant")
     @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -75,6 +77,10 @@ class MgInfo : AppCompatActivity() {
 
         binding.btnAtras.setOnClickListener {
             val intent = Intent(this, MgInicio::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+//            overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
             startActivity(intent)
         }
 
@@ -101,8 +107,8 @@ class MgInfo : AppCompatActivity() {
             seleccionado = 5;
             check()
         }
-        val back = binding.butAll.background as GradientDrawable
-        back.setColor(Color.parseColor("#FF9D0A"))
+//        val back = binding.butAll.background as GradientDrawable
+//        back.setColor(Color.parseColor("#FF9D0A"))
         binding.butAll.setOnClickListener {
             seleccionado = 0
             check()
@@ -307,7 +313,7 @@ class MgInfo : AppCompatActivity() {
                 cal.time = today
                 cal.set(Calendar.DAY_OF_WEEK, cal.firstDayOfWeek)
                 val startOfWeek = cal.time
-                cal.add(Calendar.DAY_OF_WEEK, 6)
+                cal.add(Calendar.DAY_OF_WEEK, 7)
                 val endOfWeek = cal.time
 
                 lista_gastos = verInfoSemana(
@@ -700,7 +706,8 @@ class MgInfo : AppCompatActivity() {
     }
 
 
-    private fun showDatePicker() {
+    private fun
+            showDatePicker() {
         var startDate: Calendar? = null
         var endDate: Calendar? = null
 
@@ -715,7 +722,7 @@ class MgInfo : AppCompatActivity() {
                 startDate = Calendar.getInstance().apply {
                     set(Calendar.YEAR, selectedYear)
                     set(Calendar.MONTH, selectedMonth)
-                    set(Calendar.DAY_OF_MONTH, selectedDay)
+                    set(Calendar.DAY_OF_MONTH, selectedDay.minus(1))
                 }
 
                 val endDatePicker = DatePickerDialog(

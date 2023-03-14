@@ -88,6 +88,7 @@
             android:fontFamily="@font/oswald"
             android:hint="0"
             android:inputType="numberDecimal"
+            android:maxLength="8"
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="26sp"

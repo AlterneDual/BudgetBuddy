@@ -5,8 +5,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,10 +26,10 @@ public final class MgInicioIngresosBinding implements ViewBinding {
   private final DrawerLayout rootView;
 
   @NonNull
-  public final ImageButton btnAddGroup3;
+  public final Button btnAddGroup3;
 
   @NonNull
-  public final ImageView butInfo;
+  public final Button butInfo;
 
   @NonNull
   public final DrawerLayout drawerLayout;
@@ -72,8 +70,8 @@ public final class MgInicioIngresosBinding implements ViewBinding {
   @NonNull
   public final Button tvSemana;
 
-  private MgInicioIngresosBinding(@NonNull DrawerLayout rootView, @NonNull ImageButton btnAddGroup3,
-      @NonNull ImageView butInfo, @NonNull DrawerLayout drawerLayout,
+  private MgInicioIngresosBinding(@NonNull DrawerLayout rootView, @NonNull Button btnAddGroup3,
+      @NonNull Button butInfo, @NonNull DrawerLayout drawerLayout,
       @NonNull LinearLayout linearLayout5, @NonNull ListView lvInicioIngreso,
       @NonNull NavigationView navView, @NonNull PieChart pieChart, @NonNull Toolbar toolbarA,
       @NonNull Button tvAnho, @NonNull Button tvDia, @NonNull TextView tvGastos,
@@ -125,13 +123,13 @@ public final class MgInicioIngresosBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.btnAddGroup3;
-      ImageButton btnAddGroup3 = ViewBindings.findChildViewById(rootView, id);
+      Button btnAddGroup3 = ViewBindings.findChildViewById(rootView, id);
       if (btnAddGroup3 == null) {
         break missingId;
       }
 
       id = R.id.butInfo;
-      ImageView butInfo = ViewBindings.findChildViewById(rootView, id);
+      Button butInfo = ViewBindings.findChildViewById(rootView, id);
       if (butInfo == null) {
         break missingId;
       }

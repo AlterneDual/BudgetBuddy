@@ -164,8 +164,7 @@ class Ajustes : AppCompatActivity() {
             eliminar0 = "Eliminar datos"
             eliminar = "Borrar todos los datos"
 
-        }
-        else {
+        } else {
             idioma0 = "Language"
             idioma = "English"
             verSaldo = "Show Balance"
@@ -176,23 +175,23 @@ class Ajustes : AppCompatActivity() {
 
 
         if (value == 0) {
-            if(languageEnable.spanishEnable) visibSaldo = "Activado"
+            if (languageEnable.spanishEnable) visibSaldo = "Activado"
             else visibSaldo = "Enabled"
             listaAjustes = mutableListOf<ItemGenerico>(
 
                 ItemGenerico(idioma0, idioma, R.drawable.idioma),
                 ItemGenerico(verSaldo, visibSaldo, R.drawable.group),
-                ItemGenerico(eliminar0 , eliminar, R.drawable.eliminar)
+                ItemGenerico(eliminar0, eliminar, R.drawable.eliminar)
             )
         } else {
-            if(languageEnable.spanishEnable) visibSaldo = "Desactivado"
+            if (languageEnable.spanishEnable) visibSaldo = "Desactivado"
             else visibSaldo = "Disabled"
             listaAjustes = mutableListOf<ItemGenerico>(
 
 
                 ItemGenerico(idioma0, idioma, R.drawable.idioma),
                 ItemGenerico(verSaldo, visibSaldo, R.drawable.group),
-                ItemGenerico(eliminar0 , eliminar, R.drawable.eliminar)
+                ItemGenerico(eliminar0, eliminar, R.drawable.eliminar)
             )
         }
 
@@ -237,6 +236,8 @@ class Ajustes : AppCompatActivity() {
                             toast.show()
                             languageEnable.spanishEnable = true
                             setLocale(this, "es")
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+                            overridePendingTransition(0, 0)
                             finish()
                             startActivity(intent)
 
@@ -251,6 +252,8 @@ class Ajustes : AppCompatActivity() {
                             btnIngles.isChecked = true
                             btnEspañol.isChecked = false
                             setLocale(this, "en")
+                            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+                            overridePendingTransition(0, 0)
                             finish()
                             startActivity(intent)
                         }

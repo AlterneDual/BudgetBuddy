@@ -32,12 +32,12 @@ class Categorias : AppCompatActivity() {
     private var posicion: Int = 0
 
     //----------------------------------Atributos y metodos Menu lateral----------------------------------
-    lateinit var drawerLayout : DrawerLayout
+    lateinit var drawerLayout: DrawerLayout
     lateinit var navigationView: NavigationView
     lateinit var drawerToggle: ActionBarDrawerToggle
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if(drawerToggle.onOptionsItemSelected(item)){
+        if (drawerToggle.onOptionsItemSelected(item)) {
             return true
         }
         return super.onOptionsItemSelected(item)
@@ -45,11 +45,10 @@ class Categorias : AppCompatActivity() {
 
     override fun onBackPressed() {
 
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)){
+        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
 
             drawerLayout.closeDrawer(GravityCompat.START)
-        }
-        else{
+        } else {
             super.onBackPressed()
         }
     }
@@ -96,16 +95,19 @@ class Categorias : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
+
                 nav_cat1.itemId -> {
                     val intent = Intent(this, Categorias::class.java)
                     startActivity(intent)
                     true
                 }
+
                 nav_ajustes1.itemId -> {
                     val intent = Intent(this, Ajustes::class.java)
                     startActivity(intent)
                     true
                 }
+
                 else -> false
 
             }
@@ -127,7 +129,8 @@ class Categorias : AppCompatActivity() {
     private fun inicializarAdapter() {
 
         grid_view = binding.GVCategoria
-        adapterList = myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
+        adapterList =
+            myListAdapter_categorias(this, R.layout.custom_grid_categorias, listaCategorias)
         grid_view.adapter = adapterList
         registerForContextMenu(grid_view)
     }
@@ -168,9 +171,9 @@ class Categorias : AppCompatActivity() {
         }
     }
 
-    private fun rellenar_bd_categorias(){
-        if(categoriaCRUD.getAllCategoria().isEmpty()){
-            for(categoria in listaCategorias){
+    private fun rellenar_bd_categorias() {
+        if (categoriaCRUD.getAllCategoria().isEmpty()) {
+            for (categoria in listaCategorias) {
                 categoriaCRUD.addCategoria(categoria)
             }
         }
@@ -201,7 +204,8 @@ class Categorias : AppCompatActivity() {
                     { dialogInterface, i ->
                         categoriaCRUD.deleteCategoria(listaCategorias[posicion!!].id)
                         adapterList.notifyDataSetChanged()
-                        recargarBDD()}
+                        recargarBDD()
+                    }
                     .setNegativeButton("CANCELAR") { dialogInterface, i -> dialogInterface.cancel() }
                     .create()
                 dialogo.show()
@@ -219,7 +223,7 @@ class Categorias : AppCompatActivity() {
         listaCategorias.clear()
         listaCategorias.addAll(categoriaCRUD.getAllCategoria())
         adapterList.notifyDataSetChanged()
-        Toast.makeText(this, "Has recargado la lista", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "Has actualizado las Categorias", Toast.LENGTH_SHORT).show()
         return true
     }
 }

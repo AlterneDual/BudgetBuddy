@@ -2750,6 +2750,7 @@ int drawable cat_restaurante 0x7f07009b
 int drawable cat_videojuego 0x7f07009c
 int drawable categoria 0x7f07009d
 int drawable cerrar 0x7f07009e
+int drawable circle_button 0x7f070139
 int drawable circulo_amarillo 0x7f07009f
 int drawable circulo_azul 0x7f0700a0
 int drawable circulo_celeste 0x7f0700a1
@@ -2765,6 +2766,7 @@ int drawable decimal 0x7f0700aa
 int drawable default_backgound 0x7f0700ab
 int drawable default_button 0x7f0700ac
 int drawable default_button_cancel 0x7f0700ad
+int drawable default_button_simple 0x7f07013b
 int drawable default_categoria 0x7f0700ae
 int drawable design_fab_background 0x7f0700af
 int drawable design_ic_visibility 0x7f0700b0
@@ -2888,6 +2890,7 @@ int drawable notify_panel_notification_icon_bg 0x7f070125
 int drawable pantalla_carga_background 0x7f070126
 int drawable pantallainicial 0x7f070127
 int drawable pantallamygroup 0x7f070128
+int drawable plus 0x7f07013a
 int drawable plus_button 0x7f070129
 int drawable previous 0x7f07012a
 int drawable rectangulo 0x7f07012b
@@ -3033,7 +3036,6 @@ int id btnAtras 0x7f09007a
 int id btnAtras1 0x7f09007b
 int id btnAtras2 0x7f09007c
 int id btnAtras3 0x7f09007d
-int id btnAtras4 0x7f09007e
 int id btnAtras6 0x7f09007f
 int id btnAtrasA2 0x7f090080
 int id btnAtrasB 0x7f090081
@@ -3344,7 +3346,6 @@ int id mtrl_picker_title_text 0x7f0901b1
 int id mtrl_view_tag_bottom_padding 0x7f0901b2
 int id multiply 0x7f0901b3
 int id nav_ajustes 0x7f0901b4
-int id nav_cerrar_sesion 0x7f0901b5
 int id nav_edit_cat 0x7f0901b6
 int id nav_home 0x7f0901b7
 int id nav_view 0x7f0901b8
@@ -3447,7 +3448,6 @@ int id search_view_status_bar_spacer 0x7f090218
 int id search_view_toolbar 0x7f090219
 int id search_view_toolbar_container 0x7f09021a
 int id search_voice_btn 0x7f09021b
-int id second_section 0x7f09021c
 int id select_dialog_listview 0x7f09021d
 int id selected 0x7f09021e
 int id selection_type 0x7f09021f

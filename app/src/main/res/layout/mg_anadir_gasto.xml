@@ -19,6 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -33,17 +34,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.098" />
 
-    <ImageView
+    <Button
         android:id="@+id/btnAtras3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
+        android:layout_width="58dp"
+        android:layout_height="46dp"
+        android:background="@drawable/default_button_simple"
         android:clickable="true"
+        android:foreground="@drawable/back_row"
+        android:foregroundGravity="center"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_row"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -66,6 +69,7 @@
             android:fontFamily="@font/oswald"
             android:hint="0"
             android:inputType="numberDecimal"
+            android:maxLength="8"
             android:textAlignment="center"
             android:textColor="#FFF"
             android:textSize="26sp"
@@ -174,7 +178,7 @@
         android:fontFamily="@font/oswald"
         android:text="@string/ingresos"
         android:textColor="#C6BEBE"
-        android:textSize="20sp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -186,27 +190,27 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="5dp"
         android:numColumns="4"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        android:orientation="horizontal"/>
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
-<!--    <GridView-->
-<!--        android:id="@+id/gvCategorias"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="120dp"-->
-<!--        android:layout_marginStart="5dp"-->
-<!--        android:layout_marginTop="100dp"-->
-<!--        android:layout_marginEnd="5dp"-->
-<!--        android:numColumns="4"-->
-<!--        android:rowCount="1"-->
-<!--        android:horizontalSpacing="5dp"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="1.0"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"-->
-<!--        android:scrollbars="horizontal" />-->
+    <!--    <GridView-->
+    <!--        android:id="@+id/gvCategorias"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="120dp"-->
+    <!--        android:layout_marginStart="5dp"-->
+    <!--        android:layout_marginTop="100dp"-->
+    <!--        android:layout_marginEnd="5dp"-->
+    <!--        android:numColumns="4"-->
+    <!--        android:rowCount="1"-->
+    <!--        android:horizontalSpacing="5dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"-->
+    <!--        android:scrollbars="horizontal" />-->
 
     <TextView
         android:id="@+id/tvFechaSeleccionada"
@@ -231,6 +235,7 @@
         android:fontFamily="@font/oswald"
         android:hint="@string/breve_descripcion"
         android:inputType="text"
+        android:maxLength="15"
         android:textColor="#FFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/rvCategorias"

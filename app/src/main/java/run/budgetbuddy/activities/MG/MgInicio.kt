@@ -152,8 +152,6 @@ class MgInicio : AppCompatActivity() {
 
 
         //-------------------------------------------Menu lateral-------------------------------------------
-
-
         check()
         listaCategorias = crearCategorias()
         rellenar_bd_categorias()
@@ -163,8 +161,9 @@ class MgInicio : AppCompatActivity() {
         btnIngresos.setOnClickListener {
             if (trabajar_ingresos == 0) {
                 val intent = Intent(this, MgInicioIngresos::class.java)
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+                overridePendingTransition(0, 0)
                 startActivity(intent)
-                overridePendingTransition(R.drawable.slide_out_left, R.drawable.slide_out_right)
             } else if (trabajar_ingresos == 1) {
                 Toast.makeText(
                     this,
@@ -172,14 +171,12 @@ class MgInicio : AppCompatActivity() {
                     Toast.LENGTH_LONG
                 ).show()
             }
-
         }
         var btnAnadirGasto = binding.btnAddGroup3
         btnAnadirGasto.setOnClickListener {
             val intent = Intent(this, MgAnadirGasto::class.java)
             startActivity(intent)
         }
-
 
         binding.tvDia.setOnClickListener {
             seleccionado = 1;
@@ -188,7 +185,6 @@ class MgInicio : AppCompatActivity() {
 
         binding.tvSemana.setOnClickListener {
             seleccionado = 2;
-
             check()
         }
         binding.tvMes.setOnClickListener {
@@ -208,8 +204,6 @@ class MgInicio : AppCompatActivity() {
             val intent = Intent(this, MgInfo::class.java)
             startActivity(intent)
         }
-
-
     }
 
     @RequiresApi(Build.VERSION_CODES.N)
@@ -233,8 +227,8 @@ class MgInicio : AppCompatActivity() {
             total += (g.importe).toFloat()
         }
         pieChart.setCenterTextColor(Color.parseColor("#FFFFFF"))
-
-        pieChart.centerText = "$total €"
+        val conf_value = (Math.round(total * 100) / 100.0)
+        pieChart.centerText = "$conf_value €"
         pieChart.setCenterTextSize(20f)
         val tf: Typeface? = ResourcesCompat.getFont(this, R.font.oswald)
         pieChart.setCenterTextTypeface(tf)
@@ -505,7 +499,7 @@ class MgInicio : AppCompatActivity() {
                 cal.time = today
                 cal.set(Calendar.DAY_OF_WEEK, cal.firstDayOfWeek)
                 val startOfWeek = cal.time
-                cal.add(Calendar.DAY_OF_WEEK, 6)
+                cal.add(Calendar.DAY_OF_WEEK, 7)
                 val endOfWeek = cal.time
 
                 var gastos = verInfoSemana(

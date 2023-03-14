@@ -28,7 +28,7 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
   public final Button btnAnadir;
 
   @NonNull
-  public final ImageView btnAtras4;
+  public final Button btnAtras3;
 
   @NonNull
   public final ImageView btnCalendario;
@@ -55,6 +55,9 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
   public final LinearLayout linearLayout3;
 
   @NonNull
+  public final TextView textView3;
+
+  @NonNull
   public final Toolbar toolbarA;
 
   @NonNull
@@ -70,15 +73,15 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
   public final TextView tvIngresos2;
 
   private MgAnadirIngresoBinding(@NonNull ConstraintLayout rootView, @NonNull Button btnAnadir,
-      @NonNull ImageView btnAtras4, @NonNull ImageView btnCalendario, @NonNull Button btnFecha6,
+      @NonNull Button btnAtras3, @NonNull ImageView btnCalendario, @NonNull Button btnFecha6,
       @NonNull Button btnFecha7, @NonNull Button btnFecha8, @NonNull EditText etCantidad2,
       @NonNull EditText etComentario1, @NonNull LinearLayout linearLayout2,
-      @NonNull LinearLayout linearLayout3, @NonNull Toolbar toolbarA, @NonNull TextView tvDivisa1,
-      @NonNull TextView tvFechaSeleccionada2, @NonNull TextView tvGastos,
-      @NonNull TextView tvIngresos2) {
+      @NonNull LinearLayout linearLayout3, @NonNull TextView textView3, @NonNull Toolbar toolbarA,
+      @NonNull TextView tvDivisa1, @NonNull TextView tvFechaSeleccionada2,
+      @NonNull TextView tvGastos, @NonNull TextView tvIngresos2) {
     this.rootView = rootView;
     this.btnAnadir = btnAnadir;
-    this.btnAtras4 = btnAtras4;
+    this.btnAtras3 = btnAtras3;
     this.btnCalendario = btnCalendario;
     this.btnFecha6 = btnFecha6;
     this.btnFecha7 = btnFecha7;
@@ -87,6 +90,7 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
     this.etComentario1 = etComentario1;
     this.linearLayout2 = linearLayout2;
     this.linearLayout3 = linearLayout3;
+    this.textView3 = textView3;
     this.toolbarA = toolbarA;
     this.tvDivisa1 = tvDivisa1;
     this.tvFechaSeleccionada2 = tvFechaSeleccionada2;
@@ -127,9 +131,9 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.btnAtras4;
-      ImageView btnAtras4 = ViewBindings.findChildViewById(rootView, id);
-      if (btnAtras4 == null) {
+      id = R.id.btnAtras3;
+      Button btnAtras3 = ViewBindings.findChildViewById(rootView, id);
+      if (btnAtras3 == null) {
         break missingId;
       }
 
@@ -181,6 +185,12 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.textView3;
+      TextView textView3 = ViewBindings.findChildViewById(rootView, id);
+      if (textView3 == null) {
+        break missingId;
+      }
+
       id = R.id.toolbarA;
       Toolbar toolbarA = ViewBindings.findChildViewById(rootView, id);
       if (toolbarA == null) {
@@ -211,9 +221,10 @@ public final class MgAnadirIngresoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new MgAnadirIngresoBinding((ConstraintLayout) rootView, btnAnadir, btnAtras4,
+      return new MgAnadirIngresoBinding((ConstraintLayout) rootView, btnAnadir, btnAtras3,
           btnCalendario, btnFecha6, btnFecha7, btnFecha8, etCantidad2, etComentario1, linearLayout2,
-          linearLayout3, toolbarA, tvDivisa1, tvFechaSeleccionada2, tvGastos, tvIngresos2);
+          linearLayout3, textView3, toolbarA, tvDivisa1, tvFechaSeleccionada2, tvGastos,
+          tvIngresos2);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
